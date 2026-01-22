@@ -40,13 +40,14 @@ let currentLang = localStorage.getItem('selectedLang') || 'en';
 function applyLanguage(lang) {
     // Update body direction
     bodyElement.dir = translations[lang].dir;
+    bodyElement.lang = lang;
     
     // Add Arabic class for specific styling
-    if (lang === 'ar') {
-        subtitleElement.classList.add('arabic');
-    } else {
-        subtitleElement.classList.remove('arabic');
-    }
+   // if (lang === 'ar') {
+  //      subtitleElement.classList.add('arabic');
+  //  } else {
+  //      subtitleElement.classList.remove('arabic');
+  //  }
     
     // Fade out content
     [nameElement, subtitleElement, footerElement].forEach(el => {
