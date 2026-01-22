@@ -30,6 +30,12 @@ html, body {
 html {
     font-size: 16px;
 }
+body[lang="ar"] .name,
+body[lang="ar"] .subtitle,
+body[lang="ar"] .footer,
+body[lang="ar"] .lang-btn {
+    font-family: var(--font-arabic);
+}
 
 body {
     font-family: var(--font-sans);
@@ -144,12 +150,12 @@ body[dir="rtl"] .language-switcher {
     opacity: 0;
     animation: slideUp 1s ease 0.5s forwards;
 }
-
+/*
 .arabic {
-    font-family: var(--font-arabic); /* Changed from Segoe UI */
+    font-family: var(--font-arabic);
     font-size: clamp(1.2rem, 3.2vw, 1.6rem);
 }
-
+*/
 /* Social Links */
 .social-links {
     display: flex;
@@ -249,6 +255,7 @@ body[dir="rtl"] .language-switcher {
         margin-bottom: var(--spacing-lg);
     }
 }
+
 
 
 
