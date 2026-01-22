@@ -44,7 +44,7 @@ body {
     justify-content: center;
     text-align: center;
     padding: var(--spacing-sm);
-    background-image: url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=20&blur=100');
+    background-image: url('/images/ChatGPT Image 22 Oca 2026 23_33_40.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -249,5 +249,6 @@ body[dir="rtl"] .language-switcher {
         margin-bottom: var(--spacing-lg);
     }
 }
+
 
 
