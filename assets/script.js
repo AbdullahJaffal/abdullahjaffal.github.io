@@ -1,104 +1,129 @@
-// Mobile navigation toggle
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.querySelector('.nav-menu');
+// Translations object
+const translations = {
+    en: {
+        dir: "ltr",
+        name: "Abdullah Jaffal",
+        subtitle: "A personal space under construction",
+        footer: "&copy; 2026 Abdullah Jaffal. All rights reserved."
+    },
+    ar: {
+        dir: "rtl",
+        name: "عبد الله جفاّل",
+        subtitle: "مساحة شخصية، قيد الإنشاء",
+        footer: "&copy; 2026 عبد الله جفال. جميع الحقوق محفوظة."
+    },
+    tr: {
+        dir: "ltr",
+        name: "Abdullah Jaffal",
+        subtitle: "Kişisel bir alan, geliştirilme sürecinde",
+        footer: "&copy; 2026 Abdullah Jaffal. Tüm hakları saklıdır."
+    },
+    ru: {
+        dir: "ltr",
+        name: "Абдулла Джаффал",
+        subtitle: "Личное пространство, в процессе создания",
+        footer: "&copy; 2026 Абдулла Джаффал. Все права защищены."
+    }
+};
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburger.querySelector('i').classList.toggle('fa-bars');
-    hamburger.querySelector('i').classList.toggle('fa-times');
-});
+// DOM Elements
+const bodyElement = document.body;
+const nameElement = document.getElementById('name');
+const subtitleElement = document.getElementById('subtitle');
+const footerElement = document.getElementById('footer-text');
+const langButtons = document.querySelectorAll('.lang-btn');
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.querySelector('i').classList.add('fa-bars');
-        hamburger.querySelector('i').classList.remove('fa-times');
-    });
-});
+// Current language
+let currentLang = localStorage.getItem('selectedLang') || 'en';
 
-// Form submission
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+// Function to apply language
+function applyLanguage(lang) {
+    // Update body direction
+    bodyElement.dir = translations[lang].dir;
     
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-    
-    // Simple validation
-    if (!name || !email || !subject || !message) {
-        alert('Please fill in all fields');
-        return;
+    // Add Arabic class for specific styling
+    if (lang === 'ar') {
+        subtitleElement.classList.add('arabic');
+    } else {
+        subtitleElement.classList.remove('arabic');
     }
     
-    // In a real implementation, you would send this data to a server
-    // For now, we'll just show an alert
-    alert(`Thank you for your message, ${name}! I will get back to you soon.`);
-    
-    // Reset form
-    contactForm.reset();
-});
-
-// Animate skill bars when they come into view
-const skillBars = document.querySelectorAll('.skill-progress');
-
-const animateSkillBars = () => {
-    skillBars.forEach(bar => {
-        const barWidth = bar.style.width;
-        bar.style.width = '0';
-        
-        setTimeout(() => {
-            bar.style.transition = 'width 1.5s ease-in-out';
-            bar.style.width = barWidth;
-        }, 300);
+    // Fade out content
+    [nameElement, subtitleElement, footerElement].forEach(el => {
+        el.style.opacity = '0';
+        el.style.transition = 'opacity 0.3s ease';
     });
-};
-
-// Intersection Observer for skill bars animation
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.3
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateSkillBars();
-            observer.unobserve(entry.target);
+    
+    // Update content after fade out
+    setTimeout(() => {
+        nameElement.textContent = translations[lang].name;
+        subtitleElement.textContent = translations[lang].subtitle;
+        footerElement.innerHTML = translations[lang].footer;
+        
+        // Fade in content
+        [nameElement, subtitleElement, footerElement].forEach(el => {
+            el.style.opacity = '1';
+        });
+    }, 300);
+    
+    // Update active button
+    langButtons.forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
         }
     });
-}, observerOptions);
-
-// Observe skills section
-const skillsSection = document.querySelector('.skills');
-if (skillsSection) {
-    observer.observe(skillsSection);
+    
+    // Save to localStorage
+    localStorage.setItem('selectedLang', lang);
+    currentLang = lang;
 }
 
-// Add scroll effect to navbar
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
-        navbar.style.padding = '10px 0';
-    } else {
-        navbar.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
-        navbar.style.padding = '20px 0';
-    }
-});
+// Function to setup event listeners
+function setupEventListeners() {
+    // Add click events to language buttons
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            if (lang !== currentLang) {
+                applyLanguage(lang);
+            }
+        });
+    });
+    
+    // Add hover effect to social links
+    const socialLinks = document.querySelectorAll('.social-link');
+    socialLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            link.style.transform = 'translateY(-3px)';
+        });
+        
+        link.addEventListener('mouseleave', () => {
+            link.style.transform = 'translateY(0)';
+        });
+    });
+}
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement)
+// Initialize page
+function initPage() {
+    // Apply saved language
+    applyLanguage(currentLang);
+    
+    // Setup event listeners
+    setupEventListeners();
+    
+    // Handle window resize for responsive adjustments
+    window.addEventListener('resize', handleResize);
+}
+
+// Handle window resize
+function handleResize() {
+    // Adjust font sizes for mobile
+    if (window.innerWidth < 768) {
+        document.querySelector('.language-switcher').style.flexWrap = 'wrap';
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', initPage);
