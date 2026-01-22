@@ -21,10 +21,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
 html {
     font-size: 16px;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -245,3 +248,4 @@ body[dir="rtl"] .language-switcher {
         margin-bottom: var(--spacing-lg);
     }
 }
+
