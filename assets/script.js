@@ -3,14 +3,14 @@ const translations = {
     en: {
         dir: "ltr",
         name: "Abdullah Jaffal",
-        subtitle: "A personal space under construction",
+        subtitle: "A personal space, in progress",
         footer: "&copy; 2026 Abdullah Jaffal. All rights reserved."
     },
     ar: {
         dir: "rtl",
-        name: "عبد الله جفاّل",
+        name: "عبد الله جفَّال",
         subtitle: "مساحة شخصية، قيد الإنشاء",
-        footer: "&copy; 2026 عبد الله جفال. جميع الحقوق محفوظة."
+        footer: "&copy; 2026 عبد الله جفَّال. جميع الحقوق محفوظة."
     },
     tr: {
         dir: "ltr",
