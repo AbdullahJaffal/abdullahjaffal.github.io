@@ -366,19 +366,8 @@ textarea.form-input {
 }
 
 [lang="en"],
-[lang="tr"],
-[lang="ru"] {
+[lang="tr"] {
     font-family: 'Inter', sans-serif;
-}
-
-/* Russian language adjustments */
-[lang="ru"] {
-    letter-spacing: normal;
-}
-
-[lang="ru"] .tracking-wide,
-[lang="ru"] .tracking-wider {
-    letter-spacing: normal;
 }
 
 /* Turkish language adjustments */
