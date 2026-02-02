@@ -403,141 +403,6 @@ const translations = {
         // Footer
         copyright: "© 2026 Abdullah Jaffal. Tüm hakları saklıdır.",
         backToTop: "Başa Dön"
-    },
-    
-    ru: {
-        // Navigation
-        home: "Главная",
-        experience: "Опыт",
-        education: "Образование",
-        skills: "Навыки",
-        projects: "Проекты",
-        contact: "Контакты",
-        
-        // Hero
-        engineering: "Инженерные",
-        infrastructure: "Инфраструктурные",
-        and: "и",
-        roadDesign: "Дорожные",
-        solutions: "Решения",
-        yearsExperience: "Лет опыта",
-        projectsCompleted: "Завершенных проектов",
-        countriesServed: "Стран",
-        viewExperience: "Посмотреть опыт",
-        downloadCv: "Скачать резюме",
-        
-        // Experience
-        experienceSubtitle: "Профессиональный путь и ключевые роли в инфраструктуре и инженерии",
-        present: "Настоящее время",
-        fullTime: "Полная занятость",
-        remoteSince2025: "Удаленно с 2025",
-        infrastructureEngineer: "Инженер по инфраструктуре и дорожному проектированию",
-        experienceDescription1: "Проектирование комплексных инфраструктурных систем, включая канализационные сети, ливневую канализацию, системы пожаротушения, ирригацию и водоснабжение. Проведение дорожного проектирования, анализа покрытий, транспортных исследований и планирования перекрестков.",
-        notableProjects: "Значимые проекты",
-        project1: "Инфраструктура поселка из 170 вилл с трапециевидными водоводами и коробчатыми водопропускными трубами",
-        project2: "Инфраструктура отеля на археологическом участке со специализированной дренажной защитой",
-        project3: "Система управления паводками для отеля с автоматической конструкцией резервного резервуара",
-        project4: "Административные объекты ветряных электростанций в удаленных горных районах",
-        project5: "Жилые и коммерческие комплексы в Монголии с адаптацией к экстремальному климату",
-        stormwaterManagement: "Управление ливневыми водами",
-        roadDesign: "Дорожное проектирование",
-        infrastructurePlanning: "Планирование инфраструктуры",
-        
-        sixMonths: "6 месяцев",
-        salesRepresentative: "Представитель по продажам",
-        experienceDescription2: "Управление операциями продаж, переговоры с клиентами и организация контрактов. Оказание переводческой поддержки международным клиентам и разработка индивидуальных предложений.",
-        salesManagement: "Управление продажами",
-        clientRelations: "Работа с клиентами",
-        contractNegotiation: "Переговоры по контрактам",
-        multilingualSupport: "Многоязычная поддержка",
-        
-        fiveMonths: "5 месяцев",
-        internship: "Стажировка",
-        traineeEngineer: "Стажер-инженер - Производственный отдел",
-        experienceDescription3: "Управление производственным процессом, надзор за командами и временное выполнение обязанностей начальника производства. Разработка систем Excel для расчетов сырья и контроля запасов.",
-        productionManagement: "Управление производством",
-        teamSupervision: "Надзор за командой",
-        inventoryControl: "Контроль запасов",
-        
-        // Education
-        bachelorDegree: "Бакалавр наук в области гражданского строительства",
-        educationDescription: "Сочетание теоретических основ с практическим применением через практическое обучение и прикладные проекты. Сосредоточение на проектировании инфраструктуры и дорог с акцентом на реальные инженерные задачи.",
-        gpa: "Средний балл",
-        professionalMembership: "Профессиональное членство",
-        chamberEngineers: "Палата гражданских инженеров Турции",
-        memberSince2021: "Член с 2021 года",
-        selectedProjects: "Избранные академические проекты",
-        roadDesignProject: "Проект дорожного проектирования",
-        roadDesignDescription: "Проектирование дороги длиной 1500 метров с топографическим выбором маршрута, анализом поперечного сечения, продольным профилированием и балансом земляных работ.",
-        roadPlanning: "Планирование дорог",
-        urbanInfrastructure: "Проектирование городской инфраструктуры",
-        urbanInfrastructureDescription: "Проектирование канализационных, хозяйственно-питьевых и ливневых сетей для жилых районов с учетом будущего роста населения и оценкой интенсивности осадков.",
-        hydraulicDesign: "Гидравлическое проектирование",
-        networkPlanning: "Планирование сетей",
-        urbanDevelopment: "Градостроительство",
-        materialResearch: "Исследование материалов",
-        materialResearchDescription: "Исследование 'Потенциальные применения диатомита в цементной и бетонной технологии' для устойчивых строительных материалов.",
-        materialsScience: "Материаловедение",
-        sustainability: "Устойчивое развитие",
-        concreteTechnology: "Технология бетона",
-        
-        // Skills
-        skillsSubtitle: "Технический опыт и профессиональные компетенции, приобретенные через образование и практический опыт",
-        technicalExpertise: "Техническая экспертиза",
-        softwareProficiency: "Владение программным обеспечением",
-        expert: "Эксперт",
-        advanced: "Продвинутый",
-        intermediate: "Средний",
-        engineeringCompetencies: "Инженерные компетенции",
-        infrastructureDesign: "Проектирование инфраструктуры",
-        hydraulicCalculations: "Гидравлические расчеты",
-        trafficAnalysis: "Анализ трафика",
-        projectManagement: "Управление проектами",
-        languages: "Языки",
-        arabic: "Арабский",
-        native: "Родной",
-        turkish: "Турецкий",
-        english: "Английский",
-        upperIntermediate: "Выше среднего (B2)",
-        additionalCompetencies: "Дополнительные компетенции",
-        technicalDevelopment: "Техническая разработка",
-        frontendBackend: "Фронтенд и бэкенд разработка",
-        strategicThinking: "Стратегическое мышление",
-        chessEnthusiast: "Любитель шахмат - средний уровень",
-        creativeWriting: "Креативное письмо",
-        technicalFiction: "Техническое и художественное письмо",
-        
-        // Projects
-        projectsSubtitle: "Ключевые инфраструктурные и инженерные проекты, демонстрирующие экспертизу и инновации",
-        villaCompound: "Поселок из 170 вилл",
-        villaCompoundDescription: "Полное проектирование инфраструктуры и внутренних дорог для элитного поселка вилл в Стамбуле.",
-        stormwaterDrainage: "Ливневая канализация",
-        waterSupply: "Водоснабжение",
-        archaeologicalHotel: "Отель на археологическом участке",
-        archaeologicalHotelDescription: "Проектирование инфраструктуры для отеля на охраняемом археологическом участке со специализированным дренажем.",
-        heritageProtection: "Защита наследия",
-        specialDrainage: "Специальный дренаж",
-        sitePreservation: "Сохранение участка",
-        floodManagement: "Система управления паводками",
-        floodManagementDescription: "Автоматическая система резервного резервуара для отеля в паводкоопасной зоне с интеллектуальным управлением дренажем.",
-        smartSystems: "Интеллектуальные системы",
-        drainageControl: "Управление дренажем",
-        
-        // Contact
-        contactSubtitle: "Не стесняйтесь обращаться для сотрудничества, возможностей или просто для связи",
-        getInTouch: "Связаться",
-        location: "Местоположение",
-        phone: "Телефон",
-        email: "Электронная почта",
-        connectWithMe: "Связаться со мной",
-        name: "Имя",
-        subject: "Тема",
-        message: "Сообщение",
-        sendMessage: "Отправить сообщение",
-        
-        // Footer
-        copyright: "© 2026 Абдулла Джаффаль. Все права защищены.",
-        backToTop: "Вернуться к началу"
     }
 };
 
@@ -755,7 +620,6 @@ function setupForm() {
         if (!formData.name || !formData.email || !formData.message) {
             alert(currentLang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة.' : 
                   currentLang === 'tr' ? 'Lütfen tüm gerekli alanları doldurun.' :
-                  currentLang === 'ru' ? 'Пожалуйста, заполните все обязательные поля.' :
                   'Please fill in all required fields.');
             return;
         }
@@ -763,7 +627,6 @@ function setupForm() {
         // Show success message
         alert(currentLang === 'ar' ? 'شكراً لك على رسالتك! سأعود إليك قريباً.' :
               currentLang === 'tr' ? 'Mesajınız için teşekkürler! Size en kısa sürede döneceğim.' :
-              currentLang === 'ru' ? 'Спасибо за ваше сообщение! Я свяжусь с вами в ближайшее время.' :
               'Thank you for your message! I will get back to you soon.');
         
         // Reset form
