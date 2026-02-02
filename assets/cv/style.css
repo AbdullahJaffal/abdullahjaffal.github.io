@@ -359,6 +359,9 @@ textarea.form-input {
     padding-left: 0;
     padding-right: 2rem;
 }
+[dir="rtl"] .navbar {
+    direction: rtl;
+}
 
 /* Language-specific font families */
 [lang="ar"] {
