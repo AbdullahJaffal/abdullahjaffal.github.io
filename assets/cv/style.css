@@ -309,60 +309,11 @@ textarea.form-input {
     }
 }
 
-/* RTL Support */
-[dir="rtl"] .experience-item {
-    grid-template-columns: 1fr 120px;
-}
-
-[dir="rtl"] .experience-date {
-    text-align: right;
-}
 
 [dir="rtl"] .nav-link::after {
-    left: auto;
     right: 0;
+    left: auto;
 }
-
-[dir="rtl"] .primary-btn i,
-[dir="rtl"] .secondary-btn i {
-    margin-left: 0;
-    margin-right: 8px;
-}
-
-[dir="rtl"] .primary-btn i.fa-arrow-right {
-    margin-left: 0;
-    margin-right: 8px;
-    transform: rotate(180deg);
-}
-
-[dir="rtl"] .flex.items-start .mr-4 {
-    margin-right: 0;
-    margin-left: 1rem;
-}
-
-[dir="rtl"] .ml-2 {
-    margin-left: 0;
-    margin-right: 0.5rem;
-}
-
-[dir="rtl"] .space-x-4 > * + * {
-    margin-left: 0;
-    margin-right: 1rem;
-}
-
-[dir="rtl"] .border-l {
-    border-left: none;
-    border-right: 1px solid #e0e0e0;
-}
-
-[dir="rtl"] .pl-8 {
-    padding-left: 0;
-    padding-right: 2rem;
-}
-[dir="rtl"] .navbar {
-    direction: rtl;
-}
-
 /* Language-specific font families */
 [lang="ar"] {
     font-family: 'IBM Plex Sans Arabic', sans-serif;
