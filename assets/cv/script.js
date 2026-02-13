@@ -2,6 +2,7 @@
 const translations = {
     en: {
         // Navigation
+        dir: "ltr",
         home: "Home",
         experience: "Experience",
         education: "Education",
@@ -137,6 +138,7 @@ const translations = {
     
     ar: {
         // Navigation
+        dir: "rtl",
         home: "الرئيسية",
         experience: "الخبرة",
         education: "التعليم",
@@ -272,6 +274,7 @@ const translations = {
     
     tr: {
         // Navigation
+        dir: "ltr",
         home: "Ana Sayfa",
         experience: "Deneyim",
         education: "Eğitim",
