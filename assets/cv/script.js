@@ -448,34 +448,36 @@ function initPage() {
 
 // Function to apply language
 function applyLanguage(lang) {
-    // Update body direction and lang attribute
-    bodyElement.dir = translations[lang].dir || 'ltr';
+    const langConfig = translations[lang] || translations['en'];
+    
+    bodyElement.dir = langConfig.dir || 'ltr';
     bodyElement.lang = lang;
     
-    // Update font family based on language
+    const linksContainer = document.getElementById('nav-links-container');
+    if (linksContainer) {
+        linksContainer.dir = langConfig.dir || 'ltr';
+    }
+    
     if (lang === 'ar') {
         bodyElement.style.fontFamily = "'IBM Plex Sans Arabic', sans-serif";
     } else {
         bodyElement.style.fontFamily = "'Inter', sans-serif";
     }
     
-    // Update all text elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
+        if (langConfig[key]) {
+            element.textContent = langConfig[key];
         }
     });
     
-    // Update placeholders for form inputs
     document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
         const key = element.getAttribute('data-i18n-placeholder');
-        if (translations[lang] && translations[lang][key]) {
-            element.placeholder = translations[lang][key];
+        if (langConfig[key]) {
+            element.placeholder = langConfig[key];
         }
     });
     
-    // Update active language button
     langButtons.forEach(btn => {
         if (btn.getAttribute('data-lang') === lang) {
             btn.classList.add('active');
@@ -484,13 +486,12 @@ function applyLanguage(lang) {
         }
     });
     
-    // Update copyright year
+    
     const copyrightElement = document.getElementById('copyright');
-    if (copyrightElement && translations[lang] && translations[lang].copyright) {
-        copyrightElement.textContent = translations[lang].copyright;
+    if (copyrightElement && langConfig.copyright) {
+        copyrightElement.textContent = langConfig.copyright;
     }
     
-    // Save to localStorage
     localStorage.setItem('selectedLang', lang);
     currentLang = lang;
 }
