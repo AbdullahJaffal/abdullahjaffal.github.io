@@ -12,10 +12,11 @@ const translations = {
         
         // Hero
         engineering: "Engineering",
-        infrastructure: "Infrastructure",
-        and: "&",
-        roadDesign: "Road Design",
+        lifelines: "Lifelines",
+        for: "for",
+        futurecities: "Future Cities",
         solutions: "Solutions",
+        herodescription:"Infrastructure Design Engineer specializing in mega-scale hydraulic systems, utility galleries, and design automation. Turning complex master plans into sustainable urban realities.",
         yearsExperience: "Years Experience",
         projectsCompleted: "Projects Completed",
         countriesServed: "Countries Served",
