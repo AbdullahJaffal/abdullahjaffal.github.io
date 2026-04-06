@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdullah Jaffal | Engineering Portfolio</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Custom Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -35,18 +33,14 @@
         }
     </script>
     
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/cv/style.css">
     
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💼</text></svg>">
 </head>
 <body class="font-sans text-text bg-white" dir="ltr" lang="en">
-    <!-- Top Navigation Bar -->
     <nav dir="ltr" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 backdrop-blur-sm bg-white/95">
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-center h-16">
@@ -83,11 +77,20 @@
                 </div>
             </div>
         </div>
+        
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200">
+            <div class="px-6 py-4 space-y-4 flex flex-col">
+                <a href="#hero" class="mobile-nav-link text-lg font-medium" data-section="hero" data-i18n="home">Home</a>
+                <a href="#experience" class="mobile-nav-link text-lg font-medium" data-section="experience" data-i18n="experience">Experience</a>
+                <a href="#education" class="mobile-nav-link text-lg font-medium" data-section="education" data-i18n="education">Education</a>
+                <a href="#skills" class="mobile-nav-link text-lg font-medium" data-section="skills" data-i18n="skills">Skills</a>
+                <a href="#projects" class="mobile-nav-link text-lg font-medium" data-section="projects" data-i18n="projects">Projects</a>
+                <a href="#contact" class="mobile-nav-link text-lg font-medium" data-section="contact" data-i18n="contact">Contact</a>
+            </div>
+        </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="pt-16">
-        <!-- Hero Section -->
         <section id="hero" class="min-h-screen flex items-center border-b border-gray-200" data-section="hero">
             <div class="container mx-auto px-6 py-24 lg:py-32">
                 <div class="max-w-6xl mx-auto">
@@ -133,8 +136,7 @@
             </div>
         </section>
 
-         <!-- Projects Section -->
-        <section id="projects" class="py-24 lg:py-32 border-b border-gray-200" data-section="projects">
+         <section id="projects" class="py-24 lg:py-32 border-b border-gray-200" data-section="projects">
             <div class="container mx-auto px-6">
                 <div class="max-w-5xl mx-auto">
                     <div class="mb-16">
@@ -153,7 +155,7 @@
                                 <h3 class="text-lg font-bold mb-2" data-i18n="tashkentTitle">New Tashkent City</h3>
                                 <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="tashkentDescShort">Complete infrastructure and internal road design for a 6,000-hectare project.</p>
                                 <span class="text-accent text-sm font-semibold flex items-center hover:underline">
-                                    View Details <span data-i18n="viewDetails"></span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
+                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
                                 </span>
                             </div>
                         </div>
@@ -163,10 +165,10 @@
                                 <i class="fas fa-home text-4xl text-accent"></i>
                             </div>
                             <div class="p-5">
-                                <h3 class="text-lg font-bold mb-2">170-Villa Compound</h3>
-                                <p class="text-gray-500 text-sm mb-4 line-clamp-2">Complete infrastructure and internal road design for luxury villa compound.</p>
+                                <h3 class="text-lg font-bold mb-2" data-i18n="villaCompound">170-Villa Compound</h3>
+                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="villaCompoundDescription">Complete infrastructure and internal road design for luxury villa compound.</p>
                                 <span class="text-accent text-sm font-semibold flex items-center hover:underline">
-                                    View Details <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
                                 </span>
                             </div>
                         </div>
@@ -176,10 +178,10 @@
                                 <i class="fas fa-hotel text-4xl text-accent"></i>
                             </div>
                             <div class="p-5">
-                                <h3 class="text-lg font-bold mb-2">Archaeological Site Hotel</h3>
-                                <p class="text-gray-500 text-sm mb-4 line-clamp-2">Infrastructure design for hotel on protected archaeological site.</p>
+                                <h3 class="text-lg font-bold mb-2" data-i18n="archaeologicalHotel">Archaeological Site Hotel</h3>
+                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="archaeologicalHotelDescription">Infrastructure design for hotel on protected archaeological site.</p>
                                 <span class="text-accent text-sm font-semibold flex items-center hover:underline">
-                                    View Details <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
                                 </span>
                             </div>
                         </div>
@@ -189,10 +191,10 @@
                                 <i class="fas fa-water text-4xl text-accent"></i>
                             </div>
                             <div class="p-5">
-                                <h3 class="text-lg font-bold mb-2">Flood Management System</h3>
-                                <p class="text-gray-500 text-sm mb-4 line-clamp-2">Automatic reserve tank system for hotel in flood-prone area.</p>
+                                <h3 class="text-lg font-bold mb-2" data-i18n="floodManagement">Flood Management System</h3>
+                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="floodManagementDescription">Automatic reserve tank system for hotel in flood-prone area.</p>
                                 <span class="text-accent text-sm font-semibold flex items-center hover:underline">
-                                    View Details <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
                                 </span>
                             </div>
                         </div>
@@ -214,7 +216,6 @@
             </div>
         </div>
 
-        <!-- Experience Section -->
         <section id="experience" class="py-24 lg:py-32 border-b border-gray-200" data-section="experience">
             <div class="container mx-auto px-6">
                 <div class="max-w-5xl mx-auto">
@@ -224,10 +225,8 @@
                         <p class="text-light mt-4 max-w-2xl" data-i18n="experienceSubtitle">Professional journey and key roles in infrastructure and engineering</p>
                     </div>
                     
-                    <!-- Experience Timeline -->
                     <div class="space-y-16">
 
-                        <!-- Experience Item 1 -->
                         <div class="experience-item">
                             <div class="experience-date">
                                 <div class="date-year">Jul 2025</div>
@@ -275,7 +274,6 @@
                             </div>
                         </div>
 
-                        <!-- Experience Item 2 -->
                         <div class="experience-item">
                             <div class="experience-date">
                                 <div class="date-year">jan 2023</div>
@@ -320,7 +318,6 @@
                             </div>
                         </div>
                         
-                        <!-- Experience Item 3 -->
                         <div class="experience-item">
                             <div class="experience-date">
                                 <div class="date-year">Feb 2022</div>
@@ -346,7 +343,6 @@
                             </div>
                         </div>
                         
-                        <!-- Experience Item 4 -->
                         <div class="experience-item">
                             <div class="experience-date">
                                 <div class="date-year">Feb 2021</div>
@@ -372,7 +368,6 @@
                             </div>
                         </div>
                         
-                        <!-- Experience Item 5 -->
                         <div class="experience-item">
                             <div class="experience-date">
                                 <div class="date-year">Jun 2020</div>
@@ -398,7 +393,6 @@
                             </div>
                         </div>
 
-                        <!-- Experience Item 6 -->
                         <div class="experience-item">
                             <div class="experience-date">
                                 <div class="date-year">Aug 2019</div>
@@ -426,7 +420,6 @@
             </div>
         </section>
 
-        <!-- Education Section -->
         <section id="education" class="py-24 lg:py-32 border-b border-gray-200" data-section="education">
             <div class="container mx-auto px-6">
                 <div class="max-w-5xl mx-auto">
@@ -436,7 +429,6 @@
                     </div>
                     
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        <!-- Education Details -->
                         <div>
                             <div class="mb-8">
                                 <div class="flex items-center justify-between mb-4">
@@ -453,7 +445,6 @@
                                 </div>
                             </div>
                             
-                            <!-- Professional Membership -->
                             <div class="border border-gray-200 p-6">
                                 <h4 class="font-bold mb-3 uppercase tracking-wide text-sm" data-i18n="professionalMembership">Professional Membership</h4>
                                 <div class="flex items-center">
@@ -468,7 +459,6 @@
                             </div>
                         </div>
                         
-                        <!-- Academic Projects -->
                         <div>
                             <h4 class="text-xl font-bold mb-6" data-i18n="selectedProjects">Selected Academic Projects</h4>
                             <div class="space-y-6">
@@ -514,7 +504,6 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="py-24 lg:py-32 border-b border-gray-200" data-section="skills">
             <div class="container mx-auto px-6">
                 <div class="max-w-5xl mx-auto">
@@ -525,11 +514,9 @@
                     </div>
                     
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        <!-- Technical Skills -->
                         <div>
                             <h3 class="text-2xl font-bold mb-8" data-i18n="technicalExpertise">Technical Expertise</h3>
                             <div class="space-y-8">
-                                <!-- Software Skills -->
                                 <div>
                                     <h4 class="font-bold mb-4 uppercase tracking-wide text-sm" data-i18n="softwareProficiency">Software Proficiency</h4>
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -572,7 +559,6 @@
                                     </div>
                                 </div>
                                 
-                                <!-- Core Competencies -->
                                 <div>
                                     <h4 class="font-bold mb-4 uppercase tracking-wide text-sm" data-i18n="engineeringCompetencies">Engineering Competencies</h4>
                                     <div class="grid grid-cols-2 gap-3">
@@ -599,9 +585,7 @@
                             </div>
                         </div>
                         
-                        <!-- Languages & Additional -->
                         <div>
-                            <!-- Languages -->
                             <div class="mb-12">
                                 <h3 class="text-2xl font-bold mb-8" data-i18n="languages">Languages</h3>
                                 <div class="space-y-6">
@@ -635,7 +619,6 @@
                                 </div>
                             </div>
                             
-                            <!-- Additional Skills -->
                             <div>
                                 <h3 class="text-2xl font-bold mb-8" data-i18n="additionalCompetencies">Additional Competencies</h3>
                                 <div class="space-y-4">
@@ -680,7 +663,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-24 lg:py-32" data-section="contact">
             <div class="container mx-auto px-6">
                 <div class="max-w-5xl mx-auto">
@@ -691,7 +673,6 @@
                     </div>
                     
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        <!-- Contact Information -->
                         <div>
                             <h3 class="text-2xl font-bold mb-8" data-i18n="getInTouch">Get In Touch</h3>
                             
@@ -727,7 +708,6 @@
                                 </div>
                             </div>
                             
-                            <!-- Social Links -->
                             <div class="mt-12 pt-8 border-t border-gray-200">
                                 <h4 class="font-bold mb-6" data-i18n="connectWithMe">Connect with me</h4>
                                 <div class="flex space-x-4">
@@ -744,7 +724,6 @@
                             </div>
                         </div>
                         
-                        <!-- Contact Form -->
                         <div>
                             <form id="contact-form" class="space-y-6">
                                 <div>
@@ -778,7 +757,6 @@
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="py-12 border-t border-gray-200">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row justify-between items-center">
@@ -800,7 +778,6 @@
         </footer>
     </main>
 
-    <!-- JavaScript -->
     <script src="assets/cv/script.js"></script>
 </body>
 </html>
