@@ -104,21 +104,59 @@ const translations = {
         creativeWriting: "Creative Writing",
         technicalFiction: "Technical & Fiction Writing",
         
-        // Projects
+        // Projects Subtitle
         projectsSubtitle: "Key infrastructure and engineering projects showcasing expertise and innovation",
+        viewDetails: "View Details",
+        myContribution: "My Contribution:",
+        keyImplementations: "Key Implementations:",
+
+        // Project 1: Tashkent
+        tashkentTitle: "New Tashkent City",
+        tashkentLocation: "Tashkent, Uzbekistan",
+        tashkentScale: "6,000 Hectares",
+        tashkentDescShort: "Complete infrastructure and internal road design for a 6,000-hectare project.",
+        tashkentDesc: "Complete infrastructure and internal road design for a massive urban development project, ensuring sustainable and modern utilities.",
+        urbanPlanning: "Urban Planning",
+        waterSystems: "Water Systems",
+        tashkentCont1: "Utility Galleries: Designed state-of-the-art underground multi-utility tunnels (Galeri) to house potable water, district heating, and electrical lines.",
+        tashkentCont2: "Water Management Ecosystem: Engineered comprehensive networks for stormwater drainage and sewage, including the integration of artificial rivers.",
+        tashkentCont3: "Advanced Water Treatment: Implemented sustainable drainage solutions such as Sludge & Floating Matter Traps.",
+        tashkentCont4: "Fire Safety: Designed city-wide firefighting water supply networks adhering to rigorous international safety standards.",
+        tashkentCont5: "Optimization: Executed complex hydraulic calculations for optimal pipe sizing and network efficiency.",
+
+        // Project 2: 170 Villa
         villaCompound: "170-Villa Compound",
+        villaLocation: "Istanbul, Turkey",
+        villaScale: "Residential Compound",
         villaCompoundDescription: "Complete infrastructure and internal road design for luxury villa compound in Istanbul.",
         stormwaterDrainage: "Stormwater Drainage",
         waterSupply: "Water Supply",
+        villaCont1: "Developed full grading and earthwork optimization plans.",
+        villaCont2: "Designed a complete sanitary sewer and potable water network for 170 individual units.",
+        villaCont3: "Implemented a custom stormwater management system to prevent surface flooding.",
+
+        // Project 3: Archaeological Hotel
         archaeologicalHotel: "Archaeological Site Hotel",
+        archLocation: "Historical District",
+        archScale: "Boutique Hotel",
         archaeologicalHotelDescription: "Infrastructure design for hotel on protected archaeological site with specialized drainage.",
         heritageProtection: "Heritage Protection",
         specialDrainage: "Special Drainage",
         sitePreservation: "Site Preservation",
+        archCont1: "Designed zero-impact foundations and shallow utility trenches to protect historical artifacts.",
+        archCont2: "Engineered a suspended drainage system avoiding ground penetration.",
+        archCont3: "Coordinated closely with preservation authorities to meet strict compliance guidelines.",
+
+        // Project 4: Flood Management
         floodManagement: "Flood Management System",
+        floodLocation: "Coastal Area",
+        floodScale: "Commercial Property",
         floodManagementDescription: "Automatic reserve tank system for hotel in flood-prone area with smart drainage control.",
         smartSystems: "Smart Systems",
         drainageControl: "Drainage Control",
+        floodCont1: "Engineered an automated pumping station and retention basin system.",
+        floodCont2: "Designed backflow prevention mechanisms for high-tide scenarios.",
+        floodCont3: "Integrated smart sensors for real-time water level monitoring and automated response.",
         
         // Contact
         contactSubtitle: "Feel free to reach out for collaboration, opportunities, or just to connect",
@@ -153,6 +191,7 @@ const translations = {
         and: "و",
         roadDesign: "تصميم الطرق",
         solutions: "حلول",
+        herodescription: "مهندس تصميم البنية التحتية، متخصص في الأنظمة الهيدروليكية الضخمة، أنفاق الخدمات، وأتمتة التصميم. تحويل المخططات المعقدة إلى واقع حضري مستدام.",
         yearsExperience: "سنوات الخبرة",
         projectsCompleted: "مشروع مكتمل",
         countriesServed: "دولة تم العمل بها",
@@ -240,21 +279,59 @@ const translations = {
         creativeWriting: "الكتابة الإبداعية",
         technicalFiction: "كتابة تقنية وخيالية",
         
-        // Projects
+        // Projects Subtitle
         projectsSubtitle: "مشاريع البنية التحتية والهندسية الرئيسية التي تبرز الخبرة والابتكار",
+        viewDetails: "عرض التفاصيل",
+        myContribution: "مساهمتي:",
+        keyImplementations: "التنفيذات الرئيسية:",
+
+        // Project 1: Tashkent
+        tashkentTitle: "مدينة طشقند الجديدة",
+        tashkentLocation: "طشقند، أوزبكستان",
+        tashkentScale: "6,000 هكتار",
+        tashkentDescShort: "تصميم كامل للبنية التحتية والطرق الداخلية لمشروع يمتد على 6000 هكتار.",
+        tashkentDesc: "تصميم كامل للبنية التحتية والطرق الداخلية لمشروع تطوير حضري ضخم، مع ضمان مرافق حديثة ومستدامة.",
+        urbanPlanning: "التخطيط الحضري",
+        waterSystems: "أنظمة المياه",
+        tashkentCont1: "أنفاق الخدمات: تصميم أنفاق خدمات متعددة تحت الأرض (Galeri) لاستيعاب مياه الشرب، التدفئة المركزية، والخطوط الكهربائية.",
+        tashkentCont2: "نظام إدارة المياه: هندسة شبكات شاملة لتصريف مياه الأمطار والصرف الصحي، بما في ذلك دمج الأنهار الاصطناعية.",
+        tashkentCont3: "معالجة المياه المتقدمة: تنفيذ حلول تصريف مستدامة مثل مصائد الحمأة والمواد العائمة.",
+        tashkentCont4: "السلامة من الحرائق: تصميم شبكات إمداد مياه لمكافحة الحرائق على مستوى المدينة تلتزم بمعايير السلامة الدولية الصارمة.",
+        tashkentCont5: "التحسين: إجراء حسابات هيدروليكية معقدة لتحديد الحجم الأمثل للأنابيب وكفاءة الشبكة.",
+
+        // Project 2: 170 Villa
         villaCompound: "مجمع 170 فيلا",
+        villaLocation: "إسطنبول، تركيا",
+        villaScale: "مجمع سكني",
         villaCompoundDescription: "تصميم بنية تحتية كاملة وطرق داخلية لمجمع فيلات فاخر في إسطنبول.",
         stormwaterDrainage: "تصريف مياه الأمطار",
         waterSupply: "إمداد المياه",
+        villaCont1: "تطوير خطط كاملة للتسوية وتحسين أعمال الحفر.",
+        villaCont2: "تصميم شبكة متكاملة للصرف الصحي ومياه الشرب لـ 170 وحدة مستقلة.",
+        villaCont3: "تنفيذ نظام مخصص لإدارة مياه الأمطار لمنع الفيضانات السطحية.",
+
+        // Project 3: Archaeological Hotel
         archaeologicalHotel: "فندق الموقع الأثري",
+        archLocation: "منطقة تاريخية",
+        archScale: "فندق بوتيك",
         archaeologicalHotelDescription: "تصميم بنية تحتية لفندق على موقع أثري محمي مع تصريف متخصص.",
         heritageProtection: "حماية التراث",
         specialDrainage: "تصريف خاص",
         sitePreservation: "الحفاظ على الموقع",
+        archCont1: "تصميم أساسات معدومة التأثير وخنادق مرافق ضحلة لحماية القطع الأثرية.",
+        archCont2: "هندسة نظام تصريف معلق يتجنب اختراق الأرض.",
+        archCont3: "التنسيق الوثيق مع سلطات الحفاظ على التراث لتلبية إرشادات الامتثال الصارمة.",
+
+        // Project 4: Flood Management
         floodManagement: "نظام إدارة الفيضانات",
+        floodLocation: "منطقة ساحلية",
+        floodScale: "عقار تجاري",
         floodManagementDescription: "نظام خزان احتياطي آلي للفندق في منطقة معرضة للفيضانات مع تحكم ذكي في التصريف.",
         smartSystems: "أنظمة ذكية",
         drainageControl: "التحكم في التصريف",
+        floodCont1: "هندسة محطة ضخ آلية ونظام حوض احتجاز.",
+        floodCont2: "تصميم آليات منع التدفق العكسي لسيناريوهات المد العالي.",
+        floodCont3: "دمج أجهزة استشعار ذكية لمراقبة مستوى المياه في الوقت الفعلي والاستجابة الآلية.",
         
         // Contact
         contactSubtitle: "لا تتردد في التواصل للتعاون أو الفرص أو مجرد الاتصال",
@@ -289,6 +366,7 @@ const translations = {
         and: "&",
         roadDesign: "Yol Tasarımı",
         solutions: "Çözümler",
+        herodescription: "Mega ölçekli hidrolik sistemler, altyapı galerileri ve tasarım otomasyonu konularında uzmanlaşmış Altyapı Tasarım Mühendisi. Karmaşık master planları sürdürülebilir kentsel gerçekliklere dönüştürüyor.",
         yearsExperience: "Yıl Deneyim",
         projectsCompleted: "Tamamlanan Proje",
         countriesServed: "Hizmet Verilen Ülke",
@@ -376,21 +454,59 @@ const translations = {
         creativeWriting: "Yaratıcı Yazarlık",
         technicalFiction: "Teknik ve Kurgu Yazımı",
         
-        // Projects
+        // Projects Subtitle
         projectsSubtitle: "Uzmanlık ve yenilik sergileyen temel altyapı ve mühendislik projeleri",
+        viewDetails: "Detayları Gör",
+        myContribution: "Katkılarım:",
+        keyImplementations: "Temel Uygulamalar:",
+
+        // Project 1: Tashkent
+        tashkentTitle: "Yeni Taşkent Şehri",
+        tashkentLocation: "Taşkent, Özbekistan",
+        tashkentScale: "6,000 Hektar",
+        tashkentDescShort: "6.000 hektarlık proje için komple altyapı ve iç yol tasarımı.",
+        tashkentDesc: "Sürdürülebilir ve modern kamu hizmetleri sağlayan devasa bir kentsel gelişim projesi için komple altyapı ve iç yol tasarımı.",
+        urbanPlanning: "Şehir Planlama",
+        waterSystems: "Su Sistemleri",
+        tashkentCont1: "Altyapı Galerileri: İçme suyu, bölgesel ısıtma ve elektrik hatlarını barındırmak için son teknoloji yeraltı çoklu altyapı tünelleri (Galeri) tasarlandı.",
+        tashkentCont2: "Su Yönetim Ekosistemi: Yapay nehirlerin entegrasyonu dahil olmak üzere, yağmur suyu drenajı ve kanalizasyon için kapsamlı ağlar oluşturuldu.",
+        tashkentCont3: "Gelişmiş Su Arıtma: Çamur ve Yüzer Madde Tutucular gibi sürdürülebilir drenaj çözümleri uygulandı.",
+        tashkentCont4: "Yangın Güvenliği: Zorlu uluslararası güvenlik standartlarına bağlı şehir çapında yangın söndürme su temin ağları tasarlandı.",
+        tashkentCont5: "Optimizasyon: Optimum boru boyutlandırması ve ağ verimliliği için karmaşık hidrolik hesaplamalar yapıldı.",
+
+        // Project 2: 170 Villa
         villaCompound: "170 Villalık Site",
+        villaLocation: "İstanbul, Türkiye",
+        villaScale: "Konut Sitesi",
         villaCompoundDescription: "İstanbul'da lüks villa sitesi için tam altyapı ve iç yol tasarımı.",
         stormwaterDrainage: "Yağmur Suyu Drenajı",
         waterSupply: "Su Temini",
+        villaCont1: "Tam tesviye ve toprak işleri optimizasyon planları geliştirildi.",
+        villaCont2: "170 bağımsız birim için tam bir sıhhi kanalizasyon ve içme suyu ağı tasarlandı.",
+        villaCont3: "Yüzey su baskınlarını önlemek için özel bir yağmur suyu yönetim sistemi uygulandı.",
+
+        // Project 3: Archaeological Hotel
         archaeologicalHotel: "Arkeolojik Alan Oteli",
+        archLocation: "Tarihi Bölge",
+        archScale: "Butik Otel",
         archaeologicalHotelDescription: "Özel drenaj ile korunan arkeolojik alandaki otel için altyapı tasarımı.",
         heritageProtection: "Kültür Mirası Koruma",
         specialDrainage: "Özel Drenaj",
         sitePreservation: "Alan Koruma",
+        archCont1: "Tarihi eserleri korumak için sıfır etkili temeller ve sığ altyapı hendekleri tasarlandı.",
+        archCont2: "Zemine nüfuz etmeyi önleyen asma bir drenaj sistemi oluşturuldu.",
+        archCont3: "Sıkı uyumluluk yönergelerini karşılamak için koruma yetkilileriyle yakın koordinasyon sağlandı.",
+
+        // Project 4: Flood Management
         floodManagement: "Sel Yönetim Sistemi",
+        floodLocation: "Kıyı Bölgesi",
+        floodScale: "Ticari Mülk",
         floodManagementDescription: "Sel riskli bölgedeki otel için akıllı drenaj kontrolü ile otomatik yedek tank sistemi.",
         smartSystems: "Akıllı Sistemler",
         drainageControl: "Drenaj Kontrolü",
+        floodCont1: "Otomatik bir pompa istasyonu ve tutma havzası sistemi oluşturuldu.",
+        floodCont2: "Yüksek gelgit senaryoları için geri akış önleme mekanizmaları tasarlandı.",
+        floodCont3: "Gerçek zamanlı su seviyesi izleme ve otomatik yanıt için akıllı sensörler entegre edildi.",
         
         // Contact
         contactSubtitle: "İşbirliği, fırsatlar veya sadece bağlantı kurmak için iletişime geçmekten çekinmeyin",
@@ -407,6 +523,68 @@ const translations = {
         // Footer
         copyright: "© 2026 Abdullah Jaffal. Tüm hakları saklıdır.",
         backToTop: "Başa Dön"
+    }
+};
+
+// Data object holding all modal project details
+const projectsData = {
+    'tashkent': {
+        icon: 'fa-city',
+        titleKey: 'tashkentTitle',
+        locationKey: 'tashkentLocation',
+        scaleKey: 'tashkentScale',
+        descriptionKey: 'tashkentDesc',
+        tagsKeys: ['infrastructurePlanning', 'urbanPlanning', 'waterSystems'],
+        contributionTitleKey: 'myContribution',
+        contributionsKeys: [
+            'tashkentCont1',
+            'tashkentCont2',
+            'tashkentCont3',
+            'tashkentCont4',
+            'tashkentCont5'
+        ]
+    },
+    'villa170': {
+        icon: 'fa-home',
+        titleKey: 'villaCompound',
+        locationKey: 'villaLocation',
+        scaleKey: 'villaScale',
+        descriptionKey: 'villaCompoundDescription',
+        tagsKeys: ['stormwaterDrainage', 'roadDesign', 'waterSupply'],
+        contributionTitleKey: 'keyImplementations',
+        contributionsKeys: [
+            'villaCont1',
+            'villaCont2',
+            'villaCont3'
+        ]
+    },
+    'archaeological': {
+        icon: 'fa-hotel',
+        titleKey: 'archaeologicalHotel',
+        locationKey: 'archLocation',
+        scaleKey: 'archScale',
+        descriptionKey: 'archaeologicalHotelDescription',
+        tagsKeys: ['heritageProtection', 'specialDrainage', 'sitePreservation'],
+        contributionTitleKey: 'keyImplementations',
+        contributionsKeys: [
+            'archCont1',
+            'archCont2',
+            'archCont3'
+        ]
+    },
+    'flood': {
+        icon: 'fa-water',
+        titleKey: 'floodManagement',
+        locationKey: 'floodLocation',
+        scaleKey: 'floodScale',
+        descriptionKey: 'floodManagementDescription',
+        tagsKeys: ['floodManagement', 'smartSystems', 'drainageControl'],
+        contributionTitleKey: 'keyImplementations',
+        contributionsKeys: [
+            'floodCont1',
+            'floodCont2',
+            'floodCont3'
+        ]
     }
 };
 
@@ -487,7 +665,6 @@ function applyLanguage(lang) {
         }
     });
     
-    
     const copyrightElement = document.getElementById('copyright');
     if (copyrightElement && langConfig.copyright) {
         copyrightElement.textContent = langConfig.copyright;
@@ -540,11 +717,28 @@ function setupEventListeners() {
             }
         });
     });
+
+    // Modal Close Listeners
+    const modal = document.getElementById('projectModal');
+    if (modal) {
+        // Close modal when clicking outside the content box
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeProjectModal();
+            }
+        });
+    }
+
+    // Close modal on Escape key press
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+            closeProjectModal();
+        }
+    });
 }
 
 // Setup scroll spy
 function setupScrollSpy() {
-    // Create intersection observer
     const observerOptions = {
         root: null,
         rootMargin: '-20% 0px -70% 0px',
@@ -560,7 +754,6 @@ function setupScrollSpy() {
         });
     }, observerOptions);
     
-    // Observe all sections
     sections.forEach(section => {
         observer.observe(section);
     });
@@ -662,12 +855,102 @@ function setupScrollAnimations() {
 
 // Handle responsive adjustments
 function handleResponsive() {
-    // Check if we need to adjust layout for RTL languages
     if (bodyElement.dir === 'rtl') {
         document.body.classList.add('rtl-layout');
     } else {
         document.body.classList.remove('rtl-layout');
     }
+}
+
+// Project Modal Logic
+function openProjectModal(projectId) {
+    const modal = document.getElementById('projectModal');
+    const modalContentBox = document.getElementById('modalContentBox');
+    const modalBody = document.getElementById('modalDynamicBody');
+    const data = projectsData[projectId];
+
+    if (!data || !modal || !modalBody) return;
+
+    // Generate Tags HTML dynamically with data-i18n attributes
+    let tagsHtml = '';
+    if (data.tagsKeys && data.tagsKeys.length > 0) {
+        tagsHtml = '<div class="flex flex-wrap gap-2 mb-6">' + 
+            data.tagsKeys.map(key => `<span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-semibold uppercase tracking-wider" data-i18n="${key}"></span>`).join('') + 
+            '</div>';
+    }
+
+    // Generate Contributions HTML dynamically
+    let contributionsHtml = '';
+    if (data.contributionsKeys && data.contributionsKeys.length > 0) {
+        const listItems = data.contributionsKeys.map(key => `
+            <li class="flex items-start mb-4">
+                <div class="w-1.5 h-1.5 bg-accent rounded-full mt-2.5 mr-4 flex-shrink-0"></div>
+                <span class="text-gray-700 leading-relaxed" data-i18n="${key}"></span>
+            </li>
+        `).join('');
+
+        contributionsHtml = `
+            <div class="mt-8 pt-8 border-t border-gray-100">
+                <h5 class="text-lg font-bold mb-5 text-gray-900" data-i18n="${data.contributionTitleKey}"></h5>
+                <ul>${listItems}</ul>
+            </div>
+        `;
+    }
+
+    // Assemble final Modal Content
+    modalBody.innerHTML = `
+        <div class="w-full h-48 sm:h-64 bg-gray-50 flex items-center justify-center rounded-xl mb-8 border border-gray-100">
+            <i class="fas ${data.icon} text-6xl text-accent"></i>
+        </div>
+        
+        <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-900" data-i18n="${data.titleKey}"></h3>
+        
+        <div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-6 font-medium">
+            <span class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-accent"></i> <span class="ml-1" data-i18n="${data.locationKey}"></span></span>
+            <span class="flex items-center"><i class="fas fa-ruler-combined mr-2 text-accent"></i> <span class="ml-1" data-i18n="${data.scaleKey}"></span></span>
+        </div>
+        
+        ${tagsHtml}
+        
+        <p class="text-gray-600 text-lg leading-relaxed" data-i18n="${data.descriptionKey}"></p>
+        
+        ${contributionsHtml}
+    `;
+
+    // Apply translations to the newly generated modal content
+    const langConfig = translations[currentLang] || translations['en'];
+    modalBody.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (langConfig[key]) {
+            element.textContent = langConfig[key];
+        }
+    });
+
+    // Show Modal with Animation
+    modal.classList.remove('hidden');
+    void modal.offsetWidth; // Force browser reflow
+    modal.classList.remove('opacity-0');
+    modalContentBox.classList.remove('scale-95');
+    
+    // Prevent background scrolling
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal() {
+    const modal = document.getElementById('projectModal');
+    const modalContentBox = document.getElementById('modalContentBox');
+
+    if (!modal) return;
+
+    modal.classList.add('opacity-0');
+    modalContentBox.classList.add('scale-95');
+
+    // Wait for transition to finish before hiding
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        // Restore background scrolling
+        document.body.style.overflow = '';
+    }, 300);
 }
 
 // Initialize when DOM is loaded
@@ -679,7 +962,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Handle initial scroll position
 window.addEventListener('load', () => {
-    // If there's a hash in the URL, scroll to it
     if (window.location.hash) {
         const targetElement = document.querySelector(window.location.hash);
         if (targetElement) {
@@ -694,6 +976,5 @@ window.addEventListener('load', () => {
         }
     }
     
-    // Add loaded class for animations
     document.body.classList.add('loaded');
 });
