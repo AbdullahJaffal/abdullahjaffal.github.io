@@ -1,4 +1,4 @@
-// Complete translations for 4 languages
+// Complete translations for 3 languages
 const translations = {
     en: {
         // Navigation
@@ -109,6 +109,7 @@ const translations = {
         viewDetails: "View Details",
         myContribution: "My Contribution:",
         keyImplementations: "Key Implementations:",
+        projectGallery: "Project Gallery",
 
         // Project 1: Tashkent
         tashkentTitle: "New Tashkent City",
@@ -284,6 +285,7 @@ const translations = {
         viewDetails: "عرض التفاصيل",
         myContribution: "مساهمتي:",
         keyImplementations: "التنفيذات الرئيسية:",
+        projectGallery: "معرض المشروع",
 
         // Project 1: Tashkent
         tashkentTitle: "مدينة طشقند الجديدة",
@@ -459,11 +461,12 @@ const translations = {
         viewDetails: "Detayları Gör",
         myContribution: "Katkılarım:",
         keyImplementations: "Temel Uygulamalar:",
+        projectGallery: "Proje Galerisi",
 
         // Project 1: Tashkent
         tashkentTitle: "Yeni Taşkent Şehri",
         tashkentLocation: "Taşkent, Özbekistan",
-        tashkentScale: "6,000 Hektar",
+        tashkentScale: "6,000 Hectares",
         tashkentDescShort: "6.000 hektarlık proje için komple altyapı ve iç yol tasarımı.",
         tashkentDesc: "Sürdürülebilir ve modern kamu hizmetleri sağlayan devasa bir kentsel gelişim projesi için komple altyapı ve iç yol tasarımı.",
         urbanPlanning: "Şehir Planlama",
@@ -526,10 +529,16 @@ const translations = {
     }
 };
 
-// Data object holding all modal project details
+// Data object holding all modal project details, including main images and gallery
 const projectsData = {
     'tashkent': {
         icon: 'fa-city',
+        mainImage: 'assets/projects/tashkent-main.jpg', // Replace with your actual path
+        gallery: [
+            'assets/projects/tashkent-gallery-1.jpg', // Replace with your actual path
+            'assets/projects/tashkent-gallery-2.jpg', // Replace with your actual path
+            'assets/projects/tashkent-gallery-3.jpg'  // Replace with your actual path
+        ],
         titleKey: 'tashkentTitle',
         locationKey: 'tashkentLocation',
         scaleKey: 'tashkentScale',
@@ -546,6 +555,11 @@ const projectsData = {
     },
     'villa170': {
         icon: 'fa-home',
+        mainImage: 'assets/projects/villa-main.jpg', // Replace with your actual path
+        gallery: [
+            'assets/projects/villa-gallery-1.jpg', // Replace with your actual path
+            'assets/projects/villa-gallery-2.jpg'  // Replace with your actual path
+        ],
         titleKey: 'villaCompound',
         locationKey: 'villaLocation',
         scaleKey: 'villaScale',
@@ -560,6 +574,11 @@ const projectsData = {
     },
     'archaeological': {
         icon: 'fa-hotel',
+        mainImage: 'assets/projects/arch-main.jpg', // Replace with your actual path
+        gallery: [
+            'assets/projects/arch-gallery-1.jpg', // Replace with your actual path
+            'assets/projects/arch-gallery-2.jpg'  // Replace with your actual path
+        ],
         titleKey: 'archaeologicalHotel',
         locationKey: 'archLocation',
         scaleKey: 'archScale',
@@ -574,6 +593,11 @@ const projectsData = {
     },
     'flood': {
         icon: 'fa-water',
+        mainImage: 'assets/projects/flood-main.jpg', // Replace with your actual path
+        gallery: [
+            'assets/projects/flood-gallery-1.jpg', // Replace with your actual path
+            'assets/projects/flood-gallery-2.jpg'  // Replace with your actual path
+        ],
         titleKey: 'floodManagement',
         locationKey: 'floodLocation',
         scaleKey: 'floodScale',
@@ -871,6 +895,13 @@ function openProjectModal(projectId) {
 
     if (!data || !modal || !modalBody) return;
 
+    // Generate main content image or icon fallback
+    const mainContentImage = data.mainImage 
+        ? `<img src="${data.mainImage}" alt="Project Main Image" class="w-full h-48 sm:h-64 object-cover rounded-xl mb-8 border border-gray-100 shadow-sm">`
+        : `<div class="w-full h-48 sm:h-64 bg-gray-50 flex items-center justify-center rounded-xl mb-8 border border-gray-100">
+            <i class="fas ${data.icon} text-6xl text-accent"></i>
+           </div>`;
+
     // Generate Tags HTML dynamically with data-i18n attributes
     let tagsHtml = '';
     if (data.tagsKeys && data.tagsKeys.length > 0) {
@@ -897,11 +928,26 @@ function openProjectModal(projectId) {
         `;
     }
 
+    // Generate Gallery HTML dynamically
+    let galleryHtml = '';
+    if (data.gallery && data.gallery.length > 0) {
+        galleryHtml = `
+            <div class="mt-8 pt-8 border-t border-gray-100">
+                <h5 class="text-lg font-bold mb-5 text-gray-900" data-i18n="projectGallery"></h5>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    ${data.gallery.map(img => `
+                        <div class="aspect-video overflow-hidden rounded-lg border border-gray-100 group cursor-pointer">
+                            <img src="${img}" alt="Gallery Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+
     // Assemble final Modal Content
     modalBody.innerHTML = `
-        <div class="w-full h-48 sm:h-64 bg-gray-50 flex items-center justify-center rounded-xl mb-8 border border-gray-100">
-            <i class="fas ${data.icon} text-6xl text-accent"></i>
-        </div>
+        ${mainContentImage}
         
         <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-900" data-i18n="${data.titleKey}"></h3>
         
@@ -915,6 +961,7 @@ function openProjectModal(projectId) {
         <p class="text-gray-600 text-lg leading-relaxed" data-i18n="${data.descriptionKey}"></p>
         
         ${contributionsHtml}
+        ${galleryHtml}
     `;
 
     // Apply translations to the newly generated modal content
