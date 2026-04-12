@@ -138,7 +138,93 @@
             </div>
         </section>
 
+        <section id="projects" class="py-24 lg:py-32 border-b border-gray-200" data-section="projects">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+                    <div class="mb-16">
+                        <h2 class="text-4xl font-bold tracking-tight mb-4" data-i18n="projects">Notable Projects</h2>
+                        <div class="h-px w-16 bg-accent"></div>
+                        <p class="text-light mt-4 max-w-2xl" data-i18n="projectsSubtitle">Key infrastructure and engineering projects showcasing expertise and innovation</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" onclick="openProjectModal('tashkent')">
+                            <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
+                                <i class="fas fa-city text-4xl text-accent"></i>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold mb-2" data-i18n="proj1Title">New Tashkent City</h3>
+                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="proj1Sub">Complete infrastructure and internal road design for a 6,000-hectare project.</p>
+                                <span class="text-accent text-sm font-semibold flex items-center hover:underline">
+                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
+                                </span>
+                            </div>
+                        </div>
         
+                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" onclick="openProjectModal('villa')">
+                            <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
+                                <i class="fas fa-home text-4xl text-accent"></i>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold mb-2" data-i18n="proj2Title">Istanbul Villa Compound</h3>
+                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="proj2Sub">Complete infrastructure and internal road design for luxury villa compound.</p>
+                                <span class="text-accent text-sm font-semibold flex items-center hover:underline">
+                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" onclick="openProjectModal('archaeological')">
+                            <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
+                                <i class="fas fa-hotel text-4xl text-accent"></i>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold mb-2" data-i18n="archaeologicalHotel">Archaeological Site Hotel</h3>
+                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="archaeologicalHotelDescription">Infrastructure design for hotel on protected archaeological site.</p>
+                                <span class="text-accent text-sm font-semibold flex items-center hover:underline">
+                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" onclick="openProjectModal('flood')">
+                            <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
+                                <i class="fas fa-water text-4xl text-accent"></i>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold mb-2" data-i18n="floodManagement">Flood Management System</h3>
+                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="floodManagementDescription">Automatic reserve tank system for hotel in flood-prone area.</p>
+                                <span class="text-accent text-sm font-semibold flex items-center hover:underline">
+                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" onclick="openProjectModal('industrial')">
+                            <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
+                                <i class="fas fa-industry text-4xl text-accent"></i>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold mb-2" data-i18n="proj3Title">Industrial & Commercial Developments</h3>
+                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="proj3Sub">Hotels and Industrial Facilities</p>
+                                <span class="text-accent text-sm font-semibold flex items-center hover:underline">
+                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div id="projectModal" class="fixed inset-0 z-[100] hidden bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300">
+            <div class="bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative transform scale-95 transition-transform duration-300" id="modalContentBox">
+                <button onclick="closeProjectModal()" class="absolute top-5 right-5 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-200 hover:text-gray-800 focus:outline-none z-10 transition-colors">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+                <div id="modalDynamicBody" class="p-8 sm:p-12"></div>
+            </div>
+        </div>
 
         <section id="experience" class="py-24 lg:py-32 border-b border-gray-200" data-section="experience">
             <div class="container mx-auto px-6">
@@ -155,6 +241,9 @@
                                 <div class="date-duration" data-i18n="present">Present</div>
                             </div>
                             <div class="experience-content">
+                                <div class="mb-2">
+                                    <span class="inline-block px-3 py-1 bg-accent text-white text-sm font-medium" data-i18n="fullTime">Full-Time</span>
+                                </div>
                                 <h3 class="text-2xl font-bold mb-3" data-i18n="expTitle1">Infrastructure Design Engineer</h3>
                                 <h4 class="text-xl text-light mb-4" data-i18n="expCompany1">Elsa Proje | Istanbul, Türkiye & Tashkent, Uzbekistan</h4>
                                 <p class="text-light mb-6 leading-relaxed" data-i18n="expOverview1">
@@ -181,6 +270,12 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="skill-tag">AutoCAD</span>
+                                    <span class="skill-tag">Civil 3D</span>
+                                    <span class="skill-tag">URBANO 11</span>
+                                    <span class="skill-tag">WaterGEMS</span>
+                                </div>
                             </div>
                         </div>
 
@@ -190,6 +285,9 @@
                                 <div class="date-duration" data-i18n="toJul2025">Jul 2025</div>
                             </div>
                             <div class="experience-content">
+                                <div class="mb-2">
+                                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium" data-i18n="fullTime">Full-Time</span>
+                                </div>
                                 <h3 class="text-2xl font-bold mb-3" data-i18n="expTitle2">Infrastructure & Road Design Engineer</h3>
                                 <h4 class="text-xl text-light mb-4" data-i18n="expCompany2">Köroğlu Mühendislik LTD | Istanbul, Türkiye</h4>
                                 <p class="text-light mb-6 leading-relaxed" data-i18n="expOverview2">
@@ -216,6 +314,13 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="skill-tag">AutoCAD</span>
+                                    <span class="skill-tag">Civil 3D</span>
+                                    <span class="skill-tag">URBANO 11</span>
+                                    <span class="skill-tag" data-i18n="roadDesign">Road Design</span>
+                                    <span class="skill-tag" data-i18n="infrastructurePlanning">Infrastructure Planning</span>
+                                </div>
                             </div>
                         </div>
 
@@ -225,6 +330,9 @@
                                 <div class="date-duration" data-i18n="toDec2022">Dec 2022</div>
                             </div>
                             <div class="experience-content">
+                                <div class="mb-2">
+                                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium" data-i18n="fullTime">Full-Time</span>
+                                </div>
                                 <h3 class="text-2xl font-bold mb-3" data-i18n="expTitle3">Sales Representative</h3>
                                 <h4 class="text-xl text-light mb-4" data-i18n="expCompany3">Pala Kalıp Makine | Istanbul, Türkiye</h4>
                                 <ul class="space-y-3">
@@ -242,22 +350,52 @@
 
                         <div class="experience-item">
                             <div class="experience-date">
-                                <div class="date-year">2019</div>
-                                <div class="date-duration">2021</div>
+                                <div class="date-year">Feb 2021</div>
+                                <div class="date-duration" data-i18n="fiveMonths">5 Months</div>
                             </div>
                             <div class="experience-content">
-                                <h3 class="text-2xl font-bold mb-3" data-i18n="expTitle4">Trainee Engineer</h3>
-                                <h4 class="text-xl text-light mb-4" data-i18n="expCompany4">Various Companies (Fibrobeton, Köseoğlu, Koç İnşaat) | Türkiye</h4>
-                                <ul class="space-y-3">
-                                    <li class="flex items-start">
-                                        <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
-                                        <span data-i18n="exp4Task1">Managed production workflows and improved Excel material calculation systems.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
-                                        <span data-i18n="exp4Task2">Conducted static and wind analysis using SAP2000 and developed architectural insights using Revit.</span>
-                                    </li>
-                                </ul>
+                                <div class="mb-2">
+                                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium" data-i18n="internship">Internship</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-3" data-i18n="traineeEngineer">Trainee Engineer - Production Department</h3>
+                                <h4 class="text-xl text-light mb-4">Fibrobeton Yapı Elemanları - Düzce, Türkiye</h4>
+                                <p class="text-light mb-6 leading-relaxed" data-i18n="experienceDescription3">
+                                    Managed production workflow, supervised teams, and temporarily assumed production chief responsibilities. Developed Excel systems for raw material calculations and inventory control.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <div class="experience-date">
+                                <div class="date-year">Jun 2020</div>
+                                <div class="date-duration" data-i18n="2Months">2 Months</div>
+                            </div>
+                            <div class="experience-content">
+                                <div class="mb-2">
+                                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium" data-i18n="internship">Internship</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-3" data-i18n="traineeEngineer">Trainee Engineer - Technical Office</h3>
+                                <h4 class="text-xl text-light mb-4">Köseoğlu Mühendislik - Kilis, Türkiye</h4>
+                                <p class="text-light mb-6 leading-relaxed" data-i18n="experienceDescription3">
+                                    During my internship, I learned about the construction sector in an office environment. I conducted and reviewed static, earthquake, and wind analysis of multi-story reinforced concrete structures using AutoCAD and SAP2000. Additionally, I acquired various insights into designing buildings' exterior and interior appearance using Revit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-date">
+                                <div class="date-year">Aug 2019</div>
+                                <div class="date-duration" data-i18n="2Months">2 Months</div>
+                            </div>
+                            <div class="experience-content">
+                                <div class="mb-2">
+                                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium" data-i18n="internship">Internship</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-3" data-i18n="traineeEngineer">Trainee Engineer - OnSite</h3>
+                                <h4 class="text-xl text-light mb-4">Koç İnşaat - Düzce, Türkiye</h4>
+                                <p class="text-light mb-6 leading-relaxed" data-i18n="experienceDescription3">
+                                    I was present at the construction site of the TOKİ 127+1kD housing project in the Cumayeri district of Düzce, including its infrastructure and landscaping works. By the end of my construction site internship, although my construction and engineering knowledge was insufficient, I developed a general perspective on the field. During the internship, I gained various insights into construction works and site management. Regarding infrastructure, I learned how to use the leveling instrument (nivelman) and understood how essential it is in the process of creating sewage and stormwater drainage systems.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -265,66 +403,242 @@
             </div>
         </section>
 
-        <section id="projects" class="py-24 lg:py-32 border-b border-gray-200" data-section="projects">
+        <section id="education" class="py-24 lg:py-32 border-b border-gray-200" data-section="education">
             <div class="container mx-auto px-6">
                 <div class="max-w-5xl mx-auto">
                     <div class="mb-16">
-                        <h2 class="text-4xl font-bold tracking-tight mb-4" data-i18n="notableProjects">Engineering Portfolio</h2>
+                        <h2 class="text-4xl font-bold tracking-tight mb-4" data-i18n="education">Education</h2>
                         <div class="h-px w-16 bg-accent"></div>
                     </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" onclick="openProjectModal('tashkent')">
-                            <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
-                                <i class="fas fa-city text-4xl text-accent"></i>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <div>
+                            <div class="mb-8">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-2xl font-bold" data-i18n="bachelorDegree">Bachelor of Science in Civil Engineering</h3>
+                                    <span class="text-light">2017 - 2021</span>
+                                </div>
+                                <h4 class="text-xl text-light mb-4">Düzce University</h4>
+                                <p class="text-light mb-4 leading-relaxed" data-i18n="educationDescription">
+                                    Combined theoretical foundations with practical application through hands-on training and applied projects. Focused on infrastructure and road design with emphasis on real-world engineering challenges.
+                                </p>
+                                <div class="flex items-center">
+                                    <span class="font-medium mr-3" data-i18n="gpa">GPA:</span>
+                                    <span class="text-2xl font-bold">3.14</span>
+                                </div>
                             </div>
-                            <div class="p-5">
-                                <h3 class="text-lg font-bold mb-2" data-i18n="proj1Title">New Tashkent City - Phase 1</h3>
-                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="proj1Sub">6,000 Hectares (Mega-Scale Urban Development)</p>
-                                <span class="text-accent text-sm font-semibold flex items-center hover:underline">
-                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
-                                </span>
+                            <div class="border border-gray-200 p-6">
+                                <h4 class="font-bold mb-3 uppercase tracking-wide text-sm" data-i18n="professionalMembership">Professional Membership</h4>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-gray-100 flex items-center justify-center mr-4">
+                                        <i class="fas fa-award text-accent"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-medium" data-i18n="chamberEngineers">Chamber of Civil Engineers in Turkey</div>
+                                        <div class="text-light text-sm" data-i18n="memberSince2021">Member since 2021</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-        
-                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" onclick="openProjectModal('villa')">
-                            <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
-                                <i class="fas fa-home text-4xl text-accent"></i>
-                            </div>
-                            <div class="p-5">
-                                <h3 class="text-lg font-bold mb-2" data-i18n="proj2Title">Istanbul Villa Compound</h3>
-                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="proj2Sub">170 Residential Units</p>
-                                <span class="text-accent text-sm font-semibold flex items-center hover:underline">
-                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
-                                </span>
-                            </div>
-                        </div>
-        
-                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" onclick="openProjectModal('industrial')">
-                            <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
-                                <i class="fas fa-industry text-4xl text-accent"></i>
-                            </div>
-                            <div class="p-5">
-                                <h3 class="text-lg font-bold mb-2" data-i18n="proj3Title">Industrial & Commercial Developments</h3>
-                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="proj3Sub">Hotels and Industrial Facilities</p>
-                                <span class="text-accent text-sm font-semibold flex items-center hover:underline">
-                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
-                                </span>
+                        <div>
+                            <h4 class="text-xl font-bold mb-6" data-i18n="selectedProjects">Selected Academic Projects</h4>
+                            <div class="space-y-6">
+                                <div class="border border-gray-200 p-6">
+                                    <h5 class="font-bold mb-3" data-i18n="roadDesignProject">Road Design Project</h5>
+                                    <p class="text-light mb-3" data-i18n="roadDesignDescription">
+                                        Designed a 1,500-meter road with topographic route selection, cross-section analysis, longitudinal profiling, and earthwork balancing.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-tag-sm">Topography</span>
+                                        <span class="skill-tag-sm">Earthwork</span>
+                                        <span class="skill-tag-sm" data-i18n="roadPlanning">Road Planning</span>
+                                    </div>
+                                </div>
+                                <div class="border border-gray-200 p-6">
+                                    <h5 class="font-bold mb-3" data-i18n="urbanInfrastructure">Urban Infrastructure Design</h5>
+                                    <p class="text-light mb-3" data-i18n="urbanInfrastructureDescription">
+                                        Designed sewer, domestic water, and stormwater networks for residential areas with future growth considerations and rainfall intensity estimation.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-tag-sm" data-i18n="hydraulicDesign">Hydraulic Design</span>
+                                        <span class="skill-tag-sm" data-i18n="networkPlanning">Network Planning</span>
+                                        <span class="skill-tag-sm" data-i18n="urbanDevelopment">Urban Development</span>
+                                    </div>
+                                </div>
+                                <div class="border border-gray-200 p-6">
+                                    <h5 class="font-bold mb-3" data-i18n="materialResearch">Material Research Study</h5>
+                                    <p class="text-light mb-3" data-i18n="materialResearchDescription">
+                                        Investigated "Potential Applications of Diatomite in Cement and Concrete Technology" for sustainable construction materials.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-tag-sm" data-i18n="materialsScience">Materials Science</span>
+                                        <span class="skill-tag-sm" data-i18n="sustainability">Sustainability</span>
+                                        <span class="skill-tag-sm" data-i18n="concreteTechnology">Concrete Technology</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <div id="projectModal" class="fixed inset-0 z-[100] hidden bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300">
-            <div class="bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative transform scale-95 transition-transform duration-300" id="modalContentBox">
-                <button onclick="closeProjectModal()" class="absolute top-5 right-5 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-200 hover:text-gray-800 focus:outline-none z-10 transition-colors">
-                    <i class="fas fa-times text-xl"></i>
-                </button>
-                <div id="modalDynamicBody" class="p-8 sm:p-12"></div>
+        <section id="skills" class="py-24 lg:py-32 border-b border-gray-200" data-section="skills">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+                    <div class="mb-16">
+                        <h2 class="text-4xl font-bold tracking-tight mb-4" data-i18n="skills">Skills</h2>
+                        <div class="h-px w-16 bg-accent"></div>
+                        <p class="text-light mt-4 max-w-2xl" data-i18n="skillsSubtitle">Technical expertise and professional competencies developed through education and practical experience</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-8" data-i18n="technicalExpertise">Technical Expertise</h3>
+                            <div class="space-y-8">
+                                <div>
+                                    <h4 class="font-bold mb-4 uppercase tracking-wide text-sm" data-i18n="softwareProficiency">Software Proficiency</h4>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div class="border border-gray-200 p-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="font-medium">AutoCAD</span>
+                                                <span class="text-accent text-sm font-medium" data-i18n="expert">Expert</span>
+                                            </div>
+                                            <div class="h-1 bg-gray-100">
+                                                <div class="h-full bg-accent" style="width: 95%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="border border-gray-200 p-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="font-medium">Civil 3D</span>
+                                                <span class="text-accent text-sm font-medium" data-i18n="advanced">Advanced</span>
+                                            </div>
+                                            <div class="h-1 bg-gray-100">
+                                                <div class="h-full bg-accent" style="width: 85%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="border border-gray-200 p-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="font-medium">Urbano II</span>
+                                                <span class="text-accent text-sm font-medium" data-i18n="advanced">Advanced</span>
+                                            </div>
+                                            <div class="h-1 bg-gray-100">
+                                                <div class="h-full bg-accent" style="width: 80%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="border border-gray-200 p-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="font-medium">SAP2000</span>
+                                                <span class="text-accent text-sm font-medium" data-i18n="intermediate">Intermediate</span>
+                                            </div>
+                                            <div class="h-1 bg-gray-100">
+                                                <div class="h-full bg-accent" style="width: 70%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-bold mb-4 uppercase tracking-wide text-sm" data-i18n="engineeringCompetencies">Engineering Competencies</h4>
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <div class="border border-gray-200 p-3 text-center">
+                                            <div class="text-light text-sm mb-1" data-i18n="infrastructureDesign">Infrastructure Design</div>
+                                        </div>
+                                        <div class="border border-gray-200 p-3 text-center">
+                                            <div class="text-light text-sm mb-1" data-i18n="stormwaterManagement">Stormwater Management</div>
+                                        </div>
+                                        <div class="border border-gray-200 p-3 text-center">
+                                            <div class="text-light text-sm mb-1" data-i18n="roadPlanning">Road Planning</div>
+                                        </div>
+                                        <div class="border border-gray-200 p-3 text-center">
+                                            <div class="text-light text-sm mb-1" data-i18n="hydraulicCalculations">Hydraulic Calculations</div>
+                                        </div>
+                                        <div class="border border-gray-200 p-3 text-center">
+                                            <div class="text-light text-sm mb-1" data-i18n="trafficAnalysis">Traffic Analysis</div>
+                                        </div>
+                                        <div class="border border-gray-200 p-3 text-center">
+                                            <div class="text-light text-sm mb-1" data-i18n="projectManagement">Project Management</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="mb-12">
+                                <h3 class="text-2xl font-bold mb-8" data-i18n="languages">Languages</h3>
+                                <div class="space-y-6">
+                                    <div>
+                                        <div class="flex justify-between mb-2">
+                                            <span class="font-medium" data-i18n="arabic">Arabic</span>
+                                            <span class="text-accent text-sm font-medium" data-i18n="native">Native</span>
+                                        </div>
+                                        <div class="h-1 bg-gray-100">
+                                            <div class="h-full bg-accent" style="width: 100%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between mb-2">
+                                            <span class="font-medium" data-i18n="turkish">Turkish</span>
+                                            <span class="text-accent text-sm font-medium" data-i18n="advanced">Advanced (C1)</span>
+                                        </div>
+                                        <div class="h-1 bg-gray-100">
+                                            <div class="h-full bg-accent" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between mb-2">
+                                            <span class="font-medium" data-i18n="english">English</span>
+                                            <span class="text-accent text-sm font-medium" data-i18n="upperIntermediate">Upper Intermediate (B2)</span>
+                                        </div>
+                                        <div class="h-1 bg-gray-100">
+                                            <div class="h-full bg-accent" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-2xl font-bold mb-8" data-i18n="additionalCompetencies">Additional Competencies</h3>
+                                <div class="space-y-4">
+                                    <div class="border border-gray-200 p-4">
+                                        <div class="flex items-center">
+                                            <div class="w-8 h-8 bg-gray-100 flex items-center justify-center mr-4">
+                                                <i class="fas fa-code text-accent"></i>
+                                            </div>
+                                            <div>
+                                                <div class="font-medium" data-i18n="technicalDevelopment">Technical Development</div>
+                                                <div class="text-light text-sm" data-i18n="frontendBackend">Frontend & Backend Development</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border border-gray-200 p-4">
+                                        <div class="flex items-center">
+                                            <div class="w-8 h-8 bg-gray-100 flex items-center justify-center mr-4">
+                                                <i class="fas fa-chess text-accent"></i>
+                                            </div>
+                                            <div>
+                                                <div class="font-medium" data-i18n="strategicThinking">Strategic Thinking</div>
+                                                <div class="text-light text-sm" data-i18n="chessEnthusiast">Chess Enthusiast - Intermediate Level</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="border border-gray-200 p-4">
+                                        <div class="flex items-center">
+                                            <div class="w-8 h-8 bg-gray-100 flex items-center justify-center mr-4">
+                                                <i class="fas fa-pen-fancy text-accent"></i>
+                                            </div>
+                                            <div>
+                                                <div class="font-medium" data-i18n="creativeWriting">Creative Writing</div>
+                                                <div class="text-light text-sm" data-i18n="technicalFiction">Technical & Fiction Writing</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
         <section id="skills" class="py-24 lg:py-32 border-b border-gray-200" data-section="skills">
             <div class="container mx-auto px-6">
@@ -454,10 +768,13 @@
                     <div class="mb-16">
                         <h2 class="text-4xl font-bold tracking-tight mb-4" data-i18n="contact">Contact</h2>
                         <div class="h-px w-16 bg-accent"></div>
+                        <p class="text-light mt-4 max-w-2xl" data-i18n="contactSubtitle">Feel free to reach out for collaboration, opportunities, or just to connect</p>
                     </div>
                     
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div>
+                            <h3 class="text-2xl font-bold mb-8" data-i18n="getInTouch">Get In Touch</h3>
+                            
                             <div class="space-y-6 mb-8">
                                 <div class="flex items-start">
                                     <div class="w-10 h-10 bg-gray-100 flex items-center justify-center mr-4">
@@ -465,7 +782,7 @@
                                     </div>
                                     <div>
                                         <div class="font-medium mb-1" data-i18n="location">Location</div>
-                                        <div class="text-light" data-i18n="locDetails">Istanbul, Türkiye / Tashkent, Uzbekistan</div>
+                                        <div class="text-light">Istanbul, Türkiye</div>
                                     </div>
                                 </div>
                                 
@@ -475,7 +792,7 @@
                                     </div>
                                     <div>
                                         <div class="font-medium mb-1" data-i18n="phone">Phone</div>
-                                        <div class="text-light" dir="ltr">+90 553 102 58 18</div>
+                                        <div class="text-light">+90 553 102 58 18</div>
                                     </div>
                                 </div>
                                 
@@ -491,12 +808,48 @@
                             </div>
                             
                             <div class="mt-12 pt-8 border-t border-gray-200">
+                                <h4 class="font-bold mb-6" data-i18n="connectWithMe">Connect with me</h4>
                                 <div class="flex space-x-4">
-                                    <a href="https://linkedin.com/in/Abdullahjaffal" target="_blank" class="social-icon" aria-label="LinkedIn">
+                                    <a href="mailto:jaffal.abdullah@gmail.com" class="social-icon" aria-label="Email">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                    <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn">
                                         <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
                                     </a>
                                 </div>
                             </div>
+                        </div>
+                        
+                        <div>
+                            <form id="contact-form" class="space-y-6">
+                                <div>
+                                    <label for="name" class="block mb-2 font-medium" data-i18n="name">Name</label>
+                                    <input type="text" id="name" class="form-input" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block mb-2 font-medium" data-i18n="email">Email</label>
+                                    <input type="email" id="email" class="form-input" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="subject" class="block mb-2 font-medium" data-i18n="subject">Subject</label>
+                                    <input type="text" id="subject" class="form-input">
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block mb-2 font-medium" data-i18n="message">Message</label>
+                                    <textarea id="message" rows="5" class="form-input" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="primary-btn w-full">
+                                    <i class="fas fa-paper-plane mr-2"></i>
+                                    <span data-i18n="sendMessage">Send Message</span>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
