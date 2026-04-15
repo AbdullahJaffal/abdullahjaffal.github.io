@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 .bg-orange-50 {
-    background-color: rgb(255 250 245);
+    background-color: rgb(255 250 245)!important;
 }
 html {
     scroll-behavior: smooth;
