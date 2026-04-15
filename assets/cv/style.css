@@ -6,7 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.bg-orange-50 {
+    background-color: rgb(255 250 245);
+}
 html {
     scroll-behavior: smooth;
 }
