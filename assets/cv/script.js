@@ -58,7 +58,7 @@ const translations = {
         
         // Education
         bachelorDegree: "Bachelor of Science in Civil Engineering",
-        educationDescription: "Combined theoretical foundations with practical application through hands-on training and applied projects. Focused on infrastructure and road design with emphasis on real-world engineering challenges.",
+        educationDescription: "During my studies at the Faculty of Technology, I prioritized a hands-on approach to engineering, specializing in infrastructure and road design. By executing numerous applied projects, I mastered the art of applying theoretical frameworks to real-world contexts. This practical focus significantly accelerated my transition into the industry, allowing me to handle large-scale engineering challenges with confidence and precision.",
         gpa: "GPA",
         professionalMembership: "Professional Membership",
         chamberEngineers: "Chamber of Civil Engineers in Turkey",
@@ -115,15 +115,15 @@ const translations = {
         tashkentTitle: "New Tashkent City",
         tashkentLocation: "Tashkent, Uzbekistan",
         tashkentScale: "6,000 Hectares",
-        tashkentDescShort: "Complete infrastructure and internal road design for a 6,000-hectare project.",
-        tashkentDesc: "Complete infrastructure and internal road design for a massive urban development project, ensuring sustainable and modern utilities.",
+        tashkentDescShort: "Comprehensive infrastructure design for a 6,000-hectare sustainable and resilient urban development.",
+        tashkentDesc: "Comprehensive infrastructure design for a large-scale urban project, focusing on sustainability, resilience, and modern engineering standards.",
         urbanPlanning: "Urban Planning",
         waterSystems: "Water Systems",
-        tashkentCont1: "Utility Galleries: Designed state-of-the-art underground multi-utility tunnels (Galeri) to house potable water, district heating, and electrical lines.",
-        tashkentCont2: "Water Management Ecosystem: Engineered comprehensive networks for stormwater drainage and sewage, including the integration of artificial rivers.",
-        tashkentCont3: "Advanced Water Treatment: Implemented sustainable drainage solutions such as Sludge & Floating Matter Traps.",
-        tashkentCont4: "Fire Safety: Designed city-wide firefighting water supply networks adhering to rigorous international safety standards.",
-        tashkentCont5: "Optimization: Executed complex hydraulic calculations for optimal pipe sizing and network efficiency.",
+        tashkentCont1: "Integrated Multi-Utility Galleries: Designed advanced underground tunnels (Galeri) to consolidate potable water, district heating, electrical power, and other essential infrastructure services, ensuring streamlined maintenance and a cleaner urban aesthetic.",
+        tashkentCont2: "Urban Water Features & Microclimate Regulation: Engineered a network of artificial canals designed to enhance the city's microclimate and humidity levels. This involved managing river water intake and integrating these canals as functional conduits for treated stormwater.",
+        tashkentCont3: "First Flush Stormwater Treatment: Implemented sustainable hydraulic solutions to treat \"First Flush\" rainfall. Designed specialized structures utilizing velocity reduction, flotation, and sedimentation to trap sludge, debris, and oils before discharging water into the artificial canals.",
+        tashkentCont4: "Pressurized Water & Firefighting Networks: Executed complex hydraulic modeling to determine optimal pipe diameters and pressure requirements for city-wide potable water and fire safety. Integrated strategic isolation valves to ensure uninterrupted service and network resilience during maintenance or emergencies.",
+        tashkentCont5: "Sanitary Sewage Systems: Designed efficient gravity-based sewage networks, calculating optimal slopes and pipe capacities based on projected population density and peak flow requirements.",
 
         // Project 2: 170 Villa
         villaCompound: "170-Villa Compound",
