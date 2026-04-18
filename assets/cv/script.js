@@ -827,40 +827,63 @@ function initMobileMenu() {
         }
     });
 }
-
-// Setup contact form
+// Setup contact form with EmailJS
 function setupForm() {
     if (!contactForm) return;
     
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Get form data
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
+        const nameVal = document.getElementById('name').value;
+        const emailVal = document.getElementById('email').value;
+        const subjectVal = document.getElementById('subject').value;
+        const messageVal = document.getElementById('message').value;
         
-        // Simple validation
-        if (!formData.name || !formData.email || !formData.message) {
+        if (!nameVal || !emailVal || !messageVal) {
             alert(currentLang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة.' : 
                   currentLang === 'tr' ? 'Lütfen tüm gerekli alanları doldurun.' :
                   'Please fill in all required fields.');
             return;
         }
         
-        // Show success message
-        alert(currentLang === 'ar' ? 'شكراً لك على رسالتك! سأعود إليك قريباً.' :
-              currentLang === 'tr' ? 'Mesajınız için teşekkürler! Size en kısa sürede döneceğim.' :
-              'Thank you for your message! I will get back to you soon.');
+    
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = currentLang === 'ar' ? 'جاري الإرسال <i class="fas fa-spinner fa-spin ml-2"></i>' : 'Sending...';
+        submitBtn.disabled = true;
         
-        // Reset form
-        contactForm.reset();
+        const templateParams = {
+            name: nameVal,
+            email: emailVal,
+            subject: subjectVal,
+            message: messageVal
+        };
+        
+        emailjs.send('service_aexwb6t', 'template_qpqiteg', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                
+                
+                alert(currentLang === 'ar' ? 'شكراً لك على رسالتك! سأعود إليك قريباً.' :
+                      currentLang === 'tr' ? 'Mesajınız için teşekkürler! Size en kısa sürede döneceğim.' :
+                      'Thank you for your message! I will get back to you soon.');
+                
+                contactForm.reset();
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                
+            }, function(error) {
+                console.log('FAILED...', error);
+                
+                
+                alert(currentLang === 'ar' ? 'حدث خطأ أثناء إرسال الرسالة. يرجى التأكد من اتصالك والمحاولة لاحقاً.' : 'Failed to send the message. Please try again later.');
+                
+                
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            });
     });
 }
-
 // Setup scroll animations
 function setupScrollAnimations() {
     const observerOptions = {
