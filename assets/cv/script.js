@@ -538,7 +538,7 @@ const translations = {
 const projectsData = {
     'tashkent': {
         icon: 'fa-city',
-        mainImage: 'images/project/tashkent/yangi-toshkent-02', // Replace with your actual path
+        mainImage: '../../images/project/tashkent/yangi-toshkent-02.webp', // Replace with your actual path
         gallery: [
             'assets/projects/tashkent-gallery-1.jpg', // Replace with your actual path
             'assets/projects/tashkent-gallery-2.jpg', // Replace with your actual path
