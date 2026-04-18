@@ -1,0 +1,81 @@
+/* Custom Styles for Literary Arabic Page */
+
+/* Base Adjustments */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: right;
+}
+
+/* Typography Enhancements */
+.prose p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Buttons */
+.read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #a87c5f;
+    font-weight: 600;
+    background: transparent;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    color: #8a644b;
+    transform: translateX(-5px);
+}
+
+/* Text Selection */
+::selection {
+    background-color: rgba(168, 124, 95, 0.3);
+    color: inherit;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a87c5f;
+}
+
+/* --- Dark Mode Customizations --- */
+.dark body {
+    background-color: #121212;
+    color: #e5e5e5;
+}
+
+.dark .bg-paper { background-color: #121212; }
+.dark .bg-paper-dark { background-color: #1a1a1a; }
+.dark .text-text { color: #e5e5e5; }
+.dark .text-text-light { color: #a3a3a3; }
+.dark .border-border { border-color: #2a2a2a; }
+
+.dark .nav-container {
+    background-color: rgba(18, 18, 18, 0.9);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #404040;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #a87c5f;
+}
