@@ -834,6 +834,17 @@ function setupForm() {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
+        // 1. Get the reCAPTCHA response token
+        const captchaResponse = grecaptcha.getResponse();
+        
+        // 2. Validate that the reCAPTCHA is completed before proceeding
+        if (captchaResponse.length === 0) {
+            alert(currentLang === 'ar' ? 'يرجى التحقق من مربع "أنا لست برنامج روبوت".' : 
+                  currentLang === 'tr' ? 'Lütfen "Ben robot değilim" kutusunu doğrulayın.' :
+                  'Please verify that you are not a robot.');
+            return;
+        }
+        
         const nameVal = document.getElementById('name').value;
         const emailVal = document.getElementById('email').value;
         const subjectVal = document.getElementById('subject').value;
@@ -846,38 +857,40 @@ function setupForm() {
             return;
         }
         
-    
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
         submitBtn.innerHTML = currentLang === 'ar' ? 'جاري الإرسال <i class="fas fa-spinner fa-spin ml-2"></i>' : 'Sending...';
         submitBtn.disabled = true;
         
+        // 3. Add the reCAPTCHA token to template parameters
         const templateParams = {
             name: nameVal,
             email: emailVal,
             subject: subjectVal,
-            message: messageVal
+            message: messageVal,
+            'g-recaptcha-response': captchaResponse
         };
         
         emailjs.send('service_aexwb6t', 'template_qpqiteg', templateParams)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 
-                
                 alert(currentLang === 'ar' ? 'شكراً لك على رسالتك! سأعود إليك قريباً.' :
                       currentLang === 'tr' ? 'Mesajınız için teşekkürler! Size en kısa sürede döneceğim.' :
                       'Thank you for your message! I will get back to you soon.');
                 
                 contactForm.reset();
+                
+                // 4. Reset the reCAPTCHA widget for future submissions
+                grecaptcha.reset();
+                
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
                 
             }, function(error) {
                 console.log('FAILED...', error);
                 
-                
                 alert(currentLang === 'ar' ? 'حدث خطأ أثناء إرسال الرسالة. يرجى التأكد من اتصالك والمحاولة لاحقاً.' : 'Failed to send the message. Please try again later.');
-                
                 
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
