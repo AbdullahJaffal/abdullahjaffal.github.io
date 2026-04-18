@@ -1,6 +1,7 @@
 // Complete translations for 3 languages
 const translations = {
     en: {
+        dir: "ltr",
         home: "Home",
         projects: "Projects",
         experience: "Experience",
@@ -157,6 +158,7 @@ const translations = {
         tashkentCont5: "Sanitary Sewage Systems: Designed efficient gravity-based sewage networks, calculating optimal slopes and pipe capacities based on projected population density and peak flow requirements.",
     },
     ar: {
+        dir: "rtl",
         home: "الرئيسية",
         projects: "المشاريع",
         experience: "الخبرات",
@@ -313,6 +315,7 @@ const translations = {
         tashkentCont5: "أنظمة الصرف الصحي: تصميم شبكات صرف صحي فعالة تعتمد على الجاذبية، مع حساب الميول وسعات الأنابيب المثلى بناءً على الكثافة السكانية المتوقعة ومتطلبات التدفق في أوقات الذروة."
     },
     tr: {
+        dir: "ltr",
         home: "Ana Sayfa",
         projects: "Projeler",
         experience: "Deneyim",
