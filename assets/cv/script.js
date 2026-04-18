@@ -1057,33 +1057,38 @@ window.addEventListener('load', () => {
 // Experience Section: Load More Functionality
 function initExperienceLoadMore() {
     const loadMoreBtn = document.getElementById('load-more-btn');
-    const hiddenItems = document.querySelectorAll('.hidden-experience');
     const container = document.getElementById('load-more-container');
 
-    if (!loadMoreBtn || hiddenItems.length === 0) return;
+    if (!loadMoreBtn) return;
+
+    const itemsPerLoad = 2;
 
     loadMoreBtn.addEventListener('click', () => {
-        hiddenItems.forEach((item, index) => {
-            // Remove the hidden class to make it part of DOM
+        const hiddenItems = document.querySelectorAll('.hidden-experience.hidden');
+        
+        for (let i = 0; i < itemsPerLoad && i < hiddenItems.length; i++) {
+            const item = hiddenItems[i];
+            
             item.classList.remove('hidden');
             
-            // Staggered animation using setTimeout
             setTimeout(() => {
-                item.classList.remove('opacity-0', '-translate-y-4');
+                item.classList.remove('opacity-0', 'translate-y-4');
                 item.classList.add('opacity-100', 'translate-y-0');
-            }, index * 150);
-        });
+            }, i * 150);
+        }
 
-        // Hide the button container after loading all items
-        container.style.opacity = '0';
-        setTimeout(() => {
-            container.remove();
-        }, 300);
+        const remainingHidden = document.querySelectorAll('.hidden-experience.hidden');
+        
+        if (remainingHidden.length === 0) {
+            container.style.opacity = '0';
+            container.style.transition = 'opacity 0.3s ease';
+            setTimeout(() => {
+                container.style.display = 'none';
+            }, 300);
+        }
     });
 }
 
-// Call this inside your DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', () => {
-    // ... existing init calls ...
     initExperienceLoadMore();
 });
