@@ -43,43 +43,45 @@ document.addEventListener('DOMContentLoaded', () => {
         updateThemeUI(isDark);
     });
 
-    // --- الوظيفة الجديدة: إعداد أزرار التنقل (التالي والسابق) ---
     function setupNavigation(workElement) {
-        // تحويل عناصر المقالات إلى مصفوفة لمعرفة ترتيب المقال الحالي
         const worksArray = Array.from(literaryWorks);
         const currentIndex = worksArray.indexOf(workElement);
 
-        // تحديد المقال السابق والتالي
         const prevWork = worksArray[currentIndex - 1];
         const nextWork = worksArray[currentIndex + 1];
 
-        // البحث عن حاوية أزرار التنقل في المقال المفتوح حالياً
         const navContainer = workElement.querySelector('.article-navigation');
         
         if (navContainer) {
             const prevBtn = navContainer.querySelector('.prev-btn');
             const nextBtn = navContainer.querySelector('.next-btn');
 
-            // إعداد بيانات زر "السابق"
             if (prevWork && prevBtn) {
-                // جلب عنوان المقال السابق لوضعه في الزر
                 const prevTitle = prevWork.querySelector('h3').innerText;
+                const prevChapter = prevWork.querySelector('h4') ? prevWork.querySelector('h4').innerText : '';
+                
                 prevBtn.querySelector('.title-span').innerText = prevTitle;
+                const prevChapterSpan = prevBtn.querySelector('.chapter-span');
+                if (prevChapterSpan) prevChapterSpan.innerText = prevChapter;
+                
                 prevBtn.classList.remove('hidden');
                 prevBtn.onclick = () => switchWork(prevWork);
             } else if (prevBtn) {
-                prevBtn.classList.add('hidden'); // إخفاء الزر إذا كان هذا المقال هو الأول
+                prevBtn.classList.add('hidden');
             }
 
-            // إعداد بيانات زر "التالي"
             if (nextWork && nextBtn) {
-                // جلب عنوان المقال التالي لوضعه في الزر
                 const nextTitle = nextWork.querySelector('h3').innerText;
+                const nextChapter = nextWork.querySelector('h4') ? nextWork.querySelector('h4').innerText : '';
+                
                 nextBtn.querySelector('.title-span').innerText = nextTitle;
+                const nextChapterSpan = nextBtn.querySelector('.chapter-span');
+                if (nextChapterSpan) nextChapterSpan.innerText = nextChapter;
+                
                 nextBtn.classList.remove('hidden');
                 nextBtn.onclick = () => switchWork(nextWork);
             } else if (nextBtn) {
-                nextBtn.classList.add('hidden'); // إخفاء الزر إذا كان هذا المقال هو الأخير
+                nextBtn.classList.add('hidden');
             }
         }
     }
