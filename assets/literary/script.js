@@ -43,9 +43,64 @@ document.addEventListener('DOMContentLoaded', () => {
         updateThemeUI(isDark);
     });
 
+    // --- الوظيفة الجديدة: إعداد أزرار التنقل (التالي والسابق) ---
+    function setupNavigation(workElement) {
+        // تحويل عناصر المقالات إلى مصفوفة لمعرفة ترتيب المقال الحالي
+        const worksArray = Array.from(literaryWorks);
+        const currentIndex = worksArray.indexOf(workElement);
+
+        // تحديد المقال السابق والتالي
+        const prevWork = worksArray[currentIndex - 1];
+        const nextWork = worksArray[currentIndex + 1];
+
+        // البحث عن حاوية أزرار التنقل في المقال المفتوح حالياً
+        const navContainer = workElement.querySelector('.article-navigation');
+        
+        if (navContainer) {
+            const prevBtn = navContainer.querySelector('.prev-btn');
+            const nextBtn = navContainer.querySelector('.next-btn');
+
+            // إعداد بيانات زر "السابق"
+            if (prevWork && prevBtn) {
+                // جلب عنوان المقال السابق لوضعه في الزر
+                const prevTitle = prevWork.querySelector('h3').innerText;
+                prevBtn.querySelector('.title-span').innerText = prevTitle;
+                prevBtn.classList.remove('hidden');
+                prevBtn.onclick = () => switchWork(prevWork);
+            } else if (prevBtn) {
+                prevBtn.classList.add('hidden'); // إخفاء الزر إذا كان هذا المقال هو الأول
+            }
+
+            // إعداد بيانات زر "التالي"
+            if (nextWork && nextBtn) {
+                // جلب عنوان المقال التالي لوضعه في الزر
+                const nextTitle = nextWork.querySelector('h3').innerText;
+                nextBtn.querySelector('.title-span').innerText = nextTitle;
+                nextBtn.classList.remove('hidden');
+                nextBtn.onclick = () => switchWork(nextWork);
+            } else if (nextBtn) {
+                nextBtn.classList.add('hidden'); // إخفاء الزر إذا كان هذا المقال هو الأخير
+            }
+        }
+    }
+
+    // الانتقال المباشر بين النصوص دون العودة للقائمة
+    function switchWork(targetWork) {
+        if (currentOpenWork) {
+            // إخفاء النص الحالي وتهيئة شكله المبدئي
+            currentOpenWork.querySelector('.work-full').style.display = 'none';
+            currentOpenWork.querySelector('.work-preview').style.display = 'block';
+            currentOpenWork.style.display = 'none';
+        }
+        // فتح النص المستهدف (نمرر false كي لا نقوم بتحديث نقطة سكرول القائمة الرئيسية)
+        openWork(targetWork, false);
+    }
+
     // 4. Open/Close Literary Works
-    function openWork(workElement) {
-        scrollPos = window.scrollY; // Save current scroll position
+    function openWork(workElement, saveScroll = true) {
+        if (saveScroll) {
+            scrollPos = window.scrollY; // Save current scroll position
+        }
         
         // Hide all other works from view
         literaryWorks.forEach(w => {
@@ -60,10 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
         
         preview.style.display = 'none';
         full.style.display = 'block';
+        workElement.style.display = 'block'; // Ensure the target is visible
         
         // Scroll to top of the article smoothly
         window.scrollTo({ top: 0, behavior: 'smooth' });
         currentOpenWork = workElement;
+
+        // تهيئة أزرار التنقل لهذا المقال
+        setupNavigation(workElement);
     }
 
     function closeWork() {
@@ -90,12 +149,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Attach click events to open/close buttons
     literaryWorks.forEach(work => {
         const previewBtn = work.querySelector('.work-preview');
-        const backBtn = work.querySelector('.back-to-list');
+        // إصلاح المشكلة: استخدام querySelectorAll لجلب جميع أزرار العودة للقائمة
+        const backBtns = work.querySelectorAll('.back-to-list');
 
-        previewBtn.addEventListener('click', () => openWork(work));
-        if (backBtn) {
-            backBtn.addEventListener('click', closeWork);
-        }
+        previewBtn.addEventListener('click', () => openWork(work, true));
+        
+        // تفعيل كل أزرار العودة (العلوي والسفلي)
+        backBtns.forEach(btn => {
+            btn.addEventListener('click', closeWork);
+        });
     });
 
     // 5. Reading Progress Bar Tracking
