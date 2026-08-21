@@ -776,12 +776,11 @@ function applyLanguage(lang) {
 
     bodyElement.dir = dir;
     bodyElement.lang = lang;
-    
-    const linksContainer = document.getElementById('nav-links-container');
-    if (linksContainer) {
-        linksContainer.dir = langConfig.dir || 'ltr';
-    }
-    
+
+    // The navbar itself is dir="ltr"-locked in the HTML (see <nav>) so its
+    // buttons stay in a fixed position across languages - only the label
+    // text inside them changes. Do not override that per-language here.
+
     if (lang === 'ar') {
         bodyElement.style.fontFamily = "'IBM Plex Sans Arabic', sans-serif";
     } else {
