@@ -4,12 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Abdullah Jaffal - Infrastructure Design Engineer specializing in mega-scale hydraulic systems, utility galleries, and design automation.">
-    <meta name="keywords" content="Civil Engineer, Infrastructure Design, Urbano11, WaterGEMS, AutoCAD, Tashkent, Istanbul">
+    <meta name="keywords" content="Civil Engineer, Infrastructure Design, Hydraulic Design, Stormwater Management, Sewer Networks, Water Networks, Urbano 11, WaterGEMS, AutoCAD, Civil 3D, AutoLISP, Design Automation, Tashkent, Istanbul">
+    <meta name="author" content="Abdullah Jaffal">
+    <meta name="theme-color" content="#96694e">
+    <link rel="canonical" href="https://abdullahjaffal.me/">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Abdullah Jaffal">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ar_AR">
+    <meta property="og:locale:alternate" content="tr_TR">
     <meta property="og:title" content="Abdullah Jaffal | Engineering Portfolio">
     <meta property="og:description" content="Turning complex master plans into sustainable urban realities.">
-    <meta property="og:image" content="images/me.jpeg">
+    <meta property="og:image" content="https://abdullahjaffal.me/images/me.jpeg">
+    <meta property="og:image:alt" content="Abdullah Jaffal, Infrastructure Design Engineer">
     <meta property="og:url" content="https://abdullahjaffal.me/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abdullah Jaffal | Engineering Portfolio">
+    <meta name="twitter:description" content="Turning complex master plans into sustainable urban realities.">
+    <meta name="twitter:image" content="https://abdullahjaffal.me/images/me.jpeg">
+
     <title>Abdullah Jaffal | Engineering Portfolio</title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Abdullah Jaffal",
+      "url": "https://abdullahjaffal.me/",
+      "image": "https://abdullahjaffal.me/images/me.jpeg",
+      "jobTitle": "Infrastructure Design Engineer",
+      "description": "Civil Engineer | Hydraulic & Infrastructure Design | Stormwater, Sewer, Water Networks | AutoCAD, Civil 3D, WaterGEMS | Process Automation",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Elsa Proje"
+      },
+      "email": "mailto:jaffal.abdullah@gmail.com",
+      "telephone": "+905531025818",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Istanbul",
+        "addressCountry": "TR"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Düzce University"
+      },
+      "knowsLanguage": ["ar", "tr", "en", "ru"],
+      "knowsAbout": [
+        "Infrastructure Design",
+        "Hydraulic Modeling",
+        "Stormwater Management",
+        "Sewer Network Design",
+        "Water Distribution Networks",
+        "Utility Gallery Design",
+        "Road Design",
+        "Design Automation",
+        "AutoCAD",
+        "Civil 3D",
+        "WaterGEMS",
+        "AutoLISP",
+        "Excel VBA"
+      ],
+      "sameAs": ["https://www.linkedin.com/in/abdullahjaffal/"]
+    }
+    </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -20,7 +80,7 @@
                     colors: {
                         'primary': '#0a0a0a',
                         'secondary': '#1a1a1a',
-                        'accent': '#a87c5f',
+                        'accent': '#96694e',
                         'text': '#333333',
                         'light': '#666666',
                         'border': '#e0e0e0',
@@ -54,11 +114,12 @@
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💼</text></svg>">
 </head>
 <body class="font-sans text-text bg-white" dir="ltr" lang="en">
-    <nav dir="ltr" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 backdrop-blur-sm bg-white/95">
-        <div class="container mx-auto px-6">
+    <a href="#main-content" class="skip-link" data-i18n="skipToContent">Skip to main content</a>
+    <nav dir="ltr" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 backdrop-blur-sm bg-white/95" aria-label="Main navigation">
+        <div class="container mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center h-16">
                 <div>
-                    <h1 class="text-xl font-bold tracking-wider" id="nav-name">ABDULLAH JAFFAL</h1>
+                    <h1 class="text-base sm:text-xl font-bold tracking-wide sm:tracking-wider whitespace-nowrap" id="nav-name">ABDULLAH JAFFAL</h1>
                 </div>
                 
                 <div class="hidden lg:flex items-center">
@@ -70,26 +131,27 @@
                         <a href="#skills" class="nav-link" data-section="skills" data-i18n="skills">Skills</a>
                         <a href="#about" class="nav-link" data-section="about" data-i18n="about">About</a>
                         <a href="#contact" class="nav-link" data-section="contact" data-i18n="contact">Contact</a>
-                        <div class="mr-10 pl-2 border-l border-accent">
-                            <a href="/Literature" class="nav-link" data-section="contact" data-i18n="literature">Literature</a>
+                        <a href="/tools" class="nav-link" data-i18n="tools">Software</a>
+                        <div class="me-10 ps-2 border-s border-accent">
+                            <a href="/Literature" class="nav-link" data-i18n="literature">Literature</a>
                         </div>
                     </div>
                     
-                    <div class="flex items-center gap-2 ml-8 pl-8 border-l border-gray-200">
-                        <button class="lang-btn" data-lang="en">EN</button>
-                        <button class="lang-btn" data-lang="ar">AR</button>
-                        <button class="lang-btn" data-lang="tr">TR</button>
+                    <div class="flex items-center gap-2 ms-8 ps-8 border-s border-gray-200">
+                        <button class="lang-btn" data-lang="en" lang="en" aria-pressed="false" aria-label="Switch to English">EN</button>
+                        <button class="lang-btn" data-lang="ar" lang="ar" aria-pressed="false" aria-label="التبديل إلى العربية">AR</button>
+                        <button class="lang-btn" data-lang="tr" lang="tr" aria-pressed="false" aria-label="Türkçeye geç">TR</button>
                     </div>
                 </div>
                 
-                <div class="lg:hidden flex items-center gap-4">
+                <div class="lg:hidden flex items-center gap-2 sm:gap-4">
                     <div class="flex gap-2">
-                        <button class="lang-btn" data-lang="en">EN</button>
-                        <button class="lang-btn" data-lang="ar">AR</button>
-                        <button class="lang-btn" data-lang="tr">TR</button>
+                        <button class="lang-btn" data-lang="en" lang="en" aria-pressed="false" aria-label="Switch to English">EN</button>
+                        <button class="lang-btn" data-lang="ar" lang="ar" aria-pressed="false" aria-label="التبديل إلى العربية">AR</button>
+                        <button class="lang-btn" data-lang="tr" lang="tr" aria-pressed="false" aria-label="Türkçeye geç">TR</button>
                     </div>
-                    <button id="mobile-menu-btn" class="text-text">
-                        <i class="fas fa-bars text-xl"></i>
+                    <button id="mobile-menu-btn" class="text-text" type="button" aria-label="Open navigation menu" data-i18n-aria="openMenu" aria-expanded="false" aria-controls="mobile-menu">
+                        <i class="fas fa-bars text-xl" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -104,12 +166,13 @@
                 <a href="#skills" class="mobile-nav-link text-lg font-medium" data-section="skills" data-i18n="skills">Skills</a>
                 <a href="#about" class="mobile-nav-link text-lg font-medium" data-section="about" data-i18n="about">About</a>
                 <a href="#contact" class="mobile-nav-link text-lg font-medium" data-section="contact" data-i18n="contact">Contact</a>
-                <a href="/Literature" class="mobile-nav-link text-lg font-medium" data-section="contact" data-i18n="literature">Literature</a>
+                <a href="/tools" class="mobile-nav-link text-lg font-medium" data-i18n="tools">Software</a>
+                <a href="/Literature" class="mobile-nav-link text-lg font-medium" data-i18n="literature">Literature</a>
             </div>
         </div>
     </nav>
 
-    <main class="pt-16">
+    <main class="pt-16" id="main-content" tabindex="-1">
         <section id="hero" class="min-h-screen flex items-center border-b border-gray-200" data-section="hero">
             <div class="container mx-auto px-6 py-24 lg:py-32">
                 <div class="max-w-6xl mx-auto">
@@ -144,10 +207,10 @@
                     <div class="flex flex-wrap gap-4">
                         <a href="#experience" class="primary-btn">
                             <span data-i18n="viewExperience">View Experience</span>
-                            <i class="fas fa-arrow-right ml-2"></i>
+                            <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                         <a href="resume-english.pdf" download class="secondary-btn">
-                            <i class="fas fa-download mr-2"></i>
+                            <i class="fas fa-download me-2"></i>
                             <span data-i18n="downloadCv">Download CV</span>
                         </a>
                     </div>
@@ -164,80 +227,76 @@
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" onclick="openProjectModal('tashkent')">
+                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" role="button" tabindex="0" data-project="tashkent">
                             <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
-                                <img class="w-full h-40" src="images/project/tashkent/yangi-toshkent-01.webp">
+                                <img class="w-full h-40 object-cover" src="images/project/tashkent/yangi-toshkent-01.webp" width="800" height="450" loading="lazy" decoding="async" alt="" data-i18n-alt="proj1ImageAlt">
                             </div>
                             <div class="p-5">
                                 <h3 class="text-lg font-bold mb-2" data-i18n="proj1Title">New Tashkent City</h3>
-                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="proj1Sub">Complete infrastructure and internal road design for a 6,000-hectare project.</p>
+                                <p class="text-gray-500 text-sm mb-4" data-i18n="proj1Sub">Complete infrastructure and internal road design for a 6,000-hectare project.</p>
                                 <span class="text-accent text-sm font-semibold flex items-center hover:underline">
-                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
+                                    <span data-i18n="viewDetails">View Details</span> <i aria-hidden="true" class="fas fa-arrow-right mx-2 text-xs"></i>
                                 </span>
                             </div>
                         </div>
-        
-                   <!--     <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" onclick="openProjectModal('villa170')">
+
+                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" role="button" tabindex="0" data-project="villa170">
                             <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
-                                <i class="fas fa-home text-4xl text-accent"></i>
+                                <i aria-hidden="true" class="fas fa-home text-4xl text-accent"></i>
                             </div>
                             <div class="p-5">
                                 <h3 class="text-lg font-bold mb-2" data-i18n="proj2Title">Istanbul Villa Compound</h3>
-                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="proj2Sub">Complete infrastructure and internal road design for luxury villa compound.</p>
+                                <p class="text-gray-500 text-sm mb-4" data-i18n="proj2Sub">Complete infrastructure and internal road design for a luxury villa compound.</p>
                                 <span class="text-accent text-sm font-semibold flex items-center hover:underline">
-                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
+                                    <span data-i18n="viewDetails">View Details</span> <i aria-hidden="true" class="fas fa-arrow-right mx-2 text-xs"></i>
                                 </span>
                             </div>
                         </div>
 
-                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" onclick="openProjectModal('archaeological')">
+                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" role="button" tabindex="0" data-project="archaeological">
                             <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
-                                <i class="fas fa-hotel text-4xl text-accent"></i>
+                                <i aria-hidden="true" class="fas fa-hotel text-4xl text-accent"></i>
                             </div>
                             <div class="p-5">
                                 <h3 class="text-lg font-bold mb-2" data-i18n="proj3Title">Archaeological Site Hotel</h3>
-                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="proj3Sub">Infrastructure design for hotel on protected archaeological site.</p>
+                                <p class="text-gray-500 text-sm mb-4" data-i18n="proj3Sub">Infrastructure design for a hotel on a protected archaeological site.</p>
                                 <span class="text-accent text-sm font-semibold flex items-center hover:underline">
-                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
+                                    <span data-i18n="viewDetails">View Details</span> <i aria-hidden="true" class="fas fa-arrow-right mx-2 text-xs"></i>
                                 </span>
                             </div>
                         </div>
 
-                       <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" onclick="openProjectModal('flood')">
+                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" role="button" tabindex="0" data-project="flood">
                             <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
-                                <i class="fas fa-water text-4xl text-accent"></i>
+                                <i aria-hidden="true" class="fas fa-water text-4xl text-accent"></i>
                             </div>
                             <div class="p-5">
                                 <h3 class="text-lg font-bold mb-2" data-i18n="proj4Title">Flood Management System</h3>
-                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="proj4Sub">Automatic reserve tank system for hotel in flood-prone area.</p>
+                                <p class="text-gray-500 text-sm mb-4" data-i18n="proj4Sub">Automatic reserve tank system for a hotel in a flood-prone area.</p>
                                 <span class="text-accent text-sm font-semibold flex items-center hover:underline">
-                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
+                                    <span data-i18n="viewDetails">View Details</span> <i aria-hidden="true" class="fas fa-arrow-right mx-2 text-xs"></i>
                                 </span>
                             </div>
                         </div>
 
-                        <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" onclick="openProjectModal('industrial')">
+                        <div class="project-card transform transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg bg-white rounded-lg overflow-hidden border border-gray-100">
                             <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
-                                <i class="fas fa-industry text-4xl text-accent"></i>
+                                <i aria-hidden="true" class="fas fa-industry text-4xl text-accent"></i>
                             </div>
                             <div class="p-5">
-                                <h3 class="text-lg font-bold mb-2" data-i18n="proj5Title">Industrial & Commercial Developments</h3>
-                                <p class="text-gray-500 text-sm mb-4 line-clamp-2" data-i18n="proj5Sub">Hotels and Industrial Facilities</p>
-                                <span class="text-accent text-sm font-semibold flex items-center hover:underline">
-                                    <span data-i18n="viewDetails">View Details</span> <i class="fas fa-arrow-right mx-2 text-xs"></i>
-                                </span>
+                                <h3 class="text-lg font-bold mb-2" data-i18n="proj5Title">Industrial &amp; Commercial Developments</h3>
+                                <p class="text-gray-500 text-sm" data-i18n="proj5Sub">Hotels and industrial facilities.</p>
                             </div>
-                        </div> -->
-
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <div id="projectModal" class="fixed inset-0 z-[100] hidden bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300">
+        <div id="projectModal" class="fixed inset-0 z-[100] hidden bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
             <div class="bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative transform scale-95 transition-transform duration-300" id="modalContentBox">
-                <button onclick="closeProjectModal()" class="absolute top-5 right-5 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-200 hover:text-gray-800 focus:outline-none z-10 transition-colors">
-                    <i class="fas fa-times text-xl"></i>
+                <button onclick="closeProjectModal()" class="absolute top-5 right-5 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-200 hover:text-gray-800 z-10 transition-colors" aria-label="Close project details" data-i18n-aria="closeDialog">
+                    <i class="fas fa-times text-xl" aria-hidden="true"></i>
                 </button>
                 <div id="modalDynamicBody" class="p-8 sm:p-12"></div>
             </div>
@@ -270,19 +329,19 @@
                                     <h5 class="font-bold mb-3 uppercase tracking-wide text-sm" data-i18n="keyResponsibilities">Key Responsibilities</h5>
                                     <ul class="space-y-3">
                                         <li class="flex items-start">
-                                            <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
+                                            <div class="w-1 h-1 bg-accent mt-2 me-3"></div>
                                             <span data-i18n="exp1Task1">Managing the end-to-end design process for wet utilities (water, sewage, stormwater) and dry utility coordination.</span>
                                         </li>
                                         <li class="flex items-start">
-                                            <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
+                                            <div class="w-1 h-1 bg-accent mt-2 me-3"></div>
                                             <span data-i18n="exp1Task2">Supervising the technical output for the "New Tashkent" project and other concurrent residential developments.</span>
                                         </li>
                                         <li class="flex items-start">
-                                            <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
+                                            <div class="w-1 h-1 bg-accent mt-2 me-3"></div>
                                             <span data-i18n="exp1Task3">Developing automated design scripts to accelerate project deliverables and ensure standardization across the engineering team.</span>
                                         </li>
                                         <li class="flex items-start">
-                                            <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
+                                            <div class="w-1 h-1 bg-accent mt-2 me-3"></div>
                                             <span data-i18n="exp1Task4">Coordinating with multidisciplinary teams to integrate infrastructure solutions within complex urban master plans.</span>
                                         </li>
                                     </ul>
@@ -315,20 +374,16 @@
                                     <h5 class="font-bold mb-3 uppercase tracking-wide text-sm" data-i18n="keyResponsibilities">Key Responsibilities</h5>
                                     <ul class="space-y-3">
                                         <li class="flex items-start">
-                                            <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
+                                            <div class="w-1 h-1 bg-accent mt-2 me-3"></div>
                                             <span data-i18n="exp2Task1">Designed comprehensive infrastructure systems for residential complexes, hotels, and industrial facilities.</span>
                                         </li>
                                         <li class="flex items-start">
-                                            <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
+                                            <div class="w-1 h-1 bg-accent mt-2 me-3"></div>
                                             <span data-i18n="exp2Task2">Conducted detailed road design, including pavement structure analysis and traffic intersection planning.</span>
                                         </li>
                                         <li class="flex items-start">
-                                            <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
+                                            <div class="w-1 h-1 bg-accent mt-2 me-3"></div>
                                             <span data-i18n="exp2Task3">Performed traffic flow studies to optimize internal road layouts.</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
-                                            <span data-i18n="exp2Task4">Transitioned to a remote work model in March 2025 while maintaining full project responsibilities.</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -340,31 +395,6 @@
                                 </div>
                             </div>
                         </div>
-
-                     <!--   <div class="experience-item">
-                            <div class="experience-date">
-                                <div class="date-year" data-i18n="fromJun2022">Jun 2022</div>
-                                <div class="date-duration" data-i18n="toDec2022">Dec 2022</div>
-                            </div>
-                            <div class="experience-content">
-                                <div class="mb-2">
-                                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium" data-i18n="fullTime">Full-Time</span>
-                                </div>
-                                <h3 class="text-2xl font-bold mb-3" data-i18n="expTitle3">Sales Representative</h3>
-                                <h4 class="text-xl text-light mb-4" data-i18n="expCompany3">Pala Kalıp Makine | Istanbul, Türkiye</h4>
-                                <ul class="space-y-3">
-                                    <li class="flex items-start">
-                                        <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
-                                        <span data-i18n="exp3Task1">Managed sales operations, negotiating with clients, and organizing contracts.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
-                                        <span data-i18n="exp3Task2">Provided translation support during negotiation, sales, and after-sales service for non-Turkish-speaking clients.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        -->
 
                         <div class="experience-item hidden-experience hidden opacity-0 translate-y-4 transition-all duration-500">
                             <div class="experience-date">
@@ -419,14 +449,14 @@
                         <div id="load-more-container" class="text-center mt-16">
                             <button id="load-more-btn" class="inline-flex items-center justify-center px-8 py-3 border-2 border-accent text-accent hover:bg-accent hover:text-white transition-all duration-300 rounded-full font-bold text-lg group">
                                 <span data-i18n="loadMore">Load More Experiences</span>
-                                <i class="fas fa-chevron-down ml-2 rtl:mr-2 rtl:ml-0 transition-transform group-hover:translate-y-1"></i>
+                                <i class="fas fa-chevron-down ms-2 transition-transform group-hover:translate-y-1"></i>
                             </button>
                         </div>
 
                         <div class="border border-gray-200 p-6">
                             <h4 class="font-bold mb-3 uppercase tracking-wide text-sm" data-i18n="professionalMembership">Professional Membership</h4>
                             <div class="flex items-center">
-                                <div class="w-10 h-10 bg-gray-100 flex items-center justify-center mr-4">
+                                <div class="w-10 h-10 bg-gray-100 flex items-center justify-center me-4">
                                     <i class="fas fa-award text-accent"></i>
                                 </div>
                                 <div>
@@ -460,7 +490,7 @@
                                     During my studies at the Faculty of Technology, I received an education that combined theoretical foundations with practical application. Most courses involved hands-on training and applied projects. I focused particularly on infrastructure and road design, which significantly enhanced my ability to apply engineering concepts in real-world contexts and improved my readiness to tackle practical challenges in the civil engineering sector.
                                 </p>
                                 <div class="flex items-center">
-                                    <span class="font-medium mr-3" data-i18n="gpa">GPA:</span>
+                                    <span class="font-medium me-3" data-i18n="gpa">GPA:</span>
                                     <span class="text-2xl font-bold">3.14</span>
                                 </div>
                             </div>
@@ -474,15 +504,15 @@
                                         </div>
                                         <ul class="space-y-3 text-light text-sm">
                                             <li class="flex items-start">
-                                                <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
+                                                <div class="w-1 h-1 bg-accent mt-2 me-3"></div>
                                                 <span data-i18n="vol1">Advanced to Chairman of the Supervisory Board, where I contributed to structural reforms and assisted in drafting internal bylaws to enhance institutional governance.</span>
                                             </li>
                                             <li class="flex items-start">
-                                                <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
+                                                <div class="w-1 h-1 bg-accent mt-2 me-3"></div>
                                                 <span data-i18n="vol2">Assisted in developing official policy documents and regulatory content, supporting organizational alignment through precise documentation and professional communication.</span>
                                             </li>
                                             <li class="flex items-start">
-                                                <div class="w-1 h-1 bg-accent mt-2 mr-3"></div>
+                                                <div class="w-1 h-1 bg-accent mt-2 me-3"></div>
                                                 <span data-i18n="vol3">Contributed to institutional cohesion by helping facilitate internal conflict resolution and supporting initiatives focused on organized collective action and youth empowerment.</span>
                                             </li>
                                         </ul>
@@ -570,7 +600,7 @@
                                             </div>
                                             <div class="border border-gray-200 p-4">
                                                 <div class="flex justify-between items-center mb-2">
-                                                    <span class="font-medium">Urbano II</span>
+                                                    <span class="font-medium">Urbano 11</span>
                                                     <span class="text-accent text-sm font-medium" data-i18n="expert">Expert</span>
                                                 </div>
                                                 <div class="h-1 bg-gray-100">
@@ -580,10 +610,10 @@
                                             <div class="border border-gray-200 p-4">
                                                 <div class="flex justify-between items-center mb-2">
                                                     <span class="font-medium">WaterGEMS</span>
-                                                    <span class="text-accent text-sm font-medium" data-i18n="basic">Basic</span>
+                                                    <span class="text-accent text-sm font-medium" data-i18n="advanced">Advanced</span>
                                                 </div>
                                                 <div class="h-1 bg-gray-100">
-                                                    <div class="h-full bg-accent" style="width: 55%"></div>
+                                                    <div class="h-full bg-accent" style="width: 80%"></div>
                                                 </div>
                                             </div>
                                             <div class="border border-gray-200 p-4">
@@ -646,7 +676,7 @@
                                                     <span class="text-accent text-sm font-medium" data-i18n="intermediate">Intermediate</span>
                                                 </div>
                                                 <div class="h-1 bg-gray-100">
-                                                    <div class="h-full bg-accent" style="width: 75%"></div>
+                                                    <div class="h-full bg-accent" style="width: 70%"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -704,7 +734,7 @@
                                     <div>
                                         <div class="flex justify-between mb-2">
                                             <span class="font-medium" data-i18n="turkish">Turkish</span>
-                                            <span class="text-accent text-sm font-medium" data-i18n="advanced">Advanced (C1)</span>
+                                            <span class="text-accent text-sm font-medium" data-i18n="turkishLevel">Advanced (C1)</span>
                                         </div>
                                         <div class="h-1 bg-gray-100">
                                             <div class="h-full bg-accent" style="width: 90%"></div>
@@ -722,7 +752,7 @@
                                     <div>
                                         <div class="flex justify-between mb-2">
                                             <span class="font-medium" data-i18n="russian">Russian</span>
-                                            <span class="text-accent text-sm font-medium" data-i18n="beginner">beginner (A1)</span>
+                                            <span class="text-accent text-sm font-medium" data-i18n="beginner">Beginner (A1)</span>
                                         </div>
                                         <div class="h-1 bg-gray-100">
                                             <div class="h-full bg-accent" style="width: 20%"></div>
@@ -735,7 +765,7 @@
                                 <div class="space-y-4">
                                     <div class="border border-gray-200 p-4">
                                         <div class="flex items-center">
-                                            <div class="w-8 h-8 bg-gray-100 flex items-center justify-center mr-4">
+                                            <div class="w-8 h-8 bg-gray-100 flex items-center justify-center me-4">
                                                 <i class="fas fa-code text-accent"></i>
                                             </div>
                                             <div>
@@ -746,7 +776,7 @@
                                     </div>
                                     <div class="border border-gray-200 p-4">
                                         <div class="flex items-center">
-                                            <div class="w-8 h-8 bg-gray-100 flex items-center justify-center mr-4">
+                                            <div class="w-8 h-8 bg-gray-100 flex items-center justify-center me-4">
                                                 <i class="fas fa-chess text-accent"></i>
                                             </div>
                                             <div>
@@ -757,7 +787,7 @@
                                     </div>
                                     <div class="border border-gray-200 p-4">
                                         <div class="flex items-center">
-                                            <div class="w-8 h-8 bg-gray-100 flex items-center justify-center mr-4">
+                                            <div class="w-8 h-8 bg-gray-100 flex items-center justify-center me-4">
                                                 <i class="fas fa-pen-fancy text-accent"></i>
                                             </div>
                                             <div>
@@ -777,18 +807,23 @@
         <section id="about" class="py-24 lg:py-32 border-b border-gray-200 bg-orange-50" data-section="about">
             <div class="container mx-auto px-6">
                 <div class="max-w-5xl mx-auto">
-                    <div class="mb-16">
-                        <h2 class="text-4xl font-bold tracking-tight mb-4" data-i18n="aboutMe">About Me</h2>
-                        <div class="h-px w-16 bg-accent mb-6"></div>
-                        <p class="text-light mb-4 leading-relaxed" data-i18n="aboutP1">
-                            I am an Infrastructure Design Engineer with over four years of experience specializing in the technical design of complex utility and water management systems. My professional background spans a diverse range of scales, from localized residential developments to massive, city-scale urban expansions.
-                        </p>
-                        <p class="text-light mb-4 leading-relaxed" data-i18n="aboutP2">
-                            My core focus includes pressurized water systems for potable water, irrigation, and firefighting, as well as sanitary sewage and multi-purpose surface water management. This involves designing traditional drainage networks alongside artificial canals that serve beyond simple runoff—facilitating site-wide drainage, microclimate regulation, and urban aesthetics. I also specialize in groundwater control and foundation drainage to ensure structural protection and long-term resilience.
-                        </p>
-                        <p class="text-light leading-relaxed" data-i18n="aboutP3">
-                            My workflow is built on technical precision, utilizing industry-standard tools such as AutoCAD, Urbano 11, and WaterGEMS to deliver functional and reliable infrastructure solutions. To optimize this process, I leverage Design Automation through AutoLISP and Excel VBA. This approach allows me to eliminate repetitive, routine tasks and minimize potential errors, freeing up capacity to focus on the unique engineering challenges and technical nuances of every project.
-                        </p>
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 items-start">
+                        <div class="lg:col-span-1">
+                            <img src="images/me.jpeg" alt="" data-i18n-alt="aboutPhotoAlt" width="831" height="831" loading="lazy" decoding="async" class="w-full max-w-xs mx-auto lg:max-w-none lg:mx-0 aspect-square object-cover border border-gray-200">
+                        </div>
+                        <div class="lg:col-span-3">
+                            <h2 class="text-4xl font-bold tracking-tight mb-4" data-i18n="aboutMe">About Me</h2>
+                            <div class="h-px w-16 bg-accent mb-6"></div>
+                            <p class="text-light mb-4 leading-relaxed" data-i18n="aboutP1">
+                                I am an Infrastructure Design Engineer with over four years of experience specializing in the technical design of complex utility and water management systems. My professional background spans a diverse range of scales, from localized residential developments to massive, city-scale urban expansions.
+                            </p>
+                            <p class="text-light mb-4 leading-relaxed" data-i18n="aboutP2">
+                                My core focus includes pressurized water systems for potable water, irrigation, and firefighting, as well as sanitary sewage and multi-purpose surface water management. This involves designing traditional drainage networks alongside artificial canals that serve beyond simple runoff—facilitating site-wide drainage, microclimate regulation, and urban aesthetics. I also specialize in groundwater control and foundation drainage to ensure structural protection and long-term resilience.
+                            </p>
+                            <p class="text-light leading-relaxed" data-i18n="aboutP3">
+                                My workflow is built on technical precision, utilizing industry-standard tools such as AutoCAD, Urbano 11, and WaterGEMS to deliver functional and reliable infrastructure solutions. To optimize this process, I leverage Design Automation through AutoLISP and Excel VBA. This approach allows me to eliminate repetitive, routine tasks and minimize potential errors, freeing up capacity to focus on the unique engineering challenges and technical nuances of every project.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -809,7 +844,7 @@
                             
                             <div class="space-y-6 mb-8">
                                 <div class="flex items-start">
-                                    <div class="w-10 h-10 bg-gray-100 flex items-center justify-center mr-4">
+                                    <div class="w-10 h-10 bg-gray-100 flex items-center justify-center me-4">
                                         <i class="fas fa-map-marker-alt text-accent"></i>
                                     </div>
                                     <div>
@@ -819,7 +854,7 @@
                                 </div>
                                 
                                 <div class="flex items-start">
-                                    <div class="w-10 h-10 bg-gray-100 flex items-center justify-center mr-4">
+                                    <div class="w-10 h-10 bg-gray-100 flex items-center justify-center me-4">
                                         <i class="fas fa-phone text-accent"></i>
                                     </div>
                                     <div>
@@ -829,7 +864,7 @@
                                 </div>
                                 
                                 <div class="flex items-start">
-                                    <div class="w-10 h-10 bg-gray-100 flex items-center justify-center mr-4">
+                                    <div class="w-10 h-10 bg-gray-100 flex items-center justify-center me-4">
                                         <i class="fas fa-envelope text-accent"></i>
                                     </div>
                                     <div>
@@ -841,11 +876,11 @@
                             
                             <div class="mt-12 pt-8 border-t border-gray-200">
                                 <h4 class="font-bold mb-6" data-i18n="connectWithMe">Connect with me</h4>
-                                <div class="flex space-x-4">
+                                <div class="flex gap-4">
                                     <a href="mailto:jaffal.abdullah@gmail.com" class="social-icon" aria-label="Email">
                                         <i class="fas fa-envelope"></i>
                                     </a>
-                                    <a href="https://www.linkedin.com/in/abdullahjaffal/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                                    <a href="https://www.linkedin.com/in/abdullahjaffal/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </div>
@@ -875,7 +910,7 @@
                                 </div>
                                 <div class="g-recaptcha mb-6" data-sitekey="6LcYeL4sAAAAAJxZdWlhiQq1-EM499pa6IrmCMHW"></div>
                                 <button type="submit" class="primary-btn w-full">
-                                    <i class="fas fa-paper-plane mr-2"></i>
+                                    <i class="fas fa-paper-plane me-2"></i>
                                     <span data-i18n="sendMessage">Send Message</span>
                                 </button>
                             </form>
@@ -892,9 +927,9 @@
                         <p class="text-light" id="copyright">© 2026 Abdullah Jaffal. All rights reserved.</p>
                     </div>
                     
-                    <div class="flex items-center space-x-6">
+                    <div class="flex items-center gap-6">
                         <a href="resume-english.pdf" download class="text-light hover:text-accent transition-colors text-sm">
-                            <i class="fas fa-download mr-1"></i>
+                            <i class="fas fa-download me-1"></i>
                             <span data-i18n="downloadCv">Download CV</span>
                         </a>
                         <a href="#hero" class="text-light hover:text-accent transition-colors text-sm">

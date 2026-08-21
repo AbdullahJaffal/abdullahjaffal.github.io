@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Engineering software built by Abdullah Jaffal: AutoCAD and Civil 3D plugins for infrastructure design, quantity take-off, as-built data integrity, and a catalogue of AutoLISP automation tools.">
+    <meta name="keywords" content="AutoCAD Plugin, Civil 3D Plugin, BricsCAD, Urbano 11, Bill of Quantities, Metraj, AutoLISP, Design Automation, Infrastructure Software, C# .NET">
+    <meta name="author" content="Abdullah Jaffal">
+    <meta name="theme-color" content="#96694e">
+    <link rel="canonical" href="https://abdullahjaffal.me/tools">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Abdullah Jaffal">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ar_AR">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="og:title" content="Software & Tools | Abdullah Jaffal">
+    <meta property="og:description" content="CAD plugins, calculation engines and automation that turn hours of infrastructure drafting into a single command.">
+    <meta property="og:image" content="https://abdullahjaffal.me/images/me.jpeg">
+    <meta property="og:url" content="https://abdullahjaffal.me/tools">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Software & Tools | Abdullah Jaffal">
+    <meta name="twitter:description" content="CAD plugins, calculation engines and automation that turn hours of infrastructure drafting into a single command.">
+    <meta name="twitter:image" content="https://abdullahjaffal.me/images/me.jpeg">
+
+    <title>Software &amp; Tools | Abdullah Jaffal</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0a0a0a',
+                        'secondary': '#1a1a1a',
+                        'accent': '#96694e',
+                        'text': '#333333',
+                        'light': '#666666',
+                        'border': '#e0e0e0',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'arabic': ['IBM Plex Sans Arabic', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/cv/style.css">
+    <link rel="stylesheet" href="assets/tools/style.css">
+
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+
+    <script>
+        // Arm the scroll-reveal ONLY when this browser can actually undo it.
+        // Without this class the content is plain visible, so a scripting
+        // failure can never leave the page blank.
+        (function () {
+            try {
+                if ('IntersectionObserver' in window &&
+                    !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    document.documentElement.classList.add('reveal-ready');
+                }
+            } catch (e) {}
+        })();
+    </script>
+</head>
+<body class="font-sans text-text bg-white" dir="ltr" lang="en">
+    <a href="#main-content" class="skip-link" data-i18n="skipToContent">Skip to main content</a>
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 backdrop-blur-sm bg-white/95" aria-label="Main navigation">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center h-16">
+                <div>
+                    <a href="/" class="text-base sm:text-xl font-bold tracking-wide sm:tracking-wider whitespace-nowrap hover:text-accent transition-colors">ABDULLAH JAFFAL</a>
+                </div>
+
+                <div class="hidden lg:flex items-center">
+                    <div class="flex items-center gap-8">
+                        <a href="/tools" class="nav-link active" aria-current="page" data-i18n="tools">Software</a>
+                        <div class="me-10 ps-2 border-s border-accent">
+                            <a href="/" class="nav-link" data-i18n="backToSite">Back to portfolio</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 ms-8 ps-8 border-s border-gray-200">
+                        <button class="lang-btn" data-lang="en" lang="en" aria-pressed="false" aria-label="Switch to English">EN</button>
+                        <button class="lang-btn" data-lang="ar" lang="ar" aria-pressed="false" aria-label="التبديل إلى العربية">AR</button>
+                        <button class="lang-btn" data-lang="tr" lang="tr" aria-pressed="false" aria-label="Türkçeye geç">TR</button>
+                    </div>
+                </div>
+
+                <div class="lg:hidden flex items-center gap-2 sm:gap-4">
+                    <div class="flex gap-2">
+                        <button class="lang-btn" data-lang="en" lang="en" aria-pressed="false" aria-label="Switch to English">EN</button>
+                        <button class="lang-btn" data-lang="ar" lang="ar" aria-pressed="false" aria-label="التبديل إلى العربية">AR</button>
+                        <button class="lang-btn" data-lang="tr" lang="tr" aria-pressed="false" aria-label="Türkçeye geç">TR</button>
+                    </div>
+                    <button id="mobile-menu-btn" class="text-text" type="button" aria-label="Open navigation menu" data-i18n-aria="openMenu" aria-expanded="false" aria-controls="mobile-menu">
+                        <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200">
+            <div class="px-6 py-4 space-y-4 flex flex-col">
+                <a href="/tools" class="mobile-nav-link text-lg font-medium" aria-current="page" data-i18n="tools">Software</a>
+                <a href="/" class="mobile-nav-link text-lg font-medium" data-i18n="backToSite">Back to portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16" id="main-content" tabindex="-1">
+
+        <section id="hero" class="py-24 lg:py-32 border-b border-gray-200">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+                    <div class="mb-16">
+                        <h1 class="text-4xl font-bold tracking-tight mb-4" data-i18n="heroHeading">Software & Tools</h1>
+                        <div class="h-px w-16 bg-accent mb-6"></div>
+                        <p class="text-light mb-4 leading-relaxed" data-i18n="heroP1">
+                            Infrastructure design still involves a lot of repetitive, error-prone manual work — quantity take-offs, label placement, as-built checks, the same geometric routines on every project. Where the tool I needed didn't exist, I built it.
+                        </p>
+                        <p class="text-light leading-relaxed" data-i18n="heroP2">
+                            That started as small AutoLISP scripts and grew into a small ecosystem: a plugin suite for the CAD platforms I use daily, and an AI-assisted command hub I now rely on for AutoCAD work generally. What follows is that toolkit.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="stat-box">
+                            <div class="text-3xl font-bold mb-2">5</div>
+                            <div class="text-light uppercase tracking-wide text-sm" data-i18n="statTools">Tools Built</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="text-3xl font-bold mb-2">100+</div>
+                            <div class="text-light uppercase tracking-wide text-sm" data-i18n="statCommands">CAD Commands</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="text-3xl font-bold mb-2">3</div>
+                            <div class="text-light uppercase tracking-wide text-sm" data-i18n="statPlatforms">CAD Platforms</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="text-3xl font-bold mb-2">50+</div>
+                            <div class="text-light uppercase tracking-wide text-sm" data-i18n="statAutolisp">AutoLISP Routines</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 lg:py-28 border-b border-gray-200 bg-orange-50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+
+                    <div class="suite-panel reveal mb-12">
+                        <div class="flex flex-wrap items-center gap-4 mb-6">
+                            <h2 class="text-3xl lg:text-4xl font-bold tracking-tight" data-i18n="suiteHeading">UrbanoSuite</h2>
+                            <span class="suite-badge" data-i18n="suiteBadge">Released · v2.0.5</span>
+                        </div>
+                        <p class="text-lg text-light leading-relaxed mb-8" data-i18n="suiteLead">
+                            A plugin suite for AutoCAD and BricsCAD that extends Urbano 11, the utility-network design platform. It ships as a single installer with a shared licensing core and is in daily production use.
+                        </p>
+
+                        <div class="challenge-box">
+                            <h3 class="font-bold mb-3 uppercase tracking-wide text-sm" data-i18n="suiteChallenge">The engineering problem</h3>
+                            <p class="text-light leading-relaxed" data-i18n="suiteChallengeText">
+                                Urbano 11 exposes no public API — its design data is effectively locked inside the application. I reverse-engineered its export pipeline and built a reliable extraction layer on top of it, which is what makes every module in the suite possible. That layer is documented as an internal rulebook so the behaviour stays reproducible as the host application changes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <article class="tool-card reveal">
+                            <span class="tool-icon" aria-hidden="true"><i class="fas fa-calculator"></i></span>
+                            <span class="tool-role" data-i18n="modBoqRole">Bill of Quantities</span>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="modBoqTitle">UrbanoBoQ</h3>
+                            <p class="text-light leading-relaxed mb-4" data-i18n="modBoqText">
+                                Turns a designed utility network into a complete, multi-sheet Excel quantity take-off: pipes, manholes, trenches and excavation volumes. Resolves overlapping trench geometry with polygon boolean operations so shared excavation is never counted twice, and stacks pre-cast manhole rings automatically to the required depth.
+                            </p>
+                            <div class="tool-meta" data-i18n="modBoqMeta">24 commands</div>
+                        </article>
+
+                        <article class="tool-card reveal">
+                            <span class="tool-icon" aria-hidden="true"><i class="fas fa-shield-halved"></i></span>
+                            <span class="tool-role" data-i18n="modLockRole">As-Built Integrity</span>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="modLockTitle">UrbanoLock</h3>
+                            <p class="text-light leading-relaxed mb-4" data-i18n="modLockText">
+                                Protects as-built survey data once it has been entered. It locks the recorded values into the drawing, validates them continuously, repairs drift on its own, and can push a verified set back into the design platform's own templates. Built for the stage where a single overwritten level quietly invalidates a whole network.
+                            </p>
+                            <div class="tool-meta" data-i18n="modLockMeta">60 commands</div>
+                        </article>
+
+                        <article class="tool-card reveal">
+                            <span class="tool-icon" aria-hidden="true"><i class="fas fa-tag"></i></span>
+                            <span class="tool-role" data-i18n="modLabelsRole">Annotation</span>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="modLabelsTitle">UrbanoLabels</h3>
+                            <p class="text-light leading-relaxed mb-4" data-i18n="modLabelsText">
+                                Draws configurable information labels for manholes — a template-driven body holding the fields you choose, offset from the object and optionally joined to it by a leader with further data above and below the line. Labels stay linked to their source, so a data refresh updates them in place.
+                            </p>
+                            <div class="tool-meta" data-i18n="modLabelsMeta">13 commands · licence-free</div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 lg:py-28 border-b border-gray-200">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+
+                    <div class="suite-panel reveal">
+                        <div class="flex flex-wrap items-center gap-4 mb-6">
+                            <h2 class="text-3xl lg:text-4xl font-bold tracking-tight" data-i18n="cmdhubTitle">CmdHub</h2>
+                            <span class="suite-badge" data-i18n="cmdhubBadge">Independent Application · Released</span>
+                        </div>
+                        <p class="text-lg text-light leading-relaxed mb-8" data-i18n="cmdhubLead">
+                            An independent AutoCAD companion I built and use daily. It unifies 1,200+ searchable commands in one place — Autodesk's native commands, AutoLISP tools curated from the community, and the ones I've written myself (about 20 entirely by hand, 30+ more with AI assistance) — each with its own explanation, usage notes and source. Search works by description, not just exact name: type what a command should do and it finds the closest matches.
+                        </p>
+
+                        <div class="stat-box inline-block mb-8">
+                            <div class="text-3xl font-bold mb-2" data-i18n="cmdhubStatValue">1,200+</div>
+                            <div class="text-light uppercase tracking-wide text-sm" data-i18n="cmdhubStatLabel">Commands Indexed</div>
+                        </div>
+
+                        <div class="challenge-box mb-8">
+                            <h3 class="font-bold mb-3 uppercase tracking-wide text-sm" data-i18n="cmdhubAiTitle">Built-in AI Assistant</h3>
+                            <p class="text-light leading-relaxed" data-i18n="cmdhubAiText">
+                                A built-in AI mode answers AutoCAD questions on demand and recommends matching commands from the library. It can also draft an entirely new AutoLISP tool from a plain-language description: the AI proposes a plan, generates and lints the code, and lets you test it safely in a quarantined copy of the drawing — your original file is never touched — before it's approved and added to the searchable library.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold mb-3 uppercase tracking-wide text-sm" data-i18n="cmdhubHandTitle">A few of the routines I wrote by hand</h4>
+                            <div id="cmdhub-routines" class="flex flex-wrap gap-2 mb-4"></div>
+                            <p class="text-sm text-light flex items-center gap-2">
+                                <i class="fas fa-wand-magic-sparkles text-accent" aria-hidden="true"></i>
+                                <span data-i18n="cmdhubAiNote">+30 more of my own routines were built with AI assistance</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 lg:py-28 border-b border-gray-200 bg-orange-50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+                    <div class="mb-14">
+                        <h2 class="text-3xl lg:text-4xl font-bold tracking-tight mb-4" data-i18n="otherHeading">Other Projects</h2>
+                        <div class="h-px w-16 bg-accent"></div>
+                        <p class="text-light mt-4 max-w-2xl" data-i18n="otherLead">
+                            Work outside the Urbano ecosystem — from drafting automation to a full catalogue of AutoLISP tooling.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <article class="tool-card reveal">
+                            <span class="tool-icon" aria-hidden="true"><i class="fas fa-grip"></i></span>
+                            <span class="tool-role" data-i18n="catchRole">Drafting Automation</span>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="catchTitle">CatchBasinPlacer</h3>
+                            <p class="text-light leading-relaxed mb-4" data-i18n="catchText">
+                                Built specifically for the New Tashkent City project, to its own drawing standard — not intended for reuse elsewhere. It places and orients asymmetric drainage grille blocks at parking pockets across large drawings. The block only fits a pocket one way round, so instead of tangent mathematics it uses a spatial match-and-filter search.
+                            </p>
+                            <div class="tool-meta" data-i18n="catchMeta">AutoCAD · New Tashkent City</div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 lg:py-28 border-b border-gray-200">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+                    <div class="mb-14">
+                        <h2 class="text-3xl lg:text-4xl font-bold tracking-tight mb-4" data-i18n="stackHeading">How It Is Built</h2>
+                        <div class="h-px w-16 bg-accent"></div>
+                        <p class="text-light mt-4 max-w-2xl" data-i18n="stackLead">
+                            The engineering problem drives the stack, not the other way round.
+                        </p>
+                    </div>
+
+                    <dl class="stack-group grid grid-cols-1 md:grid-cols-2 gap-x-12">
+                        <div>
+                            <dt data-i18n="stackLangs">Languages</dt>
+                            <dd>C# · .NET · AutoLISP · Excel VBA</dd>
+                        </div>
+                        <div>
+                            <dt data-i18n="stackPlatforms">Platforms</dt>
+                            <dd>AutoCAD · Civil 3D · BricsCAD</dd>
+                        </div>
+                        <div>
+                            <dt data-i18n="stackUi">Interface</dt>
+                            <dd>WPF · MVVM · Ribbon &amp; palette integration</dd>
+                        </div>
+                        <div>
+                            <dt data-i18n="stackDomain">Domain</dt>
+                            <dd data-i18n="stackDomainList">Network topology, polygon geometry, hydraulic calculation, spreadsheet generation</dd>
+                        </div>
+                        <div class="md:col-span-2 pt-6 mt-2 border-t border-gray-200">
+                            <dt data-i18n="stackProcess">Development Process</dt>
+                            <dd data-i18n="stackProcessText">Built with AI-assisted development — I design the engineering logic and architecture; AI accelerates the implementation.</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 lg:py-32 border-b border-gray-200 bg-orange-50" data-section="about">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 items-start">
+                        <div class="lg:col-span-1">
+                            <img src="images/me.jpeg" alt="" data-i18n-alt="aboutPhotoAlt" width="831" height="831" loading="lazy" decoding="async" class="w-full max-w-xs mx-auto lg:max-w-none lg:mx-0 aspect-square object-cover border border-gray-200">
+                        </div>
+                        <div class="lg:col-span-3">
+                            <h2 class="text-4xl font-bold tracking-tight mb-4" data-i18n="aboutMe">About Me</h2>
+                            <div class="h-px w-16 bg-accent mb-6"></div>
+                            <p class="text-light mb-4 leading-relaxed" data-i18n="aboutP1">
+                                I am an Infrastructure Design Engineer with over four years of experience specializing in the technical design of complex utility and water management systems. My professional background spans a diverse range of scales, from localized residential developments to massive, city-scale urban expansions.
+                            </p>
+                            <p class="text-light mb-4 leading-relaxed" data-i18n="aboutP2">
+                                My core focus includes pressurized water systems for potable water, irrigation, and firefighting, as well as sanitary sewage and multi-purpose surface water management. This involves designing traditional drainage networks alongside artificial canals that serve beyond simple runoff—facilitating site-wide drainage, microclimate regulation, and urban aesthetics. I also specialize in groundwater control and foundation drainage to ensure structural protection and long-term resilience.
+                            </p>
+                            <p class="text-light leading-relaxed" data-i18n="aboutP3">
+                                My workflow is built on technical precision, utilizing industry-standard tools such as AutoCAD, Urbano 11, and WaterGEMS to deliver functional and reliable infrastructure solutions. To optimize this process, I leverage Design Automation through AutoLISP and Excel VBA. This approach allows me to eliminate repetitive, routine tasks and minimize potential errors, freeing up capacity to focus on the unique engineering challenges and technical nuances of every project.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 lg:py-24">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-2xl lg:text-3xl font-bold tracking-tight mb-4" data-i18n="ctaHeading">Interested in any of this?</h2>
+                    <p class="text-light leading-relaxed mb-8" data-i18n="ctaText">
+                        Happy to talk through how these tools work, or about building something similar for your own workflow.
+                    </p>
+                    <a href="/#contact" class="primary-btn">
+                        <span data-i18n="ctaButton">Get in touch</span>
+                        <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-12 border-t border-gray-200 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-light" id="copyright">© 2026 Abdullah Jaffal. All rights reserved.</p>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <a href="/" class="text-light hover:text-accent transition-colors text-sm" data-i18n="backToSite">Back to portfolio</a>
+                        <a href="#main-content" class="text-light hover:text-accent transition-colors text-sm" data-i18n="backToTop">Back to Top</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="assets/tools/script.js"></script>
+</body>
+</html>

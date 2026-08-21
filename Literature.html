@@ -3,13 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Abdullah Jaffal - Infrastructure Design Engineer specializing in mega-scale hydraulic systems, utility galleries, and design automation.">
-    <meta name="keywords" content="Civil Engineer, Infrastructure Design, Urbano11, WaterGEMS, AutoCAD, Tashkent, Istanbul">
-    <meta property="og:title" content="Abdullah Jaffal | Engineering Portfolio">
-    <meta property="og:description" content="Turning complex master plans into sustainable urban realities.">
-    <meta property="og:image" content="images/me.jpeg">
-    <meta property="og:url" content="https://abdullahjaffal.me/">
+    <meta name="description" content="مساحة أدبية لعبد الله جفَّال — مقتطفات روائية ونصوص أدبية.">
+    <meta name="keywords" content="أدب، رواية عربية، نصوص أدبية، أجنحة في مستوطنة العقاب">
+    <meta name="author" content="عبد الله جفَّال">
+    <meta name="theme-color" content="#96694e">
+    <link rel="canonical" href="https://abdullahjaffal.me/Literature">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="عبد الله جفَّال">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:title" content="مساحة أدبية | عبد الله جفَّال">
+    <meta property="og:description" content="والحبُّ خمرُ الحياةِ وما الإنسانُ إلا كأسُها المقدّس">
+    <meta property="og:image" content="https://abdullahjaffal.me/images/me.jpeg">
+    <meta property="og:url" content="https://abdullahjaffal.me/Literature">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="مساحة أدبية | عبد الله جفَّال">
+    <meta name="twitter:description" content="والحبُّ خمرُ الحياةِ وما الإنسانُ إلا كأسُها المقدّس">
+    <meta name="twitter:image" content="https://abdullahjaffal.me/images/me.jpeg">
     <title>مساحة أدبية | عبد الله جفَّال</title>
+
+    <script>
+        // Applied before first paint so dark-mode readers never see a white flash
+        (function () {
+            try {
+                var saved = localStorage.getItem('literary-theme');
+                var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (saved === 'dark' || (!saved && prefersDark)) {
+                    document.documentElement.classList.add('dark');
+                }
+            } catch (e) {}
+        })();
+            try {
+                // This page is Arabic-first; only switch away from it when the
+                // visitor has an explicit stored preference from elsewhere on
+                // the site (the language buttons share this key across pages).
+                var lang = localStorage.getItem('selectedLang') || 'ar';
+                document.documentElement.lang = lang;
+                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            } catch (e) {}
+    </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -23,7 +56,7 @@
                         'paper-dark': '#f4f1ea',
                         'text': '#2c2c2c',
                         'text-light': '#666666',
-                        'accent': '#a87c5f',
+                        'accent': '#96694e',
                         'border': '#e8e8e8',
                     },
                     fontFamily: {
@@ -57,39 +90,45 @@
 </head>
 <body class="font-arabic bg-paper text-text transition-colors duration-300" dir="rtl">
     
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-paper/90 backdrop-blur-md border-b border-border transition-colors duration-300 nav-container">
+    <nav aria-label="التنقل الرئيسي" data-i18n-aria="mainNavAria" class="fixed top-0 left-0 right-0 z-50 bg-paper/90 backdrop-blur-md border-b border-border transition-colors duration-300 nav-container">
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-center h-16">
                 <div>
-                    <a href="index.html" class="text-xl font-bold tracking-wide text-text hover:text-accent transition-colors">
+                    <a href="index.html" class="text-xl font-bold tracking-wide text-text hover:text-accent transition-colors" data-i18n="brandName">
                         عبد الله جفَّال
                     </a>
                 </div>
                 
-                <div class="flex items-center space-x-6 space-x-reverse">
-                    <button id="theme-toggle" class="text-text-light hover:text-accent transition-colors text-sm flex items-center">
-                        <i class="far fa-moon ml-2"></i>
-                        <span id="theme-text">الوضع الليلي</span>
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <button id="theme-toggle" type="button" aria-pressed="false" class="text-text-light hover:text-accent transition-colors text-sm flex items-center">
+                        <i class="far fa-moon ml-2" aria-hidden="true"></i>
+                        <span id="theme-text" class="nav-label-text" data-i18n="themeDark">الوضع الليلي</span>
                     </button>
                     <div class="h-4 w-px bg-border"></div>
-                    <a href="/" class="text-text-light hover:text-text transition-colors text-sm font-medium">
-                        العودة للموقع
-                        <i class="fas fa-arrow-left mr-2 text-xs"></i>
+                    <div class="flex items-center gap-2">
+                        <button class="lang-btn" data-lang="en" lang="en" aria-pressed="false" aria-label="Switch to English">EN</button>
+                        <button class="lang-btn" data-lang="ar" lang="ar" aria-pressed="false" aria-label="التبديل إلى العربية">AR</button>
+                        <button class="lang-btn" data-lang="tr" lang="tr" aria-pressed="false" aria-label="Türkçeye geç">TR</button>
+                    </div>
+                    <div class="h-4 w-px bg-border"></div>
+                    <a href="/" class="back-site-link text-text-light hover:text-text transition-colors text-sm font-medium" data-i18n-aria="backToSite">
+                        <span class="nav-label-text" data-i18n="backToSite">العودة للموقع</span>
+                        <i class="fas fa-arrow-left mr-2 text-xs" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="pt-16 min-h-screen">
+    <main id="main-content" class="pt-16 min-h-screen">
         <section class="py-16 lg:py-24 border-b border-border bg-paper-dark/20 transition-colors duration-300">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto text-center animate-fade-in-up">
-                    <span class="text-accent font-medium tracking-wider text-sm mb-4 block">مدونة الكاتب</span>
-                    <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight text-text">
+                    <span class="text-accent font-medium tracking-wider text-sm mb-4 block" data-i18n="writersCorner">مدونة الكاتب</span>
+                    <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight text-text" data-i18n="pageHeading">
                         مساحة أدبية
                     </h1>
-                    <p class="text-xl text-text-light mb-8 leading-relaxed max-w-2xl mx-auto font-light">
+                    <p class="text-xl text-text-light mb-8 leading-relaxed max-w-2xl mx-auto font-light" dir="rtl">
                         والحبُّ خمرُ الحياةِ وما الإنسانُ إلا كأسُها المقدَّس
                     </p>
                     <div class="h-px w-24 bg-accent mx-auto opacity-60"></div>
@@ -106,26 +145,26 @@
                         <article class="literary-work animate-fade-in-up" data-work="1">
                             <div class="work-preview cursor-pointer group">
                                 <div class="mb-6">
-                                    <span class="inline-block px-4 py-1 bg-accent/10 text-accent font-medium text-sm rounded-full mb-4 border border-accent/20">
+                                    <span class="inline-block px-4 py-1 bg-accent/10 text-accent font-medium text-sm rounded-full mb-4 border border-accent/20" data-i18n="fictionExcerpt">
                                         مقتطف روائي
                                     </span>
-                                    <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-text group-hover:text-accent transition-colors duration-300">
+                                    <h2 class="work-title text-2xl lg:text-3xl font-bold mb-4 text-text group-hover:text-accent transition-colors duration-300" dir="rtl">
                                         أجنحة في مستوطنة العقاب
                                     </h3>
-                                    <h4 class="text-accent text-sm font-bold tracking-widest mb-2 block">الفصل الأول</h4>
-                                    <p class="text-text-light text-lg leading-relaxed mb-6 font-light">
+                                    <h3 class="work-chapter text-accent text-sm font-bold tracking-widest mb-2 block" dir="rtl">الفصل الأول</h3>
+                                    <p class="text-text-light text-lg leading-relaxed mb-6 font-light" dir="rtl">
                                         استيقظت متأخرًا، أو أنا لست أدري على وجه الدقة متى استيقظت؛ فربما كنت مستيقظًا منذ مدة أنتظر رنة المنبه، فالزمن هنا بات كسائل لزج لا شوائب فيه تغير من جريانه أو تقطعه....
                                     </p>
                                 </div>
                                 
                                 <div class="flex items-center justify-between pt-6 border-t border-border/50">
                                     <div class="text-sm text-text-light font-medium">
-                                        <span class="ml-4"><i class="far fa-clock ml-1"></i> 4 دقائق قراءة</span>
-                                        <span><i class="far fa-calendar ml-1"></i> إسطنبول 2023</span>
+                                        <span class="ml-4"><i class="far fa-clock ml-1" aria-hidden="true"></i> <span data-i18n-minread="4"></span></span>
+                                        <span><i class="far fa-calendar ml-1" aria-hidden="true"></i> <span data-i18n="cityIstanbul"></span> 2023</span>
                                     </div>
                                     <button class="read-more-btn">
-                                        <span>اقرأ المزيد</span>
-                                        <i class="fas fa-arrow-left mr-2 text-sm"></i>
+                                        <span data-i18n="readMore">اقرأ المزيد</span>
+                                        <i class="fas fa-arrow-left mr-2 text-sm" aria-hidden="true"></i>
                                     </button>
                                 </div>
                             </div>
@@ -133,18 +172,18 @@
                             <div class="work-full hidden mt-8 pt-8 border-t border-border">
                                 <div class="max-w-3xl mx-auto">
                                     <button class="back-to-list mb-8 text-text-light hover:text-accent transition-colors font-medium">
-                                        <i class="fas fa-arrow-right ml-2"></i> العودة للقائمة
+                                        <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i> <span data-i18n="backToList">العودة للقائمة</span>
                                     </button>
                                     
                                     <div class="prose prose-lg max-w-none text-text">
                                         <div class="mb-12 text-center">
-                                            <span class="text-accent text-sm font-bold tracking-widest mb-2 block">تداعيات ذاتية</span>
-                                            <h1 class="text-3xl lg:text-4xl font-bold mb-6">أجنحة في مستوطنة العقاب</h1>
+                                            <span class="text-accent text-sm font-bold tracking-widest mb-2 block" dir="rtl">تداعيات ذاتية</span>
+                                            <h2 class="text-3xl lg:text-4xl font-bold mb-6" dir="rtl">أجنحة في مستوطنة العقاب</h2>
                                             <div class="h-1 w-12 bg-accent mx-auto"></div>
-                                            <h3 class="text-xl lg:text-2xl font-bold my-6">الفصل الأول</h3>
+                                            <h3 class="text-xl lg:text-2xl font-bold my-6" dir="rtl">الفصل الأول</h3>
                                         </div>
                                         
-                                        <div class="space-y-6 text-xl leading-loose font-light" id="text-content-1">
+                                        <div class="space-y-6 text-xl leading-loose font-light" id="text-content-1" dir="rtl">
                                             <p>
                                                 استيقظت متأخرًا، أو أنا لست أدري على وجه الدقة متى استيقظت؛ فربما كنت مستيقظًا منذ مدة أنتظر رنة المنبه، فالزمن هنا بات كسائل لزج لا شوائب فيه تغير من جريانه أو تقطعه. ولكن إن لم تمزق رنة المنبه صمت الصباح، كيف لم يمزقه رنين الهاتف؟ الشمس بدأت باختراق غرفتي معلنة أنه يوم سيئ آخر ويوم عناءٍ طويل لا ينتهي. وكانت في السابق خجولة لا تقتحم غرفتي حتى أغادر سريري، فإن كانت هي الخجولة قد اقتحمت يومي بوقاحة، فكيف لا يمكن للهاتف أن يقتحمه؟ أن يجعلني أسمع توبيخًا من رب العمل على التأخر؟ نظرت للهاتف الذي تشوّهت معالمه وشاخ قبل أوانه، كان يتدلى من أسفله وحتى الحائط سلك الشاحن. مددت يدي ناحية ضوء السرير، يبدو أن كل الظروف تخبرني بذات الشيء. تقلبت في فراشي ناحية الهاتف، لمست شاشته لأتيقن من وجوده وأنه لم يمت قبلي. أظهرت شاشته التوقيت، هي التاسعة والربع. لقد تجاوزت حتى الوقت الذي يُعزى لزحمة المواصلات ويُحتج به، فكيف لم يرن الهاتف بعد!
                                             </p>
@@ -185,17 +224,15 @@
                                     <div class="article-navigation flex flex-col sm:flex-row justify-between items-center mt-12 pt-8 border-t border-border gap-6 mb-8">
                                         <button class="prev-btn hidden text-text hover:text-accent transition-colors text-right flex-1 w-full sm:w-auto group">
                                             <span class="text-sm text-text-light block mb-1">
-                                                <i class="fas fa-arrow-right ml-1"></i> الفصل السابق
-                                            </span>
+                                                <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i> <span data-i18n="prevChapterLabel">الفصل السابق</span></span>
                                             <span class="title-span font-bold text-lg group-hover:text-accent block"></span>
                                             <span class="chapter-span text-sm text-accent opacity-90 block mt-1"></span>
                                         </button>
                                         <button class="back-to-list text-text-light hover:text-accent transition-colors font-medium shrink-0">
-                                            <i class="fas fa-list ml-2"></i> القائمة الرئيسية
-                                        </button>
+                                            <i class="fas fa-list ml-2" aria-hidden="true"></i> <span data-i18n="mainList">القائمة الرئيسية</span></button>
                                         <button class="next-btn hidden text-text hover:text-accent transition-colors text-left flex-1 w-full sm:w-auto group">
-                                            <span class="text-sm text-text-light block mb-1">
-                                                الفصل التالي <i class="fas fa-arrow-left mr-1"></i>
+                                            <span data-i18n="nextChapterLabel"><span class="text-sm text-text-light block mb-1">
+                                                الفصل التالي</span> <i class="fas fa-arrow-left mr-1" aria-hidden="true"></i>
                                             </span>
                                             <span class="title-span font-bold text-lg group-hover:text-accent block"></span>
                                             <span class="chapter-span text-sm text-accent opacity-90 block mt-1"></span>
@@ -208,26 +245,26 @@
                         <article class="literary-work animate-fade-in-up" data-work="2">
                             <div class="work-preview cursor-pointer group">
                                 <div class="mb-6">
-                                    <span class="inline-block px-4 py-1 bg-accent/10 text-accent font-medium text-sm rounded-full mb-4 border border-accent/20">
+                                    <span class="inline-block px-4 py-1 bg-accent/10 text-accent font-medium text-sm rounded-full mb-4 border border-accent/20" data-i18n="fictionExcerpt">
                                         مقتطف روائي
                                     </span>
-                                    <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-text group-hover:text-accent transition-colors duration-300">
+                                    <h2 class="work-title text-2xl lg:text-3xl font-bold mb-4 text-text group-hover:text-accent transition-colors duration-300" dir="rtl">
                                         أجنحة في مستوطنة العقاب
                                     </h3>
-                                    <h4 class="text-accent text-sm font-bold tracking-widest mb-2 block">الفصل الثاني</h4>
-                                    <p class="text-text-light text-lg leading-relaxed mb-6 font-light">
+                                    <h3 class="work-chapter text-accent text-sm font-bold tracking-widest mb-2 block" dir="rtl">الفصل الثاني</h3>
+                                    <p class="text-text-light text-lg leading-relaxed mb-6 font-light" dir="rtl">
                                         حملت حقيبتي وخرجت من المنزل، تأكدت من إحكامي لإغلاق الباب، استدرت ناحية المصعد وطلبته. وصل المصعد وفتح بابه، فانبعثت منه رائحة الغاز التي زكمت أنفي في الصباح....
                                     </p>
                                 </div>
                                 
                                 <div class="flex items-center justify-between pt-6 border-t border-border/50">
                                     <div class="text-sm text-text-light font-medium">
-                                        <span class="ml-4"><i class="far fa-clock ml-1"></i> 3 دقائق قراءة</span>
-                                        <span><i class="far fa-calendar ml-1"></i> إسطنبول 2023</span>
+                                        <span class="ml-4"><i class="far fa-clock ml-1" aria-hidden="true"></i> <span data-i18n-minread="3"></span></span>
+                                        <span><i class="far fa-calendar ml-1" aria-hidden="true"></i> <span data-i18n="cityIstanbul"></span> 2023</span>
                                     </div>
                                     <button class="read-more-btn">
-                                        <span>اقرأ المزيد</span>
-                                        <i class="fas fa-arrow-left mr-2 text-sm"></i>
+                                        <span data-i18n="readMore">اقرأ المزيد</span>
+                                        <i class="fas fa-arrow-left mr-2 text-sm" aria-hidden="true"></i>
                                     </button>
                                 </div>
                             </div>
@@ -235,18 +272,18 @@
                             <div class="work-full hidden mt-8 pt-8 border-t border-border">
                                 <div class="max-w-3xl mx-auto">
                                     <button class="back-to-list mb-8 text-text-light hover:text-accent transition-colors font-medium">
-                                        <i class="fas fa-arrow-right ml-2"></i> العودة للقائمة
+                                        <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i> <span data-i18n="backToList">العودة للقائمة</span>
                                     </button>
                                     
                                     <div class="prose prose-lg max-w-none text-text">
                                         <div class="mb-12 text-center">
-                                            <span class="text-accent text-sm font-bold tracking-widest mb-2 block">تداعيات ذاتية</span>
-                                            <h1 class="text-3xl lg:text-4xl font-bold mb-6">أجنحة في مستوطنة العقاب</h1>
+                                            <span class="text-accent text-sm font-bold tracking-widest mb-2 block" dir="rtl">تداعيات ذاتية</span>
+                                            <h2 class="text-3xl lg:text-4xl font-bold mb-6" dir="rtl">أجنحة في مستوطنة العقاب</h2>
                                             <div class="h-1 w-12 bg-accent mx-auto"></div>
-                                            <h3 class="text-xl lg:text-2xl font-bold my-6">الفصل الثاني</h3>
+                                            <h3 class="text-xl lg:text-2xl font-bold my-6" dir="rtl">الفصل الثاني</h3>
                                         </div>
                                         
-                                        <div class="space-y-6 text-xl leading-loose font-light" id="text-content-1">
+                                        <div class="space-y-6 text-xl leading-loose font-light" id="text-content-1" dir="rtl">
                                             <p>
                                                 حملت حقيبتي وخرجت من المنزل، تأكدت من إحكامي لإغلاق الباب، استدرت ناحية المصعد وطلبته. وصل المصعد وفتح بابه، فانبعثت منه رائحة الغاز التي زكمت أنفي في الصباح، تذكرت القهوة وفورانها، فعدت للمنزل لأتأكد من إقفال مفتاح النار؛ كان شرودي قبلها قد أنساني إن كنت قد أقفلته. هرولت إلى المطبخ وتأكدت من إغلاقه، تفقدت المنزل مرة أخرى، كل قطعة من الأثاث واقفة في مكانها، مجموعة التلفاز تتربع صدر الصالون وتحمل الأوعية الزجاجية، "الأراتي" على الطاولات بتوزيع هندسي منتظم، وسريري مرتب كما لو أن أمي من قامت بترتيبه، باب البلكون والنوافذ مغلقة والأنوار مطفأة. الآن فقط أغادر المنزل بسلام ويقين من أن كارثة لن تحدث في غيابي. خرجت من المنزل وتأكدت من إغلاق بابه مرة أخرى، توجهت للمصعد فإذا ببابه يغلق بوجهي. يبدو أن أحدًا من الجيران يستعمله، أو ربما هو عامل توصيل، فلا فرق، فلست أرى في استدارة وجه من أصادفه في هذا المبنى سوى صحنٍ زجاجيًا.
                                             </p>
@@ -264,17 +301,15 @@
                                     <div class="article-navigation flex flex-col sm:flex-row justify-between items-center mt-12 pt-8 border-t border-border gap-6 mb-8">
                                         <button class="prev-btn hidden text-text hover:text-accent transition-colors text-right flex-1 w-full sm:w-auto group">
                                             <span class="text-sm text-text-light block mb-1">
-                                                <i class="fas fa-arrow-right ml-1"></i> الفصل السابق
-                                            </span>
+                                                <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i> <span data-i18n="prevChapterLabel">الفصل السابق</span></span>
                                             <span class="title-span font-bold text-lg group-hover:text-accent block"></span>
                                             <span class="chapter-span text-sm text-accent opacity-90 block mt-1"></span>
                                         </button>
                                         <button class="back-to-list text-text-light hover:text-accent transition-colors font-medium shrink-0">
-                                            <i class="fas fa-list ml-2"></i> القائمة الرئيسية
-                                        </button>
+                                            <i class="fas fa-list ml-2" aria-hidden="true"></i> <span data-i18n="mainList">القائمة الرئيسية</span></button>
                                         <button class="next-btn hidden text-text hover:text-accent transition-colors text-left flex-1 w-full sm:w-auto group">
-                                            <span class="text-sm text-text-light block mb-1">
-                                                الفصل التالي <i class="fas fa-arrow-left mr-1"></i>
+                                            <span data-i18n="nextChapterLabel"><span class="text-sm text-text-light block mb-1">
+                                                الفصل التالي</span> <i class="fas fa-arrow-left mr-1" aria-hidden="true"></i>
                                             </span>
                                             <span class="title-span font-bold text-lg group-hover:text-accent block"></span>
                                             <span class="chapter-span text-sm text-accent opacity-90 block mt-1"></span>
@@ -284,29 +319,29 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="literary-work animate-fade-in-up" data-work="2">
+                        <article class="literary-work animate-fade-in-up" data-work="3">
                             <div class="work-preview cursor-pointer group">
                                 <div class="mb-6">
-                                    <span class="inline-block px-4 py-1 bg-accent/10 text-accent font-medium text-sm rounded-full mb-4 border border-accent/20">
+                                    <span class="inline-block px-4 py-1 bg-accent/10 text-accent font-medium text-sm rounded-full mb-4 border border-accent/20" data-i18n="fictionExcerpt">
                                         مقتطف روائي
                                     </span>
-                                    <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-text group-hover:text-accent transition-colors duration-300">
+                                    <h2 class="work-title text-2xl lg:text-3xl font-bold mb-4 text-text group-hover:text-accent transition-colors duration-300" dir="rtl">
                                         أجنحة في مستوطنة العقاب
                                     </h3>
-                                    <h4 class="text-accent text-sm font-bold tracking-widest mb-2 block">الفصل الثالث</h4>
-                                    <p class="text-text-light text-lg leading-relaxed mb-6 font-light">
+                                    <h3 class="work-chapter text-accent text-sm font-bold tracking-widest mb-2 block" dir="rtl">الفصل الثالث</h3>
+                                    <p class="text-text-light text-lg leading-relaxed mb-6 font-light" dir="rtl">
                                        غادرت مدخل العمارة فلفحني هواءٌ بارد رعشت له أطرافي، فدسست يديّ في جيوب المعطف لأحافظ على ما تركته الدرابزين فيها من دفء. انعطفت يمينًا متجهًا ناحية موقف الحافلات....
                                     </p>
                                 </div>
                                 
                                 <div class="flex items-center justify-between pt-6 border-t border-border/50">
                                     <div class="text-sm text-text-light font-medium">
-                                        <span class="ml-4"><i class="far fa-clock ml-1"></i> 3 دقائق قراءة</span>
-                                        <span><i class="far fa-calendar ml-1"></i> إسطنبول 2023</span>
+                                        <span class="ml-4"><i class="far fa-clock ml-1" aria-hidden="true"></i> <span data-i18n-minread="3"></span></span>
+                                        <span><i class="far fa-calendar ml-1" aria-hidden="true"></i> <span data-i18n="cityIstanbul"></span> 2023</span>
                                     </div>
                                     <button class="read-more-btn">
-                                        <span>اقرأ المزيد</span>
-                                        <i class="fas fa-arrow-left mr-2 text-sm"></i>
+                                        <span data-i18n="readMore">اقرأ المزيد</span>
+                                        <i class="fas fa-arrow-left mr-2 text-sm" aria-hidden="true"></i>
                                     </button>
                                 </div>
                             </div>
@@ -314,18 +349,18 @@
                             <div class="work-full hidden mt-8 pt-8 border-t border-border">
                                 <div class="max-w-3xl mx-auto">
                                     <button class="back-to-list mb-8 text-text-light hover:text-accent transition-colors font-medium">
-                                        <i class="fas fa-arrow-right ml-2"></i> العودة للقائمة
+                                        <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i> <span data-i18n="backToList">العودة للقائمة</span>
                                     </button>
                                     
                                     <div class="prose prose-lg max-w-none text-text">
                                         <div class="mb-12 text-center">
-                                            <span class="text-accent text-sm font-bold tracking-widest mb-2 block">تداعيات ذاتية</span>
-                                            <h1 class="text-3xl lg:text-4xl font-bold mb-6">أجنحة في مستوطنة العقاب</h1>
+                                            <span class="text-accent text-sm font-bold tracking-widest mb-2 block" dir="rtl">تداعيات ذاتية</span>
+                                            <h2 class="text-3xl lg:text-4xl font-bold mb-6" dir="rtl">أجنحة في مستوطنة العقاب</h2>
                                             <div class="h-1 w-12 bg-accent mx-auto"></div>
-                                            <h3 class="text-xl lg:text-2xl font-bold my-6">الفصل الثالث</h3>
+                                            <h3 class="text-xl lg:text-2xl font-bold my-6" dir="rtl">الفصل الثالث</h3>
                                         </div>
                                         
-                                        <div class="space-y-6 text-xl leading-loose font-light" id="text-content-1">
+                                        <div class="space-y-6 text-xl leading-loose font-light" id="text-content-1" dir="rtl">
                                             <p>
                                                 غادرت مدخل العمارة فلفحني هواءٌ بارد رعشت له أطرافي، فدسست يديّ في جيوب المعطف لأحافظ على ما تركته الدرابزين فيها من دفء. انعطفت يمينًا متجهًا ناحية موقف الحافلات، بينما لا يزال تفكيري عالقًا في الدرجات وعددها، فأنا لم أخطئ يومًا في عدها أو عد الأدوار التي قطعتها - نزولاً كان أم صعوداً - مهما كنت شاردًا. كنت منشغلًا بها حتى قطع تفكيري عجوزٌ يقف على الرصيف المقابل، ببذلته الإيطالية المصنوعة من خيوط الحرير، وربطة عنق وساعة ذهبية لامعة قد استقرت في جيبه وامتدت سلسلتها إلى أعلى صدره مختفية نهايتها خلف ياقة الجاكيت. كان يعكس أعلى درجات الترف التي قد يصل لها البشر لولا دبوس قد ثبته على ياقة الجاكيت، يرى فيه عرقًا أخضرَ، هو ربما غصن زيتون، فلست أستطيع من هذه المسافة تحديد ماهيته، لكنه كان يمثل ندبة تشوّه ياقة الجاكيت وتنسل منه خيوط الحرير كدم أسيل خلف هذه الندبة.
                                             </p>
@@ -349,17 +384,15 @@
                                     <div class="article-navigation flex flex-col sm:flex-row justify-between items-center mt-12 pt-8 border-t border-border gap-6 mb-8">
                                         <button class="prev-btn hidden text-text hover:text-accent transition-colors text-right flex-1 w-full sm:w-auto group">
                                             <span class="text-sm text-text-light block mb-1">
-                                                <i class="fas fa-arrow-right ml-1"></i> الفصل السابق
-                                            </span>
+                                                <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i> <span data-i18n="prevChapterLabel">الفصل السابق</span></span>
                                             <span class="title-span font-bold text-lg group-hover:text-accent block"></span>
                                             <span class="chapter-span text-sm text-accent opacity-90 block mt-1"></span>
                                         </button>
                                         <button class="back-to-list text-text-light hover:text-accent transition-colors font-medium shrink-0">
-                                            <i class="fas fa-list ml-2"></i> القائمة الرئيسية
-                                        </button>
+                                            <i class="fas fa-list ml-2" aria-hidden="true"></i> <span data-i18n="mainList">القائمة الرئيسية</span></button>
                                         <button class="next-btn hidden text-text hover:text-accent transition-colors text-left flex-1 w-full sm:w-auto group">
-                                            <span class="text-sm text-text-light block mb-1">
-                                                الفصل التالي <i class="fas fa-arrow-left mr-1"></i>
+                                            <span data-i18n="nextChapterLabel"><span class="text-sm text-text-light block mb-1">
+                                                الفصل التالي</span> <i class="fas fa-arrow-left mr-1" aria-hidden="true"></i>
                                             </span>
                                             <span class="title-span font-bold text-lg group-hover:text-accent block"></span>
                                             <span class="chapter-span text-sm text-accent opacity-90 block mt-1"></span>
@@ -374,7 +407,7 @@
                     </div>
                     
                     <div class="mt-20 pt-8 border-t border-border text-center animate-fade-in-up" style="animation-delay: 0.3s">
-                        <p class="text-text-light mb-6 font-medium">
+                        <p class="text-text-light mb-6 font-medium" data-i18n="moreComingSoon">
                             المزيد من النصوص قادمة قريباً...
                         </p>
                         <div class="flex items-center justify-center space-x-4 space-x-reverse">
@@ -392,12 +425,12 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0 text-center md:text-right">
-                    <p class="text-text-light text-sm font-medium">
-                        © 2026 عبد الله جفال. جميع النصوص محمية ومسجلة.
+                    <p class="text-text-light text-sm font-medium" data-i18n="copyright">
+                        © {year} عبد الله جفَّال. جميع النصوص محمية ومسجلة.
                     </p>
                 </div>
                 <div class="flex items-center space-x-6 space-x-reverse">
-                    <a href="/" class="text-text-light hover:text-accent transition-colors text-sm font-medium">
+                    <a href="/" class="text-text-light hover:text-accent transition-colors text-sm font-medium" data-i18n="backToSite">
                         العودة للموقع
                     </a>
                 </div>
@@ -405,7 +438,7 @@
         </div>
     </footer>
 
-    <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-accent z-[60] w-0 transition-all duration-150"></div>
+    <div id="reading-progress" aria-hidden="true" class="fixed top-0 right-0 h-1 bg-accent z-[60] w-0 transition-all duration-150"></div>
 
     <script src="assets/literary/script.js"></script>
 </body>

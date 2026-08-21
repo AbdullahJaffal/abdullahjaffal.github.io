@@ -2,6 +2,65 @@
 const translations = {
     en: {
         dir: "ltr",
+        tools: "Software",
+        villaCompound: "170-Villa Compound",
+        villaLocation: "Istanbul, Turkey",
+        villaScale: "Residential Compound",
+        villaCompoundDescription: "Complete infrastructure and internal road design for luxury villa compound in Istanbul.",
+        villaCont1: "Developed full grading and earthwork optimization plans.",
+        villaCont2: "Designed a complete sanitary sewer and potable water network for 170 individual units.",
+        villaCont3: "Implemented a custom stormwater management system to prevent surface flooding.",
+
+        // Project 3: Archaeological Hotel,
+        stormwaterDrainage: "Stormwater Drainage",
+        roadDesign: "Road Design",
+        waterSupply: "Water Supply",
+        keyImplementations: "My Contribution:",
+        archaeologicalHotel: "Archaeological Site Hotel",
+        archLocation: "Historical District",
+        archScale: "Boutique Hotel",
+        archaeologicalHotelDescription: "Infrastructure design for hotel on protected archaeological site with specialized drainage.",
+        archCont1: "Designed zero-impact foundations and shallow utility trenches to protect historical artifacts.",
+        archCont2: "Engineered a suspended drainage system avoiding ground penetration.",
+        archCont3: "Coordinated closely with preservation authorities to meet strict compliance guidelines.",
+
+        // Project 4: Flood Management,
+        heritageProtection: "Heritage Protection",
+        specialDrainage: "Special Drainage",
+        sitePreservation: "Site Preservation",
+        floodManagement: "Flood Management System",
+        floodLocation: "Coastal Area",
+        floodScale: "Commercial Property",
+        floodManagementDescription: "Automatic reserve tank system for hotel in flood-prone area with smart drainage control.",
+        floodCont1: "Engineered an automated pumping station and retention basin system.",
+        floodCont2: "Designed backflow prevention mechanisms for high-tide scenarios.",
+        floodCont3: "Integrated smart sensors for real-time water level monitoring and automated response.",
+        
+        // Contact,
+        smartSystems: "Smart Systems",
+        drainageControl: "Drainage Control",
+        proj2Title: "Istanbul Villa Compound",
+        proj2Sub: "Complete infrastructure and internal road design for a luxury villa compound.",
+        proj3Title: "Archaeological Site Hotel",
+        proj3Sub: "Infrastructure design for a hotel on a protected archaeological site.",
+        proj4Title: "Flood Management System",
+        proj4Sub: "Automatic reserve tank system for a hotel in a flood-prone area.",
+        proj5Title: "Industrial & Commercial Developments",
+        proj5Sub: "Hotels and industrial facilities.",
+        pageTitle: "Abdullah Jaffal | Engineering Portfolio",
+        metaDescription: "Abdullah Jaffal - Infrastructure Design Engineer specializing in mega-scale hydraulic systems, utility galleries, and design automation.",
+        skipToContent: "Skip to main content",
+        closeDialog: "Close project details",
+        openMenu: "Open navigation menu",
+        closeMenu: "Close navigation menu",
+        proj1ImageAlt: "Aerial view of the New Tashkent City master plan",
+        turkishLevel: "Advanced (C1)",
+        copyright: "© {year} Abdullah Jaffal. All rights reserved.",
+        sending: "Sending...",
+        captchaRequired: "Please verify that you are not a robot.",
+        fieldsRequired: "Please fill in all required fields.",
+        sendSuccess: "Thank you for your message! I will get back to you soon.",
+        sendError: "Failed to send the message. Please check your connection and try again later.",
         home: "Home",
         projects: "Projects",
         experience: "Experience",
@@ -18,7 +77,7 @@ const translations = {
         herodescription: "Infrastructure Design Engineer specializing in mega-scale hydraulic systems, utility galleries, and design automation. Turning complex master plans into sustainable urban realities.",
         yearsExperience: "Years Experience",
         projectsCompleted: "Projects Completed",
-        countriesServed: "Countries Served",
+        countriesServed: "Countries with Projects",
         viewExperience: "View Experience",
         downloadCv: "Download CV",
         Notableprojects: "Notable Projects",
@@ -46,7 +105,6 @@ const translations = {
         exp2Task1: "Designed comprehensive infrastructure systems for residential complexes, hotels, and industrial facilities.",
         exp2Task2: "Conducted detailed road design, including pavement structure analysis and traffic intersection planning.",
         exp2Task3: "Performed traffic flow studies to optimize internal road layouts.",
-        exp2Task4: "Transitioned to a remote work model in March 2025 while maintaining full project responsibilities.",
         fromFeb2021: "Feb 2021",
         toJun2021: "Jun 2021",
         internship: "Internship",
@@ -60,9 +118,9 @@ const translations = {
         exp5Task: "During my internship, I learned about the construction sector in an office environment. I conducted and reviewed static, earthquake, and wind analysis of multi-story reinforced concrete structures using AutoCAD and SAP2000. Additionally, I acquired various insights into designing buildings' exterior and interior appearance using Revit.",
         fromAug2019: "Aug 2019",
         toSep2019: "Sep 2019",
-        expTitle6: "Trainee Engineer - OnSite",
+        expTitle6: "Trainee Engineer - On-Site",
         expCompany6: "Koç İnşaat - Düzce, Türkiye",
-        exp6Task: "I was present at the construction site of the TOKİ 127+1kD housing project in the Cumayeri district of Düzce, including its infrastructure and landscaping works. By the end of my construction site internship, although my construction and engineering knowledge was insufficient, I developed a general perspective on the field. During the internship, I gained various insights into construction works and site management. Regarding infrastructure, I learned how to use the leveling instrument (nivelman) and understood how essential it is in the process of creating sewage and stormwater drainage systems.",
+        exp6Task: "Worked on site at the TOKİ 127+1kD housing project in the Cumayeri district of Düzce, covering its infrastructure and landscaping works. This was my first exposure to a live construction site, and it gave me a practical perspective on construction sequencing and site management. On the infrastructure side, I learned to operate the leveling instrument (nivelman) and saw first-hand how central accurate levelling is to setting out sewage and stormwater drainage systems.",
         loadMore: "Load More Experiences",
         professionalMembership: "Professional Membership",
         chamberEngineers: "Chamber of Civil Engineers in Turkey",
@@ -72,7 +130,7 @@ const translations = {
         gpa: "GPA:",
         volunteering: "Volunteering Experience",
         volunteerRole: "Elected Leadership Roles",
-        volunteerOrg: "Syria Students Union",
+        volunteerOrg: "Syrian Students Union",
         vol1: "Advanced to Chairman of the Supervisory Board, where I contributed to structural reforms and assisted in drafting internal bylaws to enhance institutional governance.",
         vol2: "Assisted in developing official policy documents and regulatory content, supporting organizational alignment through precise documentation and professional communication.",
         vol3: "Contributed to institutional cohesion by helping facilitate internal conflict resolution and supporting initiatives focused on organized collective action and youth empowerment.",
@@ -114,7 +172,7 @@ const translations = {
         english: "English",
         upperIntermediate: "Upper Intermediate (B2)",
         russian: "Russian",
-        beginner: "beginner (A1)",
+        beginner: "Beginner (A1)",
         additionalCompetencies: "Additional Competencies",
         technicalDevelopment: "Technical Development",
         frontendBackend: "Frontend & Backend Development",
@@ -123,6 +181,7 @@ const translations = {
         creativeWriting: "Creative Writing",
         technicalFiction: "Technical & Fiction Writing",
         aboutMe: "About Me",
+        aboutPhotoAlt: "Portrait of Abdullah Jaffal",
         aboutP1: "I am an Infrastructure Design Engineer with over four years of experience specializing in the technical design of complex utility and water management systems. My professional background spans a diverse range of scales, from localized residential developments to massive, city-scale urban expansions.",
         aboutP2: "My core focus includes pressurized water systems for potable water, irrigation, and firefighting, as well as sanitary sewage and multi-purpose surface water management. This involves designing traditional drainage networks alongside artificial canals that serve beyond simple runoff—facilitating site-wide drainage, microclimate regulation, and urban aesthetics. I also specialize in groundwater control and foundation drainage to ensure structural protection and long-term resilience.",
         aboutP3: "My workflow is built on technical precision, utilizing industry-standard tools such as AutoCAD, Urbano 11, and WaterGEMS to deliver functional and reliable infrastructure solutions. To optimize this process, I leverage Design Automation through AutoLISP and Excel VBA. This approach allows me to eliminate repetitive, routine tasks and minimize potential errors, freeing up capacity to focus on the unique engineering challenges and technical nuances of every project.",
@@ -145,12 +204,10 @@ const translations = {
         PressurizedNetworks: "Pressurized Networks",
         OpenChannelsDesign: "Open Channels Design",
         myContribution: "My Contribution:",
-        keyImplementations: "Key Implementations:",
         projectGallery: "Project Gallery",
         tashkentTitle: "New Tashkent City",
         tashkentLocation: "Tashkent, Uzbekistan",
         tashkentScale: "6,000 Hectares",
-        tashkentDescShort: "Comprehensive infrastructure design for a 6,000-hectare sustainable and resilient urban development.",
         tashkentDesc: "Comprehensive infrastructure design for a large-scale urban project, focusing on sustainability, resilience, and modern engineering standards.",
         tashkentCont1: "Integrated Multi-Utility Galleries: Designed advanced underground tunnels (Galeri) to consolidate potable water, district heating, electrical power, and other essential infrastructure services, ensuring streamlined maintenance and a cleaner urban aesthetic.",
         tashkentCont2: "Urban Water Features & Microclimate Regulation: Engineered a network of artificial canals designed to enhance the city's microclimate and humidity levels. This involved managing river water intake and integrating these canals as functional conduits for treated stormwater.",
@@ -160,23 +217,82 @@ const translations = {
     },
     ar: {
         dir: "rtl",
+        tools: "البرمجيات",
+        villaCompound: "مجمع 170 فيلا",
+        villaLocation: "إسطنبول، تركيا",
+        villaScale: "مجمع سكني",
+        villaCompoundDescription: "تصميم بنية تحتية كاملة وطرق داخلية لمجمع فيلات فاخر في إسطنبول.",
+        villaCont1: "وضعتُ خططاً كاملة للتسوية وتحسين توازن الأعمال الترابية.",
+        villaCont2: "تصميم شبكة متكاملة للصرف الصحي ومياه الشرب لـ 170 وحدة مستقلة.",
+        villaCont3: "تنفيذ نظام مخصص لإدارة مياه الأمطار لمنع الفيضانات السطحية.",
+
+        // Project 3: Archaeological Hotel,
+        stormwaterDrainage: "تصريف مياه الأمطار",
+        roadDesign: "تصميم الطرق",
+        waterSupply: "إمداد المياه",
+        keyImplementations: "مساهمتي:",
+        archaeologicalHotel: "فندق الموقع الأثري",
+        archLocation: "منطقة تاريخية",
+        archScale: "فندق بوتيك",
+        archaeologicalHotelDescription: "تصميم بنية تحتية لفندق على موقع أثري محمي مع تصريف متخصص.",
+        archCont1: "صمّمتُ أساسات عديمة الأثر وخنادق خدمات ضحلة لحماية اللقى الأثرية.",
+        archCont2: "صمّمتُ نظام تصريف معلّق يتفادى اختراق التربة.",
+        archCont3: "التنسيق الوثيق مع سلطات الحفاظ على التراث لتلبية إرشادات الامتثال الصارمة.",
+
+        // Project 4: Flood Management,
+        heritageProtection: "حماية التراث",
+        specialDrainage: "تصريف خاص",
+        sitePreservation: "الحفاظ على الموقع",
+        floodManagement: "نظام إدارة الفيضانات",
+        floodLocation: "منطقة ساحلية",
+        floodScale: "عقار تجاري",
+        floodManagementDescription: "نظام خزان احتياطي آلي للفندق في منطقة معرضة للفيضانات مع تحكم ذكي في التصريف.",
+        floodCont1: "صمّمتُ محطة ضخ آلية ونظام حوض احتجاز.",
+        floodCont2: "تصميم آليات منع التدفق العكسي لسيناريوهات المد العالي.",
+        floodCont3: "دمج أجهزة استشعار ذكية لمراقبة مستوى المياه في الوقت الفعلي والاستجابة الآلية.",
+        
+        // Contact,
+        smartSystems: "أنظمة ذكية",
+        drainageControl: "التحكم في التصريف",
+        proj2Title: "مجمع فلل في إسطنبول",
+        proj2Sub: "تصميم متكامل للبنية التحتية والطرق الداخلية لمجمع فلل فاخر.",
+        proj3Title: "فندق في موقع أثري",
+        proj3Sub: "تصميم البنية التحتية لفندق ضمن موقع أثري محمي.",
+        proj4Title: "نظام إدارة الفيضانات",
+        proj4Sub: "نظام خزانات احتياطية أوتوماتيكي لفندق في منطقة معرَّضة للفيضانات.",
+        proj5Title: "مشاريع صناعية وتجارية",
+        proj5Sub: "فنادق ومنشآت صناعية.",
+        pageTitle: "عبد الله جفَّال | ملف أعمال هندسي",
+        metaDescription: "عبد الله جفَّال - مهندس تصميم بنية تحتية متخصص في الأنظمة الهيدروليكية الضخمة وأنفاق الخدمات وأتمتة التصميم.",
+        skipToContent: "الانتقال إلى المحتوى الرئيسي",
+        closeDialog: "إغلاق تفاصيل المشروع",
+        openMenu: "فتح قائمة التنقل",
+        closeMenu: "إغلاق قائمة التنقل",
+        proj1ImageAlt: "منظر جوي للمخطط العام لمدينة طشقند الجديدة",
+        turkishLevel: "متقدم (C1)",
+        copyright: "© {year} عبد الله جفَّال. جميع الحقوق محفوظة.",
+        sending: "جارٍ الإرسال...",
+        captchaRequired: "يرجى التحقق من مربع \"أنا لست برنامج روبوت\".",
+        fieldsRequired: "يرجى ملء جميع الحقول المطلوبة.",
+        sendSuccess: "شكراً لك على رسالتك! سأعود إليك قريباً.",
+        sendError: "حدث خطأ أثناء إرسال الرسالة. يرجى التأكد من اتصالك والمحاولة لاحقاً.",
         home: "الرئيسية",
         projects: "المشاريع",
         experience: "الخبرات",
         education: "التعليم",
         skills: "المهارات",
         about: "نبذة عني",
-        contact: "تواصل معي",
-        literature: "ركن أدبي",
+        contact: "تواصل",
+        literature: "مساحة أدبية",
         h_engineering: "هندسة",
-        h_sustainable: "شرايين",
-        h_lifelines: "الحياة",
-        h_of: "لــمدن",
+        h_sustainable: "شرايين حياة",
+        h_lifelines: "مستدامة",
+        h_of: "لمدن",
         h_futurecities: "المستقبل",
         herodescription: "مهندس تصميم بنية تحتية متخصص في الأنظمة الهيدروليكية الضخمة، وأنفاق الخدمات، وأتمتة التصميم. أحول المخططات التوجيهية المعقدة إلى واقع حضري مستدام.",
         yearsExperience: "سنوات من الخبرة",
         projectsCompleted: "مشاريع منجزة",
-        countriesServed: "دول تم العمل بها",
+        countriesServed: "دول بها مشاريع",
         viewExperience: "عرض الخبرات",
         downloadCv: "تحميل السيرة الذاتية",
         Notableprojects: "أبرز المشاريع",
@@ -186,10 +302,10 @@ const translations = {
         viewDetails: "عرض التفاصيل",
         Professionalexperience: "الخبرة المهنية",
         fromJul2025: "يوليو 2025",
-        present: "الحاضر",
+        present: "حتى الآن",
         fullTime: "دوام كامل",
         expTitle1: "مهندس تصميم بنية تحتية",
-        expCompany1: "Elsa Proje | إسطنبول، تركيا وطشقند، أوزبكستان",
+        expCompany1: "Elsa Proje | إسطنبول (تركيا) وطشقند (أوزبكستان)",
         expOverview1: "نظرة عامة على الدور: قيادة جهود التصميم الفني لمشاريع البنية التحتية واسعة النطاق، مع التركيز على النمذجة الهيدروليكية وتنسيق الخدمات.",
         keyResponsibilities: "المسؤوليات الرئيسية",
         exp1Task1: "إدارة عملية التصميم الشاملة للخدمات الرطبة (المياه، الصرف الصحي، تصريف مياه الأمطار) وتنسيق الخدمات الجافة.",
@@ -204,7 +320,6 @@ const translations = {
         exp2Task1: "تصميم أنظمة بنية تحتية شاملة للمجمعات السكنية والفنادق والمنشآت الصناعية.",
         exp2Task2: "إجراء تصميم تفصيلي للطرق، بما في ذلك تحليل بنية الرصف وتخطيط التقاطعات المرورية.",
         exp2Task3: "إجراء دراسات التدفق المروري لتحسين تخطيطات الطرق الداخلية.",
-        exp2Task4: "الانتقال إلى نموذج العمل عن بعد في مارس 2025 مع الحفاظ على مسؤوليات المشروع كاملة.",
         fromFeb2021: "فبراير 2021",
         toJun2021: "يونيو 2021",
         internship: "تدريب",
@@ -220,19 +335,19 @@ const translations = {
         toSep2019: "سبتمبر 2019",
         expTitle6: "مهندس متدرب - في الموقع",
         expCompany6: "Koç İnşaat - دوزجة، تركيا",
-        exp6Task: "تواجدت في موقع بناء مشروع إسكان TOKİ 127+1kD في منطقة جومائيري في دوزجة، بما في ذلك أعمال البنية التحتية وتنسيق الحدائق. مع نهاية تدريبي في الموقع، ورغم أن معرفتي الإنشائية والهندسية لم تكن كافية، طورت منظوراً عاماً حول المجال. خلال التدريب، اكتسبت رؤى متنوعة حول أعمال البناء وإدارة الموقع. فيما يتعلق بالبنية التحتية، تعلمت كيفية استخدام جهاز الميزانية (النيفلما) وأدركت مدى أهميته في عملية إنشاء شبكات الصرف الصحي وتصريف مياه الأمطار.",
+        exp6Task: "عملت في موقع مشروع إسكان TOKİ 127+1kD في منطقة جومائيري بولاية دوزجة، شاملاً أعمال البنية التحتية وتنسيق الحدائق. كان هذا أول احتكاك مباشر لي بموقع إنشائي قائم، وقد منحني منظوراً عملياً حول تسلسل أعمال البناء وإدارة الموقع. وفي جانب البنية التحتية، تعلمت تشغيل جهاز الميزانية (النيفلمان) ولمست بنفسي مدى محورية دقة المناسيب في تخطيط شبكات الصرف الصحي وتصريف مياه الأمطار.",
         loadMore: "تحميل المزيد من الخبرات",
         professionalMembership: "العضويات المهنية",
         chamberEngineers: "غرفة المهندسين المدنيين في تركيا",
         memberSince2021: "عضو منذ 2021",
         bachelorDegree: "بكالوريوس في الهندسة المدنية",
-        educationDescription: "خلال دراستي في كلية التكنولوجيا، تلقيت تعليماً يجمع بين الأسس النظرية والتطبيق العملي. تضمنت معظم الدورات تدريباً عملياً ومشاريع تطبيقية. ركزت بشكل خاص على تصميم البنية التحتية والطرق، مما عزز بشكل كبير من قدرتي على تطبيق المفاهيم الهندسية في سياقات العالم الحقيقي وحسن استعدادي للتعامل مع التحديات العملية في قطاع الهندسة المدنية.",
+        educationDescription: "خلال دراستي في كلية التكنولوجيا، تلقيت تعليماً يجمع بين الأسس النظرية والتطبيق العملي. تضمّن معظم المقررات تدريباً عملياً ومشاريع تطبيقية. ركزت بشكل خاص على تصميم البنية التحتية والطرق، مما عزز بشكل كبير من قدرتي على تطبيق المفاهيم الهندسية في سياقات العالم الحقيقي وحسن استعدادي للتعامل مع التحديات العملية في قطاع الهندسة المدنية.",
         gpa: "المعدل التراكمي:",
         volunteering: "تجربة العمل التطوعي",
         volunteerRole: "أدوار قيادية منتخبة",
         volunteerOrg: "اتحاد طلبة سوريا",
         vol1: "ترقيت إلى منصب رئيس هيئة الرقابة، حيث ساهمت في الإصلاحات الهيكلية وساعدت في صياغة اللوائح الداخلية لتعزيز الحوكمة المؤسسية.",
-        vol2: "المساهمة في تطوير الوثائق السياسية الرسمية والمحتوى التنظيمي، ودعم التوافق التنظيمي من خلال التوثيق الدقيق والتواصل المهني.",
+        vol2: "ساهمتُ في إعداد وثائق السياسات الرسمية والمحتوى التنظيمي، ودعمتُ الاتساق المؤسسي عبر توثيق دقيق وتواصل مهني.",
         vol3: "ساهمت في التماسك المؤسسي من خلال المساعدة في تسهيل حل النزاعات الداخلية ودعم المبادرات التي تركز على العمل الجماعي المنظم وتمكين الشباب.",
         selectedProjects: "مشاريع أكاديمية مختارة",
         roadDesignProject: "مشروع تصميم طريق",
@@ -275,14 +390,15 @@ const translations = {
         beginner: "مبتدئ (A1)",
         additionalCompetencies: "كفاءات إضافية",
         technicalDevelopment: "التطوير التقني",
-        frontendBackend: "تطوير واجهات الويب (Frontend & Backend)",
+        frontendBackend: "تطوير الويب — الواجهات والخوادم",
         strategicThinking: "التفكير الاستراتيجي",
         chessEnthusiast: "شغوف بالشطرنج - مستوى متوسط",
         creativeWriting: "الكتابة الإبداعية",
-        technicalFiction: "الكتابة الفنية والأدبية",
+        technicalFiction: "الكتابة التقنية والأدبية",
         aboutMe: "نبذة عني",
+        aboutPhotoAlt: "صورة شخصية لعبد الله جفَّال",
         aboutP1: "أنا مهندس تصميم بنية تحتية بخبرة تزيد عن أربع سنوات، متخصص في التصميم الفني لأنظمة الخدمات وإدارة المياه المعقدة. تمتد خلفيتي المهنية عبر نطاق متنوع من المشاريع، بدءاً من التطويرات السكنية المحلية إلى التوسعات الحضرية الضخمة على مستوى المدن.",
-        aboutP2: "يشمل تركيزي الأساسي أنظمة المياه المضغوطة لمياه الشرب والري ومكافحة الحرائق، بالإضافة إلى الصرف الصحي وإدارة المياه السطحية متعددة الأغراض. يتضمن ذلك تصميم شبكات الصرف التقليدية إلى جانب القنوات الاصطناعية التي تتجاوز مجرد تصريف المياه — لتشمل تصريف الموقع بالكامل، وتنظيم المناخ المحلي، وإضفاء جمالية حضرية. أتخصص أيضاً في التحكم بالمياه الجوفية وتصريف الأساسات لضمان الحماية الهيكلية والمرونة على المدى الطويل.",
+        aboutP2: "يشمل تركيزي الأساسي أنظمة المياه المضغوطة لمياه الشرب والري ومكافحة الحرائق، بالإضافة إلى الصرف الصحي وإدارة المياه السطحية متعددة الأغراض. يتضمن ذلك تصميم شبكات الصرف التقليدية إلى جانب القنوات الاصطناعية التي تتجاوز مجرد تصريف المياه — لتشمل تصريف الموقع بالكامل، وتنظيم المناخ المحلي، وإضفاء جمالية حضرية. أتخصص أيضاً في التحكم بالمياه الجوفية وتصريف الأساسات لضمان الحماية الإنشائية والمتانة على المدى الطويل.",
         aboutP3: "تعتمد منهجية عملي على الدقة الفنية، باستخدام أدوات قياسية في الصناعة مثل AutoCAD و Urbano 11 و WaterGEMS لتقديم حلول بنية تحتية وظيفية وموثوقة. ولتحسين هذه العملية، أستفيد من أتمتة التصميم عبر AutoLISP و Excel VBA. يتيح لي هذا النهج التخلص من المهام الروتينية المتكررة وتقليل الأخطاء المحتملة، مما يوفر لي المساحة للتركيز على التحديات الهندسية الفريدة والتفاصيل الفنية لكل مشروع.",
         contactSubtitle: "لا تتردد في التواصل للتعاون أو الفرص أو لمجرد إلقاء التحية",
         getInTouch: "تواصل معي",
@@ -303,12 +419,10 @@ const translations = {
         PressurizedNetworks: "الشبكات المضغوطة",
         OpenChannelsDesign: "تصميم القنوات المفتوحة",
         myContribution: "مساهمتي:",
-        keyImplementations: "التنفيذات الرئيسية:",
         projectGallery: "معرض المشروع",
         tashkentTitle: "مدينة طشقند الجديدة",
         tashkentLocation: "طشقند، أوزبكستان",
         tashkentScale: "6,000 هكتار",
-        tashkentDescShort: "تصميم متكامل للبنية التحتية لتطوير حضري مستدام ومرن يمتد على مساحة 6000 هكتار.",
         tashkentDesc: "تصميم متكامل للبنية التحتية لمشروع حضري واسع النطاق، مع التركيز على الاستدامة والمرونة والمعايير الهندسية الحديثة.",
         tashkentCont1: "أنفاق الخدمات المتعددة المتكاملة: تصميم أنفاق تحت الأرض متطورة (Galeri) لدمج مياه الشرب والتدفئة المركزية والطاقة الكهربائية وخدمات البنية التحتية الأساسية الأخرى، مما يضمن صيانة مبسطة ومظهراً حضرياً أنظف.",
         tashkentCont2: "المعالم المائية الحضرية وتنظيم المناخ المحلي: هندسة شبكة من القنوات الاصطناعية المصممة لتعزيز المناخ المحلي ومستويات الرطوبة في المدينة. تضمن ذلك إدارة سحب مياه النهر ودمج هذه القنوات كمسارات وظيفية لمياه الأمطار المعالجة.",
@@ -318,6 +432,65 @@ const translations = {
     },
     tr: {
         dir: "ltr",
+        tools: "Yazılım",
+        villaCompound: "170 Villalık Site",
+        villaLocation: "İstanbul, Türkiye",
+        villaScale: "Konut Sitesi",
+        villaCompoundDescription: "İstanbul'da lüks villa sitesi için tam altyapı ve iç yol tasarımı.",
+        villaCont1: "Tam tesviye ve toprak işleri optimizasyon planları geliştirildi.",
+        villaCont2: "170 bağımsız birim için tam bir sıhhi kanalizasyon ve içme suyu ağı tasarlandı.",
+        villaCont3: "Yüzey su baskınlarını önlemek için özel bir yağmur suyu yönetim sistemi uygulandı.",
+
+        // Project 3: Archaeological Hotel,
+        stormwaterDrainage: "Yağmur Suyu Drenajı",
+        roadDesign: "Yol Tasarımı",
+        waterSupply: "Su Temini",
+        keyImplementations: "Katkılarım:",
+        archaeologicalHotel: "Arkeolojik Alan Oteli",
+        archLocation: "Tarihi Bölge",
+        archScale: "Butik Otel",
+        archaeologicalHotelDescription: "Özel drenaj ile korunan arkeolojik alandaki otel için altyapı tasarımı.",
+        archCont1: "Tarihi eserleri korumak için sıfır etkili temeller ve sığ altyapı hendekleri tasarlandı.",
+        archCont2: "Zemine nüfuz etmeyi önleyen asma bir drenaj sistemi oluşturuldu.",
+        archCont3: "Sıkı uyumluluk yönergelerini karşılamak için koruma yetkilileriyle yakın koordinasyon sağlandı.",
+
+        // Project 4: Flood Management,
+        heritageProtection: "Kültür Mirası Koruma",
+        specialDrainage: "Özel Drenaj",
+        sitePreservation: "Alan Koruma",
+        floodManagement: "Sel Yönetim Sistemi",
+        floodLocation: "Kıyı Bölgesi",
+        floodScale: "Ticari Mülk",
+        floodManagementDescription: "Sel riskli bölgedeki otel için akıllı drenaj kontrolü ile otomatik yedek tank sistemi.",
+        floodCont1: "Otomatik bir pompa istasyonu ve tutma havzası sistemi oluşturuldu.",
+        floodCont2: "Yüksek gelgit senaryoları için geri akış önleme mekanizmaları tasarlandı.",
+        floodCont3: "Gerçek zamanlı su seviyesi izleme ve otomatik yanıt için akıllı sensörler entegre edildi.",
+        
+        // Contact,
+        smartSystems: "Akıllı Sistemler",
+        drainageControl: "Drenaj Kontrolü",
+        proj2Title: "İstanbul Villa Kompleksi",
+        proj2Sub: "Lüks villa kompleksi için komple altyapı ve iç yol tasarımı.",
+        proj3Title: "Arkeolojik Alan Oteli",
+        proj3Sub: "Koruma altındaki arkeolojik alanda yer alan otel için altyapı tasarımı.",
+        proj4Title: "Taşkın Yönetim Sistemi",
+        proj4Sub: "Taşkın riski taşıyan bölgedeki bir otel için otomatik rezerv tank sistemi.",
+        proj5Title: "Endüstriyel ve Ticari Projeler",
+        proj5Sub: "Oteller ve endüstriyel tesisler.",
+        pageTitle: "Abdullah Jaffal | Mühendislik Portfolyosu",
+        metaDescription: "Abdullah Jaffal - Mega ölçekli hidrolik sistemler, altyapı galerileri ve tasarım otomasyonu konusunda uzman Altyapı Tasarım Mühendisi.",
+        skipToContent: "Ana içeriğe geç",
+        closeDialog: "Proje detaylarını kapat",
+        openMenu: "Menüyü aç",
+        closeMenu: "Menüyü kapat",
+        proj1ImageAlt: "Yeni Taşkent şehri nazım planının havadan görünüşü",
+        turkishLevel: "İleri seviye (C1)",
+        copyright: "© {year} Abdullah Jaffal. Tüm hakları saklıdır.",
+        sending: "Gönderiliyor...",
+        captchaRequired: "Lütfen \"Ben robot değilim\" kutusunu doğrulayın.",
+        fieldsRequired: "Lütfen tüm gerekli alanları doldurun.",
+        sendSuccess: "Mesajınız için teşekkürler! Size en kısa sürede döneceğim.",
+        sendError: "Mesaj gönderilemedi. Lütfen bağlantınızı kontrol edip daha sonra tekrar deneyin.",
         home: "Ana Sayfa",
         projects: "Projeler",
         experience: "Deneyim",
@@ -326,15 +499,15 @@ const translations = {
         about: "Hakkımda",
         contact: "İletişim",
         literature: "Edebiyat",
-        h_engineering: "Engineering",
-        h_sustainable: "Sustainable",
-        h_lifelines: "Lifelines",
-        h_of: "of",
-        h_futurecities: "Future Cities",
+        h_engineering: "Geleceğin",
+        h_sustainable: "Şehirlerine",
+        h_lifelines: "Sürdürülebilir",
+        h_of: "Yaşam",
+        h_futurecities: "Hatları",
         herodescription: "Büyük ölçekli hidrolik sistemler, altyapı galerileri ve tasarım otomasyonu konularında uzmanlaşmış Altyapı Tasarım Mühendisi. Karmaşık master planları sürdürülebilir kentsel gerçekliklere dönüştürüyorum.",
         yearsExperience: "Yıllık Deneyim",
         projectsCompleted: "Tamamlanan Proje",
-        countriesServed: "Hizmet Verilen Ülke",
+        countriesServed: "Proje Yürütülen Ülke",
         viewExperience: "Deneyimlerimi Gör",
         downloadCv: "CV'yi İndir",
         Notableprojects: "Önemli Projeler",
@@ -362,7 +535,6 @@ const translations = {
         exp2Task1: "Konut kompleksleri, oteller ve endüstriyel tesisler için kapsamlı altyapı sistemleri tasarlandı.",
         exp2Task2: "Üstyapı analizi ve trafik kavşak planlaması dahil detaylı yol tasarımı yapıldı.",
         exp2Task3: "İç yol planlarını optimize etmek için trafik akış çalışmaları gerçekleştirildi.",
-        exp2Task4: "Mart 2025'te tam proje sorumluluklarını sürdürerek uzaktan çalışma modeline geçildi.",
         fromFeb2021: "Şub 2021",
         toJun2021: "Haz 2021",
         internship: "Staj",
@@ -378,7 +550,7 @@ const translations = {
         toSep2019: "Eyl 2019",
         expTitle6: "Stajyer Mühendis - Şantiye",
         expCompany6: "Koç İnşaat - Düzce, Türkiye",
-        exp6Task: "Düzce'nin Cumayeri ilçesindeki TOKİ 127+1kD konut projesinin altyapı ve çevre düzenleme işleri dahil olmak üzere şantiyesinde bulundum. Şantiye stajımın sonunda, inşaat ve mühendislik bilgim yetersiz olmasına rağmen sektöre dair genel bir bakış açısı geliştirdim. Staj boyunca inşaat işleri ve şantiye yönetimi hakkında çeşitli bilgiler edindim. Altyapı konusunda nivo (nivelman) cihazını kullanmayı öğrendim ve kanalizasyon ile yağmur suyu drenaj sistemleri oluşturma sürecinde ne kadar önemli olduğunu kavradım.",
+        exp6Task: "Düzce'nin Cumayeri ilçesindeki TOKİ 127+1kD konut projesinin şantiyesinde, altyapı ve çevre düzenleme işleri dahil olmak üzere görev aldım. Aktif bir şantiyeyle ilk doğrudan temasım oldu ve bana inşaat iş sıralaması ile şantiye yönetimi konusunda pratik bir bakış açısı kazandırdı. Altyapı tarafında nivo (nivelman) cihazını kullanmayı öğrendim ve kanalizasyon ile yağmur suyu drenaj sistemlerinin aplikasyonunda kot hassasiyetinin ne kadar belirleyici olduğunu bizzat gördüm.",
         loadMore: "Daha Fazla Deneyim Yükle",
         professionalMembership: "Mesleki Üyelik",
         chamberEngineers: "İnşaat Mühendisleri Odası",
@@ -439,6 +611,7 @@ const translations = {
         creativeWriting: "Yaratıcı Yazarlık",
         technicalFiction: "Teknik ve Kurgu Yazarlığı",
         aboutMe: "Hakkımda",
+        aboutPhotoAlt: "Abdullah Jaffal portresi",
         aboutP1: "Karmaşık altyapı ve su yönetim sistemlerinin teknik tasarımında uzmanlaşmış, dört yılı aşkın deneyime sahip bir Altyapı Tasarım Mühendisiyim. Profesyonel geçmişim, yerel konut projelerinden büyük şehir ölçeğindeki kentsel genişlemelere kadar geniş bir yelpazeyi kapsamaktadır.",
         aboutP2: "Temel odak noktam, içme suyu, sulama ve yangın söndürme için basınçlı su sistemlerinin yanı sıra sıhhi kanalizasyon ve çok amaçlı yüzey suyu yönetimidir. Bu, basit yüzey akışının ötesine hizmet eden yapay kanalların yanı sıra geleneksel drenaj ağlarının tasarlanmasını içerir; böylece alan çapında drenaj, mikro iklim düzenlemesi ve kentsel estetik kolaylaştırılır. Ayrıca yapısal koruma ve uzun vadeli dayanıklılık sağlamak için yeraltı suyu kontrolü ve temel drenajı konularında uzmanım.",
         aboutP3: "İş akışım, işlevsel ve güvenilir altyapı çözümleri sunmak için AutoCAD, Urbano 11 ve WaterGEMS gibi endüstri standardı araçları kullanan teknik hassasiyete dayanmaktadır. Bu süreci optimize etmek için AutoLISP ve Excel VBA ile Tasarım Otomasyonundan yararlanıyorum. Bu yaklaşım, tekrarlayan rutin görevleri ortadan kaldırmama ve olası hataları en aza indirmeme olanak tanıyarak her projenin benzersiz mühendislik zorluklarına ve teknik nüanslarına odaklanmak için kapasite açıyor.",
@@ -447,7 +620,7 @@ const translations = {
         location: "Konum",
         phone: "Telefon",
         email: "E-posta",
-        connectWithMe: "Bana Katılın",
+        connectWithMe: "Benimle bağlantı kurun",
         name: "İsim",
         subject: "Konu",
         message: "Mesaj",
@@ -461,12 +634,10 @@ const translations = {
         PressurizedNetworks: "Basınçlı Şebekeler",
         OpenChannelsDesign: "Açık Kanal Tasarımı",
         myContribution: "Katkılarım:",
-        keyImplementations: "Temel Uygulamalar:",
         projectGallery: "Proje Galerisi",
         tashkentTitle: "Yeni Taşkent Şehri",
         tashkentLocation: "Taşkent, Özbekistan",
         tashkentScale: "6.000 Hektar",
-        tashkentDescShort: "6.000 hektarlık sürdürülebilir ve dirençli bir kentsel gelişim için kapsamlı altyapı tasarımı.",
         tashkentDesc: "Sürdürülebilirlik, dayanıklılık ve modern mühendislik standartlarına odaklanan, büyük ölçekli bir kentsel proje için kapsamlı altyapı tasarımı.",
         tashkentCont1: "Entegre Çoklu Altyapı Galerileri: İçme suyu, bölgesel ısıtma, elektrik gücü ve diğer temel altyapı hizmetlerini bir araya getirmek, basitleştirilmiş bakım ve daha temiz bir kentsel estetik sağlamak için gelişmiş yeraltı tünelleri (Galeri) tasarlandı.",
         tashkentCont2: "Kentsel Su Özellikleri ve Mikro İklim Düzenlemesi: Şehrin mikro iklimini ve nem seviyelerini artırmak için tasarlanmış yapay kanallardan oluşan bir ağ modellendi. Bu, nehir suyu alımını yönetmeyi ve bu kanalları arıtılmış yağmur suyu için işlevsel kanallar olarak entegre etmeyi içeriyordu.",
@@ -480,15 +651,14 @@ const translations = {
 const projectsData = {
     'tashkent': {
         icon: 'fa-city',
-        mainImage: '../../images/project/tashkent/yangi-toshkent-02.webp', // Replace with your actual path
-        gallery: [
-            'assets/projects/tashkent-gallery-1.jpg', // Replace with your actual path
-            'assets/projects/tashkent-gallery-2.jpg', // Replace with your actual path
-            'assets/projects/tashkent-gallery-3.jpg'  // Replace with your actual path
-        ],
+        mainImage: 'images/project/tashkent/yangi-toshkent-02.webp',
+        // Galleries stay empty until the images exist under images/project/<name>/ -
+        // listing missing files renders broken thumbnails in the dialog.
+        gallery: [],
         titleKey: 'tashkentTitle',
         locationKey: 'tashkentLocation',
         scaleKey: 'tashkentScale',
+        scaleIcon: 'fa-ruler-combined',
         descriptionKey: 'tashkentDesc',
         tagsKeys: ['HydraulicModeling', 'DesignAutomation', 'MultiUtilityGalleries', 'StormwaterManagement', 'SanitarySewageDesign', 'PressurizedNetworks', 'OpenChannelsDesign'],
         contributionTitleKey: 'myContribution',
@@ -502,14 +672,12 @@ const projectsData = {
     },
     'villa170': {
         icon: 'fa-home',
-        mainImage: 'assets/projects/villa-main.jpg', // Replace with your actual path
-        gallery: [
-            'assets/projects/villa-gallery-1.jpg', // Replace with your actual path
-            'assets/projects/villa-gallery-2.jpg'  // Replace with your actual path
-        ],
+        mainImage: null,
+        gallery: [],
         titleKey: 'villaCompound',
         locationKey: 'villaLocation',
         scaleKey: 'villaScale',
+        scaleIcon: 'fa-building',
         descriptionKey: 'villaCompoundDescription',
         tagsKeys: ['stormwaterDrainage', 'roadDesign', 'waterSupply'],
         contributionTitleKey: 'keyImplementations',
@@ -521,14 +689,12 @@ const projectsData = {
     },
     'archaeological': {
         icon: 'fa-hotel',
-        mainImage: 'assets/projects/arch-main.jpg', // Replace with your actual path
-        gallery: [
-            'assets/projects/arch-gallery-1.jpg', // Replace with your actual path
-            'assets/projects/arch-gallery-2.jpg'  // Replace with your actual path
-        ],
+        mainImage: null,
+        gallery: [],
         titleKey: 'archaeologicalHotel',
         locationKey: 'archLocation',
         scaleKey: 'archScale',
+        scaleIcon: 'fa-building',
         descriptionKey: 'archaeologicalHotelDescription',
         tagsKeys: ['heritageProtection', 'specialDrainage', 'sitePreservation'],
         contributionTitleKey: 'keyImplementations',
@@ -540,16 +706,14 @@ const projectsData = {
     },
     'flood': {
         icon: 'fa-water',
-        mainImage: 'assets/projects/flood-main.jpg', // Replace with your actual path
-        gallery: [
-            'assets/projects/flood-gallery-1.jpg', // Replace with your actual path
-            'assets/projects/flood-gallery-2.jpg'  // Replace with your actual path
-        ],
+        mainImage: null,
+        gallery: [],
         titleKey: 'floodManagement',
         locationKey: 'floodLocation',
         scaleKey: 'floodScale',
+        scaleIcon: 'fa-building',
         descriptionKey: 'floodManagementDescription',
-        tagsKeys: ['floodManagement', 'smartSystems', 'drainageControl'],
+        tagsKeys: ['StormwaterManagement', 'smartSystems', 'drainageControl'],
         contributionTitleKey: 'keyImplementations',
         contributionsKeys: [
             'floodCont1',
@@ -557,6 +721,7 @@ const projectsData = {
             'floodCont3'
         ]
     }
+    // 'industrial' has no detail copy, so that card stays a summary card.
 };
 
 // DOM Elements
@@ -574,6 +739,9 @@ let currentLang = localStorage.getItem('selectedLang') || 'en';
 
 // Scroll spy state
 let currentSection = 'hero';
+
+// Element that had focus before the project dialog opened
+let lastFocusedElement = null;
 
 // Initialize page
 function initPage() {
@@ -599,8 +767,14 @@ function initPage() {
 // Function to apply language
 function applyLanguage(lang) {
     const langConfig = translations[lang] || translations['en'];
-    
-    bodyElement.dir = langConfig.dir || 'ltr';
+    const dir = langConfig.dir || 'ltr';
+
+    // Keep <html> in sync too - search engines, screen readers and browser
+    // translation all read lang/dir from the root element, not from <body>.
+    document.documentElement.lang = lang;
+    document.documentElement.dir = dir;
+
+    bodyElement.dir = dir;
     bodyElement.lang = lang;
     
     const linksContainer = document.getElementById('nav-links-container');
@@ -627,18 +801,40 @@ function applyLanguage(lang) {
             element.placeholder = langConfig[key];
         }
     });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(element => {
+        const key = element.getAttribute('data-i18n-aria');
+        if (langConfig[key]) {
+            element.setAttribute('aria-label', langConfig[key]);
+        }
+    });
+
+    document.querySelectorAll('[data-i18n-alt]').forEach(element => {
+        const key = element.getAttribute('data-i18n-alt');
+        if (langConfig[key]) {
+            element.alt = langConfig[key];
+        }
+    });
+
+    // Page title and meta description are what search results and shared
+    // links actually display, so they follow the selected language too.
+    if (langConfig.pageTitle) {
+        document.title = langConfig.pageTitle;
+    }
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription && langConfig.metaDescription) {
+        metaDescription.setAttribute('content', langConfig.metaDescription);
+    }
     
     langButtons.forEach(btn => {
-        if (btn.getAttribute('data-lang') === lang) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
+        const isActive = btn.getAttribute('data-lang') === lang;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
     
     const copyrightElement = document.getElementById('copyright');
     if (copyrightElement && langConfig.copyright) {
-        copyrightElement.textContent = langConfig.copyright;
+        copyrightElement.textContent = langConfig.copyright.replace('{year}', new Date().getFullYear());
     }
     
     localStorage.setItem('selectedLang', lang);
@@ -681,10 +877,24 @@ function setupEventListeners() {
                 // Close mobile menu if open
                 if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
                     const icon = mobileMenuBtn.querySelector('i');
                     icon.classList.remove('fa-times');
                     icon.classList.add('fa-bars');
                 }
+            }
+        });
+    });
+
+    // Project cards: reachable by mouse, keyboard and assistive tech
+    document.querySelectorAll('[data-project]').forEach(card => {
+        const projectId = card.getAttribute('data-project');
+
+        card.addEventListener('click', () => openProjectModal(projectId));
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openProjectModal(projectId);
             }
         });
     });
@@ -747,25 +957,37 @@ function updateActiveNavLink(sectionId) {
 function initMobileMenu() {
     if (!mobileMenuBtn || !mobileMenu) return;
     
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+    function setMobileMenu(open) {
+        mobileMenu.classList.toggle('hidden', !open);
+        mobileMenuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+
         const icon = mobileMenuBtn.querySelector('i');
-        if (mobileMenu.classList.contains('hidden')) {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        } else {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
+        icon.classList.toggle('fa-times', open);
+        icon.classList.toggle('fa-bars', !open);
+
+        const langConfig = translations[currentLang] || translations['en'];
+        const label = open ? langConfig.closeMenu : langConfig.openMenu;
+        if (label) {
+            mobileMenuBtn.setAttribute('aria-label', label);
         }
+    }
+
+    mobileMenuBtn.addEventListener('click', () => {
+        setMobileMenu(mobileMenu.classList.contains('hidden'));
     });
-    
+
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-            mobileMenu.classList.add('hidden');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+            setMobileMenu(false);
+        }
+    });
+
+    // Escape closes the menu and returns focus to the toggle
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+            setMobileMenu(false);
+            mobileMenuBtn.focus();
         }
     });
 }
@@ -779,11 +1001,11 @@ function setupForm() {
         // 1. Get the reCAPTCHA response token
         const captchaResponse = grecaptcha.getResponse();
         
+        const t = translations[currentLang] || translations['en'];
+
         // 2. Validate that the reCAPTCHA is completed before proceeding
         if (captchaResponse.length === 0) {
-            alert(currentLang === 'ar' ? 'يرجى التحقق من مربع "أنا لست برنامج روبوت".' : 
-                  currentLang === 'tr' ? 'Lütfen "Ben robot değilim" kutusunu doğrulayın.' :
-                  'Please verify that you are not a robot.');
+            alert(t.captchaRequired);
             return;
         }
         
@@ -793,15 +1015,13 @@ function setupForm() {
         const messageVal = document.getElementById('message').value;
         
         if (!nameVal || !emailVal || !messageVal) {
-            alert(currentLang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة.' : 
-                  currentLang === 'tr' ? 'Lütfen tüm gerekli alanları doldurun.' :
-                  'Please fill in all required fields.');
+            alert(t.fieldsRequired);
             return;
         }
         
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
-        submitBtn.innerHTML = currentLang === 'ar' ? 'جاري الإرسال <i class="fas fa-spinner fa-spin ml-2"></i>' : 'Sending...';
+        submitBtn.innerHTML = t.sending + ' <i class="fas fa-spinner fa-spin ms-2" aria-hidden="true"></i>';
         submitBtn.disabled = true;
         
         // 3. Add the reCAPTCHA token to template parameters
@@ -817,9 +1037,7 @@ function setupForm() {
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 
-                alert(currentLang === 'ar' ? 'شكراً لك على رسالتك! سأعود إليك قريباً.' :
-                      currentLang === 'tr' ? 'Mesajınız için teşekkürler! Size en kısa sürede döneceğim.' :
-                      'Thank you for your message! I will get back to you soon.');
+                alert(t.sendSuccess);
                 
                 contactForm.reset();
                 
@@ -832,7 +1050,7 @@ function setupForm() {
             }, function(error) {
                 console.log('FAILED...', error);
                 
-                alert(currentLang === 'ar' ? 'حدث خطأ أثناء إرسال الرسالة. يرجى التأكد من اتصالك والمحاولة لاحقاً.' : 'Failed to send the message. Please try again later.');
+                alert(t.sendError);
                 
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
@@ -898,7 +1116,7 @@ function openProjectModal(projectId) {
     if (data.contributionsKeys && data.contributionsKeys.length > 0) {
         const listItems = data.contributionsKeys.map(key => `
             <li class="flex items-start mb-4">
-                <div class="w-1.5 h-1.5 bg-accent rounded-full mt-2.5 mr-4 flex-shrink-0"></div>
+                <div class="w-1.5 h-1.5 bg-accent rounded-full mt-2.5 me-4 flex-shrink-0"></div>
                 <span class="text-gray-700 leading-relaxed" data-i18n="${key}"></span>
             </li>
         `).join('');
@@ -932,11 +1150,11 @@ function openProjectModal(projectId) {
     modalBody.innerHTML = `
         ${mainContentImage}
         
-        <h3 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-900" data-i18n="${data.titleKey}"></h3>
+        <h3 id="modalTitle" class="text-3xl sm:text-4xl font-bold mb-4 text-gray-900" data-i18n="${data.titleKey}"></h3>
         
         <div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-6 font-medium">
-            <span class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-accent"></i> <span class="ml-1" data-i18n="${data.locationKey}"></span></span>
-            <span class="flex items-center"><i class="fas fa-ruler-combined mr-2 text-accent"></i> <span class="ml-1" data-i18n="${data.scaleKey}"></span></span>
+            <span class="flex items-center"><i class="fas fa-map-marker-alt me-2 text-accent"></i> <span class="ms-1" data-i18n="${data.locationKey}"></span></span>
+            <span class="flex items-center"><i class="fas ${data.scaleIcon || 'fa-ruler-combined'} me-2 text-accent" aria-hidden="true"></i> <span class="ms-1" data-i18n="${data.scaleKey}"></span></span>
         </div>
         
         ${tagsHtml}
@@ -956,14 +1174,44 @@ function openProjectModal(projectId) {
         }
     });
 
+    // Remember what had focus so it can be restored on close
+    lastFocusedElement = document.activeElement;
+
     // Show Modal with Animation
     modal.classList.remove('hidden');
+    modal.setAttribute('aria-hidden', 'false');
     void modal.offsetWidth; // Force browser reflow
     modal.classList.remove('opacity-0');
     modalContentBox.classList.remove('scale-95');
     
     // Prevent background scrolling
     document.body.style.overflow = 'hidden';
+
+    // Move focus into the dialog and keep it there while it is open
+    const closeBtn = modal.querySelector('button');
+    if (closeBtn) closeBtn.focus();
+    modal.addEventListener('keydown', trapModalFocus);
+}
+
+// Keeps Tab/Shift+Tab cycling inside the open dialog
+function trapModalFocus(e) {
+    if (e.key !== 'Tab') return;
+
+    const focusable = e.currentTarget.querySelectorAll(
+        'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusable.length === 0) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+    }
 }
 
 function closeProjectModal() {
@@ -974,13 +1222,21 @@ function closeProjectModal() {
 
     modal.classList.add('opacity-0');
     modalContentBox.classList.add('scale-95');
+    modal.removeEventListener('keydown', trapModalFocus);
 
     // Wait for transition to finish before hiding
     setTimeout(() => {
         modal.classList.add('hidden');
+        modal.setAttribute('aria-hidden', 'true');
         // Restore background scrolling
         document.body.style.overflow = '';
     }, 300);
+
+    // Send focus back to whatever opened the dialog
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+        lastFocusedElement.focus();
+        lastFocusedElement = null;
+    }
 }
 
 // Initialize when DOM is loaded
