@@ -1,0 +1,91 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="schematicTitle">
+    <title id="schematicTitle">Surface stormwater collection and first-flush treatment schematic</title>
+
+    <defs>
+        <marker id="arrowAccent" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#96694e"></path>
+        </marker>
+        <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#9ca3af"></path>
+        </marker>
+    </defs>
+
+    <rect x="0" y="0" width="800" height="450" fill="#ffffff"></rect>
+
+    <!-- Street strip with drainage grates (izgara) -->
+    <rect x="70" y="48" width="660" height="26" rx="4" fill="#f3f4f6"></rect>
+    <g stroke="#6b7280" stroke-width="1.5" fill="#ffffff">
+        <g transform="translate(130,52)">
+            <rect x="0" y="0" width="34" height="18" rx="2"></rect>
+            <line x1="7" y1="3" x2="7" y2="15"></line>
+            <line x1="14" y1="3" x2="14" y2="15"></line>
+            <line x1="21" y1="3" x2="21" y2="15"></line>
+            <line x1="28" y1="3" x2="28" y2="15"></line>
+        </g>
+        <g transform="translate(270,52)">
+            <rect x="0" y="0" width="34" height="18" rx="2"></rect>
+            <line x1="7" y1="3" x2="7" y2="15"></line>
+            <line x1="14" y1="3" x2="14" y2="15"></line>
+            <line x1="21" y1="3" x2="21" y2="15"></line>
+            <line x1="28" y1="3" x2="28" y2="15"></line>
+        </g>
+        <g transform="translate(410,52)">
+            <rect x="0" y="0" width="34" height="18" rx="2"></rect>
+            <line x1="7" y1="3" x2="7" y2="15"></line>
+            <line x1="14" y1="3" x2="14" y2="15"></line>
+            <line x1="21" y1="3" x2="21" y2="15"></line>
+            <line x1="28" y1="3" x2="28" y2="15"></line>
+        </g>
+        <g transform="translate(550,52)">
+            <rect x="0" y="0" width="34" height="18" rx="2"></rect>
+            <line x1="7" y1="3" x2="7" y2="15"></line>
+            <line x1="14" y1="3" x2="14" y2="15"></line>
+            <line x1="21" y1="3" x2="21" y2="15"></line>
+            <line x1="28" y1="3" x2="28" y2="15"></line>
+        </g>
+    </g>
+
+    <!-- Vertical connectors from grates down to the gravity main line -->
+    <g stroke="#9ca3af" stroke-width="2" fill="none">
+        <path d="M147,74 L147,190"></path>
+        <path d="M287,74 L287,190"></path>
+        <path d="M427,74 L427,190"></path>
+        <path d="M567,74 L567,190"></path>
+    </g>
+
+    <!-- Gravity main line with inspection manholes -->
+    <path d="M147,190 L560,190" stroke="#96694e" stroke-width="4" stroke-linecap="round" fill="none"></path>
+    <g fill="#ffffff" stroke="#96694e" stroke-width="2.5">
+        <circle cx="147" cy="190" r="7"></circle>
+        <circle cx="287" cy="190" r="7"></circle>
+        <circle cx="427" cy="190" r="7"></circle>
+        <circle cx="567" cy="190" r="7"></circle>
+    </g>
+
+    <!-- First-flush treatment structure (CYT) -->
+    <rect x="600" y="150" width="100" height="90" rx="10" fill="#ffffff" stroke="#96694e" stroke-width="2.5"></rect>
+    <path d="M567,190 L600,190" stroke="#96694e" stroke-width="4" fill="none" marker-end="url(#arrowAccent)"></path>
+    <!-- floating layer (oil/debris capture, upper) -->
+    <path d="M615,172 q6,-6 12,0 t12,0 t12,0" stroke="#c9a688" stroke-width="2.5" fill="none" stroke-linecap="round"></path>
+    <!-- settled sediment (lower) -->
+    <g fill="#9ca3af">
+        <circle cx="622" cy="218" r="3"></circle>
+        <circle cx="634" cy="222" r="3.5"></circle>
+        <circle cx="647" cy="217" r="3"></circle>
+        <circle cx="660" cy="221" r="3.5"></circle>
+        <circle cx="673" cy="216" r="3"></circle>
+    </g>
+
+    <!-- Treated flow continues to canal -->
+    <path d="M700,195 L735,195" stroke="#96694e" stroke-width="3.5" fill="none" marker-end="url(#arrowAccent)"></path>
+
+    <!-- Bypass line: skips the treatment structure once first flush has passed -->
+    <path d="M567,183 C 600,120 660,120 733,178" stroke="#9ca3af" stroke-width="2.5" fill="none" stroke-dasharray="7 6" marker-end="url(#arrowGray)"></path>
+
+    <!-- Canal -->
+    <path d="M745,150 q10,20 0,40 t0,40 t0,40 t0,40" stroke="#96694e" stroke-width="3" fill="none" opacity="0.55"></path>
+    <path d="M760,150 q10,20 0,40 t0,40 t0,40 t0,40" stroke="#96694e" stroke-width="3" fill="none" opacity="0.35"></path>
+
+    <!-- Baseline -->
+    <line x1="60" y1="330" x2="770" y2="330" stroke="#e5e7eb" stroke-width="1"></line>
+</svg>

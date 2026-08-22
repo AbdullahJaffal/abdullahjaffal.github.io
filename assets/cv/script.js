@@ -45,15 +45,15 @@ const translations = {
         proj3Sub: "Infrastructure design for a hotel on a protected archaeological site.",
         proj4Title: "Flood Management System",
         proj4Sub: "Automatic reserve tank system for a hotel in a flood-prone area.",
-        proj5Title: "Industrial & Commercial Developments",
-        proj5Sub: "Hotels and industrial facilities.",
         pageTitle: "Abdullah Jaffal | Engineering Portfolio",
         metaDescription: "Abdullah Jaffal - Infrastructure Design Engineer specializing in mega-scale hydraulic systems, utility galleries, and design automation.",
         skipToContent: "Skip to main content",
         closeDialog: "Close project details",
         openMenu: "Open navigation menu",
         closeMenu: "Close navigation menu",
-        proj1ImageAlt: "Aerial view of the New Tashkent City master plan",
+        tashkentSchematicAlt: "Simplified schematic of the surface stormwater collection network and first-flush treatment path",
+        tashkentSchematicCaption: "Stormwater Drainage System (Schematic)",
+        enlargeImage: "Enlarge image",
         turkishLevel: "Advanced (C1)",
         copyright: "© {year} Abdullah Jaffal. All rights reserved.",
         sending: "Sending...",
@@ -211,7 +211,7 @@ const translations = {
         tashkentDesc: "Comprehensive infrastructure design for a large-scale urban project, focusing on sustainability, resilience, and modern engineering standards.",
         tashkentCont1: "Integrated Multi-Utility Galleries: Designed advanced underground tunnels (Galeri) to consolidate potable water, district heating, electrical power, and other essential infrastructure services, ensuring streamlined maintenance and a cleaner urban aesthetic.",
         tashkentCont2: "Urban Water Features & Microclimate Regulation: Engineered a network of artificial canals designed to enhance the city's microclimate and humidity levels. This involved managing river water intake and integrating these canals as functional conduits for treated stormwater.",
-        tashkentCont3: "First Flush Stormwater Treatment: Implemented sustainable hydraulic solutions to treat \"First Flush\" rainfall. Designed specialized structures utilizing velocity reduction, flotation, and sedimentation to trap sludge, debris, and oils before discharging water into the artificial canals.",
+        tashkentCont3: "Stormwater Collection & First-Flush Treatment: Designed a gravity-fed collection network starting at street-level drainage grates, feeding through inspection manholes into appropriately sized main lines — grate spacing and pipe sizing were set by each street's width and longitudinal slope to keep water moving and prevent surface ponding. Before discharging into the artificial canals, this network passes through specialized structures using velocity reduction, flotation, and sedimentation to treat \"First Flush\" rainfall — the initial, most polluted runoff carrying oils, sediment and debris. Once that initial flush has passed, the comparatively clean remaining runoff bypasses treatment via a dedicated line straight to the canals: sizing full treatment infrastructure for an entire storm's volume would be an economically unjustified waste with no real technical benefit, since only the first flush carries meaningful pollution.",
         tashkentCont4: "Pressurized Water & Firefighting Networks: Executed complex hydraulic modeling to determine optimal pipe diameters and pressure requirements for city-wide potable water and fire safety. Integrated strategic isolation valves to ensure uninterrupted service and network resilience during maintenance or emergencies.",
         tashkentCont5: "Sanitary Sewage Systems: Designed efficient gravity-based sewage networks, calculating optimal slopes and pipe capacities based on projected population density and peak flow requirements.",
     },
@@ -260,15 +260,15 @@ const translations = {
         proj3Sub: "تصميم البنية التحتية لفندق ضمن موقع أثري محمي.",
         proj4Title: "نظام إدارة الفيضانات",
         proj4Sub: "نظام خزانات احتياطية أوتوماتيكي لفندق في منطقة معرَّضة للفيضانات.",
-        proj5Title: "مشاريع صناعية وتجارية",
-        proj5Sub: "فنادق ومنشآت صناعية.",
         pageTitle: "عبد الله جفَّال | ملف أعمال هندسي",
         metaDescription: "عبد الله جفَّال - مهندس تصميم بنية تحتية متخصص في الأنظمة الهيدروليكية الضخمة وأنفاق الخدمات وأتمتة التصميم.",
         skipToContent: "الانتقال إلى المحتوى الرئيسي",
         closeDialog: "إغلاق تفاصيل المشروع",
         openMenu: "فتح قائمة التنقل",
         closeMenu: "إغلاق قائمة التنقل",
-        proj1ImageAlt: "منظر جوي للمخطط العام لمدينة طشقند الجديدة",
+        tashkentSchematicAlt: "رسم تخطيطي مبسّط لشبكة تجميع مياه الأمطار السطحية ومسار معالجة الدفعة الأولى",
+        tashkentSchematicCaption: "نظام تصريف مياه الأمطار (رسم تخطيطي)",
+        enlargeImage: "تكبير الصورة",
         turkishLevel: "متقدم (C1)",
         copyright: "© {year} عبد الله جفَّال. جميع الحقوق محفوظة.",
         sending: "جارٍ الإرسال...",
@@ -426,7 +426,7 @@ const translations = {
         tashkentDesc: "تصميم متكامل للبنية التحتية لمشروع حضري واسع النطاق، مع التركيز على الاستدامة والمرونة والمعايير الهندسية الحديثة.",
         tashkentCont1: "أنفاق الخدمات المتعددة المتكاملة: تصميم أنفاق تحت الأرض متطورة (Galeri) لدمج مياه الشرب والتدفئة المركزية والطاقة الكهربائية وخدمات البنية التحتية الأساسية الأخرى، مما يضمن صيانة مبسطة ومظهراً حضرياً أنظف.",
         tashkentCont2: "المعالم المائية الحضرية وتنظيم المناخ المحلي: هندسة شبكة من القنوات الاصطناعية المصممة لتعزيز المناخ المحلي ومستويات الرطوبة في المدينة. تضمن ذلك إدارة سحب مياه النهر ودمج هذه القنوات كمسارات وظيفية لمياه الأمطار المعالجة.",
-        tashkentCont3: "معالجة الدفعة الأولى من مياه الأمطار (First Flush): تنفيذ حلول هيدروليكية مستدامة لمعالجة \"الدفعة الأولى\" من الأمطار. تصميم هياكل متخصصة تستخدم تقليل السرعة والتعويم والترسيب لاحتجاز الحمأة والحطام والزيوت قبل تصريف المياه في القنوات الاصطناعية.",
+        tashkentCont3: "تجميع مياه الأمطار ومعالجة الدفعة الأولى: تصميم شبكة تجميع تعمل بالجاذبية تبدأ من فتحات تصريف على مستوى الشارع، تتصل عبر مناهل تفتيش بخطوط رئيسية بأقطار مناسبة — حُدد توزيع الفتحات وأقطار الأنابيب وفق عرض كل شارع وميله الطولي لضمان استمرار جريان المياه ومنع تجمّع البرك على السطح. وقبل تصريف هذه الشبكة في القنوات الاصطناعية، تمر المياه عبر هياكل متخصصة تستخدم تقليل السرعة والتعويم والترسيب لمعالجة \"الدفعة الأولى\" من الأمطار — وهي الجريان الأولي الأكثر تلوثاً بالزيوت والرواسب والحطام. وبعد انتهاء هذه الدفعة الملوثة، يُوجَّه الجريان المتبقي الأقل تلوثاً نسبياً عبر خط تجاوز (bypass) مباشرة إلى القنوات: فتصميم بنية معالجة كاملة تستوعب كامل حجم العاصفة المطرية يمثل هدراً اقتصادياً غير مبرر ولا فائدة تقنية حقيقية منه، إذ إن الدفعة الأولى فقط هي التي تحمل تلوثاً ذا أهمية فعلية.",
         tashkentCont4: "شبكات المياه المضغوطة ومكافحة الحرائق: تنفيذ نمذجة هيدروليكية معقدة لتحديد الأقطار المثلى للأنابيب ومتطلبات الضغط لمياه الشرب والسلامة من الحرائق على مستوى المدينة. دمج صمامات العزل الاستراتيجية لضمان استمرار الخدمة ومرونة الشبكة أثناء الصيانة أو الطوارئ.",
         tashkentCont5: "أنظمة الصرف الصحي: تصميم شبكات صرف صحي فعالة تعتمد على الجاذبية، مع حساب الميول وسعات الأنابيب المثلى بناءً على الكثافة السكانية المتوقعة ومتطلبات التدفق في أوقات الذروة."
     },
@@ -475,15 +475,15 @@ const translations = {
         proj3Sub: "Koruma altındaki arkeolojik alanda yer alan otel için altyapı tasarımı.",
         proj4Title: "Taşkın Yönetim Sistemi",
         proj4Sub: "Taşkın riski taşıyan bölgedeki bir otel için otomatik rezerv tank sistemi.",
-        proj5Title: "Endüstriyel ve Ticari Projeler",
-        proj5Sub: "Oteller ve endüstriyel tesisler.",
         pageTitle: "Abdullah Jaffal | Mühendislik Portfolyosu",
         metaDescription: "Abdullah Jaffal - Mega ölçekli hidrolik sistemler, altyapı galerileri ve tasarım otomasyonu konusunda uzman Altyapı Tasarım Mühendisi.",
         skipToContent: "Ana içeriğe geç",
         closeDialog: "Proje detaylarını kapat",
         openMenu: "Menüyü aç",
         closeMenu: "Menüyü kapat",
-        proj1ImageAlt: "Yeni Taşkent şehri nazım planının havadan görünüşü",
+        tashkentSchematicAlt: "Yüzeysel yağmur suyu toplama ağının ve ilk yıkama arıtma hattının basitleştirilmiş şeması",
+        tashkentSchematicCaption: "Yağmur Suyu Drenaj Sistemi (Şema)",
+        enlargeImage: "Görseli büyüt",
         turkishLevel: "İleri seviye (C1)",
         copyright: "© {year} Abdullah Jaffal. Tüm hakları saklıdır.",
         sending: "Gönderiliyor...",
@@ -641,7 +641,7 @@ const translations = {
         tashkentDesc: "Sürdürülebilirlik, dayanıklılık ve modern mühendislik standartlarına odaklanan, büyük ölçekli bir kentsel proje için kapsamlı altyapı tasarımı.",
         tashkentCont1: "Entegre Çoklu Altyapı Galerileri: İçme suyu, bölgesel ısıtma, elektrik gücü ve diğer temel altyapı hizmetlerini bir araya getirmek, basitleştirilmiş bakım ve daha temiz bir kentsel estetik sağlamak için gelişmiş yeraltı tünelleri (Galeri) tasarlandı.",
         tashkentCont2: "Kentsel Su Özellikleri ve Mikro İklim Düzenlemesi: Şehrin mikro iklimini ve nem seviyelerini artırmak için tasarlanmış yapay kanallardan oluşan bir ağ modellendi. Bu, nehir suyu alımını yönetmeyi ve bu kanalları arıtılmış yağmur suyu için işlevsel kanallar olarak entegre etmeyi içeriyordu.",
-        tashkentCont3: "İlk Yıkama (First Flush) Yağmur Suyu Arıtımı: \"İlk Yıkama\" yağışını arıtmak için sürdürülebilir hidrolik çözümler uygulandı. Suyu yapay kanallara deşarj etmeden önce çamur, kalıntı ve yağları hapsetmek için hız düşürme, yüzdürme ve çöktürme kullanan özel yapılar tasarlandı.",
+        tashkentCont3: "Yağmur Suyu Toplama ve İlk Yıkama Arıtımı: Yol seviyesindeki drenaj ızgaralarından başlayıp rögarlar üzerinden uygun çaplı ana hatlara bağlanan yerçekimi tabanlı bir toplama ağı tasarlandı — ızgara aralıkları ve boru çapları, suyun akışını sürdürüp yüzeyde su birikmesini önlemek amacıyla her sokağın genişliğine ve boyuna eğimine göre belirlendi. Bu ağ, yapay kanallara deşarj edilmeden önce, yağmurun en kirli ilk akışını —yağ, tortu ve kalıntı taşıyan bölümünü— arıtmak için hız düşürme, yüzdürme ve çöktürme kullanan özel yapılardan geçirilir. Bu ilk kirli akış geçtikten sonra, nispeten daha temiz kalan akış doğrudan kanallara giden ayrı bir bypass hattına yönlendirilir: tüm fırtına hacmini karşılayacak eksiksiz bir arıtma altyapısı tasarlamak, gerçek bir teknik faydası olmayan, haklı gösterilemeyecek bir ekonomik israf olurdu.",
         tashkentCont4: "Basınçlı Su ve Yangın Söndürme Şebekeleri: Şehir çapında içme suyu ve yangın güvenliği için optimum boru çaplarını ve basınç gereksinimlerini belirlemek amacıyla karmaşık hidrolik modelleme gerçekleştirildi. Bakım veya acil durumlarda kesintisiz hizmet ve şebeke dayanıklılığı sağlamak için stratejik izolasyon vanaları entegre edildi.",
         tashkentCont5: "Atıksu Sistemleri: Öngörülen nüfus yoğunluğu ve pik debi gereksinimlerine dayalı olarak optimum eğimleri ve boru kapasitelerini hesaplayan, yerçekimi tabanlı verimli kanalizasyon ağları tasarlandı.",
     }
@@ -651,10 +651,13 @@ const translations = {
 const projectsData = {
     'tashkent': {
         icon: 'fa-city',
-        mainImage: 'images/project/tashkent/yangi-toshkent-02.webp',
-        // Galleries stay empty until the images exist under images/project/<name>/ -
-        // listing missing files renders broken thumbnails in the dialog.
-        gallery: [],
+        mainImage: null,
+        // Original schematic (not a project photo) - see stormwater-schematic.svg.
+        // No licensed photo of this project is available; kept as an icon
+        // fallback like the other cards rather than use an unverified image.
+        gallery: [
+            { src: 'images/project/tashkent/stormwater-schematic.svg', altKey: 'tashkentSchematicAlt', captionKey: 'tashkentSchematicCaption' }
+        ],
         titleKey: 'tashkentTitle',
         locationKey: 'tashkentLocation',
         scaleKey: 'tashkentScale',
@@ -909,9 +912,22 @@ function setupEventListeners() {
         });
     }
 
-    // Close modal on Escape key press
+    const lightbox = document.getElementById('imageLightbox');
+    if (lightbox) {
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeImageLightbox();
+            }
+        });
+    }
+
+    // Escape closes whichever dialog is on top: the lightbox first, then the project modal
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+        if (e.key !== 'Escape') return;
+        if (lightbox && !lightbox.classList.contains('hidden')) {
+            closeImageLightbox();
+        } else if (modal && !modal.classList.contains('hidden')) {
             closeProjectModal();
         }
     });
@@ -1134,12 +1150,20 @@ function openProjectModal(projectId) {
         galleryHtml = `
             <div class="mt-8 pt-8 border-t border-gray-100">
                 <h5 class="text-lg font-bold mb-5 text-gray-900" data-i18n="projectGallery"></h5>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                    ${data.gallery.map(img => `
-                        <div class="aspect-video overflow-hidden rounded-lg border border-gray-100 group cursor-pointer">
-                            <img src="${img}" alt="Gallery Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        </div>
-                    `).join('')}
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    ${data.gallery.map(item => {
+                        const src = typeof item === 'string' ? item : item.src;
+                        const altAttr = typeof item === 'object' && item.altKey ? `data-i18n-alt="${item.altKey}"` : '';
+                        const captionHtml = typeof item === 'object' && item.captionKey
+                            ? `<span class="gallery-caption absolute bottom-[6%] left-0 right-0 text-center text-sm sm:text-base font-bold text-gray-800 tracking-wide px-3" data-i18n="${item.captionKey}"></span>`
+                            : '';
+                        return `
+                        <button type="button" onclick="openImageLightbox(this)" class="relative w-full aspect-video overflow-hidden rounded-lg border border-gray-100 bg-white group cursor-zoom-in block" aria-label="Enlarge image" data-i18n-aria="enlargeImage">
+                            <img src="${src}" alt="" ${altAttr} class="w-full h-full object-contain p-3 transition-transform duration-500 group-hover:scale-105">
+                            ${captionHtml}
+                        </button>
+                    `;
+                    }).join('')}
                 </div>
             </div>
         `;
@@ -1170,6 +1194,18 @@ function openProjectModal(projectId) {
         const key = element.getAttribute('data-i18n');
         if (langConfig[key]) {
             element.textContent = langConfig[key];
+        }
+    });
+    modalBody.querySelectorAll('[data-i18n-alt]').forEach(element => {
+        const key = element.getAttribute('data-i18n-alt');
+        if (langConfig[key]) {
+            element.alt = langConfig[key];
+        }
+    });
+    modalBody.querySelectorAll('[data-i18n-aria]').forEach(element => {
+        const key = element.getAttribute('data-i18n-aria');
+        if (langConfig[key]) {
+            element.setAttribute('aria-label', langConfig[key]);
         }
     });
 
@@ -1235,6 +1271,78 @@ function closeProjectModal() {
     if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
         lastFocusedElement.focus();
         lastFocusedElement = null;
+    }
+}
+
+// Tracks focus separately from lastFocusedElement so opening/closing the
+// lightbox (nested inside the project modal) doesn't clobber the project
+// modal's own return-focus target.
+let lastLightboxFocusedElement = null;
+
+function openImageLightbox(triggerEl) {
+    if (!triggerEl) return;
+    const imgEl = triggerEl.querySelector('img');
+    const captionEl = triggerEl.querySelector('.gallery-caption');
+    if (!imgEl) return;
+
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxImg = document.getElementById('lightboxImage');
+    const lightboxWrap = document.getElementById('lightboxImageWrap');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    if (!lightbox || !lightboxImg || !lightboxWrap) return;
+
+    lightboxImg.src = imgEl.currentSrc || imgEl.src;
+    lightboxImg.alt = imgEl.alt;
+    if (lightboxCaption) {
+        // Mirror the caption's own data-i18n key so a language switch while
+        // the lightbox is open re-translates it too, via the normal
+        // document-wide [data-i18n] pass in applyLanguage().
+        const capKey = captionEl ? captionEl.getAttribute('data-i18n') : null;
+        if (capKey) {
+            lightboxCaption.setAttribute('data-i18n', capKey);
+            const langConfig = translations[currentLang] || translations['en'];
+            lightboxCaption.textContent = langConfig[capKey] || '';
+        } else {
+            lightboxCaption.removeAttribute('data-i18n');
+            lightboxCaption.textContent = '';
+        }
+    }
+
+    lastLightboxFocusedElement = document.activeElement;
+
+    lightbox.classList.remove('hidden');
+    lightbox.setAttribute('aria-hidden', 'false');
+    void lightbox.offsetWidth; // Force reflow so the transition plays
+    lightbox.classList.remove('opacity-0');
+    lightboxWrap.classList.remove('scale-95');
+
+    document.body.style.overflow = 'hidden';
+
+    const closeBtn = lightbox.querySelector('button');
+    if (closeBtn) closeBtn.focus();
+}
+
+function closeImageLightbox() {
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxWrap = document.getElementById('lightboxImageWrap');
+    if (!lightbox) return;
+
+    lightbox.classList.add('opacity-0');
+    if (lightboxWrap) lightboxWrap.classList.add('scale-95');
+
+    setTimeout(() => {
+        lightbox.classList.add('hidden');
+        lightbox.setAttribute('aria-hidden', 'true');
+
+        // Keep the background locked if the project modal is still open behind it
+        const projectModal = document.getElementById('projectModal');
+        const projectModalOpen = projectModal && !projectModal.classList.contains('hidden');
+        document.body.style.overflow = projectModalOpen ? 'hidden' : '';
+    }, 300);
+
+    if (lastLightboxFocusedElement && typeof lastLightboxFocusedElement.focus === 'function') {
+        lastLightboxFocusedElement.focus();
+        lastLightboxFocusedElement = null;
     }
 }
 

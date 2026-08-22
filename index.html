@@ -229,7 +229,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div class="project-card cursor-pointer transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-white rounded-lg overflow-hidden border border-gray-100" role="button" tabindex="0" data-project="tashkent">
                             <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
-                                <img class="w-full h-40 object-cover" src="images/project/tashkent/yangi-toshkent-01.webp" width="800" height="450" loading="lazy" decoding="async" alt="" data-i18n-alt="proj1ImageAlt">
+                                <i aria-hidden="true" class="fas fa-city text-4xl text-accent"></i>
                             </div>
                             <div class="p-5">
                                 <h3 class="text-lg font-bold mb-2" data-i18n="proj1Title">New Tashkent City</h3>
@@ -279,15 +279,6 @@
                             </div>
                         </div>
 
-                        <div class="project-card transform transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg bg-white rounded-lg overflow-hidden border border-gray-100">
-                            <div class="w-full h-40 bg-gray-50 flex items-center justify-center border-b border-gray-100">
-                                <i aria-hidden="true" class="fas fa-industry text-4xl text-accent"></i>
-                            </div>
-                            <div class="p-5">
-                                <h3 class="text-lg font-bold mb-2" data-i18n="proj5Title">Industrial &amp; Commercial Developments</h3>
-                                <p class="text-gray-500 text-sm" data-i18n="proj5Sub">Hotels and industrial facilities.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -299,6 +290,16 @@
                     <i class="fas fa-times text-xl" aria-hidden="true"></i>
                 </button>
                 <div id="modalDynamicBody" class="p-8 sm:p-12"></div>
+            </div>
+        </div>
+
+        <div id="imageLightbox" class="fixed inset-0 z-[110] hidden bg-black bg-opacity-80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8 opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true" aria-hidden="true">
+            <button onclick="closeImageLightbox()" class="absolute top-5 right-5 w-10 h-10 bg-white bg-opacity-90 rounded-full flex items-center justify-center text-gray-700 hover:bg-opacity-100 z-10 transition-colors" aria-label="Close image" data-i18n-aria="closeDialog">
+                <i class="fas fa-times text-xl" aria-hidden="true"></i>
+            </button>
+            <div id="lightboxImageWrap" class="relative max-w-full max-h-full bg-white rounded-lg p-4 transform scale-95 transition-transform duration-300">
+                <img id="lightboxImage" src="" alt="" class="max-w-full max-h-full object-contain">
+                <span id="lightboxCaption" class="absolute bottom-[6%] left-0 right-0 text-center text-base sm:text-lg font-bold text-gray-800 tracking-wide px-4"></span>
             </div>
         </div>
 
