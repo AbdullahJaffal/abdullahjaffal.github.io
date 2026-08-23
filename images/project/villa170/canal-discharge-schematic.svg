@@ -1,0 +1,95 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="villaSchematicTitle">
+    <title id="villaSchematicTitle">Schematic of the artificial canal, full-volume treatment, and energy-dissipation discharge path to the creek</title>
+
+    <defs>
+        <marker id="arrowAccentV" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#96694e"></path>
+        </marker>
+        <marker id="arrowGrayV" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#9ca3af"></path>
+        </marker>
+    </defs>
+
+    <rect x="0" y="0" width="800" height="450" fill="#ffffff"></rect>
+
+    <!-- Villa with foundation drainage ring, and roof downspout to its own inspection chamber -->
+    <g stroke="#6b7280" stroke-width="1.5" fill="#ffffff">
+        <path d="M55,95 L95,58 L135,95 Z"></path>
+        <rect x="65" y="95" width="60" height="42"></rect>
+    </g>
+    <rect x="42" y="128" width="106" height="16" rx="3" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="4 3"></rect>
+    <path d="M133,100 L172,100 L172,150" stroke="#9ca3af" stroke-width="2" fill="none"></path>
+    <circle cx="172" cy="158" r="7" fill="#ffffff" stroke="#96694e" stroke-width="2.5"></circle>
+
+    <!-- Street with drainage grates (izgara) fed by road-edge gutters -->
+    <rect x="300" y="48" width="170" height="26" rx="4" fill="#f3f4f6"></rect>
+    <g stroke="#6b7280" stroke-width="1.5" fill="#ffffff">
+        <g transform="translate(340,52)">
+            <rect x="0" y="0" width="32" height="18" rx="2"></rect>
+            <line x1="7" y1="3" x2="7" y2="15"></line>
+            <line x1="14" y1="3" x2="14" y2="15"></line>
+            <line x1="21" y1="3" x2="21" y2="15"></line>
+            <line x1="28" y1="3" x2="28" y2="15"></line>
+        </g>
+        <g transform="translate(410,52)">
+            <rect x="0" y="0" width="32" height="18" rx="2"></rect>
+            <line x1="7" y1="3" x2="7" y2="15"></line>
+            <line x1="14" y1="3" x2="14" y2="15"></line>
+            <line x1="21" y1="3" x2="21" y2="15"></line>
+            <line x1="28" y1="3" x2="28" y2="15"></line>
+        </g>
+    </g>
+
+    <!-- Perimeter runoff entering from the surrounding land -->
+    <path d="M20,170 C 45,178 65,182 92,188" stroke="#9ca3af" stroke-width="2" fill="none" marker-end="url(#arrowGrayV)"></path>
+
+    <!-- Connectors down to the gravity main line -->
+    <g stroke="#9ca3af" stroke-width="2" fill="none">
+        <path d="M172,165 L172,190"></path>
+        <path d="M356,74 L356,190"></path>
+        <path d="M426,74 L426,190"></path>
+    </g>
+
+    <!-- Gravity main line with inspection manholes, transitioning into the open canal -->
+    <path d="M92,190 L430,190" stroke="#96694e" stroke-width="4" stroke-linecap="round" fill="none"></path>
+    <g fill="#ffffff" stroke="#96694e" stroke-width="2.5">
+        <circle cx="172" cy="190" r="7"></circle>
+        <circle cx="356" cy="190" r="7"></circle>
+        <circle cx="426" cy="190" r="7"></circle>
+    </g>
+
+    <!-- Open artificial canal (double line = open channel, distinct from the piped main line) -->
+    <path d="M430,183 L520,183" stroke="#96694e" stroke-width="2" fill="none"></path>
+    <path d="M430,197 L520,197" stroke="#96694e" stroke-width="2" fill="none" opacity="0.55"></path>
+
+    <!-- Full-volume treatment structure (traps floating and settled debris) -->
+    <rect x="520" y="150" width="95" height="80" rx="10" fill="#ffffff" stroke="#96694e" stroke-width="2.5"></rect>
+    <path d="M515,190 L520,190" stroke="#96694e" stroke-width="4" fill="none"></path>
+    <path d="M535,172 q6,-6 12,0 t12,0 t12,0" stroke="#c9a688" stroke-width="2.5" fill="none" stroke-linecap="round"></path>
+    <g fill="#9ca3af">
+        <circle cx="540" cy="210" r="3"></circle>
+        <circle cx="552" cy="214" r="3.5"></circle>
+        <circle cx="565" cy="209" r="3"></circle>
+        <circle cx="578" cy="213" r="3.5"></circle>
+        <circle cx="591" cy="208" r="3"></circle>
+    </g>
+
+    <!-- Energy breaker: drop into a stilling pool (havuz) -->
+    <path d="M615,190 L648,190" stroke="#96694e" stroke-width="3.5" fill="none"></path>
+    <path d="M648,190 L648,275" stroke="#96694e" stroke-width="3" fill="none" marker-end="url(#arrowAccentV)"></path>
+    <ellipse cx="675" cy="290" rx="42" ry="22" fill="#ffffff" stroke="#96694e" stroke-width="2.5"></ellipse>
+    <path d="M660,290 q7,-7 14,0 t14,0" stroke="#c9a688" stroke-width="2" fill="none" stroke-linecap="round"></path>
+
+    <!-- Street crossing over the precast box culvert -->
+    <rect x="700" y="255" width="55" height="70" fill="#f3f4f6"></rect>
+    <rect x="705" y="282" width="45" height="16" fill="#ffffff" stroke="#96694e" stroke-width="2"></rect>
+    <path d="M717,290 L695,290" stroke="#96694e" stroke-width="3" fill="none"></path>
+    <path d="M750,290 L768,290" stroke="#96694e" stroke-width="3" fill="none" marker-end="url(#arrowAccentV)"></path>
+
+    <!-- Creek (dere) -->
+    <path d="M775,255 q10,20 0,40 t0,40 t0,40 t0,40" stroke="#96694e" stroke-width="3" fill="none" opacity="0.55"></path>
+    <path d="M790,255 q10,20 0,40 t0,40 t0,40 t0,40" stroke="#96694e" stroke-width="3" fill="none" opacity="0.35"></path>
+
+    <!-- Baseline -->
+    <line x1="20" y1="360" x2="790" y2="360" stroke="#e5e7eb" stroke-width="1"></line>
+</svg>
