@@ -158,6 +158,12 @@
 
     document.querySelectorAll(".year").forEach(el => { el.textContent = new Date().getFullYear(); });
 
+    // ---- FAQ: one answer open at a time (native via <details name>, this covers older browsers) ----
+    const faqItems = document.querySelectorAll(".faq details");
+    faqItems.forEach(d => d.addEventListener("toggle", () => {
+        if (d.open) faqItems.forEach(o => { if (o !== d && o.open) o.open = false; });
+    }));
+
     // ---- motion: scroll progress, sticky-bar shadow, active section, reveal on scroll, pointer light ----
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;

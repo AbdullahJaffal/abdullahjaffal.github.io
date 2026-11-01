@@ -690,3 +690,83 @@ html[dir="rtl"] .form .captcha > div { transform-origin: 100% 0; }
     .form__actions { flex-direction: column; align-items: stretch; }
     .form .captcha { align-self: center; }
 }
+
+/* =====================================================================
+   Requirements + FAQ — spec sheet and a one-at-a-time accordion, one screen tall
+   ===================================================================== */
+:root { interpolate-size: allow-keywords; }
+.sec--faq { padding-block: 72px; }
+.sec--faq h2 { font-size: clamp(1.6rem, 1.1rem + 1.5vw, 2.2rem); }
+.sec--faq h2::after { margin-top: 14px; }
+.two--faq { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 56px; }
+
+/* spec sheet, drawn like a title block */
+.spec { margin-top: 26px; border-radius: 16px; overflow: hidden; background: #0C2A42; color: #C9D8E6;
+        border: 1px solid rgba(124,192,242,.3); box-shadow: 0 24px 50px -24px rgba(12,42,66,.65);
+        background-image: linear-gradient(rgba(124,192,242,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(124,192,242,.07) 1px, transparent 1px); background-size: 24px 24px; }
+.spec__head { display: flex; justify-content: space-between; padding: 10px 18px; font: 600 .7rem var(--mono); letter-spacing: .12em; color: var(--accent-2);
+              background: rgba(79,163,227,.1); border-bottom: 1px solid rgba(124,192,242,.25); direction: ltr; }
+.spec .req { margin: 0; padding: 4px 0; border: 0; background: none; border-radius: 0; backdrop-filter: none; }
+.spec .req li { display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 14px; padding: 11px 18px; border: 0; border-radius: 0;
+                border-bottom: 1px dashed rgba(124,192,242,.16); transition: background .25s; }
+.spec .req li:last-child { border-bottom: 0; }
+.spec .req li:hover { background: rgba(79,163,227,.08); padding-inline: 18px; }
+.req__ic { display: grid; place-items: center; height: 30px; border-radius: 8px; font: 600 .66rem var(--mono); font-style: normal; letter-spacing: .02em;
+           color: #fff; background: linear-gradient(135deg, rgba(79,163,227,.4), rgba(19,78,120,.6)); border: 1px solid rgba(124,192,242,.4); direction: ltr; }
+.spec .req b { color: #fff; font-size: .95rem; }
+.spec .req span { display: inline-flex; align-items: center; gap: 8px; color: #AFC2D4; font-size: .82rem; text-align: end; justify-content: flex-end; }
+.spec .req span::after { content: ""; flex: none; width: 9px; height: 9px; border-radius: 50%; }
+.spec .is-full span::after { background: #5CE0A0; box-shadow: 0 0 0 3px rgba(92,224,160,.18); }
+.spec .is-part span::after { background: linear-gradient(90deg, var(--accent) 50%, transparent 50%); border: 1.5px solid var(--accent); width: 10px; height: 10px; }
+.spec .is-plan span::after { border: 1.5px dashed #7D8B99; }
+.spec .is-plan .req__ic { background: transparent; border-style: dashed; color: #9AA7B4; }
+.spec .is-plan b { color: #C3CCD5; }
+
+/* direct question card */
+.ask { display: flex; align-items: center; gap: 14px; margin-top: 16px; padding: 14px 16px; border-radius: 14px; background: #fff;
+       border: 1px solid var(--line); box-shadow: 0 10px 26px -16px rgba(19,78,120,.35); }
+.ask__ic { flex: none; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: var(--tint); }
+.ask__ic svg { fill: none; stroke: var(--brand); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ask__txt { flex: 1; display: grid; gap: 2px; line-height: 1.35; }
+.ask__txt b { color: #22303C; font-size: .95rem; }
+.ask__txt span { color: var(--muted); font-size: .85rem; }
+.ask__btn { flex: none; }
+
+/* accordion: numbered, one open at a time, animated height where supported */
+.sec--faq .faq { margin-top: 26px; gap: 8px; counter-reset: q; }
+.sec--faq .faq details { position: relative; border-radius: 12px; overflow: hidden; background: rgba(255,255,255,.92); backdrop-filter: blur(3px);
+                          transition: border-color .25s, box-shadow .25s, background .25s; }
+.sec--faq .faq details::before { content: ""; position: absolute; inset-block: 0; inset-inline-start: 0; width: 3px; background: linear-gradient(180deg, var(--accent), var(--brand));
+                                  transform: scaleY(0); transition: transform .35s var(--ease); }
+.sec--faq .faq details[open]::before { transform: scaleY(1); }
+.sec--faq .faq details[open] { background: #fff; }
+.sec--faq .faq summary { counter-increment: q; padding: 12px 16px; gap: 14px; justify-content: flex-start; font-size: .97rem; transition: color .2s; }
+.sec--faq .faq summary::before { content: counter(q, decimal-leading-zero); flex: none; display: grid; place-items: center; width: 30px; height: 26px; border-radius: 7px;
+                                  font: 600 .72rem var(--mono); color: var(--brand); background: var(--tint); transition: background .25s, color .25s; }
+.sec--faq .faq summary::after { margin-inline-start: auto; width: 26px; height: 26px; font-size: 1.15rem; }
+.sec--faq .faq summary:hover { color: var(--brand); }
+.sec--faq .faq details[open] summary { color: var(--brand); }
+.sec--faq .faq details[open] summary::before { background: var(--brand); color: #fff; }
+.sec--faq .faq details p { padding: 0 16px 14px calc(16px + 30px + 14px); font-size: .93rem; line-height: 1.6; }
+.sec--faq .faq details[open] p { animation: none; }
+.sec--faq .faq details::details-content { block-size: 0; overflow: hidden; transition: block-size .35s var(--ease), content-visibility .35s allow-discrete; }
+.sec--faq .faq details[open]::details-content { block-size: auto; }
+
+@media (min-width: 1001px) and (max-height: 820px) {
+    .sec--faq { padding-block: 48px; }
+    .spec .req li { padding-block: 8px; }
+    .sec--faq .faq summary { padding-block: 10px; }
+}
+@media (max-width: 1000px) {
+    .two--faq { grid-template-columns: 1fr; gap: 48px; }
+}
+@media (max-width: 480px) {
+    .spec .req li { grid-template-columns: 40px 1fr; row-gap: 2px; padding-inline: 14px; }
+    .spec .req span { grid-column: 2; justify-content: flex-start; text-align: start; }
+    .ask { flex-wrap: wrap; }
+    .ask__btn { width: 100%; }
+    .sec--faq .faq details p { padding-inline-start: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .sec--faq .faq details::details-content { transition: none; }
+}

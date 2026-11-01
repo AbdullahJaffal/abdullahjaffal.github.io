@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <!-- ?v= busts the browser/CDN cache (GitHub Pages: max-age 600): bump it in all three links whenever a CSS/JS file changes. -->
-    <link rel="stylesheet" href="assets/style.css?v=2026110104">
+    <link rel="stylesheet" href="assets/style.css?v=2026110105">
     <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -335,29 +335,37 @@
 </section>
 
 <!-- ============ REQUIREMENTS + FAQ ============ -->
-<section class="sec" id="faq">
-    <div class="wrap two">
-        <div>
+<section class="sec sec--faq" id="faq">
+    <div class="wrap two two--faq">
+        <div class="req-col">
             <p class="eyebrow" data-i18n="rqEyebrow">Gereksinimler</p>
             <h2 data-i18n="rqTitle">Nerede çalışır</h2>
-            <ul class="req">
-                <li><b>Civil 3D 2026</b><span data-i18n="rq1">Tüm özellikler</span></li>
-                <li><b>AutoCAD 2026</b><span data-i18n="rq2">Yüzey gerektirmeyen komutlar</span></li>
-                <li><b>Windows · 64 bit</b><span data-i18n="rq3">AutoCAD 2026'nın desteklediği sürümler</span></li>
-                <li><b data-i18n="rq4t">Arayüz dili</b><span data-i18n="rq4">Türkçe; Arapça ve İngilizce sonra</span></li>
-                <li><b>BricsCAD</b><span data-i18n="rq5">Planlandı</span></li>
-            </ul>
+            <div class="spec">
+                <div class="spec__head" aria-hidden="true"><span>UrBIM 3D</span><span>SPEC · 2026</span></div>
+                <ul class="req">
+                    <li class="is-full"><i class="req__ic" aria-hidden="true">C3D</i><b>Civil 3D 2026</b><span data-i18n="rq1">Tüm özellikler</span></li>
+                    <li class="is-part"><i class="req__ic" aria-hidden="true">ACAD</i><b>AutoCAD 2026</b><span data-i18n="rq2">Yüzey gerektirmeyen komutlar</span></li>
+                    <li class="is-full"><i class="req__ic" aria-hidden="true">x64</i><b>Windows · 64 bit</b><span data-i18n="rq3">AutoCAD 2026'nın desteklediği sürümler</span></li>
+                    <li class="is-part"><i class="req__ic" aria-hidden="true">Aa</i><b data-i18n="rq4t">Arayüz dili</b><span data-i18n="rq4">Türkçe; Arapça ve İngilizce sonra</span></li>
+                    <li class="is-plan"><i class="req__ic" aria-hidden="true">BCAD</i><b>BricsCAD</b><span data-i18n="rq5">Planlandı</span></li>
+                </ul>
+            </div>
+            <div class="ask">
+                <span class="ask__ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 5 H20 V16 H10 L5 20 V16 H4 Z"/><path d="M9.5 9 a2.5 2.5 0 1 1 3.5 2.3 c-.7.3-1 .8-1 1.5"/><path d="M12 14.6 v.1"/></svg></span>
+                <div class="ask__txt"><b data-i18n="askT">Başka bir sorunuz mu var?</b><span data-i18n="askD">Doğrudan geliştiriciye yazın.</span></div>
+                <a class="btn btn--primary btn--sm ask__btn" href="mailto:jaffal.abdullah@gmail.com?subject=UrBIM%203D" data-i18n="askBtn">E-posta gönderin</a>
+            </div>
         </div>
         <div>
             <p class="eyebrow" data-i18n="faqEyebrow">Sıkça sorulan sorular</p>
             <h2 data-i18n="faqTitle">Merak edilenler</h2>
             <div class="faq">
-                <details><summary data-i18n="q1">Urbano gerekli mi?</summary><p data-i18n="a1">Hayır. UrBIM 3D tamamen bağımsızdır; verisini kendisi tutar ve başka bir programa ihtiyaç duymaz.</p></details>
-                <details><summary data-i18n="q2">Eklentisi olmayan biri çizimi açabilir mi?</summary><p data-i18n="a2">Evet. Ağ yalnızca standart AutoCAD nesnelerinden oluşur ve veriler çizimin içindedir; çizim her AutoCAD'de açılır.</p></details>
-                <details><summary data-i18n="q3">Hangi yönetmelikler desteklenecek?</summary><p data-i18n="a3">Kontrol aşamasıyla birlikte her ağ için yönetmelik seçilebilecek (örneğin İSKİ, İller Bankası). Kurallar yönetmeliklerin kendisinden alınır, uydurulmaz.</p></details>
-                <details><summary data-i18n="q4">Basınçlı ağlar?</summary><p data-i18n="a4">Önce cazibeli ağlar: kanalizasyon ve yağmur suyu. Basınçlı ağ hesapları daha sonraki bir aşamada.</p></details>
-                <details><summary data-i18n="q5">Ne zaman çıkacak?</summary><p data-i18n="a5">Tarih vermiyoruz. Deneme sürümleri hazır olduğunda ilk olarak erken erişim listesindekilere haber verilecek.</p></details>
-                <details><summary data-i18n="q6">Lisans ve fiyat?</summary><p data-i18n="a6">Daha sonra duyurulacak.</p></details>
+                <details name="faq" open><summary data-i18n="q1">Urbano gerekli mi?</summary><p data-i18n="a1">Hayır. UrBIM 3D tamamen bağımsızdır; verisini kendisi tutar ve başka bir programa ihtiyaç duymaz.</p></details>
+                <details name="faq"><summary data-i18n="q2">Eklentisi olmayan biri çizimi açabilir mi?</summary><p data-i18n="a2">Evet. Ağ yalnızca standart AutoCAD nesnelerinden oluşur ve veriler çizimin içindedir; çizim her AutoCAD'de açılır.</p></details>
+                <details name="faq"><summary data-i18n="q3">Hangi yönetmelikler desteklenecek?</summary><p data-i18n="a3">Kontrol aşamasıyla birlikte her ağ için yönetmelik seçilebilecek (örneğin İSKİ, İller Bankası). Kurallar yönetmeliklerin kendisinden alınır, uydurulmaz.</p></details>
+                <details name="faq"><summary data-i18n="q4">Basınçlı ağlar?</summary><p data-i18n="a4">Önce cazibeli ağlar: kanalizasyon ve yağmur suyu. Basınçlı ağ hesapları daha sonraki bir aşamada.</p></details>
+                <details name="faq"><summary data-i18n="q5">Ne zaman çıkacak?</summary><p data-i18n="a5">Tarih vermiyoruz. Deneme sürümleri hazır olduğunda ilk olarak erken erişim listesindekilere haber verilecek.</p></details>
+                <details name="faq"><summary data-i18n="q6">Lisans ve fiyat?</summary><p data-i18n="a6">Daha sonra duyurulacak.</p></details>
             </div>
         </div>
     </div>
@@ -446,7 +454,7 @@
     </div>
 </footer>
 
-<script src="assets/i18n.js?v=2026110104"></script>
-<script src="assets/main.js?v=2026110104"></script>
+<script src="assets/i18n.js?v=2026110105"></script>
+<script src="assets/main.js?v=2026110105"></script>
 </body>
 </html>
