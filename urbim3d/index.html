@@ -21,7 +21,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
+    <!-- ?v= busts the browser/CDN cache (GitHub Pages: max-age 600): bump it in all three links whenever a CSS/JS file changes. -->
+    <link rel="stylesheet" href="assets/style.css?v=2026110102">
     <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -152,8 +153,8 @@
                 </g>
             </svg>
           </div>
-          <div class="float float--a"><svg viewBox="0 0 24 24"><path d="M3 17 L10 9 L16 13 L21 6"/><circle cx="3" cy="17" r="2.2"/><circle cx="10" cy="9" r="2.2"/><circle cx="16" cy="13" r="2.2"/><circle cx="21" cy="6" r="2.2"/></svg><span data-i18n="artChipA">4 baca · 3 boru</span></div>
-          <div class="float float--b"><svg viewBox="0 0 24 24"><path d="M5 12.5 L10 17 L19 7"/></svg><span data-i18n="artChipB">Standart DWG</span></div>
+          <div class="float float--a"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 17 L10 9 L16 13 L21 6"/><circle cx="3" cy="17" r="2.2"/><circle cx="10" cy="9" r="2.2"/><circle cx="16" cy="13" r="2.2"/><circle cx="21" cy="6" r="2.2"/></svg><span data-i18n="artChipA">4 baca · 3 boru</span></div>
+          <div class="float float--b"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 12.5 L10 17 L19 7"/></svg><span data-i18n="artChipB">Standart DWG</span></div>
         </figure>
     </div>
 </section>
@@ -427,7 +428,7 @@
     </div>
 </footer>
 
-<script src="assets/i18n.js"></script>
-<script src="assets/main.js"></script>
+<script src="assets/i18n.js?v=2026110102"></script>
+<script src="assets/main.js?v=2026110102"></script>
 </body>
 </html>
