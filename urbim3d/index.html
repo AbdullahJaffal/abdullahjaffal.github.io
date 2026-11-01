@@ -11,7 +11,13 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="UrBIM 3D">
     <meta property="og:description" content="Kanalizasyon, yağmur suyu ve içme suyu ağlarını Civil 3D içinde tasarlayın ve metrajını çıkarın.">
-    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <meta property="og:image" content="https://abdullahjaffal.me/urbim3d/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -218,10 +224,41 @@
         <p class="eyebrow" data-i18n="howEyebrow">Nasıl çalışır</p>
         <h2 data-i18n="howTitle">Çizgiden metraja dört adım</h2>
         <ol class="steps">
-            <li class="step"><span class="step__n">1</span><span class="st st--ok" data-i18n="stOk">Çalışıyor</span><h3 data-i18n="h1t">Çizin veya dönüştürün</h3><p data-i18n="h1d">Ağı doğrudan çizin ya da mevcut çizgileri dönüştürün.</p></li>
-            <li class="step"><span class="step__n">2</span><span class="st st--dev" data-i18n="stDev">Geliştiriliyor</span><h3 data-i18n="h2t">Kotları alın</h3><p data-i18n="h2d">Arazi kotlarını Civil 3D yüzeyinden çekin; akış kotlarını ve eğimleri belirleyin.</p></li>
-            <li class="step step--later"><span class="step__n">3</span><span class="st st--plan" data-i18n="stPlan">Planlandı</span><h3 data-i18n="h3t">Kesit ve etiket</h3><p data-i18n="h3d">Boy kesitleri ve etiketleri doğrudan modelden üretin.</p></li>
-            <li class="step step--later"><span class="step__n">4</span><span class="st st--plan" data-i18n="stPlan">Planlandı</span><h3 data-i18n="h4t">Kontrol ve metraj</h3><p data-i18n="h4d">Yönetmeliğe göre kontrol edin, metrajı çıkarın.</p></li>
+            <li class="step"><span class="step__n">1</span>
+            <svg class="step__art" viewBox="0 0 160 90" aria-hidden="true">
+                <path class="a-old" d="M12 70 L40 30 L72 52"/>
+                <path class="a-arrow" d="M80 45 H94 M89 40 L94 45 L89 50"/>
+                <path class="a-pipe" d="M104 70 L122 30 L150 52"/>
+                <circle class="a-node" cx="104" cy="70" r="5"/><circle class="a-node" cx="122" cy="30" r="5"/><circle class="a-node" cx="150" cy="52" r="5"/>
+            </svg>
+            <span class="st st--ok" data-i18n="stOk">Çalışıyor</span><h3 data-i18n="h1t">Çizin veya dönüştürün</h3><p data-i18n="h1d">Ağı doğrudan çizin ya da mevcut çizgileri dönüştürün.</p></li>
+            <li class="step"><span class="step__n">2</span>
+            <svg class="step__art" viewBox="0 0 160 90" aria-hidden="true">
+                <path class="a-cont" d="M6 30 C40 18 70 40 100 28 S150 22 156 26"/>
+                <path class="a-cont" d="M6 48 C40 36 70 58 100 46 S150 40 156 44"/>
+                <path class="a-cont" d="M6 66 C40 54 70 76 100 64 S150 58 156 62"/>
+                <rect class="a-mh" x="68" y="38" width="16" height="44"/>
+                <path class="a-pipe" d="M60 38 H92"/>
+                <path class="a-lvl" d="M98 20 L104 28 L110 20 Z"/><text class="a-txt" x="114" y="27">112.40</text>
+            </svg>
+            <span class="st st--dev" data-i18n="stDev">Geliştiriliyor</span><h3 data-i18n="h2t">Kotları alın</h3><p data-i18n="h2d">Arazi kotlarını Civil 3D yüzeyinden çekin; akış kotlarını ve eğimleri belirleyin.</p></li>
+            <li class="step step--later"><span class="step__n">3</span>
+            <svg class="step__art" viewBox="0 0 160 90" aria-hidden="true">
+                <path class="a-ground" d="M6 22 L50 18 L90 26 L154 16"/>
+                <rect class="a-mh" x="30" y="20" width="12" height="40"/><rect class="a-mh" x="118" y="19" width="12" height="54"/>
+                <path class="a-pipe" d="M42 56 L118 68"/>
+                <path class="a-band" d="M6 80 H154"/><text class="a-txt" x="22" y="88">Ø300 · %0.80</text>
+            </svg>
+            <span class="st st--plan" data-i18n="stPlan">Planlandı</span><h3 data-i18n="h3t">Kesit ve etiket</h3><p data-i18n="h3d">Boy kesitleri ve etiketleri doğrudan modelden üretin.</p></li>
+            <li class="step step--later"><span class="step__n">4</span>
+            <svg class="step__art" viewBox="0 0 160 90" aria-hidden="true">
+                <path class="a-trench" d="M14 20 L30 72 H66 L82 20"/>
+                <circle class="a-pipec" cx="48" cy="60" r="9"/>
+                <path class="a-band" d="M96 24 H154 M96 44 H154 M96 64 H154"/>
+                <path class="a-ok" d="M98 15 l4 4 l7 -8 M98 35 l4 4 l7 -8 M98 55 l4 4 l7 -8"/>
+                <path class="a-row" d="M116 15 H148 M116 35 H140 M116 55 H146"/>
+            </svg>
+            <span class="st st--plan" data-i18n="stPlan">Planlandı</span><h3 data-i18n="h4t">Kontrol ve metraj</h3><p data-i18n="h4d">Yönetmeliğe göre kontrol edin, metrajı çıkarın.</p></li>
         </ol>
     </div>
 </section>

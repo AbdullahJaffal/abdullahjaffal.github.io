@@ -236,3 +236,22 @@ html[dir="rtl"] .steps::before { background: linear-gradient(-90deg, var(--brand
     *, *::before, *::after { animation-duration: 0s !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
     .profile__flow line { animation: none; opacity: 1; }
 }
+
+/* step illustrations (stand-ins until real Civil 3D screenshots arrive) */
+.step__art { width: 100%; height: auto; max-height: 110px; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 10px; margin-bottom: 16px;
+             fill: none; stroke-linecap: round; stroke-linejoin: round; direction: ltr; }
+.step--later .step__art { opacity: .6; }
+.step__art .a-old { stroke: #9AA7B4; stroke-width: 2; stroke-dasharray: 4 4; }
+.step__art .a-arrow { stroke: var(--muted); stroke-width: 2; }
+.step__art .a-pipe { stroke: var(--brand); stroke-width: 4; }
+.step__art .a-node { fill: #fff; stroke: var(--ink); stroke-width: 2.5; }
+.step__art .a-cont { stroke: #C9D2DB; stroke-width: 1.5; }
+.step__art .a-mh { fill: var(--tint); stroke: var(--ink); stroke-width: 2; }
+.step__art .a-lvl { fill: var(--brand); }
+.step__art .a-txt { fill: var(--ink); font: 500 10px var(--mono); }
+.step__art .a-ground { stroke: var(--ink); stroke-width: 2; }
+.step__art .a-band { stroke: #C9D2DB; stroke-width: 1.5; }
+.step__art .a-trench { stroke: var(--ink); stroke-width: 2; fill: var(--tint); }
+.step__art .a-pipec { fill: #fff; stroke: var(--brand); stroke-width: 3.5; }
+.step__art .a-ok { stroke: var(--brand); stroke-width: 2.5; }
+.step__art .a-row { stroke: #C9D2DB; stroke-width: 4; }
