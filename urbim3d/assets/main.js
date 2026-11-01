@@ -45,6 +45,13 @@
         const open = nav.classList.toggle("open");
         menuBtn.setAttribute("aria-expanded", String(open));
     });
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && nav.classList.contains("open")) {
+            nav.classList.remove("open");
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.focus();
+        }
+    });
     nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
         nav.classList.remove("open");
         menuBtn.setAttribute("aria-expanded", "false");

@@ -7,7 +7,7 @@
     --soft: #F3F6F9;
     --dark: #16191D;
     --dark-2: #1D2228;
-    --muted: #64748B;
+    --muted: #5B6A7E;   /* ≥4.5:1 on --soft and white */
     --line: #E3E8EE;
     --tint: #E7EFF6;
     --on-dark: #D4DBE2;
