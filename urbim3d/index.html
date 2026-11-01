@@ -22,9 +22,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
+<div class="progress" aria-hidden="true"><span></span></div>
 
 <header class="topbar" id="top">
     <div class="wrap topbar__in">
@@ -54,13 +56,17 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero">
+    <div class="hero__bg" aria-hidden="true">
+        <span class="glow glow--a"></span><span class="glow glow--b"></span><span class="glow glow--c"></span>
+        <span class="hero__spot"></span>
+    </div>
     <div class="wrap hero__in">
         <div class="hero__text">
             <p class="eyebrow eyebrow--dark" data-i18n="heroEyebrow">Civil 3D içinde altyapı ağları için BIM</p>
             <h1 class="hero__title">UrBIM <span>3D</span></h1>
             <p class="hero__lead" data-i18n="heroLead">Kanalizasyon, yağmur suyu ve içme suyu ağlarını Civil 3D içinde tasarlayın ve metrajını çıkarın — veriler çizimden hiç kopmadan.</p>
             <div class="hero__cta">
-                <a class="btn btn--primary" href="#access" data-i18n="ctaAccess">Erken erişim iste</a>
+                <a class="btn btn--primary btn--glow" href="#access"><span data-i18n="ctaAccess">Erken erişim iste</span><svg class="btn__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10 H15 M10 5 L15 10 L10 15"/></svg></a>
                 <a class="btn btn--ghost" href="#how" data-i18n="ctaHow">Nasıl çalışır</a>
             </div>
             <ul class="chips">
@@ -73,7 +79,22 @@
 
         <!-- Illustrative longitudinal profile; values are decorative, not a design. -->
         <figure class="hero__art" dir="ltr" aria-hidden="true">
+          <div class="win">
+            <div class="win__bar">
+                <span class="win__dots"><i></i><i></i><i></i></span>
+                <span class="win__title" data-i18n="artTitle">Boy kesit — H1</span>
+                <span class="win__live"><span class="dot"></span><span data-i18n="artLive">CANLI</span></span>
+            </div>
             <svg class="profile" viewBox="0 0 640 400" role="presentation">
+                <defs>
+                    <linearGradient id="gPipe" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0" stop-color="#1F5E8C"/><stop offset="1" stop-color="#2F77AD"/>
+                    </linearGradient>
+                    <linearGradient id="gSoil" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#4FA3E3" stop-opacity=".16"/><stop offset="1" stop-color="#4FA3E3" stop-opacity="0"/>
+                    </linearGradient>
+                </defs>
+                <polygon class="profile__soil" points="96,100 160,96 230,90 300,104 370,110 440,88 510,76 580,80 640,74 640,330 96,330"/>
                 <g class="profile__ticks">
                     <line x1="160" y1="96"  x2="160" y2="330"/>
                     <line x1="300" y1="104" x2="300" y2="330"/>
@@ -111,6 +132,13 @@
                     <text x="370" y="284" class="sm">Ø400</text>
                     <text x="510" y="306" class="sm">Ø400</text>
                 </g>
+                <g class="profile__cursor">
+                    <line x1="-18" y1="0" x2="18" y2="0"/><line x1="0" y1="-18" x2="0" y2="18"/>
+                    <rect x="-4" y="-4" width="8" height="8"/>
+                    <animateMotion dur="9s" begin="2.2s" repeatCount="indefinite" rotate="0"
+                                   keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"
+                                   path="M96,100 L160,96 L230,90 L300,104 L370,110 L440,88 L510,76 L580,80 L640,74"/>
+                </g>
                 <g class="profile__band">
                     <line x1="0" y1="330" x2="640" y2="330"/>
                     <line x1="0" y1="362" x2="640" y2="362"/>
@@ -123,7 +151,22 @@
                     <text x="440" y="383">108.30</text><text x="580" y="383">107.65</text>
                 </g>
             </svg>
+          </div>
+          <div class="float float--a"><svg viewBox="0 0 24 24"><path d="M3 17 L10 9 L16 13 L21 6"/><circle cx="3" cy="17" r="2.2"/><circle cx="10" cy="9" r="2.2"/><circle cx="16" cy="13" r="2.2"/><circle cx="21" cy="6" r="2.2"/></svg><span data-i18n="artChipA">4 baca · 3 boru</span></div>
+          <div class="float float--b"><svg viewBox="0 0 24 24"><path d="M5 12.5 L10 17 L19 7"/></svg><span data-i18n="artChipB">Standart DWG</span></div>
         </figure>
+    </div>
+</section>
+
+<!-- ============ KEY FACTS ============ -->
+<section class="facts" aria-label="UrBIM 3D">
+    <div class="wrap">
+        <ul class="facts__in">
+            <li><b class="facts__n">3</b><span data-i18n="fact1">ağ türü: kanalizasyon, yağmur suyu, içme suyu</span></li>
+            <li><b class="facts__n">0</b><span data-i18n="fact2">özel nesne — yalnızca standart AutoCAD</span></li>
+            <li><b class="facts__n"><span>1</span> <small>mm</small></b><span data-i18n="fact3">içinde çakışan uçlar tek düğümdür</span></li>
+            <li><b class="facts__n">1</b><span data-i18n="fact4">komutla tüm değişiklikler eşitlenir</span></li>
+        </ul>
     </div>
 </section>
 
@@ -135,21 +178,21 @@
         <p class="sec__lead" data-i18n="whyLead">Bu sorunlar bir özellikle yamanmadı; UrBIM 3D'nin mimarisi oluşmalarına izin vermiyor.</p>
         <div class="grid grid--3">
             <article class="ps">
-                <p class="ps__tag" data-i18n="tagProblem">Sorun</p>
+                <p class="ps__tag"><i class="ps__ic ps__ic--x" aria-hidden="true"></i><span data-i18n="tagProblem">Sorun</span></p>
                 <p class="ps__p" data-i18n="p1">Bağlantılar kopar; model bir “doğrulama” komutuyla düzeltilmeyi bekler.</p>
-                <p class="ps__tag ps__tag--ok">UrBIM 3D</p>
+                <p class="ps__tag ps__tag--ok"><i class="ps__ic ps__ic--ok" aria-hidden="true"></i>UrBIM 3D</p>
                 <p class="ps__s" data-i18n="s1">Topoloji geometriden türetilir: çakışan iki uç her zaman tek düğümdür. Kopuk bağlantı diye bir durum yoktur.</p>
             </article>
             <article class="ps">
-                <p class="ps__tag" data-i18n="tagProblem">Sorun</p>
+                <p class="ps__tag"><i class="ps__ic ps__ic--x" aria-hidden="true"></i><span data-i18n="tagProblem">Sorun</span></p>
                 <p class="ps__p" data-i18n="p2">Tutamaçla (grip) yapılan düzenleme ağı bozar.</p>
-                <p class="ps__tag ps__tag--ok">UrBIM 3D</p>
+                <p class="ps__tag ps__tag--ok"><i class="ps__ic ps__ic--ok" aria-hidden="true"></i>UrBIM 3D</p>
                 <p class="ps__s" data-i18n="s2">AutoCAD'in kendi araçlarıyla düzenleyin — MOVE, grip, PEDIT. Tek bir Eşitleme komutu modeli günceller; kaç öğenin beklediğini her zaman görürsünüz.</p>
             </article>
             <article class="ps">
-                <p class="ps__tag" data-i18n="tagProblem">Sorun</p>
+                <p class="ps__tag"><i class="ps__ic ps__ic--x" aria-hidden="true"></i><span data-i18n="tagProblem">Sorun</span></p>
                 <p class="ps__p" data-i18n="p3">Elle girdiğiniz değerin üzerine kurallar sessizce yazar.</p>
-                <p class="ps__tag ps__tag--ok">UrBIM 3D</p>
+                <p class="ps__tag ps__tag--ok"><i class="ps__ic ps__ic--ok" aria-hidden="true"></i>UrBIM 3D</p>
                 <p class="ps__s" data-i18n="s3">Elle girilen her değer kilitlenir ve panelde görünür; siz serbest bırakmadıkça hiçbir hesap üzerine yazmaz.</p>
             </article>
         </div>
@@ -164,21 +207,25 @@
         <div class="grid grid--4">
             <article class="card">
                 <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 34 L20 18 L34 26 L42 12"/><circle cx="6" cy="34" r="4"/><circle cx="20" cy="18" r="4"/><circle cx="34" cy="26" r="4"/><circle cx="42" cy="12" r="4"/></svg>
+                <span class="card__n" aria-hidden="true">01</span>
                 <h3 data-i18n="pr1t">Her köşe noktası bir düğüm</h3>
                 <p data-i18n="pr1d">Her köşe noktası bir düğümdür ve her boru tam iki düğüm arasındadır. Boruya köşe noktası eklemek onu ikiye böler ve araya bir düğüm koyar; bir düğümü silmek iki boruyu birleştirir.</p>
             </article>
             <article class="card">
                 <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 6 H30 L38 14 V42 H12 Z"/><path d="M30 6 V14 H38"/><path d="M18 24 H32 M18 30 H32 M18 36 H26"/></svg>
+                <span class="card__n" aria-hidden="true">02</span>
                 <h3 data-i18n="pr2t">Standart DWG</h3>
                 <p data-i18n="pr2d">Yalnızca standart AutoCAD nesneleri: borular polyline, düğümler blok. Özel nesne yok, object enabler yok — çizim herkesin bilgisayarında açılır.</p>
             </article>
             <article class="card">
                 <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="12" rx="14" ry="5"/><path d="M10 12 V36 C10 39 16 41 24 41 C32 41 38 39 38 36 V12"/><path d="M10 24 C10 27 16 29 24 29 C32 29 38 27 38 24"/></svg>
+                <span class="card__n" aria-hidden="true">03</span>
                 <h3 data-i18n="pr3t">Veriler çizimin içinde</h3>
                 <p data-i18n="pr3d">Öznitelikler aynı DWG içinde saklanır ve her nesneye kalıcı bir kimlikle bağlanır. Dış veritabanı yok, kopacak bağlantı yok.</p>
             </article>
             <article class="card">
                 <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="22" width="28" height="20" rx="3"/><path d="M16 22 V15 A8 8 0 0 1 32 15 V22"/><circle cx="24" cy="32" r="3"/></svg>
+                <span class="card__n" aria-hidden="true">04</span>
                 <h3 data-i18n="pr4t">Elle yazdığınız korunur</h3>
                 <p data-i18n="pr4d">Elle girdiğiniz değer o anda kilitlenir. Hesaplar onu ezmez; kilidi ne zaman açacağınıza siz karar verirsiniz.</p>
             </article>
@@ -314,10 +361,10 @@
 </section>
 
 <!-- ============ EARLY ACCESS ============ -->
-<section class="sec sec--soft" id="access">
+<section class="sec sec--cta" id="access">
     <div class="wrap two two--form">
         <div>
-            <p class="eyebrow" data-i18n="acEyebrow">Erken erişim</p>
+            <p class="eyebrow eyebrow--dark" data-i18n="acEyebrow">Erken erişim</p>
             <h2 data-i18n="acTitle">İlk deneyenlerden olun</h2>
             <p class="sec__lead" data-i18n="acLead">Deneme sürümleri hazır olduğunda ilk siz haberdar olun. Programı gerçek projelerde deneyip geri bildirim verecek mühendisleri özellikle arıyoruz.</p>
         </div>

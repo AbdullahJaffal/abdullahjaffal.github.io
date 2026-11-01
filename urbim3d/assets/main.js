@@ -157,4 +157,85 @@
     });
 
     document.querySelectorAll(".year").forEach(el => { el.textContent = new Date().getFullYear(); });
+
+    // ---- motion: scroll progress, sticky-bar shadow, active section, reveal on scroll, pointer light ----
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    const root = document.documentElement;
+    const bar = document.querySelector(".progress span");
+    const topbar = document.querySelector(".topbar");
+    let ticking = false;
+    function onScroll() {
+        ticking = false;
+        const max = root.scrollHeight - root.clientHeight;
+        bar.style.setProperty("--p", max > 0 ? (window.scrollY / max).toFixed(4) : 0);
+        topbar.classList.toggle("is-scrolled", window.scrollY > 8);
+    }
+    window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    onScroll();
+
+    const revealSel = [".facts__in li", ".sec .eyebrow", ".sec h2", ".sec .sec__lead", ".legend", ".ps", ".card", ".feat",
+                       ".step", ".road__i", ".req li", ".faq details", ".form"].join(",");
+    if ("IntersectionObserver" in window && !reduce) {
+        // stagger siblings, then drop the classes so hover transitions are not delayed afterwards
+        const els = [...document.querySelectorAll(revealSel)];
+        els.forEach(el => {
+            const sibs = [...el.parentElement.children].filter(c => c.matches(revealSel));
+            el.style.setProperty("--i", Math.min(sibs.indexOf(el), 8));
+            el.classList.add("reveal");
+        });
+        const rio = new IntersectionObserver(entries => entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            const el = e.target;
+            el.classList.add("is-in");
+            rio.unobserve(el);
+            setTimeout(() => { el.classList.remove("reveal", "is-in"); el.style.removeProperty("--i"); }, 900 + 70 * (+el.style.getPropertyValue("--i") || 0));
+        }), { rootMargin: "0px 0px -8% 0px" });
+        els.forEach(el => rio.observe(el));
+
+        const lio = new IntersectionObserver(entries => entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add("is-in"); lio.unobserve(e.target); }
+        }), { threshold: .4 });
+        document.querySelectorAll(".steps, .road").forEach(el => lio.observe(el));
+    } else {
+        document.querySelectorAll(".steps, .road").forEach(el => el.classList.add("is-in"));
+    }
+
+    // active nav link follows the section in view
+    if ("IntersectionObserver" in window) {
+        const links = new Map([...nav.querySelectorAll('a[href^="#"]:not(.btn)')].map(a => [a.getAttribute("href").slice(1), a]));
+        const sio = new IntersectionObserver(entries => entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            links.forEach(a => a.classList.remove("is-active"));
+            const a = links.get(e.target.id);
+            if (a) a.classList.add("is-active");
+        }), { rootMargin: "-45% 0px -50% 0px" });
+        document.querySelectorAll("main section[id]").forEach(s => sio.observe(s));
+    }
+
+    if (reduce) {
+        document.querySelectorAll("svg").forEach(svg => svg.pauseAnimations && svg.pauseAnimations());
+    } else if (finePointer) {
+        // hero: soft light under the pointer and a slight tilt of the drawing window
+        const hero = document.querySelector(".hero");
+        const win = document.querySelector(".win");
+        hero.addEventListener("pointermove", e => {
+            const r = hero.getBoundingClientRect();
+            hero.style.setProperty("--mx", `${e.clientX - r.left}px`);
+            hero.style.setProperty("--my", `${e.clientY - r.top}px`);
+            const w = win.getBoundingClientRect();
+            const dx = (e.clientX - (w.left + w.width / 2)) / w.width;
+            const dy = (e.clientY - (w.top + w.height / 2)) / w.height;
+            win.style.setProperty("--ry", `${Math.max(-1, Math.min(1, dx)) * 5}deg`);
+            win.style.setProperty("--rx", `${Math.max(-1, Math.min(1, dy)) * -4}deg`);
+        });
+        hero.addEventListener("pointerleave", () => { win.style.setProperty("--rx", "0deg"); win.style.setProperty("--ry", "0deg"); });
+
+        // cards: light follows the pointer
+        document.querySelectorAll(".ps, .card, .feat").forEach(c => c.addEventListener("pointermove", e => {
+            const r = c.getBoundingClientRect();
+            c.style.setProperty("--mx", `${e.clientX - r.left}px`);
+            c.style.setProperty("--my", `${e.clientY - r.top}px`);
+        }));
+    }
 })();
