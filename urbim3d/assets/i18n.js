@@ -6,7 +6,12 @@ window.URBIM_I18N = {
     tr: {
         msgRequired: "Lütfen adınızı ve geçerli bir e-posta adresi girin.",
         msgOpened: "E-posta uygulamanız açıldı — göndermeyi unutmayın. Teşekkürler!",
-        mailSubject: "UrBIM 3D erken erişim"
+        mailSubject: "UrBIM 3D erken erişim",
+        msgCaptcha: "Lütfen robot olmadığınızı doğrulayın.",
+        msgSending: "Gönderiliyor…",
+        msgSent: "Teşekkürler! Kaydınız alındı; deneme sürümleri hazır olduğunda size yazacağız.",
+        msgFailed: "Gönderilemedi.",
+        mailFallback: "E-posta ile gönderin"
     },
 
     ar: {
@@ -163,6 +168,11 @@ window.URBIM_I18N = {
         msgRequired: "يرجى كتابة الاسم وبريد إلكتروني صحيح.",
         msgOpened: "فُتح تطبيق البريد لديك — لا تنسَ الإرسال. شكراً لك!",
         mailSubject: "UrBIM 3D — طلب وصول مبكر",
+        msgCaptcha: "يرجى تأكيد أنك لست روبوتاً.",
+        msgSending: "جارٍ الإرسال…",
+        msgSent: "شكراً لك! سُجّل طلبك، وسنراسلك حين تجهز النسخ التجريبية.",
+        msgFailed: "تعذّر الإرسال.",
+        mailFallback: "أرسله بالبريد الإلكتروني",
 
         footBy: "يطوّر UrBIM 3D المهندس المدني عبد الله جفَّال.",
         footSite: "الموقع الشخصي"
@@ -322,6 +332,11 @@ window.URBIM_I18N = {
         msgRequired: "Please enter your name and a valid email address.",
         msgOpened: "Your email app has opened — don't forget to send it. Thank you!",
         mailSubject: "UrBIM 3D early access",
+        msgCaptcha: "Please confirm you're not a robot.",
+        msgSending: "Sending…",
+        msgSent: "Thank you! You're on the list — we'll write when test builds are ready.",
+        msgFailed: "Couldn't send.",
+        mailFallback: "Send it by email instead",
 
         footBy: "UrBIM 3D is developed by civil engineer Abdullah Jaffal.",
         footSite: "Personal website"

@@ -255,3 +255,6 @@ html[dir="rtl"] .steps::before { background: linear-gradient(-90deg, var(--brand
 .step__art .a-pipec { fill: #fff; stroke: var(--brand); stroke-width: 3.5; }
 .step__art .a-ok { stroke: var(--brand); stroke-width: 2.5; }
 .step__art .a-row { stroke: #C9D2DB; stroke-width: 4; }
+
+.captcha:empty { display: none; }
+.form__status a { color: var(--brand); font-weight: 600; }
