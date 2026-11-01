@@ -213,6 +213,117 @@
         document.querySelectorAll("main section[id]").forEach(s => sio.observe(s));
     }
 
+    // ---- living pipe network: manholes on a loose street grid, water flowing downhill, hubs pulsing ----
+    function pipeNet(canvas, o) {
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+        let W = 0, H = 0, period = 0, nodes = [], edges = [], drops = [], mouse = null, last = 0, running = false, visible = true;
+        function build() {
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            W = canvas.clientWidth; H = canvas.clientHeight;
+            if (!W || !H) return;
+            canvas.width = W * dpr; canvas.height = H * dpr;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            const S = o.spacing;
+            const rows = Math.max(3, Math.ceil((o.fixed ? 1440 : H) / S)), cols = Math.ceil(W / S) + 1;
+            period = rows * S;
+            let seed = o.seed;
+            const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+            const at = {};
+            nodes = []; edges = []; drops = [];
+            for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+                if (rnd() > o.density) continue;
+                const n = { x: c * S + S * .3 + (rnd() - .5) * S * .45, y: r * S + S * .5 + (rnd() - .5) * S * .45, ph: rnd(), deg: 0 };
+                at[r + "," + c] = n; nodes.push(n);
+            }
+            const link = (a, b, dy) => { edges.push({ a, b, dy, main: rnd() < .22 }); a.deg++; b.deg++; };
+            for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+                const n = at[r + "," + c]; if (!n) continue;
+                const right = at[r + "," + (c + 1)] || (rnd() < .5 && at[r + "," + (c + 2)]);
+                if (right && rnd() < .78) link(n, right, 0);
+                const down = at[((r + 1) % rows) + "," + c];
+                if (down && rnd() < .5) link(n, down, r + 1 === rows ? period : 0);
+            }
+            edges.forEach(e => { if (rnd() < o.flow) drops.push({ e, t: rnd(), v: (28 + rnd() * 40) / Math.hypot(e.b.x - e.a.x, e.b.y + e.dy - e.a.y) }); });
+        }
+        function draw(now) {
+            const dt = Math.min(.05, (now - last) / 1000 || 0); last = now;
+            ctx.clearRect(0, 0, W, H);
+            const off = o.fixed ? -((window.scrollY * o.parallax) % period) : 0;
+            const time = now / 1000;
+            for (let ty = off - period; ty < H + period; ty += period) {
+                if (ty > H || ty + period * 2 < 0) continue;
+                edges.forEach(e => {
+                    ctx.strokeStyle = e.main ? o.main : o.line; ctx.lineWidth = e.main ? 2.4 : 1.1;
+                    ctx.beginPath(); ctx.moveTo(e.a.x, e.a.y + ty); ctx.lineTo(e.b.x, e.b.y + e.dy + ty); ctx.stroke();
+                });
+                nodes.forEach(n => {
+                    const y = n.y + ty;
+                    if (y < -40 || y > H + 40) return;
+                    if (n.deg >= 3 && !reduce) {             // hubs breathe
+                        const p = (time * .22 + n.ph) % 1;
+                        if (p < .4) {
+                            ctx.strokeStyle = o.pulse.replace("A", (.9 * (1 - p / .4)).toFixed(3));
+                            ctx.lineWidth = 1.2; ctx.beginPath(); ctx.arc(n.x, y, 5 + p / .4 * 26, 0, 6.283); ctx.stroke();
+                        }
+                    }
+                    const sz = n.deg >= 3 ? 7 : 5;
+                    ctx.fillStyle = o.nodeFill; ctx.strokeStyle = o.node; ctx.lineWidth = 1.3;
+                    ctx.fillRect(n.x - sz / 2, y - sz / 2, sz, sz); ctx.strokeRect(n.x - sz / 2, y - sz / 2, sz, sz);
+                });
+                ctx.lineCap = "round"; ctx.strokeStyle = o.drop; ctx.lineWidth = 2.2;
+                drops.forEach(d => {
+                    const e = d.e, dx = e.b.x - e.a.x, dy = e.b.y + e.dy - e.a.y, L = Math.hypot(dx, dy);
+                    const x = e.a.x + dx * d.t, y = e.a.y + dy * d.t + ty, k = Math.min(d.t, 14 / L);
+                    if (y < -20 || y > H + 20) return;
+                    ctx.beginPath(); ctx.moveTo(x - dx * k, y - dy * k); ctx.lineTo(x, y); ctx.stroke();
+                });
+                ctx.lineCap = "butt";
+            }
+            drops.forEach(d => { d.t += d.v * dt; if (d.t > 1) d.t -= 1; });
+            if (mouse) {                                     // CAD object snap on the nearest manhole
+                let best = null, bd = 140;
+                for (let ty = off - period; ty < H + period; ty += period) nodes.forEach(n => {
+                    const dd = Math.hypot(n.x - mouse.x, n.y + ty - mouse.y);
+                    if (dd < bd) { bd = dd; best = { x: n.x, y: n.y + ty }; }
+                });
+                if (best) {
+                    ctx.strokeStyle = o.snap; ctx.lineWidth = 1.5;
+                    ctx.strokeRect(best.x - 8, best.y - 8, 16, 16);
+                    ctx.setLineDash([3, 4]); ctx.beginPath(); ctx.moveTo(mouse.x, mouse.y); ctx.lineTo(best.x, best.y); ctx.stroke(); ctx.setLineDash([]);
+                }
+            }
+        }
+        function loop(now) {
+            if (!running) return;
+            if (now - last >= 33) draw(now);                 // ~30 fps is plenty for a background
+            requestAnimationFrame(loop);
+        }
+        function start() { if (!running && visible && !document.hidden && !reduce) { running = true; last = performance.now(); requestAnimationFrame(loop); } }
+        function stop() { running = false; }
+        build(); draw(performance.now());
+        let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { build(); draw(performance.now()); }, 150); });
+        if (reduce) { window.addEventListener("scroll", () => draw(performance.now()), { passive: true }); return; }
+        document.addEventListener("visibilitychange", () => document.hidden ? stop() : start());
+        if (!o.fixed && "IntersectionObserver" in window) {
+            new IntersectionObserver(es => { visible = es[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
+        }
+        if (finePointer) {
+            const host = o.fixed ? window : canvas.parentElement;
+            host.addEventListener("pointermove", e => { const r = canvas.getBoundingClientRect(); mouse = { x: e.clientX - r.left, y: e.clientY - r.top }; });
+            (o.fixed ? document.documentElement : host).addEventListener("pointerleave", () => { mouse = null; });
+        }
+        start();
+    }
+    const pageNet = document.querySelector(".net--page");
+    if (pageNet) pipeNet(pageNet, { fixed: true, parallax: .35, spacing: 150, density: .62, flow: .55, seed: 11,
+        line: "rgba(19,78,120,.16)", main: "rgba(19,78,120,.24)", node: "rgba(19,78,120,.45)", nodeFill: "#F3F6F9",
+        drop: "rgba(79,163,227,.85)", pulse: "rgba(79,163,227,A)", snap: "rgba(19,78,120,.8)" });
+    const ctaNet = document.querySelector(".net--cta");
+    if (ctaNet) pipeNet(ctaNet, { fixed: false, spacing: 120, density: .66, flow: .8, seed: 5,
+        line: "rgba(124,192,242,.16)", main: "rgba(124,192,242,.28)", node: "rgba(124,192,242,.6)", nodeFill: "#0C2A42",
+        drop: "rgba(160,215,255,.95)", pulse: "rgba(124,192,242,A)", snap: "rgba(255,255,255,.85)" });
+
     if (reduce) {
         document.querySelectorAll("svg").forEach(svg => svg.pauseAnimations && svg.pauseAnimations());
     } else if (finePointer) {

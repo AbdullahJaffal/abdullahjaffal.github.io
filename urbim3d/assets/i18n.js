@@ -151,6 +151,11 @@ window.URBIM_I18N = {
         a6: "يُعلَن لاحقاً.",
 
         acEyebrow: "الوصول المبكر",
+        acOpen: "القائمة مفتوحة",
+        acPerk1: "تصلك النسخ التجريبية أولاً حين تجهز",
+        acPerk2: "ملاحظاتك تشكّل المراحل القادمة مباشرة",
+        acPerk3: "كل طلب يقرؤه المطوّر بنفسه",
+        acFormTitle: "طلب الوصول المبكر",
         acTitle: "كن من أوائل من يجرّبه",
         acLead: "كن أول من يعلم حين تجهز النسخ التجريبية. نبحث خصوصاً عن مهندسين يجرّبونه على مشاريع حقيقية ويشاركون ملاحظاتهم.",
         fName: "الاسم",
@@ -323,6 +328,11 @@ window.URBIM_I18N = {
         a6: "To be announced.",
 
         acEyebrow: "Early access",
+        acOpen: "List open",
+        acPerk1: "Trial builds reach you first, as soon as they're ready",
+        acPerk2: "Your feedback directly shapes the next phases",
+        acPerk3: "Every request is read by the developer personally",
+        acFormTitle: "Early access request",
         acTitle: "Be among the first to try it",
         acLead: "Be the first to know when test builds are ready. We're especially looking for engineers who will try it on real projects and share feedback.",
         fName: "Name",

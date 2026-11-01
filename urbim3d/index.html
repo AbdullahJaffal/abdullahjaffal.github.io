@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <!-- ?v= busts the browser/CDN cache (GitHub Pages: max-age 600): bump it in all three links whenever a CSS/JS file changes. -->
-    <link rel="stylesheet" href="assets/style.css?v=2026110102">
+    <link rel="stylesheet" href="assets/style.css?v=2026110103">
     <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -53,6 +53,7 @@
     </div>
 </header>
 
+<canvas class="net net--page" aria-hidden="true"></canvas>
 <main id="main">
 
 <!-- ============ HERO ============ -->
@@ -201,10 +202,11 @@
 </section>
 
 <!-- ============ PRINCIPLES ============ -->
-<section class="sec sec--soft" id="principles">
+<section class="sec sec--blue" id="principles">
     <div class="wrap">
         <p class="eyebrow" data-i18n="prEyebrow">Temel ilkeler</p>
         <h2 data-i18n="prTitle">Dört ilke, tek bir sonuç: güvenilir model</h2>
+        <div class="axes" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
         <div class="grid grid--4">
             <article class="card">
                 <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 34 L20 18 L34 26 L42 12"/><circle cx="6" cy="34" r="4"/><circle cx="20" cy="18" r="4"/><circle cx="34" cy="26" r="4"/><circle cx="42" cy="12" r="4"/></svg>
@@ -363,13 +365,26 @@
 
 <!-- ============ EARLY ACCESS ============ -->
 <section class="sec sec--cta" id="access">
+    <canvas class="net net--cta" aria-hidden="true"></canvas>
     <div class="wrap two two--form">
-        <div>
+        <div class="cta__text">
+            <p class="cta__open"><span class="dot"></span><span data-i18n="acOpen">Liste açık</span></p>
             <p class="eyebrow eyebrow--dark" data-i18n="acEyebrow">Erken erişim</p>
             <h2 data-i18n="acTitle">İlk deneyenlerden olun</h2>
             <p class="sec__lead" data-i18n="acLead">Deneme sürümleri hazır olduğunda ilk siz haberdar olun. Programı gerçek projelerde deneyip geri bildirim verecek mühendisleri özellikle arıyoruz.</p>
+            <ul class="perks">
+                <li><span class="perks__ic"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3 V15 M7 10 L12 15 L17 10"/><path d="M4 17 V20 H20 V17"/></svg></span><span data-i18n="acPerk1">Deneme sürümleri hazır olduğunda ilk size gelir</span></li>
+                <li><span class="perks__ic"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 19 L9 11 L13 15 L21 5"/><path d="M15 5 H21 V11"/></svg></span><span data-i18n="acPerk2">Geri bildiriminiz sonraki aşamaları doğrudan şekillendirir</span></li>
+                <li><span class="perks__ic"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 5 H20 V16 H10 L5 20 V16 H4 Z"/><path d="M8 9.5 H16 M8 12.5 H13"/></svg></span><span data-i18n="acPerk3">Her başvuruyu geliştiricinin kendisi okur</span></li>
+            </ul>
         </div>
+        <div class="cta__stage">
+        <span class="radar" aria-hidden="true"><i></i><i></i><i></i></span>
         <form class="form" id="accessForm" novalidate>
+            <div class="form__head">
+                <span class="form__title" data-i18n="acFormTitle">Erken erişim başvurusu</span>
+                <span class="form__code" aria-hidden="true">UrBIM·EA-01 &nbsp;1:1</span>
+            </div>
             <div class="row2">
                 <label><span data-i18n="fName">Ad Soyad</span><input name="name" required autocomplete="name"></label>
                 <label><span data-i18n="fEmail">E-posta</span><input name="email" type="email" required autocomplete="email"></label>
@@ -404,10 +419,11 @@
             </fieldset>
             <label><span data-i18n="fNote">Not (isteğe bağlı)</span><textarea name="note" rows="3"></textarea></label>
             <div class="captcha" id="captcha"></div>
-            <button class="btn btn--primary" type="submit" data-i18n="fSend">Gönder</button>
+            <button class="btn btn--primary btn--glow btn--send" type="submit"><span data-i18n="fSend">Gönder</span><svg class="btn__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10 H15 M10 5 L15 10 L10 15"/></svg></button>
             <p class="form__fine" data-i18n="fPrivacy">Bilgileriniz yalnızca erken erişim için kullanılır ve paylaşılmaz.</p>
             <p class="form__status" role="status" aria-live="polite"></p>
         </form>
+        </div>
     </div>
 </section>
 
@@ -428,7 +444,7 @@
     </div>
 </footer>
 
-<script src="assets/i18n.js?v=2026110102"></script>
-<script src="assets/main.js?v=2026110102"></script>
+<script src="assets/i18n.js?v=2026110103"></script>
+<script src="assets/main.js?v=2026110103"></script>
 </body>
 </html>
