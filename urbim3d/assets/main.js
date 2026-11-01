@@ -158,6 +158,24 @@
 
     document.querySelectorAll(".year").forEach(el => { el.textContent = new Date().getFullYear(); });
 
+    // ---- key facts: digits roll like a counter before settling, once, when the strip comes into view ----
+    const rollers = document.querySelectorAll(".facts [data-n]");
+    if (rollers.length && "IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const fio = new IntersectionObserver(es => {
+            if (!es.some(e => e.isIntersecting)) return;
+            fio.disconnect();
+            rollers.forEach((el, i) => {
+                const final = el.dataset.n; let n = 0;
+                el.classList.add("is-rolling");
+                const id = setInterval(() => {
+                    el.textContent = String(Math.floor(Math.random() * 10));
+                    if (++n > 12 + i * 4) { clearInterval(id); el.textContent = final; el.classList.remove("is-rolling"); }
+                }, 55);
+            });
+        }, { threshold: .5 });
+        fio.observe(document.querySelector(".facts"));
+    }
+
     // ---- FAQ: one answer open at a time (native via <details name>, this covers older browsers) ----
     const faqItems = document.querySelectorAll(".faq details");
     faqItems.forEach(d => d.addEventListener("toggle", () => {

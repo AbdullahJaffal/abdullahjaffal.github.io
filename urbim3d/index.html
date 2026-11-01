@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <!-- ?v= busts the browser/CDN cache (GitHub Pages: max-age 600): bump it in all three links whenever a CSS/JS file changes. -->
-    <link rel="stylesheet" href="assets/style.css?v=2026110105">
+    <link rel="stylesheet" href="assets/style.css?v=2026110106">
     <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -164,10 +164,50 @@
 <section class="facts" aria-label="UrBIM 3D">
     <div class="wrap">
         <ul class="facts__in">
-            <li><b class="facts__n">3</b><span data-i18n="fact1">ağ türü: kanalizasyon, yağmur suyu, içme suyu</span></li>
-            <li><b class="facts__n">0</b><span data-i18n="fact2">özel nesne — yalnızca standart AutoCAD</span></li>
-            <li><b class="facts__n"><span>1</span> <small>mm</small></b><span data-i18n="fact3">içinde çakışan uçlar tek düğümdür</span></li>
-            <li><b class="facts__n">1</b><span data-i18n="fact4">komutla tüm değişiklikler eşitlenir</span></li>
+            <li>
+                <div class="fact__top">
+                    <svg class="fact__art" viewBox="0 0 64 40" aria-hidden="true">
+                        <path class="fa-p1" d="M6 9 H58"/><path class="fa-p2" d="M6 20 H58"/><path class="fa-p3" d="M6 31 H58"/>
+                        <path class="fa-flow" d="M6 9 H58 M6 20 H58 M6 31 H58"/>
+                        <rect x="3" y="6" width="6" height="6"/><rect x="55" y="6" width="6" height="6"/><rect x="3" y="17" width="6" height="6"/>
+                        <rect x="55" y="17" width="6" height="6"/><rect x="3" y="28" width="6" height="6"/><rect x="55" y="28" width="6" height="6"/>
+                    </svg>
+                    <span class="fact__tag" aria-hidden="true">NET</span>
+                </div>
+                <b class="facts__n" data-n="3">3</b><span data-i18n="fact1">ağ türü: kanalizasyon, yağmur suyu, içme suyu</span>
+            </li>
+            <li>
+                <div class="fact__top">
+                    <svg class="fact__art" viewBox="0 0 64 40" aria-hidden="true">
+                        <path d="M16 3 H36 L45 12 V37 H16 Z"/><path d="M36 3 V12 H45"/><path class="fa-dim" d="M21 19 H38 M21 25 H38 M21 31 H31"/>
+                        <circle class="fa-ok" cx="49" cy="30" r="8"/><path class="fa-tick" d="M45.5 30 L48 32.5 L52.5 27.5"/>
+                    </svg>
+                    <span class="fact__tag" aria-hidden="true">DWG</span>
+                </div>
+                <b class="facts__n" data-n="0">0</b><span data-i18n="fact2">özel nesne — yalnızca standart AutoCAD</span>
+            </li>
+            <li>
+                <div class="fact__top">
+                    <svg class="fact__art" viewBox="0 0 64 40" aria-hidden="true">
+                        <path class="fa-p2" d="M4 34 L28 22"/><path class="fa-p3" d="M60 34 L36 22"/><path class="fa-p1" d="M32 20 V4"/>
+                        <circle class="fa-ring" cx="32" cy="21" r="4"/><circle class="fa-node" cx="32" cy="21" r="4.5"/>
+                        <path class="fa-dim" d="M22 38 H42 M22 35 V40 M42 35 V40"/>
+                    </svg>
+                    <span class="fact__tag" aria-hidden="true">TOL</span>
+                </div>
+                <b class="facts__n"><span data-n="1">1</span><small>mm</small></b><span data-i18n="fact3">içinde çakışan uçlar tek düğümdür</span>
+            </li>
+            <li>
+                <div class="fact__top">
+                    <svg class="fact__art fact__art--cmd" viewBox="0 0 64 40" aria-hidden="true" direction="ltr">
+                        <rect class="fa-win" x="1" y="4" width="62" height="32" rx="5"/><path class="fa-dim" d="M1 12 H63"/>
+                        <circle cx="6.5" cy="8" r="1.4"/><circle cx="11" cy="8" r="1.4"/>
+                        <text x="6" y="27" direction="ltr">› rBRefresh</text><rect class="fa-caret" x="57" y="20.5" width="3" height="8"/>
+                    </svg>
+                    <span class="fact__tag" aria-hidden="true">CMD</span>
+                </div>
+                <b class="facts__n" data-n="1">1</b><span data-i18n="fact4">komutla tüm değişiklikler eşitlenir</span>
+            </li>
         </ul>
     </div>
 </section>
@@ -454,7 +494,7 @@
     </div>
 </footer>
 
-<script src="assets/i18n.js?v=2026110105"></script>
-<script src="assets/main.js?v=2026110105"></script>
+<script src="assets/i18n.js?v=2026110106"></script>
+<script src="assets/main.js?v=2026110106"></script>
 </body>
 </html>
