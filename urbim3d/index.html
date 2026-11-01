@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hidden (unlisted) until the reveal step W.6: not indexed, not in sitemap.xml, no inbound links. -->
+    <meta name="robots" content="noindex, nofollow">
+    <title data-i18n="pageTitle">UrBIM 3D — Civil 3D içinde altyapı ağları için BIM</title>
+    <meta name="description" data-i18n-attr="content:metaDescription" content="Kanalizasyon, yağmur suyu ve içme suyu ağlarını Civil 3D içinde tasarlayın ve metrajını çıkarın.">
+    <meta name="theme-color" content="#16191D">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="UrBIM 3D">
+    <meta property="og:description" content="Kanalizasyon, yağmur suyu ve içme suyu ağlarını Civil 3D içinde tasarlayın ve metrajını çıkarın.">
+    <meta property="og:image" content="https://abdullahjaffal.me/urbim3d/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
+
+<header class="topbar" id="top">
+    <div class="wrap topbar__in">
+        <a class="brand" href="#top" aria-label="UrBIM 3D">
+            <img src="assets/logo.svg" alt="" width="36" height="36">
+            <span class="brand__name">UrBIM <b>3D</b></span>
+        </a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" data-i18n-attr="aria-label:menu" aria-label="Menü">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="nav">
+            <a href="#features" data-i18n="navFeatures">Özellikler</a>
+            <a href="#how" data-i18n="navHow">Nasıl çalışır</a>
+            <a href="#roadmap" data-i18n="navRoadmap">Yol haritası</a>
+            <a href="#faq" data-i18n="navFaq">SSS</a>
+            <div class="lang" role="group" aria-label="Dil / اللغة / Language">
+                <button type="button" data-lang="tr" lang="tr" aria-label="Türkçe">TR</button>
+                <button type="button" data-lang="ar" lang="ar" aria-label="العربية">ع</button>
+                <button type="button" data-lang="en" lang="en" aria-label="English">EN</button>
+            </div>
+            <a class="btn btn--primary btn--sm" href="#access" data-i18n="ctaAccess">Erken erişim iste</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+    <div class="wrap hero__in">
+        <div class="hero__text">
+            <p class="eyebrow eyebrow--dark" data-i18n="heroEyebrow">Civil 3D içinde altyapı ağları için BIM</p>
+            <h1 class="hero__title">UrBIM <span>3D</span></h1>
+            <p class="hero__lead" data-i18n="heroLead">Kanalizasyon, yağmur suyu ve içme suyu ağlarını Civil 3D içinde tasarlayın ve metrajını çıkarın — veriler çizimden hiç kopmadan.</p>
+            <div class="hero__cta">
+                <a class="btn btn--primary" href="#access" data-i18n="ctaAccess">Erken erişim iste</a>
+                <a class="btn btn--ghost" href="#how" data-i18n="ctaHow">Nasıl çalışır</a>
+            </div>
+            <ul class="chips">
+                <li>Civil 3D 2026</li>
+                <li>AutoCAD 2026</li>
+                <li>TR · AR · EN</li>
+            </ul>
+            <p class="hero__note"><span class="dot"></span><span data-i18n="heroNote">Geliştirme aşamasında — erken erişim listesi açık.</span></p>
+        </div>
+
+        <!-- Illustrative longitudinal profile; values are decorative, not a design. -->
+        <figure class="hero__art" dir="ltr" aria-hidden="true">
+            <svg class="profile" viewBox="0 0 640 400" role="presentation">
+                <g class="profile__ticks">
+                    <line x1="160" y1="96"  x2="160" y2="330"/>
+                    <line x1="300" y1="104" x2="300" y2="330"/>
+                    <line x1="440" y1="88"  x2="440" y2="330"/>
+                    <line x1="580" y1="80"  x2="580" y2="330"/>
+                </g>
+                <polyline class="profile__ground" pathLength="1"
+                          points="96,100 160,96 230,90 300,104 370,110 440,88 510,76 580,80 640,74"/>
+                <g class="profile__mh">
+                    <rect x="148" y="96"  width="24" height="138" style="--d:.2s"/>
+                    <rect x="288" y="104" width="24" height="152" style="--d:.35s"/>
+                    <rect x="428" y="88"  width="24" height="190" style="--d:.5s"/>
+                    <rect x="568" y="80"  width="24" height="220" style="--d:.65s"/>
+                </g>
+                <g class="profile__covers">
+                    <rect x="144" y="92"  width="32" height="5" rx="1.5"/>
+                    <rect x="284" y="100" width="32" height="5" rx="1.5"/>
+                    <rect x="424" y="84"  width="32" height="5" rx="1.5"/>
+                    <rect x="564" y="76"  width="32" height="5" rx="1.5"/>
+                </g>
+                <g class="profile__pipes">
+                    <line x1="172" y1="228" x2="288" y2="250"/>
+                    <line x1="312" y1="250" x2="428" y2="272"/>
+                    <line x1="452" y1="272" x2="568" y2="294"/>
+                </g>
+                <g class="profile__flow">
+                    <line x1="172" y1="228" x2="288" y2="250"/>
+                    <line x1="312" y1="250" x2="428" y2="272"/>
+                    <line x1="452" y1="272" x2="568" y2="294"/>
+                </g>
+                <g class="profile__lbl">
+                    <text x="160" y="80">B-1</text><text x="300" y="88">B-2</text>
+                    <text x="440" y="72">B-3</text><text x="580" y="64">B-4</text>
+                    <text x="230" y="262" class="sm">Ø300</text>
+                    <text x="370" y="284" class="sm">Ø400</text>
+                    <text x="510" y="306" class="sm">Ø400</text>
+                </g>
+                <g class="profile__band">
+                    <line x1="0" y1="330" x2="640" y2="330"/>
+                    <line x1="0" y1="362" x2="640" y2="362"/>
+                    <line x1="0" y1="394" x2="640" y2="394"/>
+                    <text x="6" y="351" class="row" data-i18n="artGround">Arazi kotu</text>
+                    <text x="6" y="383" class="row" data-i18n="artInvert">Akış kotu</text>
+                    <text x="160" y="351">112.40</text><text x="300" y="351">112.05</text>
+                    <text x="440" y="351">112.70</text><text x="580" y="351">113.00</text>
+                    <text x="160" y="383">109.60</text><text x="300" y="383">108.95</text>
+                    <text x="440" y="383">108.30</text><text x="580" y="383">107.65</text>
+                </g>
+            </svg>
+        </figure>
+    </div>
+</section>
+
+<!-- ============ PROBLEM → SOLUTION ============ -->
+<section class="sec" id="why">
+    <div class="wrap">
+        <p class="eyebrow" data-i18n="whyEyebrow">Neden UrBIM 3D</p>
+        <h2 data-i18n="whyTitle">Ağ tasarımının bilinen sorunları, yapısal olarak çözüldü</h2>
+        <p class="sec__lead" data-i18n="whyLead">Bu sorunlar bir özellikle yamanmadı; UrBIM 3D'nin mimarisi oluşmalarına izin vermiyor.</p>
+        <div class="grid grid--3">
+            <article class="ps">
+                <p class="ps__tag" data-i18n="tagProblem">Sorun</p>
+                <p class="ps__p" data-i18n="p1">Bağlantılar kopar; model bir “doğrulama” komutuyla düzeltilmeyi bekler.</p>
+                <p class="ps__tag ps__tag--ok">UrBIM 3D</p>
+                <p class="ps__s" data-i18n="s1">Topoloji geometriden türetilir: çakışan iki uç her zaman tek düğümdür. Kopuk bağlantı diye bir durum yoktur.</p>
+            </article>
+            <article class="ps">
+                <p class="ps__tag" data-i18n="tagProblem">Sorun</p>
+                <p class="ps__p" data-i18n="p2">Tutamaçla (grip) yapılan düzenleme ağı bozar.</p>
+                <p class="ps__tag ps__tag--ok">UrBIM 3D</p>
+                <p class="ps__s" data-i18n="s2">AutoCAD'in kendi araçlarıyla düzenleyin — MOVE, grip, PEDIT. Tek bir Eşitleme komutu modeli günceller; kaç öğenin beklediğini her zaman görürsünüz.</p>
+            </article>
+            <article class="ps">
+                <p class="ps__tag" data-i18n="tagProblem">Sorun</p>
+                <p class="ps__p" data-i18n="p3">Elle girdiğiniz değerin üzerine kurallar sessizce yazar.</p>
+                <p class="ps__tag ps__tag--ok">UrBIM 3D</p>
+                <p class="ps__s" data-i18n="s3">Elle girilen her değer kilitlenir ve panelde görünür; siz serbest bırakmadıkça hiçbir hesap üzerine yazmaz.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PRINCIPLES ============ -->
+<section class="sec sec--soft" id="principles">
+    <div class="wrap">
+        <p class="eyebrow" data-i18n="prEyebrow">Temel ilkeler</p>
+        <h2 data-i18n="prTitle">Dört ilke, tek bir sonuç: güvenilir model</h2>
+        <div class="grid grid--4">
+            <article class="card">
+                <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 34 L20 18 L34 26 L42 12"/><circle cx="6" cy="34" r="4"/><circle cx="20" cy="18" r="4"/><circle cx="34" cy="26" r="4"/><circle cx="42" cy="12" r="4"/></svg>
+                <h3 data-i18n="pr1t">Her köşe noktası bir düğüm</h3>
+                <p data-i18n="pr1d">Her köşe noktası bir düğümdür ve her boru tam iki düğüm arasındadır. Boruya köşe noktası eklemek onu ikiye böler ve araya bir düğüm koyar; bir düğümü silmek iki boruyu birleştirir.</p>
+            </article>
+            <article class="card">
+                <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 6 H30 L38 14 V42 H12 Z"/><path d="M30 6 V14 H38"/><path d="M18 24 H32 M18 30 H32 M18 36 H26"/></svg>
+                <h3 data-i18n="pr2t">Standart DWG</h3>
+                <p data-i18n="pr2d">Yalnızca standart AutoCAD nesneleri: borular polyline, düğümler blok. Özel nesne yok, object enabler yok — çizim herkesin bilgisayarında açılır.</p>
+            </article>
+            <article class="card">
+                <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="12" rx="14" ry="5"/><path d="M10 12 V36 C10 39 16 41 24 41 C32 41 38 39 38 36 V12"/><path d="M10 24 C10 27 16 29 24 29 C32 29 38 27 38 24"/></svg>
+                <h3 data-i18n="pr3t">Veriler çizimin içinde</h3>
+                <p data-i18n="pr3d">Öznitelikler aynı DWG içinde saklanır ve her nesneye kalıcı bir kimlikle bağlanır. Dış veritabanı yok, kopacak bağlantı yok.</p>
+            </article>
+            <article class="card">
+                <svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="22" width="28" height="20" rx="3"/><path d="M16 22 V15 A8 8 0 0 1 32 15 V22"/><circle cx="24" cy="32" r="3"/></svg>
+                <h3 data-i18n="pr4t">Elle yazdığınız korunur</h3>
+                <p data-i18n="pr4d">Elle girdiğiniz değer o anda kilitlenir. Hesaplar onu ezmez; kilidi ne zaman açacağınıza siz karar verirsiniz.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="sec" id="features">
+    <div class="wrap">
+        <p class="eyebrow" data-i18n="ftEyebrow">Özellikler</p>
+        <h2 data-i18n="ftTitle">Bugün ne çalışıyor, sırada ne var</h2>
+        <p class="sec__lead" data-i18n="ftLead">Her özelliğin etiketi programın bugünkü gerçek durumunu gösterir.</p>
+        <ul class="legend">
+            <li><span class="st st--ok" data-i18n="stOk">Çalışıyor</span></li>
+            <li><span class="st st--dev" data-i18n="stDev">Geliştiriliyor</span></li>
+            <li><span class="st st--plan" data-i18n="stPlan">Planlandı</span></li>
+        </ul>
+        <div class="grid grid--3 feats">
+            <article class="feat"><span class="st st--ok" data-i18n="stOk">Çalışıyor</span><h3 data-i18n="f1t">Ağlar</h3><p data-i18n="f1d">Kanalizasyon, yağmur suyu ve içme suyu ağları; her ağın kendi katmanları ve rengi, boru ve bacalar katalogdan.</p></article>
+            <article class="feat"><span class="st st--ok" data-i18n="stOk">Çalışıyor</span><h3 data-i18n="f2t">Çizim</h3><p data-i18n="f2d">Boru ve bacaları doğrudan çizin; uçlar mevcut düğümlere kendiliğinden bağlanır.</p></article>
+            <article class="feat"><span class="st st--ok" data-i18n="stOk">Çalışıyor</span><h3 data-i18n="f3t">Dönüştürme</h3><p data-i18n="f3d">Mevcut LINE ve POLYLINE çizimlerini tek komutla ağa dönüştürün.</p></article>
+            <article class="feat"><span class="st st--ok" data-i18n="stOk">Çalışıyor</span><h3 data-i18n="f4t">Eşitleme</h3><p data-i18n="f4d">AutoCAD komutlarıyla yapılan değişiklikler izlenir; tek komutla model güncellenir.</p></article>
+            <article class="feat"><span class="st st--ok" data-i18n="stOk">Çalışıyor</span><h3 data-i18n="f5t">Özellikler paneli</h3><p data-i18n="f5d">Seçimin tamamını tek seferde düzenleyin, yalnızca tek bir nesneyi değil.</p></article>
+            <article class="feat"><span class="st st--ok" data-i18n="stOk">Çalışıyor</span><h3 data-i18n="f6t">Ağ gezgini ve denetim</h3><p data-i18n="f6d">Ağın yapısında gezinin, sorunlu öğeleri bulun ve seçin.</p></article>
+            <article class="feat"><span class="st st--dev" data-i18n="stDev">Geliştiriliyor</span><h3 data-i18n="f7t">Kotlar</h3><p data-i18n="f7d">Arazi kotu Civil 3D yüzeyinden veya elle; akış kotları, eğimler ve akış yönü.</p></article>
+            <article class="feat"><span class="st st--dev" data-i18n="stDev">Geliştiriliyor</span><h3 data-i18n="f8t">Hatlar ve kollar</h3><p data-i18n="f8d">Boruları adlandırılmış hatlarda toplayın; kollar ağdan kendiliğinden türetilir.</p></article>
+            <article class="feat"><span class="st st--dev" data-i18n="stDev">Geliştiriliyor</span><h3 data-i18n="f9t">Adlandırma</h3><p data-i18n="f9d">Baca, boru ve hatları şablonlarla yeniden adlandırın ve numaralandırın.</p></article>
+            <article class="feat"><span class="st st--dev" data-i18n="stDev">Geliştiriliyor</span><h3 data-i18n="f10t">Etiketler</h3><p data-i18n="f10d">Baca, boru ve hat etiketleri — şablonlu ve doğrudan modelden.</p></article>
+            <article class="feat"><span class="st st--plan" data-i18n="stPlan">Planlandı</span><h3 data-i18n="f11t">Boy kesitler</h3><p data-i18n="f11d">Her hat için boy kesit ve veri tablosu; düzenleme doğrudan kesit üzerinden.</p></article>
+            <article class="feat"><span class="st st--plan" data-i18n="stPlan">Planlandı</span><h3 data-i18n="f12t">Kontrol</h3><p data-i18n="f12d">Eğim, örtü, derinlik ve uzunluk kontrolleri — her ağ için seçilen yönetmeliğe göre.</p></article>
+            <article class="feat"><span class="st st--plan" data-i18n="stPlan">Planlandı</span><h3 data-i18n="f13t">Metraj ve en kesitler</h3><p data-i18n="f13d">Hendek kazısı, dolgu ve malzeme metrajı, en kesitlerle birlikte.</p></article>
+            <article class="feat"><span class="st st--plan" data-i18n="stPlan">Planlandı</span><h3 data-i18n="f14t">Hidrolik</h3><p data-i18n="f14d">Cazibeli boru ve açık kanal hidroliği: çap seçimi, hız ve doluluk kontrolleri.</p></article>
+            <article class="feat"><span class="st st--plan" data-i18n="stPlan">Planlandı</span><h3 data-i18n="f15t">3B model ve çakışma</h3><p data-i18n="f15d">Katı modeller ve diğer altyapılarla çakışma tespiti.</p></article>
+            <article class="feat"><span class="st st--plan" data-i18n="stPlan">Planlandı</span><h3>BricsCAD</h3><p data-i18n="f16d">BricsCAD sürümü.</p></article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="sec sec--soft" id="how">
+    <div class="wrap">
+        <p class="eyebrow" data-i18n="howEyebrow">Nasıl çalışır</p>
+        <h2 data-i18n="howTitle">Çizgiden metraja dört adım</h2>
+        <ol class="steps">
+            <li class="step"><span class="step__n">1</span>
+            <svg class="step__art" viewBox="0 0 160 90" aria-hidden="true">
+                <path class="a-old" d="M12 70 L40 30 L72 52"/>
+                <path class="a-arrow" d="M80 45 H94 M89 40 L94 45 L89 50"/>
+                <path class="a-pipe" d="M104 70 L122 30 L150 52"/>
+                <circle class="a-node" cx="104" cy="70" r="5"/><circle class="a-node" cx="122" cy="30" r="5"/><circle class="a-node" cx="150" cy="52" r="5"/>
+            </svg>
+            <span class="st st--ok" data-i18n="stOk">Çalışıyor</span><h3 data-i18n="h1t">Çizin veya dönüştürün</h3><p data-i18n="h1d">Ağı doğrudan çizin ya da mevcut çizgileri dönüştürün.</p></li>
+            <li class="step"><span class="step__n">2</span>
+            <svg class="step__art" viewBox="0 0 160 90" aria-hidden="true">
+                <path class="a-cont" d="M6 30 C40 18 70 40 100 28 S150 22 156 26"/>
+                <path class="a-cont" d="M6 48 C40 36 70 58 100 46 S150 40 156 44"/>
+                <path class="a-cont" d="M6 66 C40 54 70 76 100 64 S150 58 156 62"/>
+                <rect class="a-mh" x="68" y="38" width="16" height="44"/>
+                <path class="a-pipe" d="M60 38 H92"/>
+                <path class="a-lvl" d="M98 20 L104 28 L110 20 Z"/><text class="a-txt" x="114" y="27">112.40</text>
+            </svg>
+            <span class="st st--dev" data-i18n="stDev">Geliştiriliyor</span><h3 data-i18n="h2t">Kotları alın</h3><p data-i18n="h2d">Arazi kotlarını Civil 3D yüzeyinden çekin; akış kotlarını ve eğimleri belirleyin.</p></li>
+            <li class="step step--later"><span class="step__n">3</span>
+            <svg class="step__art" viewBox="0 0 160 90" aria-hidden="true">
+                <path class="a-ground" d="M6 22 L50 18 L90 26 L154 16"/>
+                <rect class="a-mh" x="30" y="20" width="12" height="40"/><rect class="a-mh" x="118" y="19" width="12" height="54"/>
+                <path class="a-pipe" d="M42 56 L118 68"/>
+                <path class="a-band" d="M6 80 H154"/><text class="a-txt" x="22" y="88">Ø300 · %0.80</text>
+            </svg>
+            <span class="st st--plan" data-i18n="stPlan">Planlandı</span><h3 data-i18n="h3t">Kesit ve etiket</h3><p data-i18n="h3d">Boy kesitleri ve etiketleri doğrudan modelden üretin.</p></li>
+            <li class="step step--later"><span class="step__n">4</span>
+            <svg class="step__art" viewBox="0 0 160 90" aria-hidden="true">
+                <path class="a-trench" d="M14 20 L30 72 H66 L82 20"/>
+                <circle class="a-pipec" cx="48" cy="60" r="9"/>
+                <path class="a-band" d="M96 24 H154 M96 44 H154 M96 64 H154"/>
+                <path class="a-ok" d="M98 15 l4 4 l7 -8 M98 35 l4 4 l7 -8 M98 55 l4 4 l7 -8"/>
+                <path class="a-row" d="M116 15 H148 M116 35 H140 M116 55 H146"/>
+            </svg>
+            <span class="st st--plan" data-i18n="stPlan">Planlandı</span><h3 data-i18n="h4t">Kontrol ve metraj</h3><p data-i18n="h4d">Yönetmeliğe göre kontrol edin, metrajı çıkarın.</p></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ ROADMAP ============ -->
+<section class="sec sec--dark" id="roadmap">
+    <div class="wrap">
+        <p class="eyebrow eyebrow--dark" data-i18n="rmEyebrow">Yol haritası</p>
+        <h2 data-i18n="rmTitle">Aşama aşama</h2>
+        <p class="sec__lead" data-i18n="rmLead">Tarih vermiyoruz; her aşama tamamlandığında bu sayfa güncellenir.</p>
+        <ol class="road">
+            <li class="road__i is-done"><span class="road__n">0</span><b data-i18n="ph0">Temel</b><small data-i18n="rsDone">Tamamlandı</small></li>
+            <li class="road__i is-now"><span class="road__n">1</span><b data-i18n="ph1">Ağ ve çizim</b><small data-i18n="rsNow">Sürüyor</small></li>
+            <li class="road__i is-now"><span class="road__n">2</span><b data-i18n="ph2">Kotlar</b><small data-i18n="rsNow">Sürüyor</small></li>
+            <li class="road__i"><span class="road__n">3</span><b data-i18n="ph3">Boy kesitler</b><small data-i18n="rsPlan">Planlandı</small></li>
+            <li class="road__i is-now"><span class="road__n">4</span><b data-i18n="ph4">Etiketler ve paftalar</b><small data-i18n="rsNow">Sürüyor</small></li>
+            <li class="road__i"><span class="road__n">5</span><b data-i18n="ph5">Kontrol</b><small data-i18n="rsPlan">Planlandı</small></li>
+            <li class="road__i"><span class="road__n">6</span><b data-i18n="ph6">Metraj ve en kesitler</b><small data-i18n="rsPlan">Planlandı</small></li>
+            <li class="road__i"><span class="road__n">7</span><b data-i18n="ph7">Hidrolik</b><small data-i18n="rsPlan">Planlandı</small></li>
+            <li class="road__i"><span class="road__n">8</span><b data-i18n="ph8">3B ve çakışma</b><small data-i18n="rsPlan">Planlandı</small></li>
+            <li class="road__i"><span class="road__n">9</span><b data-i18n="ph9">Paketleme ve yayın</b><small data-i18n="rsPlan">Planlandı</small></li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ REQUIREMENTS + FAQ ============ -->
+<section class="sec" id="faq">
+    <div class="wrap two">
+        <div>
+            <p class="eyebrow" data-i18n="rqEyebrow">Gereksinimler</p>
+            <h2 data-i18n="rqTitle">Nerede çalışır</h2>
+            <ul class="req">
+                <li><b>Civil 3D 2026</b><span data-i18n="rq1">Tüm özellikler</span></li>
+                <li><b>AutoCAD 2026</b><span data-i18n="rq2">Yüzey gerektirmeyen komutlar</span></li>
+                <li><b>Windows · 64 bit</b><span data-i18n="rq3">AutoCAD 2026'nın desteklediği sürümler</span></li>
+                <li><b data-i18n="rq4t">Arayüz dili</b><span data-i18n="rq4">Türkçe; Arapça ve İngilizce sonra</span></li>
+                <li><b>BricsCAD</b><span data-i18n="rq5">Planlandı</span></li>
+            </ul>
+        </div>
+        <div>
+            <p class="eyebrow" data-i18n="faqEyebrow">Sıkça sorulan sorular</p>
+            <h2 data-i18n="faqTitle">Merak edilenler</h2>
+            <div class="faq">
+                <details><summary data-i18n="q1">Urbano gerekli mi?</summary><p data-i18n="a1">Hayır. UrBIM 3D tamamen bağımsızdır; verisini kendisi tutar ve başka bir programa ihtiyaç duymaz.</p></details>
+                <details><summary data-i18n="q2">Eklentisi olmayan biri çizimi açabilir mi?</summary><p data-i18n="a2">Evet. Ağ yalnızca standart AutoCAD nesnelerinden oluşur ve veriler çizimin içindedir; çizim her AutoCAD'de açılır.</p></details>
+                <details><summary data-i18n="q3">Hangi yönetmelikler desteklenecek?</summary><p data-i18n="a3">Kontrol aşamasıyla birlikte her ağ için yönetmelik seçilebilecek (örneğin İSKİ, İller Bankası). Kurallar yönetmeliklerin kendisinden alınır, uydurulmaz.</p></details>
+                <details><summary data-i18n="q4">Basınçlı ağlar?</summary><p data-i18n="a4">Önce cazibeli ağlar: kanalizasyon ve yağmur suyu. Basınçlı ağ hesapları daha sonraki bir aşamada.</p></details>
+                <details><summary data-i18n="q5">Ne zaman çıkacak?</summary><p data-i18n="a5">Tarih vermiyoruz. Deneme sürümleri hazır olduğunda ilk olarak erken erişim listesindekilere haber verilecek.</p></details>
+                <details><summary data-i18n="q6">Lisans ve fiyat?</summary><p data-i18n="a6">Daha sonra duyurulacak.</p></details>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ EARLY ACCESS ============ -->
+<section class="sec sec--soft" id="access">
+    <div class="wrap two two--form">
+        <div>
+            <p class="eyebrow" data-i18n="acEyebrow">Erken erişim</p>
+            <h2 data-i18n="acTitle">İlk deneyenlerden olun</h2>
+            <p class="sec__lead" data-i18n="acLead">Deneme sürümleri hazır olduğunda ilk siz haberdar olun. Programı gerçek projelerde deneyip geri bildirim verecek mühendisleri özellikle arıyoruz.</p>
+        </div>
+        <form class="form" id="accessForm" novalidate>
+            <div class="row2">
+                <label><span data-i18n="fName">Ad Soyad</span><input name="name" required autocomplete="name"></label>
+                <label><span data-i18n="fEmail">E-posta</span><input name="email" type="email" required autocomplete="email"></label>
+            </div>
+            <div class="row2">
+                <label><span data-i18n="fOrg">Kurum</span><input name="org" autocomplete="organization"></label>
+                <label><span data-i18n="fCountry">Ülke</span><input name="country" autocomplete="country-name"></label>
+            </div>
+            <div class="row2">
+                <label><span data-i18n="fRole">Rol</span>
+                    <select name="role">
+                        <option value="design" data-i18n="roleDesign">Tasarım mühendisi</option>
+                        <option value="contractor" data-i18n="roleContractor">Yüklenici</option>
+                        <option value="public" data-i18n="rolePublic">Belediye / kamu kurumu</option>
+                        <option value="consultant" data-i18n="roleConsultant">Danışman</option>
+                        <option value="other" data-i18n="roleOther">Diğer</option>
+                    </select>
+                </label>
+                <label><span data-i18n="fVersion">Civil 3D sürümü</span>
+                    <select name="version">
+                        <option>2026</option><option>2025</option>
+                        <option value="older" data-i18n="verOlder">Daha eski</option>
+                        <option value="acad" data-i18n="verAcad">Yalnızca AutoCAD</option>
+                    </select>
+                </label>
+            </div>
+            <fieldset>
+                <legend data-i18n="fNets">Çalıştığınız ağlar</legend>
+                <label class="chk"><input type="checkbox" name="nets" value="sewer"><span data-i18n="netSewer">Kanalizasyon</span></label>
+                <label class="chk"><input type="checkbox" name="nets" value="storm"><span data-i18n="netStorm">Yağmur suyu</span></label>
+                <label class="chk"><input type="checkbox" name="nets" value="water"><span data-i18n="netWater">İçme suyu</span></label>
+            </fieldset>
+            <label><span data-i18n="fNote">Not (isteğe bağlı)</span><textarea name="note" rows="3"></textarea></label>
+            <div class="captcha" id="captcha"></div>
+            <button class="btn btn--primary" type="submit" data-i18n="fSend">Gönder</button>
+            <p class="form__fine" data-i18n="fPrivacy">Bilgileriniz yalnızca erken erişim için kullanılır ve paylaşılmaz.</p>
+            <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+    </div>
+</section>
+
+</main>
+
+<footer class="foot">
+    <div class="wrap foot__in">
+        <div class="brand brand--foot">
+            <img src="assets/logo.svg" alt="" width="28" height="28">
+            <span class="brand__name">UrBIM <b>3D</b></span>
+        </div>
+        <p data-i18n="footBy">UrBIM 3D, inşaat mühendisi Abdullah Jaffal tarafından geliştirilmektedir.</p>
+        <p class="foot__links">
+            <a href="/" data-i18n="footSite">Kişisel site</a>
+            <a href="https://www.linkedin.com/in/abdullahjaffal/" rel="noopener" target="_blank">LinkedIn</a>
+            <span>© <span class="year">2026</span> UrBIM 3D</span>
+        </p>
+    </div>
+</footer>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
