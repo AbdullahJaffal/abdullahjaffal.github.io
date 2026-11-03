@@ -52,6 +52,20 @@
             menuBtn.focus();
         }
     });
+    // In-page links scroll to their section without putting "#section" in the address bar,
+    // so a reload or a shared link always opens at the top (see the inline script in <head>).
+    document.addEventListener("click", e => {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
+        const id = a.getAttribute("href").slice(1);
+        const target = id === "top" ? document.body : document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        const smooth = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (id === "top") scrollTo({ top: 0, behavior: smooth ? "smooth" : "auto" });
+        else target.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
+        if (id === "main") { target.setAttribute("tabindex", "-1"); target.focus({ preventScroll: true }); }
+    });
     nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
         nav.classList.remove("open");
         menuBtn.setAttribute("aria-expanded", "false");
