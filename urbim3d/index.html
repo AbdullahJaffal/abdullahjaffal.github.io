@@ -21,8 +21,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        // Always open at the top (the hero): no restored scroll position on reload, and a #section
+        // left in the address bar is cleared instead of jumping there. In-page links scroll without
+        // writing a fragment (main.js), so the address stays clean.
+        if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+        if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+        addEventListener("load", () => scrollTo({ top: 0, behavior: "instant" }));
+    </script>
     <!-- ?v= busts the browser/CDN cache (GitHub Pages: max-age 600): bump it in all three links whenever a CSS/JS file changes. -->
-    <link rel="stylesheet" href="assets/style.css?v=2026110107">
+    <link rel="stylesheet" href="assets/style.css?v=2026110301">
     <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -494,7 +502,7 @@
     </div>
 </footer>
 
-<script src="assets/i18n.js?v=2026110107"></script>
-<script src="assets/main.js?v=2026110107"></script>
+<script src="assets/i18n.js?v=2026110301"></script>
+<script src="assets/main.js?v=2026110301"></script>
 </body>
 </html>
