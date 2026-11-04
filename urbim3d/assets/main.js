@@ -164,6 +164,7 @@
             "g-recaptcha-response": token
         }).then(() => {
             say("msgSent");
+            if (window.urbimStat) window.urbimStat("early-access/sent");
             form.reset();
             window.grecaptcha.reset(captchaId);
         }, () => {
