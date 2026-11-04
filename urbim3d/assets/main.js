@@ -27,7 +27,8 @@
         if (!offer || !(Date.now() < offer.deadline)) { el.hidden = true; return; }
         const date = new Intl.DateTimeFormat(current, { day: "numeric", month: "long", year: "numeric" }).format(offer.deadline);
         const text = (I18N[current] && I18N[current].offerText) || OFFER_TR;
-        el.querySelector("[data-offer-text]").textContent = text.replace("{days}", offer.days).replace("{date}", date);
+        const priceText = offer.price ? ((I18N[current] && I18N[current].offerPrice) || " · ardından yıllık {price}").replace("{price}", offer.price) : "";
+        el.querySelector("[data-offer-text]").textContent = text.replace("{days}", offer.days).replace("{date}", date) + priceText;
         el.hidden = false;
     }
     (function loadOffer() {
@@ -43,7 +44,9 @@
         fetch(`${base}/v1/projects/${cfg.projectId}/databases/(default)/documents/settings/public?key=${encodeURIComponent(cfg.apiKey)}`)
             .then(r => r.ok ? r.json() : null).then(j => {
                 const f = j && j.fields; if (!f || !f.promoDeadline) return;
-                offer = { deadline: new Date(f.promoDeadline.timestampValue).getTime(), days: Number((f.promoDays || {}).integerValue || 180) };
+                const str = k => f[k] && (f[k].stringValue || f[k].integerValue || f[k].doubleValue);
+                offer = { deadline: new Date(f.promoDeadline.timestampValue).getTime(), days: Number((f.promoDays || {}).integerValue || 180),
+                          price: str("promoPrice") ? `${str("promoPrice")} ${str("currency") || ""}`.trim() : "" };
                 renderOffer();
             }).catch(() => { });
     })();
