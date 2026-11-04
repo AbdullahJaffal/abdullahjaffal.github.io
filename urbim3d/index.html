@@ -30,7 +30,7 @@
         addEventListener("load", () => scrollTo({ top: 0, behavior: "instant" }));
     </script>
     <!-- ?v= busts the browser/CDN cache (GitHub Pages: max-age 600): bump it in all three links whenever a CSS/JS file changes. -->
-    <link rel="stylesheet" href="assets/style.css?v=2026110408">
+    <link rel="stylesheet" href="assets/style.css?v=2026110409">
     <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -52,6 +52,7 @@
             <a href="#roadmap" data-i18n="navRoadmap">Yol haritası</a>
             <a href="#faq" data-i18n="navFaq">SSS</a>
             <a href="docs/" data-docs="" data-i18n="navDocs">Kılavuz</a>
+            <a href="pricing/" data-i18n="navPricing">Fiyatlar</a>
             <a href="account/" data-i18n="navAccount">Hesabım</a>
             <div class="lang" role="group" aria-label="Dil / اللغة / Language">
                 <button type="button" data-lang="tr" lang="tr" aria-label="Türkçe">TR</button>
@@ -88,7 +89,11 @@
             </ul>
             <p class="hero__note"><span class="dot"></span><span data-i18n="heroNote">Geliştirme aşamasında — erken erişim listesi açık.</span></p>
             <!-- early sign-up offer: filled from settings/public in the owner's database; hidden when accounts are not open or the offer ended -->
-            <a class="offer" href="account/" hidden data-offer><i></i><span data-offer-text></span><b data-i18n="offerCta">Hesap oluştur</b></a>
+            <a class="offer" href="pricing/" hidden data-offer>
+                <span class="offer__pct" data-offer-pct>%</span>
+                <span class="offer__body"><b data-i18n="offerTitle">Erken kayıt fırsatı</b><span data-offer-text></span><span class="offer__price" data-offer-price></span></span>
+                <svg class="offer__go" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10 H15 M10 5 L15 10 L10 15"/></svg>
+            </a>
         </div>
 
         <!-- Illustrative longitudinal profile; values are decorative, not a design. -->
@@ -542,14 +547,18 @@
         <p class="foot__links">
             <a href="/" data-i18n="footSite">Kişisel site</a>
             <a href="https://www.linkedin.com/in/abdullahjaffal/" rel="noopener" target="_blank">LinkedIn</a>
+            <a href="pricing/" data-i18n="navPricing">Fiyatlar</a>
+            <a href="legal/terms/" data-i18n="footTerms">Kullanım şartları</a>
+            <a href="legal/refund/" data-i18n="footRefund">İade politikası</a>
+            <a href="legal/privacy/" data-i18n="footPrivacy">Gizlilik</a>
             <span>© <span class="year">2026</span> UrBIM 3D</span>
         </p>
     </div>
 </footer>
 
-<script src="assets/i18n.js?v=2026110408"></script>
-<script src="assets/firebase-config.js?v=2026110408"></script>
-<script src="assets/stats.js?v=2026110408" defer></script>
-<script src="assets/main.js?v=2026110408"></script>
+<script src="assets/i18n.js?v=2026110409"></script>
+<script src="assets/firebase-config.js?v=2026110409"></script>
+<script src="assets/stats.js?v=2026110409" defer></script>
+<script src="assets/main.js?v=2026110409"></script>
 </body>
 </html>

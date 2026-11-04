@@ -20,15 +20,25 @@
 
     // ---- early sign-up offer (settings/public in the owner's Firebase; off while accounts are closed) ----
     let offer = null;
-    const OFFER_TR = "Erken kayıt: {days} gün ücretsiz deneme — {date} tarihine kadar";
+    const OFFER_TR = { line: "{days} gün ücretsiz deneme · {date} tarihine kadar", price: "Yıllık {early} — normal fiyat {regular}" };
+    const money = (v, cur) => {
+        const n = Number(v); if (!isFinite(n)) return String(v);
+        // wrapped in a left-to-right isolate so "$700" stays "$700" inside Arabic text
+        try { return "\u2066" + new Intl.NumberFormat(current === "ar" ? "en" : current, { style: "currency", currency: cur || "USD", maximumFractionDigits: 0 }).format(n) + "\u2069"; } catch (e) { return `${n} ${cur || ""}`; }
+    };
     function renderOffer() {
         const el = document.querySelector("[data-offer]");
         if (!el) return;
         if (!offer || !(Date.now() < offer.deadline)) { el.hidden = true; return; }
+        const tr = (k, d) => (I18N[current] && I18N[current][k]) || d;
         const date = new Intl.DateTimeFormat(current, { day: "numeric", month: "long", year: "numeric" }).format(offer.deadline);
-        const text = (I18N[current] && I18N[current].offerText) || OFFER_TR;
-        const priceText = offer.price ? ((I18N[current] && I18N[current].offerPrice) || " · ardından yıllık {price}").replace("{price}", offer.price) : "";
-        el.querySelector("[data-offer-text]").textContent = text.replace("{days}", offer.days).replace("{date}", date) + priceText;
+        const pct = offer.regular > 0 && offer.early > 0 && offer.early < offer.regular ? Math.round((offer.regular - offer.early) / offer.regular * 100) : 0;
+        el.querySelector("[data-offer-pct]").textContent = pct ? `−${pct}%` : "%";
+        el.querySelector("[data-offer-text]").textContent = tr("offerLine", OFFER_TR.line).replace("{days}", offer.days).replace("{date}", date);
+        const line = tr("offerPriceLine", OFFER_TR.price).replace("{early}", money(offer.early, offer.currency));
+        // without a regular price (not set yet) only the early price is shown
+        el.querySelector("[data-offer-price]").textContent = !offer.early ? "" : offer.regular > offer.early
+            ? line.replace("{regular}", money(offer.regular, offer.currency)) : line.split(/\s+[—-]\s+/)[0];
         el.hidden = false;
     }
     (function loadOffer() {
@@ -46,7 +56,7 @@
                 const f = j && j.fields; if (!f || !f.promoDeadline) return;
                 const str = k => f[k] && (f[k].stringValue || f[k].integerValue || f[k].doubleValue);
                 offer = { deadline: new Date(f.promoDeadline.timestampValue).getTime(), days: Number((f.promoDays || {}).integerValue || 180),
-                          price: str("promoPrice") ? `${str("promoPrice")} ${str("currency") || ""}`.trim() : "" };
+                          early: Number(str("promoPrice")) || 0, regular: Number(str("price")) || 0, currency: str("currency") || "USD" };
                 renderOffer();
             }).catch(() => { });
     })();
