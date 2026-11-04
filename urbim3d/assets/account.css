@@ -91,6 +91,9 @@
 .muted { color: var(--muted); font-size: .93rem; }
 .price b { font: 700 1.8rem var(--mono); color: var(--brand); }
 .price--soon { color: var(--muted); font-weight: 600; }
+.price span { color: var(--muted); font-weight: 500; }
+.price s { color: var(--muted); margin-inline-start: 6px; }
+.price .price__tag { display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 999px; font-size: .78rem; font-weight: 600; color: #1F7A4C; background: #E5F6EC; }
 .tile--danger { border-color: #F5C2BC; }
 .tile .acc-form { max-width: 640px; }
 .dash__email { font: 600 .82rem var(--mono); color: var(--accent); margin-bottom: 6px; direction: ltr; text-align: start; }
