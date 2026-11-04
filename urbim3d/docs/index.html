@@ -3,5 +3,10 @@
 <script>
 var L=["tr","ar","en"],l="tr";
 try{l=localStorage.getItem("urbim3d-lang")||localStorage.getItem("selectedLang")||(navigator.language||"tr").slice(0,2)}catch(e){}
-location.replace((L.indexOf(l)>=0?l:"tr")+"/");
+l=L.indexOf(l)>=0?l:"tr";
+var to=l+"/";
+// the last page read in this language, within 14 days (written by the guide pages; this browser only)
+try{var x=JSON.parse(localStorage.getItem("urbim3d-last")||"null");
+if(x&&x.href&&x.href.indexOf("/urbim3d/docs/"+l+"/")===0&&Date.now()-x.t<14*864e5)to=x.href+"?r=1"}catch(e){}
+location.replace(to);
 </script></head><body><a href="tr/">UrBIM 3D</a></body></html>
