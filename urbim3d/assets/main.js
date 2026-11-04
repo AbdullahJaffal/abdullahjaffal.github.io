@@ -30,6 +30,8 @@
             el.setAttribute(attr, t(lang, key));
         }));
         document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+        // links into the guide open it in the page's language
+        document.querySelectorAll("[data-docs]").forEach(a => { a.href = `docs/${lang}/${a.dataset.docs}`; });
         try { localStorage.setItem(STORE_KEY, lang); } catch (e) { /* private mode */ }
     }
 
