@@ -871,3 +871,12 @@ html[dir="rtl"] .guide__mock { transform: perspective(1400px) rotateY(7deg) rota
     .gm__type, .gm__side i.is-on, .gm__step em, .gm__prog i { animation: none !important; }
     .gm__prog i { width: 66%; }
 }
+
+/* early sign-up offer in the hero (shown only while settings/public says the offer is open) */
+.offer { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 16px; padding: 9px 14px; border-radius: 999px; text-decoration: none;
+    font-size: .92rem; font-weight: 600; color: #fff; background: linear-gradient(135deg, rgba(46,173,107,.95), rgba(31,138,85,.95));
+    box-shadow: 0 12px 28px -12px rgba(46,173,107,.9); transition: transform .2s var(--ease); }
+.offer:hover { transform: translateY(-2px); }
+.offer i { width: 8px; height: 8px; border-radius: 50%; background: #fff; animation: pulse 2.4s infinite; }
+.offer b { padding: 2px 10px; border-radius: 999px; background: rgba(255,255,255,.2); }
+.offer[hidden] { display: none; }

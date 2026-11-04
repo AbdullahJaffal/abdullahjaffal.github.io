@@ -18,6 +18,36 @@
     const t = (lang, key) => (I18N[lang] && I18N[lang][key]) ?? I18N.tr[key] ?? "";
     let current = "tr";
 
+    // ---- early sign-up offer (settings/public in the owner's Firebase; off while accounts are closed) ----
+    let offer = null;
+    const OFFER_TR = "Erken kayıt: {days} gün ücretsiz deneme — {date} tarihine kadar";
+    function renderOffer() {
+        const el = document.querySelector("[data-offer]");
+        if (!el) return;
+        if (!offer || !(Date.now() < offer.deadline)) { el.hidden = true; return; }
+        const date = new Intl.DateTimeFormat(current, { day: "numeric", month: "long", year: "numeric" }).format(offer.deadline);
+        const text = (I18N[current] && I18N[current].offerText) || OFFER_TR;
+        el.querySelector("[data-offer-text]").textContent = text.replace("{days}", offer.days).replace("{date}", date);
+        el.hidden = false;
+    }
+    (function loadOffer() {
+        let emu = false;
+        try {
+            const local = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+            if (local && /[?&]emu\b/.test(location.search)) sessionStorage.setItem("urbim3d-emu", "1");
+            emu = local && sessionStorage.getItem("urbim3d-emu") === "1";
+        } catch (e) { }
+        const cfg = emu ? { apiKey: "demo-key", projectId: "demo-urbim3d" } : window.URBIM_FIREBASE;
+        if (!cfg || !cfg.apiKey) return;
+        const base = emu ? "http://127.0.0.1:8080" : "https://firestore.googleapis.com";
+        fetch(`${base}/v1/projects/${cfg.projectId}/databases/(default)/documents/settings/public?key=${encodeURIComponent(cfg.apiKey)}`)
+            .then(r => r.ok ? r.json() : null).then(j => {
+                const f = j && j.fields; if (!f || !f.promoDeadline) return;
+                offer = { deadline: new Date(f.promoDeadline.timestampValue).getTime(), days: Number((f.promoDays || {}).integerValue || 180) };
+                renderOffer();
+            }).catch(() => { });
+    })();
+
     function setLang(lang) {
         if (!LANGS.includes(lang)) lang = "tr";
         current = lang;
@@ -30,6 +60,7 @@
             el.setAttribute(attr, t(lang, key));
         }));
         document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+        renderOffer();
         // links into the guide open it in the page's language
         document.querySelectorAll("[data-docs]").forEach(a => { a.href = `docs/${lang}/${a.dataset.docs}`; });
         try { localStorage.setItem(STORE_KEY, lang); } catch (e) { /* private mode */ }
@@ -146,7 +177,14 @@
         email.setAttribute("aria-invalid", String(!okEmail));
         if (!okName || !okEmail) { say("msgRequired", true); (okName ? email : name).focus(); return; }
 
+        // the owner's database keeps every request too (stats.js → Firestore leads), whatever the e-mail does
+        const saveLead = () => window.urbimLead && window.urbimLead({
+            name: name.value.trim(), email: email.value.trim(), org: form.elements.org.value.trim(), country: form.elements.country.value.trim(),
+            role: form.elements.role.value, version: form.elements.version.value,
+            nets: [...form.querySelectorAll('input[name="nets"]:checked')].map(c => c.value), note: form.elements.note.value.trim()
+        });
         if (!window.emailjs || captchaId === null) {          // services blocked or not loaded
+            saveLead();
             window.location.href = mailtoHref();
             say("msgOpened");
             return;
@@ -154,6 +192,7 @@
         const token = window.grecaptcha.getResponse(captchaId);
         if (!token) { say("msgCaptcha", true); return; }
 
+        saveLead();
         sendBtn.disabled = true;
         say("msgSending");
         window.emailjs.send(EMAILJS.service, EMAILJS.template, {
