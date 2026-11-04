@@ -30,7 +30,7 @@
         addEventListener("load", () => scrollTo({ top: 0, behavior: "instant" }));
     </script>
     <!-- ?v= busts the browser/CDN cache (GitHub Pages: max-age 600): bump it in all three links whenever a CSS/JS file changes. -->
-    <link rel="stylesheet" href="assets/style.css?v=2026110403">
+    <link rel="stylesheet" href="assets/style.css?v=2026110405">
     <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -52,6 +52,7 @@
             <a href="#roadmap" data-i18n="navRoadmap">Yol haritası</a>
             <a href="#faq" data-i18n="navFaq">SSS</a>
             <a href="docs/" data-docs="" data-i18n="navDocs">Kılavuz</a>
+            <a href="account/" data-i18n="navAccount">Hesabım</a>
             <div class="lang" role="group" aria-label="Dil / اللغة / Language">
                 <button type="button" data-lang="tr" lang="tr" aria-label="Türkçe">TR</button>
                 <button type="button" data-lang="ar" lang="ar" aria-label="العربية">ع</button>
@@ -86,6 +87,8 @@
                 <li>TR · AR · EN</li>
             </ul>
             <p class="hero__note"><span class="dot"></span><span data-i18n="heroNote">Geliştirme aşamasında — erken erişim listesi açık.</span></p>
+            <!-- early sign-up offer: filled from settings/public in the owner's database; hidden when accounts are not open or the offer ended -->
+            <a class="offer" href="account/" hidden data-offer><i></i><span data-offer-text></span><b data-i18n="offerCta">Hesap oluştur</b></a>
         </div>
 
         <!-- Illustrative longitudinal profile; values are decorative, not a design. -->
@@ -544,8 +547,9 @@
     </div>
 </footer>
 
-<script src="assets/i18n.js?v=2026110403"></script>
-<script src="assets/stats.js?v=2026110403" defer></script>
-<script src="assets/main.js?v=2026110403"></script>
+<script src="assets/i18n.js?v=2026110405"></script>
+<script src="assets/firebase-config.js?v=2026110405"></script>
+<script src="assets/stats.js?v=2026110405" defer></script>
+<script src="assets/main.js?v=2026110405"></script>
 </body>
 </html>
