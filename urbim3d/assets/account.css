@@ -131,8 +131,8 @@ html[dir="rtl"] .f select { background-position: left 12px center; }
 .tel input { font-family: var(--mono); letter-spacing: .02em; }
 /* password with a show button */
 .pw { position: relative; display: block; }
-.pw input { padding-inline-end: 44px; }
-.pw__eye { position: absolute; top: 50%; inset-inline-end: 6px; transform: translateY(-50%); width: 34px; height: 34px; border: 0; border-radius: 8px; background: transparent; cursor: pointer; display: grid; place-items: center; }
+.pw input { padding-right: 44px; } /* the input is always dir="ltr", so keep the eye on the physical right in RTL pages too */
+.pw__eye { position: absolute; top: 50%; right: 6px; transform: translateY(-50%); width: 34px; height: 34px; border: 0; border-radius: 8px; background: transparent; cursor: pointer; display: grid; place-items: center; }
 .pw__eye svg { width: 19px; height: 19px; fill: none; stroke: var(--muted); stroke-width: 1.8; }
 .pw__eye:hover { background: var(--soft); }
 .pw__eye[aria-pressed="true"] svg { stroke: var(--brand); }
