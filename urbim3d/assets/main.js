@@ -410,8 +410,8 @@
     }
     const pageNet = document.querySelector(".net--page");
     if (pageNet) pipeNet(pageNet, { fixed: true, parallax: .35, spacing: 150, density: .62, flow: .55, seed: 11,
-        line: "rgba(19,78,120,.16)", main: "rgba(19,78,120,.24)", node: "rgba(19,78,120,.45)", nodeFill: "#F3F6F9",
-        drop: "rgba(79,163,227,.85)", pulse: "rgba(79,163,227,A)", snap: "rgba(19,78,120,.8)" });
+        line: "rgba(13,100,97,.16)", main: "rgba(13,100,97,.24)", node: "rgba(13,100,97,.45)", nodeFill: "#F3F6F9",
+        drop: "rgba(79,163,227,.85)", pulse: "rgba(79,163,227,A)", snap: "rgba(13,100,97,.8)" });
     const ctaNet = document.querySelector(".net--cta");
     if (ctaNet) pipeNet(ctaNet, { fixed: false, spacing: 120, density: .66, flow: .8, seed: 5,
         line: "rgba(124,192,242,.16)", main: "rgba(124,192,242,.28)", node: "rgba(124,192,242,.6)", nodeFill: "#0C2A42",
