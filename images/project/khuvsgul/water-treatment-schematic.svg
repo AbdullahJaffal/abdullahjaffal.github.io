@@ -1,0 +1,107 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="khWaterTitle">
+    <title id="khWaterTitle">Schematic of the well water chain: two deep wells, a stepped technical building with a raw water reservoir, filtration and sedimentation, reverse osmosis, and separate domestic, irrigation and fire water tanks</title>
+
+    <defs>
+        <marker id="kwArrowAccent" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M0,0 L12,6 L0,12 Z" fill="#96694e"></path>
+        </marker>
+        <g id="kwFlake" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round">
+            <line x1="0" y1="-6" x2="0" y2="6"></line>
+            <line x1="-5.2" y1="-3" x2="5.2" y2="3"></line>
+            <line x1="-5.2" y1="3" x2="5.2" y2="-3"></line>
+        </g>
+        <path id="kwDrop" d="M0,-9 C6,-2 6,5 0,7 C-6,5 -6,-2 0,-9 Z" fill="none" stroke="#96694e" stroke-width="2"></path>
+        <path id="kwLeaf" d="M-7,6 C-7,-4 2,-9 8,-8 C8,0 2,7 -7,6 Z M-7,6 L3,-3" fill="none" stroke="#96694e" stroke-width="2" stroke-linejoin="round"></path>
+        <g id="kwFlame" fill="none" stroke="#96694e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M-5,-3 A5,5 0 0 1 5,-3"></path>
+            <rect x="-4" y="-3" width="8" height="11"></rect>
+            <line x1="-8" y1="2" x2="-4" y2="2"></line>
+            <line x1="4" y1="2" x2="8" y2="2"></line>
+            <line x1="-7" y1="8" x2="7" y2="8"></line>
+            <line x1="0" y1="-10" x2="0" y2="-8"></line>
+        </g>
+    </defs>
+
+    <rect x="0" y="0" width="800" height="450" fill="#ffffff"></rect>
+
+    <!-- Sloping ground on both sides of the stepped technical building -->
+    <path d="M20,128 L240,140" stroke="#6b7280" stroke-width="1.5" fill="none"></path>
+    <path d="M660,245 L780,262" stroke="#6b7280" stroke-width="1.5" fill="none"></path>
+
+    <!-- Frost line near the wells: the supply line runs below it -->
+    <line x1="20" y1="163" x2="236" y2="163" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 6"></line>
+    <use href="#kwFlake" x="100" y="152"></use>
+    <use href="#kwFlake" x="200" y="155"></use>
+
+    <!-- Groundwater -->
+    <path d="M30,318 q10,-6 20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0" stroke="#c9a688" stroke-width="2" fill="none"></path>
+    <path d="M30,333 q10,-6 20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0" stroke="#c9a688" stroke-width="2" fill="none" opacity="0.6"></path>
+
+    <!-- Two deep wells -->
+    <g stroke="#6b7280" stroke-width="1.5" fill="#ffffff">
+        <rect x="55" y="131" width="12" height="207"></rect>
+        <rect x="125" y="135" width="12" height="207"></rect>
+        <rect x="48" y="106" width="26" height="26" rx="3"></rect>
+        <rect x="118" y="110" width="26" height="26" rx="3"></rect>
+    </g>
+    <g stroke="#96694e" stroke-width="2.5" fill="none">
+        <path d="M61,330 L61,132"></path>
+        <path d="M131,334 L131,136"></path>
+    </g>
+    <path d="M61,132 L61,178 L250,178" stroke="#96694e" stroke-width="4" fill="none" stroke-linejoin="round" marker-end="url(#kwArrowAccent)"></path>
+    <path d="M131,136 L131,178" stroke="#96694e" stroke-width="4" fill="none"></path>
+
+    <!-- Stepped technical building following the slope -->
+    <path d="M240,130 L380,130 L380,160 L510,160 L510,195 L660,195 L660,265 L510,265 L510,230 L380,230 L380,200 L240,200 Z" fill="#ffffff" stroke="#6b7280" stroke-width="2" stroke-linejoin="round"></path>
+
+    <!-- Step 1: raw water reservoir -->
+    <rect x="255" y="146" width="110" height="46" rx="4" fill="#ffffff" stroke="#96694e" stroke-width="2.5"></rect>
+    <path d="M263,166 q8,-5 16,0 t16,0 t16,0 t16,0 t16,0 t16,0" stroke="#c9a688" stroke-width="2" fill="none" stroke-linecap="round"></path>
+
+    <!-- Step 2: filtration and sedimentation, then reverse osmosis -->
+    <path d="M365,175 L373,175 L373,197 L386,197" stroke="#96694e" stroke-width="2.5" fill="none" stroke-linejoin="round" marker-end="url(#kwArrowAccent)"></path>
+    <rect x="390" y="172" width="45" height="50" rx="4" fill="#ffffff" stroke="#96694e" stroke-width="2.5"></rect>
+    <g stroke="#c9a688" stroke-width="2">
+        <line x1="398" y1="214" x2="408" y2="180"></line>
+        <line x1="409" y1="214" x2="419" y2="180"></line>
+        <line x1="420" y1="214" x2="430" y2="180"></line>
+    </g>
+    <path d="M435,198 L447,198" stroke="#96694e" stroke-width="2.5" fill="none" marker-end="url(#kwArrowAccent)"></path>
+    <rect x="450" y="176" width="50" height="46" rx="4" fill="#ffffff" stroke="#96694e" stroke-width="2.5"></rect>
+    <g stroke="#96694e" stroke-width="1.5" opacity="0.7">
+        <line x1="457" y1="186" x2="493" y2="186"></line>
+        <line x1="457" y1="194" x2="493" y2="194"></line>
+        <line x1="457" y1="202" x2="493" y2="202"></line>
+        <line x1="457" y1="210" x2="493" y2="210"></line>
+    </g>
+
+    <!-- Step 3: three separate tanks (domestic, irrigation, fire) -->
+    <path d="M500,184 L637,184" stroke="#96694e" stroke-width="2.5" fill="none"></path>
+    <g stroke="#96694e" stroke-width="2.5" fill="none">
+        <path d="M541,184 L541,206" marker-end="url(#kwArrowAccent)"></path>
+        <path d="M589,184 L589,206" marker-end="url(#kwArrowAccent)"></path>
+        <path d="M637,184 L637,206" marker-end="url(#kwArrowAccent)"></path>
+    </g>
+    <g fill="#ffffff" stroke="#96694e" stroke-width="2.5">
+        <rect x="522" y="210" width="38" height="48" rx="4"></rect>
+        <rect x="570" y="210" width="38" height="48" rx="4"></rect>
+        <rect x="618" y="210" width="38" height="48" rx="4"></rect>
+    </g>
+    <use href="#kwDrop" x="541" y="228"></use>
+    <use href="#kwLeaf" x="589" y="228"></use>
+    <use href="#kwFlame" x="637" y="228"></use>
+    <path d="M526,246 q4,-4 8,0 t8,0 t8,0 t8,0 M574,246 q4,-4 8,0 t8,0 t8,0 t8,0 M622,246 q4,-4 8,0 t8,0 t8,0 t8,0" stroke="#c9a688" stroke-width="1.5" fill="none"></path>
+
+    <!-- Three separate outgoing lines -->
+    <g stroke="#96694e" stroke-width="3" fill="none" stroke-linejoin="round">
+        <path d="M541,258 L541,290 L735,290" marker-end="url(#kwArrowAccent)"></path>
+        <path d="M589,258 L589,315 L735,315" marker-end="url(#kwArrowAccent)"></path>
+        <path d="M637,258 L637,340 L735,340" marker-end="url(#kwArrowAccent)"></path>
+    </g>
+    <use href="#kwDrop" x="760" y="291"></use>
+    <use href="#kwLeaf" x="760" y="316"></use>
+    <use href="#kwFlame" x="760" y="341"></use>
+
+    <!-- Baseline -->
+    <line x1="20" y1="365" x2="780" y2="365" stroke="#e5e7eb" stroke-width="1"></line>
+</svg>
