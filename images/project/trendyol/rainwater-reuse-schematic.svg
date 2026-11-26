@@ -1,0 +1,104 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="trendyolReuseTitle">
+    <title id="trendyolReuseTitle">Schematic of separate rainwater lines: clean roof and car-free runoff to an underground tank for irrigation with an overflow line, road runoff discharged directly</title>
+
+    <defs>
+        <marker id="trArrowAccent" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M0,0 L12,6 L0,12 Z" fill="#96694e"></path>
+        </marker>
+        <marker id="trArrowGray" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M0,0 L12,6 L0,12 Z" fill="#9ca3af"></path>
+        </marker>
+    </defs>
+
+    <rect x="0" y="0" width="800" height="450" fill="#ffffff"></rect>
+
+    <!-- Clean sources: building roof and a car-free pedestrian area -->
+    <rect x="40" y="45" width="110" height="75" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"></rect>
+    <rect x="40" y="38" width="110" height="7" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"></rect>
+    <path d="M150,42 L162,42 L162,190" stroke="#9ca3af" stroke-width="2" fill="none"></path>
+
+    <rect x="200" y="98" width="120" height="22" fill="#f3f4f6"></rect>
+    <g stroke="#ffffff" stroke-width="2">
+        <line x1="230" y1="98" x2="230" y2="120"></line>
+        <line x1="260" y1="98" x2="260" y2="120"></line>
+        <line x1="290" y1="98" x2="290" y2="120"></line>
+    </g>
+    <!-- Tree marks the landscaped, car-free area -->
+    <line x1="215" y1="98" x2="215" y2="80" stroke="#6b7280" stroke-width="2"></line>
+    <circle cx="215" cy="70" r="14" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"></circle>
+    <path d="M260,120 L260,190" stroke="#9ca3af" stroke-width="2" fill="none"></path>
+
+    <!-- Clean rainwater line to the underground tank -->
+    <path d="M162,190 L345,190" stroke="#96694e" stroke-width="4" fill="none" stroke-linecap="round" marker-end="url(#trArrowAccent)"></path>
+    <g fill="#ffffff" stroke="#96694e" stroke-width="2.5">
+        <circle cx="162" cy="190" r="7"></circle>
+        <circle cx="260" cy="190" r="7"></circle>
+    </g>
+
+    <!-- Underground storage tank -->
+    <rect x="350" y="160" width="120" height="110" rx="6" fill="#ffffff" stroke="#96694e" stroke-width="2.5"></rect>
+    <path d="M360,215 q10,-6 20,0 t20,0 t20,0 t20,0 t20,0" stroke="#c9a688" stroke-width="2.5" fill="none" stroke-linecap="round"></path>
+    <path d="M360,240 q10,-6 20,0 t20,0 t20,0 t20,0 t20,0" stroke="#c9a688" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"></path>
+
+    <!-- Tank to treatment, then to irrigation -->
+    <path d="M350,255 L262,255" stroke="#96694e" stroke-width="3.5" fill="none" marker-end="url(#trArrowAccent)"></path>
+    <rect x="200" y="235" width="60" height="42" rx="6" fill="#ffffff" stroke="#96694e" stroke-width="2.5"></rect>
+    <g stroke="#c9a688" stroke-width="2">
+        <line x1="212" y1="270" x2="222" y2="242"></line>
+        <line x1="225" y1="270" x2="235" y2="242"></line>
+        <line x1="238" y1="270" x2="248" y2="242"></line>
+    </g>
+    <path d="M200,256 L130,256 L130,300" stroke="#96694e" stroke-width="3.5" fill="none" stroke-linejoin="round"></path>
+    <!-- Sprinkler over the grass -->
+    <circle cx="130" cy="300" r="5" fill="#96694e"></circle>
+    <g stroke="#c9a688" stroke-width="2" fill="none" stroke-linecap="round">
+        <path d="M110,292 q20,-22 40,0"></path>
+        <path d="M100,298 q30,-34 60,0"></path>
+    </g>
+    <g stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" fill="none">
+        <path d="M70,330 l4,-10 l4,10 M95,330 l4,-10 l4,10 M157,330 l4,-10 l4,10 M182,330 l4,-10 l4,10"></path>
+    </g>
+    <line x1="60" y1="330" x2="200" y2="330" stroke="#9ca3af" stroke-width="1.5"></line>
+
+    <!-- Road with grates: dirtier runoff, discharged directly -->
+    <rect x="500" y="98" width="240" height="22" rx="4" fill="#f3f4f6"></rect>
+    <g stroke="#6b7280" stroke-width="1.5" fill="#ffffff">
+        <g transform="translate(530,100)">
+            <rect x="0" y="0" width="32" height="18" rx="2"></rect>
+            <line x1="7" y1="3" x2="7" y2="15"></line><line x1="14" y1="3" x2="14" y2="15"></line><line x1="21" y1="3" x2="21" y2="15"></line><line x1="28" y1="3" x2="28" y2="15"></line>
+        </g>
+        <g transform="translate(650,100)">
+            <rect x="0" y="0" width="32" height="18" rx="2"></rect>
+            <line x1="7" y1="3" x2="7" y2="15"></line><line x1="14" y1="3" x2="14" y2="15"></line><line x1="21" y1="3" x2="21" y2="15"></line><line x1="28" y1="3" x2="28" y2="15"></line>
+        </g>
+    </g>
+    <!-- Car marks the vehicle road -->
+    <g stroke="#6b7280" stroke-width="1.5" fill="#ffffff">
+        <path d="M585,92 L592,78 L630,78 L640,92 Z"></path>
+        <rect x="578" y="88" width="70" height="10" rx="3"></rect>
+    </g>
+    <g fill="#ffffff" stroke="#6b7280" stroke-width="1.5">
+        <circle cx="595" cy="98" r="5"></circle>
+        <circle cx="632" cy="98" r="5"></circle>
+    </g>
+
+    <g stroke="#9ca3af" stroke-width="2" fill="none">
+        <path d="M546,118 L546,230"></path>
+        <path d="M666,118 L666,230"></path>
+    </g>
+    <path d="M546,230 L740,230" stroke="#6b7280" stroke-width="4" fill="none" stroke-linecap="round" marker-end="url(#trArrowGray)"></path>
+    <g fill="#ffffff" stroke="#6b7280" stroke-width="2.5">
+        <circle cx="546" cy="230" r="7"></circle>
+        <circle cx="666" cy="230" r="7"></circle>
+    </g>
+
+    <!-- Tank overflow line joins the direct discharge -->
+    <path d="M470,175 C 505,175 520,215 539,228" stroke="#9ca3af" stroke-width="2.5" fill="none" stroke-dasharray="7 6" marker-end="url(#trArrowGray)"></path>
+
+    <!-- Outfall channel -->
+    <path d="M752,190 q8,15 0,30 t0,30 t0,30" stroke="#96694e" stroke-width="3" fill="none" opacity="0.55"></path>
+    <path d="M766,190 q8,15 0,30 t0,30 t0,30" stroke="#96694e" stroke-width="3" fill="none" opacity="0.35"></path>
+
+    <!-- Baseline -->
+    <line x1="20" y1="360" x2="780" y2="360" stroke="#e5e7eb" stroke-width="1"></line>
+</svg>

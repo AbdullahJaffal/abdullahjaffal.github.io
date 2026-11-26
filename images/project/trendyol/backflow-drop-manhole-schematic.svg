@@ -1,0 +1,57 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="trendyolDropTitle">
+    <title id="trendyolDropTitle">Section schematic of the drop manhole before the outfall: the site pipe enters above the culvert's high water level, so rising water in the culvert cannot flow back into the site system</title>
+
+    <defs>
+        <marker id="tdArrowAccent" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M0,0 L12,6 L0,12 Z" fill="#96694e"></path>
+        </marker>
+        <marker id="tdArrowAccentStart" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+            <path d="M0,0 L12,6 L0,12 Z" fill="#96694e"></path>
+        </marker>
+    </defs>
+
+    <rect x="0" y="0" width="800" height="450" fill="#ffffff"></rect>
+
+    <!-- Ground surface, with the public road on the right -->
+    <line x1="20" y1="110" x2="560" y2="110" stroke="#6b7280" stroke-width="1.5"></line>
+    <rect x="560" y="102" width="220" height="12" fill="#d1d5db"></rect>
+
+    <!-- Site stormwater pipe, entering the manhole high -->
+    <path d="M30,165 L395,185" stroke="#96694e" stroke-width="10" fill="none" stroke-linecap="butt"></path>
+    <path d="M30,165 L395,185" stroke="#ffffff" stroke-width="5" fill="none"></path>
+    <path d="M60,167 L200,175" stroke="#96694e" stroke-width="2" fill="none" marker-end="url(#tdArrowAccent)"></path>
+
+    <!-- Drop manhole shaft -->
+    <g stroke="#6b7280" stroke-width="4" fill="none">
+        <path d="M395,110 L395,178 M395,192 L395,330 L480,330 L480,312 M480,288 L480,110"></path>
+    </g>
+    <rect x="388" y="104" width="99" height="8" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"></rect>
+
+    <!-- Water falling inside the manhole -->
+    <path d="M398,188 C 420,195 428,240 432,290" stroke="#96694e" stroke-width="2.5" fill="none" marker-end="url(#tdArrowAccent)"></path>
+
+    <!-- Outlet pipe to the culvert, at the low level -->
+    <path d="M480,300 L580,300" stroke="#96694e" stroke-width="10" fill="none"></path>
+    <path d="M480,300 L580,300" stroke="#ffffff" stroke-width="5" fill="none"></path>
+
+    <!-- Box culvert under the public road -->
+    <g stroke="#6b7280" stroke-width="4" fill="none">
+        <path d="M580,180 L780,180 M580,330 L780,330 M580,180 L580,292 M580,308 L580,330"></path>
+    </g>
+
+    <!-- Normal water level in the culvert -->
+    <path d="M590,318 q10,-6 20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0" stroke="#c9a688" stroke-width="2.5" fill="none"></path>
+
+    <!-- High water level: rises in the culvert and inside the manhole, but stays below the inlet -->
+    <path d="M590,235 q10,-6 20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0" stroke="#9ca3af" stroke-width="2" fill="none" stroke-dasharray="5 4"></path>
+    <path d="M400,235 q10,-6 20,0 t20,0 t20,0 t20,0" stroke="#9ca3af" stroke-width="2" fill="none" stroke-dasharray="5 4"></path>
+
+    <!-- Height kept between the high water level and the inlet pipe -->
+    <path d="M360,227 L360,196" stroke="#96694e" stroke-width="2" fill="none" marker-start="url(#tdArrowAccentStart)" marker-end="url(#tdArrowAccent)"></path>
+    <g stroke="#96694e" stroke-width="1.5">
+        <line x1="350" y1="232" x2="395" y2="232"></line>
+    </g>
+
+    <!-- Baseline -->
+    <line x1="20" y1="360" x2="780" y2="360" stroke="#e5e7eb" stroke-width="1"></line>
+</svg>

@@ -1,0 +1,59 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="windChannelsTitle">
+    <title id="windChannelsTitle">Plan schematic of open channels around the plant yard intercepting hillside runoff and a natural stream and carrying them around the buildings</title>
+
+    <defs>
+        <marker id="wcArrowAccent" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M0,0 L12,6 L0,12 Z" fill="#96694e"></path>
+        </marker>
+        <marker id="wcArrowGray" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M0,0 L12,6 L0,12 Z" fill="#9ca3af"></path>
+        </marker>
+    </defs>
+
+    <rect x="0" y="0" width="800" height="450" fill="#ffffff"></rect>
+
+    <!-- Hillside contours (uphill at the top) -->
+    <g stroke="#e5e7eb" stroke-width="1.5" fill="none">
+        <path d="M20,30 C 200,15 600,15 780,30"></path>
+        <path d="M20,55 C 200,40 600,40 780,55"></path>
+        <path d="M20,80 C 200,65 600,65 780,80"></path>
+    </g>
+
+    <!-- Runoff from the slope heading towards the yard -->
+    <g stroke="#9ca3af" stroke-width="2" fill="none">
+        <path d="M250,40 L250,100" marker-end="url(#wcArrowGray)"></path>
+        <path d="M560,40 L560,100" marker-end="url(#wcArrowGray)"></path>
+        <path d="M120,60 L160,105" marker-end="url(#wcArrowGray)"></path>
+        <path d="M690,60 L650,105" marker-end="url(#wcArrowGray)"></path>
+    </g>
+
+    <!-- Natural mountain stream (dere) coming down onto the site -->
+    <path d="M395,10 q8,15 0,30 t0,30 t0,30" stroke="#96694e" stroke-width="3" fill="none" opacity="0.55"></path>
+    <path d="M410,10 q8,15 0,30 t0,30 t0,30" stroke="#96694e" stroke-width="3" fill="none" opacity="0.35"></path>
+
+    <!-- Open channel wrapping the uphill side of the yard (outer edge, inner bed, water line) -->
+    <path d="M200,345 L200,125 L600,125 L600,345" stroke="#96694e" stroke-width="18" fill="none" stroke-linejoin="round"></path>
+    <path d="M200,345 L200,125 L600,125 L600,345" stroke="#ffffff" stroke-width="12" fill="none" stroke-linejoin="round"></path>
+    <path d="M200,345 L200,125 L600,125 L600,345" stroke="#c9a688" stroke-width="2" fill="none" stroke-dasharray="8 6" stroke-linejoin="round"></path>
+
+    <!-- Flow direction inside the channel: split at the stream inflow, down both sides, away from the yard -->
+    <g stroke="#96694e" stroke-width="2.5" fill="none">
+        <path d="M385,100 L300,100" marker-end="url(#wcArrowAccent)"></path>
+        <path d="M415,100 L500,100" marker-end="url(#wcArrowAccent)"></path>
+        <path d="M175,200 L175,280" marker-end="url(#wcArrowAccent)"></path>
+        <path d="M625,200 L625,280" marker-end="url(#wcArrowAccent)"></path>
+        <path d="M200,350 L200,372" stroke-width="3.5" marker-end="url(#wcArrowAccent)"></path>
+        <path d="M600,350 L600,372" stroke-width="3.5" marker-end="url(#wcArrowAccent)"></path>
+    </g>
+
+    <!-- Plant yard (kept dry) and the administrative / control buildings -->
+    <rect x="250" y="165" width="300" height="165" fill="#fafafa" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6 5"></rect>
+    <g fill="#ffffff" stroke="#6b7280" stroke-width="1.5">
+        <rect x="285" y="200" width="120" height="80"></rect>
+        <rect x="430" y="210" width="85" height="60"></rect>
+    </g>
+    <g stroke="#e5e7eb" stroke-width="1.5">
+        <line x1="285" y1="240" x2="405" y2="240"></line>
+        <line x1="472" y1="210" x2="472" y2="270"></line>
+    </g>
+</svg>

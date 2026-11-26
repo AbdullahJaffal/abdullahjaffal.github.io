@@ -1,0 +1,98 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="windSepticTitle">
+    <title id="windSepticTitle">Section schematic of the multi-chamber septic tank with a backup line to a gravel-walled soakaway pit, placed downwind of the buildings</title>
+
+    <defs>
+        <marker id="wsArrowAccent" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M0,0 L12,6 L0,12 Z" fill="#96694e"></path>
+        </marker>
+        <marker id="wsArrowGray" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+            <path d="M0,0 L12,6 L0,12 Z" fill="#9ca3af"></path>
+        </marker>
+    </defs>
+
+    <rect x="0" y="0" width="800" height="450" fill="#ffffff"></rect>
+
+    <!-- Prevailing wind: from the buildings towards the septic tank and the pit -->
+    <g stroke="#9ca3af" stroke-width="2" fill="none" stroke-linecap="round">
+        <path d="M250,40 C 330,30 420,50 520,38" marker-end="url(#wsArrowGray)"></path>
+        <path d="M290,62 C 370,52 460,72 560,60" marker-end="url(#wsArrowGray)"></path>
+        <path d="M270,84 C 350,74 440,94 540,82" marker-end="url(#wsArrowGray)"></path>
+    </g>
+
+    <!-- Ground surface -->
+    <line x1="20" y1="150" x2="780" y2="150" stroke="#6b7280" stroke-width="1.5"></line>
+
+    <!-- Building -->
+    <rect x="40" y="85" width="110" height="65" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"></rect>
+    <rect x="40" y="78" width="110" height="7" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"></rect>
+    <rect x="60" y="100" width="22" height="16" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"></rect>
+
+    <!-- Sewer line from the building into the first chamber -->
+    <path d="M120,150 L120,180 L222,186" stroke="#96694e" stroke-width="4" fill="none" stroke-linejoin="round" marker-end="url(#wsArrowAccent)"></path>
+
+    <!-- Multi-chamber septic tank -->
+    <rect x="225" y="165" width="255" height="130" fill="#ffffff" stroke="#6b7280" stroke-width="2.5"></rect>
+    <!-- Chamber walls with a mid-height opening -->
+    <g stroke="#6b7280" stroke-width="2.5">
+        <line x1="310" y1="165" x2="310" y2="200"></line>
+        <line x1="310" y1="232" x2="310" y2="295"></line>
+        <line x1="395" y1="165" x2="395" y2="200"></line>
+        <line x1="395" y1="232" x2="395" y2="295"></line>
+    </g>
+    <!-- Access covers -->
+    <g fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5">
+        <rect x="253" y="143" width="28" height="22"></rect>
+        <rect x="338" y="143" width="28" height="22"></rect>
+        <rect x="423" y="143" width="28" height="22"></rect>
+    </g>
+    <!-- Liquid level -->
+    <path d="M232,190 q9,-5 18,0 t18,0 t18,0 t18,0 M318,190 q9,-5 18,0 t18,0 t18,0 t18,0 M403,190 q9,-5 18,0 t18,0 t18,0 t18,0" stroke="#c9a688" stroke-width="2" fill="none" stroke-linecap="round"></path>
+    <!-- Settled solids: fewer in each chamber -->
+    <g fill="#9ca3af">
+        <circle cx="240" cy="284" r="4"></circle>
+        <circle cx="253" cy="280" r="4.5"></circle>
+        <circle cx="267" cy="285" r="4"></circle>
+        <circle cx="281" cy="279" r="4.5"></circle>
+        <circle cx="295" cy="284" r="4"></circle>
+        <circle cx="250" cy="270" r="3.5"></circle>
+        <circle cx="275" cy="268" r="3.5"></circle>
+        <circle cx="335" cy="284" r="3.5"></circle>
+        <circle cx="352" cy="280" r="4"></circle>
+        <circle cx="370" cy="284" r="3.5"></circle>
+        <circle cx="437" cy="284" r="3"></circle>
+    </g>
+    <!-- Flow through the chambers -->
+    <g stroke="#96694e" stroke-width="2" fill="none">
+        <path d="M290,216 L328,216" marker-end="url(#wsArrowAccent)"></path>
+        <path d="M375,216 L413,216" marker-end="url(#wsArrowAccent)"></path>
+    </g>
+
+    <!-- Backup line from the last chamber to the soakaway pit, away from the site -->
+    <path d="M480,195 L640,215" stroke="#96694e" stroke-width="3.5" fill="none" stroke-dasharray="9 6" marker-end="url(#wsArrowAccent)"></path>
+
+    <!-- Distance from the tank to the pit -->
+    <g stroke="#d1d5db" stroke-width="1.5">
+        <line x1="480" y1="125" x2="650" y2="125"></line>
+        <line x1="480" y1="118" x2="480" y2="132"></line>
+        <line x1="650" y1="118" x2="650" y2="132"></line>
+    </g>
+
+    <!-- Soakaway pit with gravel walls that let water through -->
+    <rect x="650" y="165" width="110" height="140" fill="#ffffff" stroke="#9ca3af" stroke-width="1.5"></rect>
+    <g fill="#c9a688" opacity="0.8">
+        <circle cx="658" cy="180" r="4"></circle><circle cx="658" cy="200" r="4"></circle><circle cx="658" cy="220" r="4"></circle><circle cx="658" cy="240" r="4"></circle><circle cx="658" cy="260" r="4"></circle><circle cx="658" cy="280" r="4"></circle>
+        <circle cx="667" cy="190" r="3.5"></circle><circle cx="667" cy="210" r="3.5"></circle><circle cx="667" cy="230" r="3.5"></circle><circle cx="667" cy="250" r="3.5"></circle><circle cx="667" cy="270" r="3.5"></circle><circle cx="667" cy="290" r="3.5"></circle>
+        <circle cx="752" cy="180" r="4"></circle><circle cx="752" cy="200" r="4"></circle><circle cx="752" cy="220" r="4"></circle><circle cx="752" cy="240" r="4"></circle><circle cx="752" cy="260" r="4"></circle><circle cx="752" cy="280" r="4"></circle>
+        <circle cx="743" cy="190" r="3.5"></circle><circle cx="743" cy="210" r="3.5"></circle><circle cx="743" cy="230" r="3.5"></circle><circle cx="743" cy="250" r="3.5"></circle><circle cx="743" cy="270" r="3.5"></circle><circle cx="743" cy="290" r="3.5"></circle>
+        <circle cx="670" cy="298" r="3.5"></circle><circle cx="685" cy="297" r="4"></circle><circle cx="700" cy="298" r="3.5"></circle><circle cx="715" cy="297" r="4"></circle><circle cx="730" cy="298" r="3.5"></circle>
+    </g>
+    <!-- Seepage into the ground -->
+    <g stroke="#9ca3af" stroke-width="1.5" fill="none">
+        <path d="M645,240 L625,240" marker-end="url(#wsArrowGray)"></path>
+        <path d="M765,240 L785,240" marker-end="url(#wsArrowGray)"></path>
+        <path d="M705,310 L705,330" marker-end="url(#wsArrowGray)"></path>
+    </g>
+
+    <!-- Baseline -->
+    <line x1="20" y1="360" x2="780" y2="360" stroke="#e5e7eb" stroke-width="1"></line>
+</svg>
